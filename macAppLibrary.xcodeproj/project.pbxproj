@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0000000000000000000201 /* macAppLibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000101 /* macAppLibraryApp.swift */; };
+		AA0000000000000000000202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000102 /* ContentView.swift */; };
+		AA0000000000000000000203 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000103 /* AppEntry.swift */; };
+		AA0000000000000000000204 /* CommunityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000104 /* CommunityData.swift */; };
+		AA0000000000000000000205 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000105 /* SidebarView.swift */; };
+		AA0000000000000000000206 /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000106 /* AppListView.swift */; };
+		AA0000000000000000000207 /* AppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000107 /* AppDetailView.swift */; };
+		AA0000000000000000000208 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000108 /* SettingsView.swift */; };
+		AA0000000000000000000209 /* AppScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000109 /* AppScanner.swift */; };
+		AA0000000000000000000210 /* MetadataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000110 /* MetadataService.swift */; };
+		AA0000000000000000000211 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000111 /* PersistenceService.swift */; };
+		AA0000000000000000000212 /* CommunityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000112 /* CommunityService.swift */; };
+		AA0000000000000000000213 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000113 /* AIService.swift */; };
+		AA0000000000000000000214 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000114 /* KeychainHelper.swift */; };
+		AA0000000000000000000215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000115 /* Assets.xcassets */; };
+		AA0000000000000000000217 /* AppLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000117 /* AppLibraryStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA0000000000000000000004 /* macAppLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macAppLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000101 /* macAppLibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macAppLibraryApp.swift; sourceTree = "<group>"; };
+		AA0000000000000000000102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000103 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
+		AA0000000000000000000104 /* CommunityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityData.swift; sourceTree = "<group>"; };
+		AA0000000000000000000105 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000106 /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000107 /* AppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000108 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000109 /* AppScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScanner.swift; sourceTree = "<group>"; };
+		AA0000000000000000000110 /* MetadataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000111 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000112 /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000113 /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000114 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		AA0000000000000000000115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0000000000000000000116 /* macAppLibrary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macAppLibrary.entitlements; sourceTree = "<group>"; };
+		AA0000000000000000000117 /* AppLibraryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLibraryStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		AA0000000000000000000002 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000301 /* macAppLibrary */,
+				AA0000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000004 /* macAppLibrary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000301 /* macAppLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000101 /* macAppLibraryApp.swift */,
+				AA0000000000000000000117 /* AppLibraryStore.swift */,
+				AA0000000000000000000302 /* Models */,
+				AA0000000000000000000303 /* Views */,
+				AA0000000000000000000304 /* Services */,
+				AA0000000000000000000305 /* Utilities */,
+				AA0000000000000000000115 /* Assets.xcassets */,
+				AA0000000000000000000116 /* macAppLibrary.entitlements */,
+			);
+			path = macAppLibrary;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000302 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000103 /* AppEntry.swift */,
+				AA0000000000000000000104 /* CommunityData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000303 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000102 /* ContentView.swift */,
+				AA0000000000000000000105 /* SidebarView.swift */,
+				AA0000000000000000000106 /* AppListView.swift */,
+				AA0000000000000000000107 /* AppDetailView.swift */,
+				AA0000000000000000000108 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000304 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000109 /* AppScanner.swift */,
+				AA0000000000000000000110 /* MetadataService.swift */,
+				AA0000000000000000000111 /* PersistenceService.swift */,
+				AA0000000000000000000112 /* CommunityService.swift */,
+				AA0000000000000000000113 /* AIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000305 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000114 /* KeychainHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0000000000000000000005 /* macAppLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000013 /* Build configuration list for PBXNativeTarget "macAppLibrary" */;
+			buildPhases = (
+				AA0000000000000000000006 /* Sources */,
+				AA0000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macAppLibrary;
+			productName = macAppLibrary;
+			productReference = AA0000000000000000000004 /* macAppLibrary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					AA0000000000000000000005 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = AA0000000000000000000010 /* Build configuration list for PBXProject "macAppLibrary" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0000000000000000000002;
+			productRefGroup = AA0000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0000000000000000000005 /* macAppLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000215 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000201 /* macAppLibraryApp.swift in Sources */,
+				AA0000000000000000000217 /* AppLibraryStore.swift in Sources */,
+				AA0000000000000000000202 /* ContentView.swift in Sources */,
+				AA0000000000000000000203 /* AppEntry.swift in Sources */,
+				AA0000000000000000000204 /* CommunityData.swift in Sources */,
+				AA0000000000000000000205 /* SidebarView.swift in Sources */,
+				AA0000000000000000000206 /* AppListView.swift in Sources */,
+				AA0000000000000000000207 /* AppDetailView.swift in Sources */,
+				AA0000000000000000000208 /* SettingsView.swift in Sources */,
+				AA0000000000000000000209 /* AppScanner.swift in Sources */,
+				AA0000000000000000000210 /* MetadataService.swift in Sources */,
+				AA0000000000000000000211 /* PersistenceService.swift in Sources */,
+				AA0000000000000000000212 /* CommunityService.swift in Sources */,
+				AA0000000000000000000213 /* AIService.swift in Sources */,
+				AA0000000000000000000214 /* KeychainHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA0000000000000000000008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AA0000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macAppLibrary/macAppLibrary.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tommertron.macAppLibrary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA0000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macAppLibrary/macAppLibrary.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tommertron.macAppLibrary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0000000000000000000010 /* Build configuration list for PBXProject "macAppLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000008 /* Debug */,
+				AA0000000000000000000009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0000000000000000000013 /* Build configuration list for PBXNativeTarget "macAppLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000011 /* Debug */,
+				AA0000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AA0000000000000000000001 /* Project object */;
+}
