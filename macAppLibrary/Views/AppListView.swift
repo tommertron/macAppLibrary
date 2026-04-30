@@ -64,6 +64,10 @@ struct AppRowView: View {
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
+                Text(app.bundleID)
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+                    .textSelection(.enabled)
             }
 
             Spacer()

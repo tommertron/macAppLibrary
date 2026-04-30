@@ -118,6 +118,12 @@ struct GalleryCardView: View {
                     .lineLimit(1)
             }
 
+            Text(app.bundleID)
+                .font(.caption2)
+                .foregroundStyle(.tertiary)
+                .lineLimit(1)
+                .textSelection(.enabled)
+
             if !app.effectiveCategories.isEmpty {
                 HStack(spacing: 4) {
                     ForEach(app.effectiveCategories.prefix(3), id: \.self) { cat in

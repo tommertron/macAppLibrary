@@ -129,6 +129,7 @@ struct AppDetailView: View {
             Text("Details")
                 .font(.headline)
             Grid(alignment: .leading, horizontalSpacing: 16, verticalSpacing: 6) {
+                metaRow("Bundle ID", value: app.bundleID)
                 metaRow("Version", value: app.version ?? "—")
                 metaRow("Size", value: app.sizeBytes.map {
                     ByteCountFormatter.string(fromByteCount: $0, countStyle: .file)
