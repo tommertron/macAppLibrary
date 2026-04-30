@@ -288,11 +288,11 @@ struct WebsiteRow: View {
                         .controlSize(.small)
                     Button("Cancel") { isEditing = false }
                         .controlSize(.small)
-                } else if let urlString = app.userWebsiteURL, let url = URL(string: urlString) {
+                } else if let urlString = app.effectiveWebsiteURL, let url = URL(string: urlString) {
                     Link(urlString, destination: url)
                         .font(.body)
                     Button {
-                        urlText = urlString
+                        urlText = app.userWebsiteURL ?? urlString
                         isEditing = true
                     } label: {
                         Image(systemName: "pencil")
@@ -300,6 +300,7 @@ struct WebsiteRow: View {
                     }
                     .buttonStyle(.plain)
                     .foregroundStyle(.secondary)
+                    .help(app.userWebsiteURL == nil ? "From community data — click to override" : "Edit website")
                 } else {
                     Button("Add website…") {
                         urlText = ""

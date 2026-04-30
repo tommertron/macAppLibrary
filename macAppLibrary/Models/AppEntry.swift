@@ -31,6 +31,7 @@ struct AppEntry: Identifiable, Hashable, Sendable {
 
     var effectiveDescription: String? { userDescription ?? communityDescription }
     var effectiveDeveloper: String? { userDeveloper ?? communityDeveloper ?? developer }
+    var effectiveWebsiteURL: String? { userWebsiteURL ?? communityURL }
 
     var effectiveCategories: [String] {
         if !userCategories.isEmpty { return userCategories }
