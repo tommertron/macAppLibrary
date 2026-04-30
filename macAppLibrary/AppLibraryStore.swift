@@ -262,6 +262,22 @@ final class AppLibraryStore {
         }
     }
 
+    func refreshCommunityData(for bundleID: String) async {
+        guard let communityData = try? await communityService.fetchCommunityData() else { return }
+        guard let idx = apps.firstIndex(where: { $0.bundleID == bundleID }) else { return }
+        if let c = communityData[bundleID] {
+            apps[idx].communityDescription = c.description
+            apps[idx].communityCategories = c.categories
+            apps[idx].communityDeveloper = c.developer
+            apps[idx].communityURL = c.url
+        } else {
+            apps[idx].communityDescription = nil
+            apps[idx].communityCategories = []
+            apps[idx].communityDeveloper = nil
+            apps[idx].communityURL = nil
+        }
+    }
+
     func refresh() async {
         isLoading = true
         errorMessage = nil

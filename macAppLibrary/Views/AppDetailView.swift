@@ -5,6 +5,7 @@ struct AppDetailView: View {
     @Environment(AppLibraryStore.self) private var store
     @State private var editedApp: AppEntry?
     @State private var isEditingDescription = false
+    @State private var isRefreshingCommunity = false
 
     var body: some View {
         if let app = store.selectedApp {
@@ -164,8 +165,28 @@ struct AppDetailView: View {
     @ViewBuilder
     private func communitySection(app: AppEntry) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Community")
-                .font(.headline)
+            HStack {
+                Text("Community")
+                    .font(.headline)
+                Spacer()
+                Button {
+                    isRefreshingCommunity = true
+                    Task {
+                        await store.refreshCommunityData(for: app.bundleID)
+                        isRefreshingCommunity = false
+                    }
+                } label: {
+                    if isRefreshingCommunity {
+                        ProgressView().controlSize(.small)
+                    } else {
+                        Label("Refresh", systemImage: "arrow.clockwise")
+                    }
+                }
+                .buttonStyle(.borderless)
+                .controlSize(.small)
+                .disabled(isRefreshingCommunity)
+                .help("Pull the latest community data for this app")
+            }
             if app.communityDescription != nil {
                 Label("This app has a community description", systemImage: "person.2.fill")
                     .font(.caption)
@@ -175,7 +196,6 @@ struct AppDetailView: View {
                     Text("This app isn't in the community database yet.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
-                    // TODO: Submit to Community button — will open PR via Cloudflare Worker
                     Button("Submit to Community…") {}
                         .buttonStyle(.bordered)
                         .controlSize(.small)
