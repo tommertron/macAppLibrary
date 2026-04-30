@@ -5,10 +5,6 @@ struct AppDetailView: View {
     @Environment(AppLibraryStore.self) private var store
     @State private var editedApp: AppEntry?
     @State private var isEditingDescription = false
-    @State private var isRefreshingCommunity = false
-    @State private var isSubmitting = false
-    @State private var submissionResult: SubmissionResult?
-    @State private var submissionError: String?
 
     var body: some View {
         if let app = store.selectedApp {
@@ -21,7 +17,7 @@ struct AppDetailView: View {
                     metadataSection(app: app)
                     Divider()
                     notesSection(app: app)
-                    communitySection(app: app)
+                    CommunitySectionView(app: app, store: store)
                     Spacer(minLength: 20)
                 }
                 .padding(24)
@@ -110,6 +106,14 @@ struct AppDetailView: View {
             HStack {
                 Text("Description")
                     .font(.headline)
+                CommunityPullButton(
+                    state: communityStringPullState(app.communityDescription, current: app.effectiveDescription),
+                    action: {
+                        var updated = app
+                        updated.userDescription = app.communityDescription
+                        store.updateApp(updated)
+                    }
+                )
                 Spacer()
                 if store.generatingDescriptionFor == app.id {
                     ProgressView().scaleEffect(0.7)
@@ -131,29 +135,7 @@ struct AppDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Details")
                 .font(.headline)
-            Grid(alignment: .leading, horizontalSpacing: 16, verticalSpacing: 6) {
-                metaRow("Bundle ID", value: app.bundleID)
-                metaRow("Version", value: app.version ?? "—")
-                metaRow("Size", value: app.sizeBytes.map {
-                    ByteCountFormatter.string(fromByteCount: $0, countStyle: .file)
-                } ?? (store.isLoadingMetadata ? "Loading…" : "—"))
-                metaRow("Last Launched", value: app.lastLaunched.map { formatted($0) } ?? "—")
-                metaRow("Last Modified", value: app.lastModified.map { formatted($0) } ?? "—")
-                metaRow("Path", value: app.bundlePath)
-                WebsiteRow(app: app, store: store)
-            }
-        }
-    }
-
-    @ViewBuilder
-    private func metaRow(_ label: String, value: String) -> some View {
-        GridRow {
-            Text(label)
-                .foregroundStyle(.secondary)
-                .gridColumnAlignment(.trailing)
-            Text(value)
-                .textSelection(.enabled)
-                .gridColumnAlignment(.leading)
+            AppMetadataGrid(app: app, store: store)
         }
     }
 
@@ -166,94 +148,6 @@ struct AppDetailView: View {
         }
     }
 
-    @ViewBuilder
-    private func communitySection(app: AppEntry) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text("Community")
-                    .font(.headline)
-                Spacer()
-                Button {
-                    isRefreshingCommunity = true
-                    Task {
-                        await store.refreshCommunityData(for: app.bundleID)
-                        isRefreshingCommunity = false
-                    }
-                } label: {
-                    if isRefreshingCommunity {
-                        ProgressView().controlSize(.small)
-                    } else {
-                        Label("Refresh", systemImage: "arrow.clockwise")
-                    }
-                }
-                .buttonStyle(.borderless)
-                .controlSize(.small)
-                .disabled(isRefreshingCommunity)
-                .help("Pull the latest community data for this app")
-            }
-            if app.communityDescription != nil {
-                Label("This app has a community description", systemImage: "person.2.fill")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            } else {
-                Text("This app isn't in the community database yet.")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-
-            if let result = submissionResult {
-                HStack(spacing: 4) {
-                    Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
-                    Link("PR #\(result.prNumber) opened — view on GitHub", destination: URL(string: result.prURL)!)
-                }
-                .font(.caption)
-            } else if let error = submissionError {
-                HStack(spacing: 4) {
-                    Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(.orange)
-                    Text(error)
-                }
-                .font(.caption)
-                .foregroundStyle(.secondary)
-            } else {
-                Button {
-                    isSubmitting = true
-                    submissionError = nil
-                    Task {
-                        do {
-                            let submission = CommunitySubmission(
-                                bundleID: app.bundleID,
-                                name: app.name,
-                                description: app.effectiveDescription ?? "",
-                                categories: app.effectiveCategories,
-                                developer: app.effectiveDeveloper,
-                                url: app.effectiveWebsiteURL
-                            )
-                            submissionResult = try await CommunityService().submitEntry(submission)
-                        } catch {
-                            submissionError = "Submission failed. Please try again."
-                        }
-                        isSubmitting = false
-                    }
-                } label: {
-                    if isSubmitting {
-                        ProgressView().controlSize(.small)
-                    } else {
-                        Text(app.communityDescription != nil ? "Submit corrections…" : "Submit to Community…")
-                    }
-                }
-                .buttonStyle(.bordered)
-                .controlSize(.small)
-                .disabled(isSubmitting || app.effectiveDescription == nil)
-                .help(app.effectiveDescription == nil ? "Add a description before submitting" : "Opens a GitHub PR for review")
-            }
-        }
-    }
-
-    private func formatted(_ date: Date) -> String {
-        let f = RelativeDateTimeFormatter()
-        f.unitsStyle = .full
-        return f.localizedString(for: date, relativeTo: .now)
-    }
 }
 
 // MARK: - Editable developer field
@@ -287,6 +181,14 @@ struct DeveloperField: View {
                 }
                 .buttonStyle(.plain)
                 .foregroundStyle(.tertiary)
+                CommunityPullButton(
+                    state: communityStringPullState(app.communityDeveloper, current: app.effectiveDeveloper),
+                    action: {
+                        var updated = app
+                        updated.userDeveloper = app.communityDeveloper
+                        store.updateApp(updated)
+                    }
+                )
             } else {
                 Button("Add developer…") {
                     text = ""
@@ -295,6 +197,14 @@ struct DeveloperField: View {
                 .buttonStyle(.plain)
                 .foregroundStyle(Color.accentColor)
                 .font(.caption)
+                CommunityPullButton(
+                    state: communityStringPullState(app.communityDeveloper, current: nil),
+                    action: {
+                        var updated = app
+                        updated.userDeveloper = app.communityDeveloper
+                        store.updateApp(updated)
+                    }
+                )
             }
         }
     }
@@ -343,6 +253,14 @@ struct WebsiteRow: View {
                     .buttonStyle(.plain)
                     .foregroundStyle(.secondary)
                     .help(app.userWebsiteURL == nil ? "From community data — click to override" : "Edit website")
+                    CommunityPullButton(
+                        state: communityStringPullState(app.communityURL, current: app.effectiveWebsiteURL),
+                        action: {
+                            var updated = app
+                            updated.userWebsiteURL = app.communityURL
+                            store.updateApp(updated)
+                        }
+                    )
                 } else {
                     Button("Add website…") {
                         urlText = ""
@@ -351,6 +269,14 @@ struct WebsiteRow: View {
                     .buttonStyle(.plain)
                     .foregroundStyle(Color.accentColor)
                     .font(.caption)
+                    CommunityPullButton(
+                        state: communityStringPullState(app.communityURL, current: nil),
+                        action: {
+                            var updated = app
+                            updated.userWebsiteURL = app.communityURL
+                            store.updateApp(updated)
+                        }
+                    )
                 }
             }
             .gridColumnAlignment(.leading)
@@ -422,6 +348,15 @@ struct CategoryPickerInline: View {
                 }
                 .buttonStyle(.plain)
                 .foregroundStyle(.secondary)
+
+                CommunityPullButton(
+                    state: communityArrayPullState(app.communityCategories, current: app.effectiveCategories),
+                    action: {
+                        var updated = app
+                        updated.userCategories = app.communityCategories
+                        store.updateApp(updated)
+                    }
+                )
             }
         }
     }
@@ -503,6 +438,44 @@ struct CategoryAutocompleteField: View {
             }
         }
         .onAppear { isFocused = true }
+    }
+}
+
+// MARK: - Shared metadata grid (used in both list and gallery expanded views)
+struct AppMetadataGrid: View {
+    let app: AppEntry
+    let store: AppLibraryStore
+
+    var body: some View {
+        Grid(alignment: .leading, horizontalSpacing: 16, verticalSpacing: 6) {
+            metaRow("Bundle ID", value: app.bundleID)
+            metaRow("Version", value: app.version ?? "—")
+            metaRow("Size", value: app.sizeBytes.map {
+                ByteCountFormatter.string(fromByteCount: $0, countStyle: .file)
+            } ?? (store.isLoadingMetadata ? "Loading…" : "—"))
+            metaRow("Last Launched", value: app.lastLaunched.map { formatted($0) } ?? "—")
+            metaRow("Last Modified", value: app.lastModified.map { formatted($0) } ?? "—")
+            metaRow("Path", value: app.bundlePath)
+            WebsiteRow(app: app, store: store)
+        }
+    }
+
+    @ViewBuilder
+    private func metaRow(_ label: String, value: String) -> some View {
+        GridRow {
+            Text(label)
+                .foregroundStyle(.secondary)
+                .gridColumnAlignment(.trailing)
+            Text(value)
+                .textSelection(.enabled)
+                .gridColumnAlignment(.leading)
+        }
+    }
+
+    private func formatted(_ date: Date) -> String {
+        let f = RelativeDateTimeFormatter()
+        f.unitsStyle = .full
+        return f.localizedString(for: date, relativeTo: .now)
     }
 }
 
@@ -603,5 +576,180 @@ struct NotesEditor: View {
         updated.userNotes = text.isEmpty ? nil : text
         store.updateApp(updated)
         isEditing = false
+    }
+}
+
+// MARK: - Community pull helpers
+
+enum CommunityPullState { case available, synced, unavailable }
+
+func communityStringPullState(_ community: String?, current: String?) -> CommunityPullState {
+    guard let cv = community, !cv.isEmpty else { return .unavailable }
+    return cv == current ? .synced : .available
+}
+
+func communityArrayPullState(_ community: [String], current: [String]) -> CommunityPullState {
+    guard !community.isEmpty else { return .unavailable }
+    return community == current ? .synced : .available
+}
+
+// MARK: - Community pull button
+
+struct CommunityPullButton: View {
+    let state: CommunityPullState
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: imageName)
+                .font(.caption)
+                .foregroundStyle(color)
+        }
+        .buttonStyle(.plain)
+        .disabled(state != .available)
+        .help(helpText)
+    }
+
+    private var imageName: String {
+        switch state {
+        case .available:   return "arrow.down.circle.fill"
+        case .synced:      return "checkmark.circle.fill"
+        case .unavailable: return "circle.slash"
+        }
+    }
+
+    private var color: Color {
+        switch state {
+        case .available:   return .green
+        case .synced:      return .secondary
+        case .unavailable: return .red
+        }
+    }
+
+    private var helpText: String {
+        switch state {
+        case .available:   return "Pull from community"
+        case .synced:      return "Matches community data"
+        case .unavailable: return "No community data for this field"
+        }
+    }
+}
+
+// MARK: - Shared community section (list and gallery)
+
+struct CommunitySectionView: View {
+    let app: AppEntry
+    let store: AppLibraryStore
+
+    @State private var isRefreshing = false
+    @State private var isSubmitting = false
+    @State private var submissionResult: SubmissionResult?
+    @State private var submissionError: String?
+
+    private var hasCommunityData: Bool {
+        app.communityDescription != nil || app.communityDeveloper != nil ||
+        !app.communityCategories.isEmpty || app.communityURL != nil
+    }
+
+    private var matchesCommunity: Bool {
+        app.effectiveDescription == app.communityDescription &&
+        app.effectiveCategories == app.communityCategories &&
+        app.effectiveDeveloper == app.communityDeveloper &&
+        app.effectiveWebsiteURL == app.communityURL
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Text("Community")
+                    .font(.headline)
+                Spacer()
+                if hasCommunityData {
+                    Button("Pull All") {
+                        store.pullCommunityFieldsToUser(for: app.bundleID)
+                    }
+                    .buttonStyle(.borderless)
+                    .controlSize(.small)
+                    .help("Pull all available community data into your app info")
+                }
+                Button {
+                    isRefreshing = true
+                    Task {
+                        await store.refreshCommunityData(for: app.bundleID)
+                        isRefreshing = false
+                    }
+                } label: {
+                    if isRefreshing {
+                        ProgressView().controlSize(.small)
+                    } else {
+                        Label("Refresh", systemImage: "arrow.clockwise")
+                    }
+                }
+                .buttonStyle(.borderless)
+                .controlSize(.small)
+                .disabled(isRefreshing)
+                .help("Pull the latest community data for this app")
+            }
+
+            if app.communityDescription != nil {
+                Label("This app has a community description", systemImage: "person.2.fill")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("This app isn't in the community database yet.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            if let result = submissionResult {
+                HStack(spacing: 4) {
+                    Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
+                    Link("PR #\(result.prNumber) opened — view on GitHub", destination: URL(string: result.prURL)!)
+                }
+                .font(.caption)
+            } else if let error = submissionError {
+                HStack(spacing: 4) {
+                    Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(.orange)
+                    Text(error)
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            } else {
+                Button {
+                    isSubmitting = true
+                    submissionError = nil
+                    Task {
+                        do {
+                            let submission = CommunitySubmission(
+                                bundleID: app.bundleID,
+                                name: app.name,
+                                description: app.effectiveDescription ?? "",
+                                categories: app.effectiveCategories,
+                                developer: app.effectiveDeveloper,
+                                url: app.effectiveWebsiteURL
+                            )
+                            submissionResult = try await CommunityService().submitEntry(submission)
+                        } catch {
+                            submissionError = "Submission failed. Please try again."
+                        }
+                        isSubmitting = false
+                    }
+                } label: {
+                    if isSubmitting {
+                        ProgressView().controlSize(.small)
+                    } else {
+                        Text(app.communityDescription != nil ? "Submit information…" : "Submit to Community…")
+                    }
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.small)
+                .disabled(isSubmitting || app.effectiveDescription == nil || matchesCommunity)
+                .help(
+                    app.effectiveDescription == nil ? "Add a description before submitting" :
+                    matchesCommunity ? "Your data already matches the community" :
+                    "Opens a GitHub PR for review"
+                )
+            }
+        }
     }
 }

@@ -74,6 +74,14 @@ struct GalleryExpandedDetailView: View {
                         HStack {
                             Text("Description")
                                 .font(.headline)
+                            CommunityPullButton(
+                                state: communityStringPullState(app.communityDescription, current: app.effectiveDescription),
+                                action: {
+                                    var updated = app
+                                    updated.userDescription = app.communityDescription
+                                    store.updateApp(updated)
+                                }
+                            )
                             Spacer()
                             if store.generatingDescriptionFor == app.id {
                                 ProgressView().scaleEffect(0.7)
@@ -93,6 +101,10 @@ struct GalleryExpandedDetailView: View {
                             .font(.headline)
                         NotesEditor(app: app, store: store)
                     }
+
+                    Divider()
+
+                    CommunitySectionView(app: app, store: store)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
 
@@ -103,19 +115,8 @@ struct GalleryExpandedDetailView: View {
 
                     Divider()
 
-                    Grid(alignment: .leading, horizontalSpacing: 12, verticalSpacing: 6) {
-                        if let version = app.version {
-                            metaRow("Version", value: version)
-                        }
-                        metaRow("Size", value: app.sizeBytes.map {
-                            ByteCountFormatter.string(fromByteCount: $0, countStyle: .file)
-                        } ?? "—")
-                        if let lastLaunched = app.lastLaunched {
-                            metaRow("Last Launched", value: formatted(lastLaunched))
-                        }
-                        WebsiteRow(app: app, store: store)
-                    }
-                    .font(.subheadline)
+                    AppMetadataGrid(app: app, store: store)
+                        .font(.subheadline)
                 }
                 .frame(maxWidth: 300, alignment: .leading)
             }
@@ -132,21 +133,4 @@ struct GalleryExpandedDetailView: View {
         .id(app.id)
     }
 
-    @ViewBuilder
-    private func metaRow(_ label: String, value: String) -> some View {
-        GridRow {
-            Text(label)
-                .foregroundStyle(.secondary)
-                .gridColumnAlignment(.trailing)
-            Text(value)
-                .textSelection(.enabled)
-                .gridColumnAlignment(.leading)
-        }
-    }
-
-    private func formatted(_ date: Date) -> String {
-        let f = RelativeDateTimeFormatter()
-        f.unitsStyle = .full
-        return f.localizedString(for: date, relativeTo: .now)
-    }
 }

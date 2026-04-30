@@ -106,6 +106,8 @@ final class AppLibraryStore {
     }
     var expandedAppID: String?
     var runningBundleIDs: Set<String> = []
+    var isRefreshingAllCommunity = false
+    var isSubmittingAllToCommunity = false
 
     // Sidebar pinned items — persisted as JSON array of encoded SidebarPin values
     var pinnedItems: [SidebarPin] = [] {
@@ -267,6 +269,71 @@ final class AppLibraryStore {
             apps[idx].communityDeveloper = nil
             apps[idx].communityURL = nil
         }
+    }
+
+    func refreshAllCommunityData() async {
+        isRefreshingAllCommunity = true
+        defer { isRefreshingAllCommunity = false }
+        guard let communityData = try? await communityService.fetchCommunityData() else { return }
+        for i in apps.indices {
+            let bundleID = apps[i].bundleID
+            if let c = communityData[bundleID] {
+                apps[i].communityDescription = c.description
+                apps[i].communityCategories = c.categories
+                apps[i].communityDeveloper = c.developer
+                apps[i].communityURL = c.url
+            } else {
+                apps[i].communityDescription = nil
+                apps[i].communityCategories = []
+                apps[i].communityDeveloper = nil
+                apps[i].communityURL = nil
+            }
+        }
+    }
+
+    var appsWithUserChanges: [AppEntry] {
+        apps.filter { app in
+            guard app.effectiveDescription != nil else { return false }
+            let changedDesc = app.userDescription.map { !$0.isEmpty && $0 != app.communityDescription } ?? false
+            let changedDev = app.userDeveloper.map { !$0.isEmpty && $0 != app.communityDeveloper } ?? false
+            let changedCats = !app.userCategories.isEmpty && app.userCategories != app.communityCategories
+            let changedURL = app.userWebsiteURL.map { !$0.isEmpty && $0 != app.communityURL } ?? false
+            return changedDesc || changedDev || changedCats || changedURL
+        }
+    }
+
+    func submitAllChangedToCommunity() async -> (submitted: Int, failed: Int) {
+        isSubmittingAllToCommunity = true
+        defer { isSubmittingAllToCommunity = false }
+        var submitted = 0
+        var failed = 0
+        for app in appsWithUserChanges {
+            do {
+                let submission = CommunitySubmission(
+                    bundleID: app.bundleID,
+                    name: app.name,
+                    description: app.effectiveDescription ?? "",
+                    categories: app.effectiveCategories,
+                    developer: app.effectiveDeveloper,
+                    url: app.effectiveWebsiteURL
+                )
+                _ = try await CommunityService().submitEntry(submission)
+                submitted += 1
+            } catch {
+                failed += 1
+            }
+        }
+        return (submitted, failed)
+    }
+
+    func pullCommunityFieldsToUser(for bundleID: String) {
+        guard let idx = apps.firstIndex(where: { $0.bundleID == bundleID }) else { return }
+        var app = apps[idx]
+        if let desc = app.communityDescription { app.userDescription = desc }
+        if let dev = app.communityDeveloper { app.userDeveloper = dev }
+        if !app.communityCategories.isEmpty { app.userCategories = app.communityCategories }
+        if let url = app.communityURL { app.userWebsiteURL = url }
+        updateApp(app)
     }
 
     func refresh() async {

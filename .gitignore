@@ -9,6 +9,7 @@ xcuserdata/
 
 # Xcode build
 build/
+dist/
 DerivedData/
 *.moved-aside
 *.hmap
