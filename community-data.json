@@ -99,6 +99,14 @@
       "Developer Tools"
     ]
   },
+  "com.nick.Clic": {
+    "name": "Clic",
+    "description": "An alternate way to control your Sonos system, with widgets and more.",
+    "categories": [
+      "Audio"
+    ],
+    "developer": "Clic for Sonos Inc."
+  },
   "com.daisydiskapp.DaisyDisk": {
     "name": "DaisyDisk",
     "description": "A visual disk space analyzer that shows your drive as an interactive sunburst map, making it easy to find and reclaim space.",
