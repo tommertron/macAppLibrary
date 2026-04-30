@@ -25,10 +25,13 @@
   },
   "com.chabomakers.Antinote": {
     "name": "Antinote",
-    "description": "A minimal, distraction-free note-taking app that lives in your menu bar for quick capture.",
+    "description": "A minimal, distraction-free note-taking app that lives in your menu bar for quick capture. TEST2",
     "categories": [
-      "Productivity"
-    ]
+      "Productivity",
+      "Notes"
+    ],
+    "developer": "https://antinote.io/     Report bugs to Discord: https://discord.gg/Vs5Xxju7mK",
+    "url": "https://antinote.io/"
   },
   "cc.anybox.Anybox": {
     "name": "Anybox",
