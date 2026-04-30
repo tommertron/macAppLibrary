@@ -4,21 +4,24 @@
     "description": "A powerful batch file renaming utility with dozens of renaming methods, previews, and automation support.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Frank Reiff"
   },
   "com.flyingmeat.Acorn8": {
     "name": "Acorn",
     "description": "A full-featured image editor designed for Mac with layers, filters, and non-destructive editing.",
     "categories": [
       "Graphics & Design"
-    ]
+    ],
+    "developer": "Flying Meat Inc"
   },
   "com.if.Amphetamine": {
     "name": "Amphetamine",
     "description": "Keeps your Mac awake on demand, preventing sleep during downloads, presentations, or long tasks.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "William C. Gustafson"
   },
   "com.chabomakers.Antinote": {
     "name": "Antinote",
@@ -32,7 +35,8 @@
     "description": "A powerful bookmarking app for saving links, files, and notes with tagging, search, and reading list features.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Anybox LTD"
   },
   "org.audacityteam.audacity": {
     "name": "Audacity",
@@ -46,28 +50,32 @@
     "description": "A professional text editor for macOS with powerful search, syntax highlighting, and scripting for developers and writers alike.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "Bare Bones Software, Inc"
   },
   "net.shinyfrog.bear": {
     "name": "Bear",
     "description": "A beautiful writing app for crafting notes and prose, with Markdown support, tagging, and seamless sync across Apple devices.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Shiny Frog"
   },
   "com.kruegersystems.calca.mac": {
     "name": "Calca",
     "description": "A symbolic calculator that lets you write math expressions and see live results inline, like a scratchpad for calculations.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Krueger Systems, Inc"
   },
   "com.flexibits.cardhop.mac": {
     "name": "Cardhop",
     "description": "A contacts app with a natural language input bar, making it fast to add, edit, and interact with people in your address book.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Flexibits Inc"
   },
   "com.openai.chat": {
     "name": "ChatGPT",
@@ -81,7 +89,8 @@
     "description": "Anthropic's AI assistant desktop app, offering thoughtful conversation, writing help, coding support, and in-depth analysis.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Anthropic PBC"
   },
   "com.openai.codex": {
     "name": "Codex",
@@ -95,7 +104,8 @@
     "description": "A visual disk space analyzer that shows your drive as an interactive sunburst map, making it easy to find and reclaim space.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Software Ambience Corp"
   },
   "com.charliemchapman.dark-noise": {
     "name": "Dark Noise",
@@ -116,7 +126,8 @@
     "description": "A package tracking app that monitors shipments from all major carriers and notifies you of delivery updates.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Junecloud LLC"
   },
   "com.hnc.Discord": {
     "name": "Discord",
@@ -137,28 +148,32 @@
     "description": "A platform for building, running, and sharing containerized applications on your Mac via a friendly desktop interface.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "Docker, Inc"
   },
   "com.agiletortoise.Drafts-OSX": {
     "name": "Drafts",
     "description": "A quick-capture writing app where text starts here \u2014 capture ideas fast and then send them anywhere with powerful actions.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Agile Tortoise"
   },
   "com.phocusllp.duemac": {
     "name": "Due",
     "description": "A reminders app that nags you until things are done, with natural language input and persistent alerts that don't let you forget.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Due Pte. Ltd"
   },
   "com.flexibits.fantastical2.mac": {
     "name": "Fantastical",
     "description": "A calendar and task manager with natural language event creation, beautiful views, and deep integration with Apple's ecosystem.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Flexibits Inc"
   },
   "com.rogueamoeba.farrago": {
     "name": "Farrago",
@@ -172,14 +187,16 @@
     "description": "A powerful file search tool that goes beyond Spotlight, searching by name, type, date, or content even in system and hidden folders.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Thomas Tempelmann"
   },
   "com.binarynights.ForkLift": {
     "name": "ForkLift",
     "description": "A dual-pane file manager with built-in FTP, SFTP, S3, and WebDAV support, plus syncing, archiving, and remote editing.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "BinaryNights"
   },
   "com.charliemchapman.ScreenFrames": {
     "name": "Framous",
@@ -193,7 +210,8 @@
     "description": "GitHub's official desktop client for managing repositories, pull requests, and branches with a visual interface.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "GitHub, Inc"
   },
   "com.ngocluu.goodlinks": {
     "name": "GoodLinks",
@@ -214,7 +232,8 @@
     "description": "An automated file organizer that watches folders and applies rules to sort, rename, tag, or delete files automatically.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Noodlesoft, LLC"
   },
   "se.oblador.Hush": {
     "name": "Hush",
@@ -228,7 +247,8 @@
     "description": "A focused writing app with a minimal interface, Markdown support, and a distraction-free writing environment for long-form content.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Information Architects Inc"
   },
   "com.apple.iMovieApp": {
     "name": "iMovie",
@@ -242,7 +262,8 @@
     "description": "A read-later service that saves articles in a clean, distraction-free format for reading offline or at your own pace.",
     "categories": [
       "News"
-    ]
+    ],
+    "developer": "Instant Paper, Inc"
   },
   "com.tapbots.Ivory": {
     "name": "Ivory",
@@ -256,49 +277,56 @@
     "description": "A powerful macro and automation tool for macOS that can automate virtually anything \u2014 keystrokes, menus, scripts, and more.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Stairways Software"
   },
   "app.longplay.Longplay-Mac": {
     "name": "Longplay",
     "description": "A music player focused on albums, presenting your library as a beautiful grid of cover art for intentional, front-to-back listening.",
     "categories": [
       "Music & Audio"
-    ]
+    ],
+    "developer": "Adrian Sch\u00f6nig"
   },
   "com.brettterpstra.marked2": {
     "name": "Marked 2",
     "description": "A Markdown preview app that works alongside any editor, rendering documents in real time with custom styles and export options.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Brett Terpstra"
   },
   "recipes.mela.appkit": {
     "name": "Mela",
     "description": "A recipe manager for collecting, organizing, and cooking from recipes, with import from the web and meal planning features.",
     "categories": [
       "Food & Drink"
-    ]
+    ],
+    "developer": "Silvio Rizzi"
   },
   "com.mimestream.Mimestream": {
     "name": "Mimestream",
     "description": "A native Gmail client for Mac built with SwiftUI, offering a fast, beautiful email experience with full Google account integration.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Mimestream, LLC"
   },
   "br.com.marcosatanaka.musicbox": {
     "name": "MusicBox",
     "description": "A music save-for-later app that lets you capture songs, albums, and playlists from any source to enjoy or explore later.",
     "categories": [
       "Music & Audio"
-    ]
+    ],
+    "developer": "Marcos Tanaka"
   },
   "com.manytricks.NameMangler": {
     "name": "Name Mangler",
     "description": "A batch file renamer with a live preview, supporting pattern matching, sequences, metadata insertion, and complex rename chains.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Many Tricks"
   },
   "pl.micropixels.NepTunes": {
     "name": "NepTunes",
@@ -312,7 +340,8 @@
     "description": "A free, open-source RSS reader for Mac and iOS with iCloud sync and a clean, native reading experience.",
     "categories": [
       "News"
-    ]
+    ],
+    "developer": "Brent Simmons"
   },
   "nl.jeffreykuiken.NoirApp.mac": {
     "name": "Noir",
@@ -326,7 +355,8 @@
     "description": "A powerful knowledge base and note-taking app that works on local Markdown files with bidirectional linking and a plugin ecosystem.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Dynalist Inc"
   },
   "md.obsidian.Obsidian-Web-Clipper": {
     "name": "Obsidian Web Clipper",
@@ -340,42 +370,48 @@
     "description": "A JSON viewer and formatter that integrates with browsers to display JSON responses in a readable, collapsible tree format.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "Anybox LTD"
   },
   "com.tapbots.Pastebot2Mac": {
     "name": "Pastebot",
     "description": "A clipboard manager with filters, transformations, and syncing, letting you search and reuse anything you've ever copied.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Tapbots LLC"
   },
   "com.pixelmatorteam.pixelmator.x": {
     "name": "Pixelmator Pro",
     "description": "A professional photo editor and image design app for Mac with AI-powered tools, layers, and full RAW support.",
     "categories": [
       "Graphics & Design"
-    ]
+    ],
+    "developer": "Apple Inc"
   },
   "br.com.marcosatanaka.play": {
     "name": "Play",
     "description": "A YouTube watch-later app that lets you save videos to a personal queue and watch them on your own schedule.",
     "categories": [
       "Entertainment"
-    ]
+    ],
+    "developer": "Marcos Tanaka"
   },
   "io.raindrop.macapp": {
     "name": "Raindrop.io",
     "description": "A cross-platform bookmarking manager with collections, tags, full-text search, and a browser extension for saving anything from the web.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Rustem Mussabekov"
   },
   "com.raycast.macos": {
     "name": "Raycast",
     "description": "A blazing-fast launcher and productivity tool for Mac with extensions for almost everything \u2014 search, snippets, scripts, and AI.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Raycast Technologies Ltd."
   },
   "com.apple.Safari": {
     "name": "Safari",
@@ -389,28 +425,32 @@
     "description": "A VNC and remote desktop client for controlling other Macs and computers from your Mac with a smooth, native interface.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Edovia Inc"
   },
   "com.apple.SFSymbols": {
     "name": "SF Symbols",
     "description": "Apple's browser and reference tool for the SF Symbols icon library, used by developers to find and export symbols for their apps.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "Apple Inc"
   },
   "org.whispersystems.signal-desktop": {
     "name": "Signal",
     "description": "A privacy-focused encrypted messaging app for text, voice, and video calls with no ads and no data collection.",
     "categories": [
       "Social Networking"
-    ]
+    ],
+    "developer": "Signal Messenger, LLC"
   },
   "com.tinyspeck.slackmacgap": {
     "name": "Slack",
     "description": "A team communication platform with channels, direct messages, file sharing, and integrations for workplace collaboration.",
     "categories": [
       "Business"
-    ]
+    ],
+    "developer": "Slack Technologies LLC, a Salesforce company"
   },
   "com.replay.sleeve": {
     "name": "Sleeve",
@@ -424,7 +464,8 @@
     "description": "A smart calculator notepad that understands natural language math, making it easy to work through calculations with context.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Acqualia Software"
   },
   "com.appliedphasor.secure-shellfish": {
     "name": "ShellFish",
@@ -438,84 +479,96 @@
     "description": "A collection of small Mac utilities and enhancements packed into one app \u2014 window management, system tweaks, and productivity boosts.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Sindre Sorhus"
   },
   "com.ameba.SwiftBar": {
     "name": "SwiftBar",
     "description": "A menu bar app that runs any script or executable and displays its output, making it easy to build custom menu bar plugins.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Ameba Labs"
   },
   "io.tailscale.ipn.macos": {
     "name": "Tailscale",
     "description": "A zero-config VPN built on WireGuard that connects your devices in a private mesh network for secure remote access.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Tailscale Inc"
   },
   "dev.leitmotif.taska": {
     "name": "Taska",
     "description": "A GitHub Issues and project management client for Mac, giving developers a native interface for tracking and managing tasks.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "Leitmotif GmbH"
   },
   "com.valerijs.boguckis.store.TextSniper": {
     "name": "TextSniper",
     "description": "Captures text from anywhere on your screen using OCR \u2014 grab text from images, PDFs, videos, or anything you can see.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Valerijs Boguckis"
   },
   "com.culturedcode.ThingsMac": {
     "name": "Things 3",
     "description": "An award-winning personal task manager with a clean, delightful design for capturing, organizing, and completing your to-dos.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Cultured Code"
   },
   "com.todoist.mac.Todoist": {
     "name": "Todoist",
     "description": "A cross-platform task manager with natural language input, projects, priorities, and collaboration features for teams and individuals.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Doist"
   },
   "com.iconfactory.Tot": {
     "name": "Tot",
     "description": "A tiny text scratchpad that lives in your menu bar, offering seven color-coded slots for notes, snippets, and quick drafts.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "The Iconfactory"
   },
   "org.m0k.transmission": {
     "name": "Transmission",
     "description": "A lightweight, open-source BitTorrent client for Mac with a minimal interface and low resource usage.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "The Transmission Project"
   },
   "com.panic.transmit.mas": {
     "name": "Transmit",
     "description": "A professional file transfer app for Mac supporting FTP, SFTP, S3, WebDAV, and many cloud services with a dual-pane interface.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "developer": "Panic Inc"
   },
   "org.videolan.vlc": {
     "name": "VLC",
     "description": "A free, open-source media player that plays virtually any video or audio format without additional codecs.",
     "categories": [
       "Video"
-    ]
+    ],
+    "developer": "VideoLAN"
   },
   "com.apple.dt.Xcode": {
     "name": "Xcode",
     "description": "Apple's integrated development environment for building apps for iOS, macOS, watchOS, tvOS, and visionOS with Swift and Objective-C.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "Apple Inc"
   },
   "dev.zed.Zed": {
     "name": "Zed",
@@ -529,27 +582,31 @@
     "description": "A video conferencing platform for meetings, webinars, and collaboration with screen sharing and recording features.",
     "categories": [
       "Business"
-    ]
+    ],
+    "developer": "Zoom Communications, Inc"
   },
   "com.apple.iWork.Keynote": {
     "name": "Keynote",
     "description": "Apple's presentation software with stunning templates, cinematic transitions, and real-time collaboration.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Apple Inc"
   },
   "com.apple.iWork.Numbers": {
     "name": "Numbers",
     "description": "Apple's spreadsheet app with flexible canvas layouts, powerful formulas, and beautiful charts.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Apple Inc"
   },
   "com.apple.iWork.Pages": {
     "name": "Pages",
     "description": "Apple's word processor with rich templates, real-time collaboration, and seamless export to Word and PDF.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "developer": "Apple Inc"
   }
 }
