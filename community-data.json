@@ -161,7 +161,7 @@
   },
   "com.agiletortoise.Drafts-OSX": {
     "name": "Drafts",
-    "description": "A quick-capture writing app where text starts here \u2014 capture ideas fast and then send them anywhere with powerful actions.",
+    "description": "A quick-capture writing app where text starts here — capture ideas fast and then send them anywhere with powerful actions.",
     "categories": [
       "Productivity"
     ],
@@ -185,7 +185,7 @@
   },
   "com.rogueamoeba.farrago": {
     "name": "Farrago",
-    "description": "A soundboard app for Mac that lets you organize and trigger audio clips instantly \u2014 great for podcasters, streamers, and presenters.",
+    "description": "A soundboard app for Mac that lets you organize and trigger audio clips instantly — great for podcasters, streamers, and presenters.",
     "categories": [
       "Music & Audio"
     ]
@@ -282,7 +282,7 @@
   },
   "com.stairways.keyboardmaestro.editor": {
     "name": "Keyboard Maestro",
-    "description": "A powerful macro and automation tool for macOS that can automate virtually anything \u2014 keystrokes, menus, scripts, and more.",
+    "description": "A powerful macro and automation tool for macOS that can automate virtually anything — keystrokes, menus, scripts, and more.",
     "categories": [
       "Utilities"
     ],
@@ -294,7 +294,7 @@
     "categories": [
       "Music & Audio"
     ],
-    "developer": "Adrian Sch\u00f6nig"
+    "developer": "Adrian Schönig"
   },
   "com.brettterpstra.marked2": {
     "name": "Marked 2",
@@ -415,7 +415,7 @@
   },
   "com.raycast.macos": {
     "name": "Raycast",
-    "description": "A blazing-fast launcher and productivity tool for Mac with extensions for almost everything \u2014 search, snippets, scripts, and AI.",
+    "description": "A blazing-fast launcher and productivity tool for Mac with extensions for almost everything — search, snippets, scripts, and AI.",
     "categories": [
       "Productivity"
     ],
@@ -484,7 +484,7 @@
   },
   "com.sindresorhus.Supercharge": {
     "name": "Supercharge",
-    "description": "A collection of small Mac utilities and enhancements packed into one app \u2014 window management, system tweaks, and productivity boosts.",
+    "description": "A collection of small Mac utilities and enhancements packed into one app — window management, system tweaks, and productivity boosts.",
     "categories": [
       "Utilities"
     ],
@@ -516,7 +516,7 @@
   },
   "com.valerijs.boguckis.store.TextSniper": {
     "name": "TextSniper",
-    "description": "Captures text from anywhere on your screen using OCR \u2014 grab text from images, PDFs, videos, or anything you can see.",
+    "description": "Captures text from anywhere on your screen using OCR — grab text from images, PDFs, videos, or anything you can see.",
     "categories": [
       "Productivity"
     ],
