@@ -33,6 +33,7 @@ struct SidebarView: View {
                 ForEach(SmartFilter.allCases) { filter in
                     HStack {
                         Label(filter.rawValue, systemImage: filter.icon)
+                            .foregroundStyle(filter == .running ? .green : .primary)
                         Spacer()
                         let n = store.count(for: filter)
                         if n > 0 {
@@ -101,6 +102,7 @@ struct SidebarView: View {
             if let filter = SmartFilter(rawValue: pin.value) {
                 HStack {
                     Label(filter.rawValue, systemImage: filter.icon)
+                        .foregroundStyle(filter == .running ? .green : .primary)
                     Spacer()
                     let n = store.count(for: filter)
                     if n > 0 {

@@ -35,11 +35,25 @@ struct AppListView: View {
 
 struct AppRowView: View {
     let app: AppEntry
+    @Environment(AppLibraryStore.self) private var store
+
+    private var isRunning: Bool {
+        store.runningBundleIDs.contains(app.bundleID)
+    }
 
     var body: some View {
         HStack(spacing: 12) {
             AppIconView(bundlePath: app.bundlePath)
                 .frame(width: 40, height: 40)
+                .overlay(alignment: .topLeading) {
+                    if app.isFavorite {
+                        Image(systemName: "star.fill")
+                            .font(.system(size: 10))
+                            .foregroundStyle(.yellow)
+                            .shadow(color: .black.opacity(0.3), radius: 1)
+                            .offset(x: -4, y: -4)
+                    }
+                }
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(app.name)
@@ -58,11 +72,12 @@ struct AppRowView: View {
                 if !app.effectiveCategories.isEmpty {
                     Text(app.effectiveCategories.joined(separator: ", "))
                         .font(.caption2)
+                        .foregroundStyle(Color.accentColor)
                         .padding(.horizontal, 6)
                         .padding(.vertical, 2)
-                        .background(.quaternary, in: Capsule())
-                        .foregroundStyle(.secondary)
+                        .background(Color.accentColor.opacity(0.15), in: Capsule())
                         .lineLimit(1)
+                        .compositingGroup()
                 }
                 if let size = app.sizeBytes {
                     Text(ByteCountFormatter.string(fromByteCount: size, countStyle: .file))
@@ -71,13 +86,14 @@ struct AppRowView: View {
                 }
             }
 
-            if app.isFavorite {
-                Image(systemName: "star.fill")
-                    .font(.caption)
-                    .foregroundStyle(.yellow)
-            }
+            Circle()
+                .fill(isRunning ? .green : .clear)
+                .stroke(isRunning ? .clear : Color.secondary.opacity(0.3), lineWidth: 1)
+                .frame(width: 8, height: 8)
+                .help(isRunning ? "Running" : "Not running")
         }
         .padding(.vertical, 2)
+        .contentShape(Rectangle())
     }
 }
 

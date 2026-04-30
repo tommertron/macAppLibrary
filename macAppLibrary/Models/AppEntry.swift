@@ -17,8 +17,9 @@ struct AppEntry: Identifiable, Hashable, Sendable {
 
     // Community data
     var communityDescription: String?
-    var communityCategory: String?
-    var communityTags: [String] = []
+    var communityCategories: [String] = []
+    var communityDeveloper: String?
+    var communityURL: String?
 
     // User overrides
     var userDescription: String?
@@ -29,11 +30,12 @@ struct AppEntry: Identifiable, Hashable, Sendable {
     var isFavorite: Bool = false
 
     var effectiveDescription: String? { userDescription ?? communityDescription }
-    var effectiveDeveloper: String? { userDeveloper ?? developer }
+    var effectiveDeveloper: String? { userDeveloper ?? communityDeveloper ?? developer }
 
     var effectiveCategories: [String] {
         if !userCategories.isEmpty { return userCategories }
-        if let cat = communityCategory ?? systemCategory { return [cat] }
+        if !communityCategories.isEmpty { return communityCategories }
+        if let cat = systemCategory { return [cat] }
         return []
     }
 

@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		658F19782FA2A7D700512642 /* GalleryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F19772FA2A7D700512642 /* GalleryCardView.swift */; };
+		658F197A2FA2A7EC00512642 /* GalleryExpandedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F19792FA2A7EC00512642 /* GalleryExpandedDetailView.swift */; };
+		658F197C2FA2A7FE00512642 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F197B2FA2A7FE00512642 /* GalleryView.swift */; };
 		AA0000000000000000000201 /* macAppLibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000101 /* macAppLibraryApp.swift */; };
 		AA0000000000000000000202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000102 /* ContentView.swift */; };
 		AA0000000000000000000203 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000103 /* AppEntry.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		658F19772FA2A7D700512642 /* GalleryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCardView.swift; sourceTree = "<group>"; };
+		658F19792FA2A7EC00512642 /* GalleryExpandedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryExpandedDetailView.swift; sourceTree = "<group>"; };
+		658F197B2FA2A7FE00512642 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000004 /* macAppLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macAppLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000000101 /* macAppLibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macAppLibraryApp.swift; sourceTree = "<group>"; };
 		AA0000000000000000000102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,7 +53,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		AA0000000000000000000002 /* root */ = {
+		AA0000000000000000000002 = {
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000301 /* macAppLibrary */,
@@ -95,6 +101,9 @@
 				AA0000000000000000000106 /* AppListView.swift */,
 				AA0000000000000000000107 /* AppDetailView.swift */,
 				AA0000000000000000000108 /* SettingsView.swift */,
+				658F19772FA2A7D700512642 /* GalleryCardView.swift */,
+				658F19792FA2A7EC00512642 /* GalleryExpandedDetailView.swift */,
+				658F197B2FA2A7FE00512642 /* GalleryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,12 +201,15 @@
 				AA0000000000000000000202 /* ContentView.swift in Sources */,
 				AA0000000000000000000203 /* AppEntry.swift in Sources */,
 				AA0000000000000000000204 /* CommunityData.swift in Sources */,
+				658F19782FA2A7D700512642 /* GalleryCardView.swift in Sources */,
 				AA0000000000000000000205 /* SidebarView.swift in Sources */,
+				658F197C2FA2A7FE00512642 /* GalleryView.swift in Sources */,
 				AA0000000000000000000206 /* AppListView.swift in Sources */,
 				AA0000000000000000000207 /* AppDetailView.swift in Sources */,
 				AA0000000000000000000208 /* SettingsView.swift in Sources */,
 				AA0000000000000000000209 /* AppScanner.swift in Sources */,
 				AA0000000000000000000210 /* MetadataService.swift in Sources */,
+				658F197A2FA2A7EC00512642 /* GalleryExpandedDetailView.swift in Sources */,
 				AA0000000000000000000211 /* PersistenceService.swift in Sources */,
 				AA0000000000000000000212 /* CommunityService.swift in Sources */,
 				AA0000000000000000000213 /* AIService.swift in Sources */,
@@ -330,7 +342,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = AA0000000000000000000001 /* Project object */;
 }

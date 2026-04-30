@@ -34,6 +34,17 @@ struct AppDetailView: View {
                         Label("Open", systemImage: "arrow.up.forward.app")
                     }
 
+                    if store.runningBundleIDs.contains(app.bundleID) {
+                        Button {
+                            if let runningApp = NSWorkspace.shared.runningApplications.first(where: { $0.bundleIdentifier == app.bundleID }) {
+                                runningApp.terminate()
+                            }
+                        } label: {
+                            Label("Quit", systemImage: "xmark.circle")
+                        }
+                        .tint(.red)
+                    }
+
                     Button {
                         NSWorkspace.shared.selectFile(app.bundlePath, inFileViewerRootedAtPath: "")
                     } label: {
@@ -317,8 +328,8 @@ struct CategoryPickerInline: View {
                 }
                 .padding(.horizontal, 8)
                 .padding(.vertical, 3)
-                .background(.quaternary, in: Capsule())
-                .foregroundStyle(.secondary)
+                .background(Color.accentColor.opacity(0.15), in: Capsule())
+                .foregroundStyle(Color.accentColor)
                 .font(.subheadline)
             }
 
@@ -326,8 +337,8 @@ struct CategoryPickerInline: View {
                 Text("Uncategorized")
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)
-                    .background(.quaternary, in: Capsule())
-                    .foregroundStyle(.secondary)
+                    .background(Color.accentColor.opacity(0.15), in: Capsule())
+                    .foregroundStyle(Color.accentColor)
                     .font(.subheadline)
             }
 

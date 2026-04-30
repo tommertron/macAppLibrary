@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 
 enum TimeUnit: String, CaseIterable, Identifiable, Codable {
     case days = "days"
@@ -28,6 +29,7 @@ struct ThresholdDuration: Equatable {
 }
 
 enum SmartFilter: String, CaseIterable, Identifiable, Hashable {
+    case running = "Running"
     case favorites = "Favorites"
     case unused = "Unused Apps"
     case newApps = "New Apps"
@@ -37,12 +39,18 @@ enum SmartFilter: String, CaseIterable, Identifiable, Hashable {
 
     var icon: String {
         switch self {
+        case .running: return "circle.fill"
         case .favorites: return "star.fill"
         case .unused: return "clock.badge.xmark"
         case .newApps: return "sparkles"
         case .recentlyUpdated: return "arrow.clockwise.circle"
         }
     }
+}
+
+enum ViewMode: String, CaseIterable {
+    case list
+    case gallery
 }
 
 enum SidebarSelection: Hashable {
@@ -93,6 +101,12 @@ final class AppLibraryStore {
     var generatingDescriptionFor: String?
     var errorMessage: String?
 
+    var viewMode: ViewMode = .list {
+        didSet { UserDefaults.standard.set(viewMode.rawValue, forKey: "viewMode") }
+    }
+    var expandedAppID: String?
+    var runningBundleIDs: Set<String> = []
+
     // Sidebar pinned items — persisted as JSON array of encoded SidebarPin values
     var pinnedItems: [SidebarPin] = [] {
         didSet { Self.savePinnedItems(pinnedItems) }
@@ -136,6 +150,7 @@ final class AppLibraryStore {
         recentlyUpdatedThreshold = Self.loadThreshold(key: "recentlyUpdatedThreshold", defaultValue: 1, defaultUnit: .weeks)
         pinnedItems = Self.loadPinnedItems()
         collapsedSections = Set(UserDefaults.standard.stringArray(forKey: "collapsedSidebarSections") ?? [])
+        viewMode = ViewMode(rawValue: UserDefaults.standard.string(forKey: "viewMode") ?? "list") ?? .list
     }
 
     private static func saveThreshold(_ threshold: ThresholdDuration, key: String) {
@@ -211,13 +226,15 @@ final class AppLibraryStore {
                 || (app.effectiveDescription?.lowercased().contains(q) ?? false)
                 || app.effectiveCategories.contains { $0.lowercased().contains(q) }
                 || (app.effectiveDeveloper?.lowercased().contains(q) ?? false)
-                || app.communityTags.contains { $0.lowercased().contains(q) }
+                || (app.communityURL?.lowercased().contains(q) ?? false)
         }
     }
 
     func apps(for filter: SmartFilter) -> [AppEntry] {
         let now = Date()
         switch filter {
+        case .running:
+            return apps.filter { runningBundleIDs.contains($0.bundleID) }
         case .favorites:
             return apps.filter(\.isFavorite)
         case .unused:
@@ -258,8 +275,9 @@ final class AppLibraryStore {
             var merged = entry
             if let c = communityData[entry.bundleID] {
                 merged.communityDescription = c.description
-                merged.communityCategory = c.category
-                merged.communityTags = c.tags
+                merged.communityCategories = c.categories
+                merged.communityDeveloper = c.developer
+                merged.communityURL = c.url
             }
             if let u = userData[entry.bundleID] {
                 merged.userDescription = u.description
@@ -273,6 +291,21 @@ final class AppLibraryStore {
         }
 
         await loadMetadata()
+    }
+
+    func refreshRunningApps() {
+        runningBundleIDs = Set(
+            NSWorkspace.shared.runningApplications.compactMap(\.bundleIdentifier)
+        )
+    }
+
+    func startRunningAppsTimer() {
+        refreshRunningApps()
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                self?.refreshRunningApps()
+            }
+        }
     }
 
     private func loadMetadata() async {
