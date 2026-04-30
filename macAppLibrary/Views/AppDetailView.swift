@@ -6,6 +6,9 @@ struct AppDetailView: View {
     @State private var editedApp: AppEntry?
     @State private var isEditingDescription = false
     @State private var isRefreshingCommunity = false
+    @State private var isSubmitting = false
+    @State private var submissionResult: SubmissionResult?
+    @State private var submissionError: String?
 
     var body: some View {
         if let app = store.selectedApp {
@@ -193,16 +196,55 @@ struct AppDetailView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             } else {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("This app isn't in the community database yet.")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                    Button("Submit to Community…") {}
-                        .buttonStyle(.bordered)
-                        .controlSize(.small)
-                        .disabled(true)
-                        .help("Coming soon — submissions will create a GitHub PR for review")
+                Text("This app isn't in the community database yet.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            if let result = submissionResult {
+                HStack(spacing: 4) {
+                    Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
+                    Link("PR #\(result.prNumber) opened — view on GitHub", destination: URL(string: result.prURL)!)
                 }
+                .font(.caption)
+            } else if let error = submissionError {
+                HStack(spacing: 4) {
+                    Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(.orange)
+                    Text(error)
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            } else {
+                Button {
+                    isSubmitting = true
+                    submissionError = nil
+                    Task {
+                        do {
+                            let submission = CommunitySubmission(
+                                bundleID: app.bundleID,
+                                name: app.name,
+                                description: app.effectiveDescription ?? "",
+                                categories: app.effectiveCategories,
+                                developer: app.effectiveDeveloper,
+                                url: app.effectiveWebsiteURL
+                            )
+                            submissionResult = try await CommunityService().submitEntry(submission)
+                        } catch {
+                            submissionError = "Submission failed. Please try again."
+                        }
+                        isSubmitting = false
+                    }
+                } label: {
+                    if isSubmitting {
+                        ProgressView().controlSize(.small)
+                    } else {
+                        Text(app.communityDescription != nil ? "Submit corrections…" : "Submit to Community…")
+                    }
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.small)
+                .disabled(isSubmitting || app.effectiveDescription == nil)
+                .help(app.effectiveDescription == nil ? "Add a description before submitting" : "Opens a GitHub PR for review")
             }
         }
     }
