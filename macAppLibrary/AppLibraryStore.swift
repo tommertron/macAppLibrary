@@ -24,7 +24,7 @@ struct ThresholdDuration: Equatable {
     var unit: TimeUnit
 
     func cutoffDate(from now: Date = Date()) -> Date {
-        Calendar.current.date(byAdding: unit.calendarComponent, value: -value, to: now)!
+        Calendar.current.date(byAdding: unit.calendarComponent, value: -max(1, value), to: now)!
     }
 }
 
@@ -120,22 +120,13 @@ final class AppLibraryStore {
     }
 
     var unusedThreshold: ThresholdDuration {
-        didSet {
-            unusedThreshold.value = max(1, unusedThreshold.value)
-            Self.saveThreshold(unusedThreshold, key: "unusedThreshold")
-        }
+        didSet { Self.saveThreshold(unusedThreshold, key: "unusedThreshold") }
     }
     var newAppsThreshold: ThresholdDuration {
-        didSet {
-            newAppsThreshold.value = max(1, newAppsThreshold.value)
-            Self.saveThreshold(newAppsThreshold, key: "newAppsThreshold")
-        }
+        didSet { Self.saveThreshold(newAppsThreshold, key: "newAppsThreshold") }
     }
     var recentlyUpdatedThreshold: ThresholdDuration {
-        didSet {
-            recentlyUpdatedThreshold.value = max(1, recentlyUpdatedThreshold.value)
-            Self.saveThreshold(recentlyUpdatedThreshold, key: "recentlyUpdatedThreshold")
-        }
+        didSet { Self.saveThreshold(recentlyUpdatedThreshold, key: "recentlyUpdatedThreshold") }
     }
 
     private let scanner = AppScanner()

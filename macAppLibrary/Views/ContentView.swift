@@ -16,6 +16,7 @@ struct ContentView: View {
                         .navigationSplitViewColumnWidth(min: 280, ideal: 360, max: 500)
                 } detail: {
                     AppDetailView()
+                        .id(store.selectedApp?.bundleID)
                 }
             case .gallery:
                 NavigationSplitView {

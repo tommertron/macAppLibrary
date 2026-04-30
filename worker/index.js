@@ -41,7 +41,8 @@ export default {
     }
     const fileData = await fileRes.json();
     const fileSha = fileData.sha;
-    const existing = JSON.parse(atob(fileData.content.replace(/\n/g, "")));
+    const rawBytes = Uint8Array.from(atob(fileData.content.replace(/\n/g, "")), c => c.charCodeAt(0));
+    const existing = JSON.parse(new TextDecoder().decode(rawBytes));
 
     // Build the new entry
     const entry = { name, description, categories: categories ?? [] };
