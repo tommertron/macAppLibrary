@@ -646,5 +646,13 @@
     ],
     "developer": "Haystack Software LLC",
     "url": "https://www.arqbackup.com/"
+  },
+  "net.galliumdigital.Modern-CSV": {
+    "name": "Modern CSV",
+    "description": "Read and manipulate CSV Files",
+    "categories": [
+      "Developer Tools"
+    ],
+    "url": "https://www.moderncsv.com/"
   }
 }
