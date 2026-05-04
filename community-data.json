@@ -681,5 +681,13 @@
     ],
     "developer": "Keeper Security, Inc",
     "url": "https://www.keepersecurity.com/"
+  },
+  "me.damir.dropover-mac": {
+    "name": "Dropover",
+    "description": "Dropover is a macOS utility that allows users to temporarily hold and manage multiple files and folders in a floating shelf for easy drag-and-drop operations between applications. It streamlines workflows by providing quick access to frequently used items without cluttering the desktop.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Damir Tursunovic"
   }
 }
