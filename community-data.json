@@ -636,5 +636,15 @@
     ],
     "developer": "Logitech, Inc",
     "url": "https://www.logitech.com/en-us/software/logi-options-plus"
+  },
+  "com.haystacksoftware.Arq": {
+    "name": "Arq",
+    "description": "Backup Software",
+    "categories": [
+      "Utilities",
+      "Backup"
+    ],
+    "developer": "Haystack Software LLC",
+    "url": "https://www.arqbackup.com/"
   }
 }
