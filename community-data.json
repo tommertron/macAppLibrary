@@ -654,5 +654,13 @@
       "Developer Tools"
     ],
     "url": "https://www.moderncsv.com/"
+  },
+  "com.utmapp.UTM": {
+    "name": "UTM",
+    "description": "Virtual Machine Emulator",
+    "categories": [
+      "Business"
+    ],
+    "url": "https://getutm.app/"
   }
 }
