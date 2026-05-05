@@ -689,5 +689,13 @@
       "Utilities"
     ],
     "developer": "Damir Tursunovic"
+  },
+  "org.jwz.cyberizer": {
+    "name": "Cyberizer",
+    "description": "jwz’s utility for creating fun glitchy video collages",
+    "categories": [
+      "Entertainment"
+    ],
+    "developer": "Jamie Zawinski"
   }
 }
