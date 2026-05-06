@@ -1,0 +1,161 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'build.sh'
+      - 'ExportOptions.plist'
+      - 'macAppLibrary/**'
+      - 'macAppLibrary.xcodeproj/**'
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract version
+        run: |
+          VERSION=$(awk -F'= ' '/MARKETING_VERSION/ {gsub(/;/, "", $2); print $2; exit}' macAppLibrary.xcodeproj/project.pbxproj)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Building macAppLibrary v$VERSION"
+
+      - name: Skip if version already released
+        run: |
+          if git rev-parse "v${VERSION}" >/dev/null 2>&1; then
+            echo "Tag v${VERSION} already exists — bump MARKETING_VERSION before merging."
+            exit 1
+          fi
+
+      - name: Import signing certificate
+        env:
+          CERT_B64: ${{ secrets.DEVELOPER_ID_CERT }}
+          CERT_PWD: ${{ secrets.DEVELOPER_ID_CERT_PASSWORD }}
+        run: |
+          echo "$CERT_B64" | tr -d '\n' | base64 --decode > cert.p12
+          security create-keychain -p temp build.keychain
+          security import cert.p12 -k build.keychain -P "$CERT_PWD" -T /usr/bin/codesign
+          security list-keychains -s build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p temp build.keychain
+          security set-key-partition-list -S apple-tool:,apple: -s -k temp build.keychain
+
+      - name: Build DMG
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+        run: bash build.sh
+
+      - name: Generate AI changelog
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          LAST_TAG=$(git tag --list 'v*' --sort=-v:refname | head -1)
+          if [ -n "$LAST_TAG" ]; then
+            RANGE="${LAST_TAG}..HEAD"
+            echo "Summarizing commits since ${LAST_TAG}"
+          else
+            RANGE="HEAD"
+            echo "No previous tag — summarizing all commits"
+          fi
+
+          git log $RANGE --pretty=format:'- %s%n%b' --no-merges > /tmp/commits.txt
+          if [ ! -s /tmp/commits.txt ]; then
+            echo "- No notable changes" > RELEASE_NOTES.md
+            exit 0
+          fi
+
+          jq -n --rawfile commits /tmp/commits.txt '{
+            model: "claude-sonnet-4-6",
+            max_tokens: 1024,
+            messages: [{
+              role: "user",
+              content: ("You are writing release notes for macAppLibrary, a macOS app that catalogues installed apps. Below are the git commits since the last release. Produce a concise, user-facing changelog in Markdown as a bullet list. Group related changes; skip purely internal/refactor commits unless they affect users. Do not include a heading — just the bullets. Keep it under 10 bullets.\n\nCommits:\n" + $commits)
+            }]
+          }' > /tmp/payload.json
+
+          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d @/tmp/payload.json)
+
+          echo "$RESPONSE" | jq -r '.content[0].text' > RELEASE_NOTES.md
+
+          if [ ! -s RELEASE_NOTES.md ] || [ "$(cat RELEASE_NOTES.md)" = "null" ]; then
+            echo "AI changelog generation failed; falling back to commit list."
+            echo "$RESPONSE" | jq .
+            cp /tmp/commits.txt RELEASE_NOTES.md
+          fi
+
+          echo "--- Generated RELEASE_NOTES.md ---"
+          cat RELEASE_NOTES.md
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.COEFFICIENCIES_SSH_KEY }}
+
+      - name: Push to coefficiencies
+        run: |
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+          git clone "git@github.com:tommertron/coefficiencies.git" /tmp/coefficiencies
+
+          DEST="/tmp/coefficiencies/content/apps/macapplibrary"
+          STATIC="/tmp/coefficiencies/static/apps/macapplibrary"
+          mkdir -p "$DEST/changelog" "$STATIC/archive"
+
+          for dmg in "$STATIC"/macAppLibrary-*.dmg; do
+            [ -f "$dmg" ] && mv "$dmg" "$STATIC/archive/"
+          done
+
+          cp "dist/macAppLibrary-${VERSION}.dmg" "$STATIC/"
+
+          printf '{\n  "version": "%s",\n  "download_url": "https://coefficiencies.com/apps/macapplibrary/macAppLibrary-%s.dmg"\n}\n' \
+            "${VERSION}" "${VERSION}" > "$STATIC/latest.json"
+
+          if [ -f "$DEST/_index.md" ]; then
+            sed -i '' -E "s|\[Download macAppLibrary [^ ]+ \(\.dmg\)\]\(/apps/macapplibrary/macAppLibrary-[^)]+\.dmg\)|[Download macAppLibrary ${VERSION} (.dmg)](/apps/macapplibrary/macAppLibrary-${VERSION}.dmg)|g" "$DEST/_index.md"
+
+            if ! grep -q "View Changelog" "$DEST/_index.md"; then
+              sed -i '' -E "s|(\[Download macAppLibrary [^ ]+ \(\.dmg\)\]\([^)]+\.dmg\))|\1\n\n[View Changelog](/apps/macapplibrary/changelog/)|" "$DEST/_index.md"
+            fi
+          fi
+
+          CHANGELOG="$DEST/changelog/index.md"
+          RELEASE_DATE=$(date +%Y-%m-%d)
+          NEW_ENTRY="## v${VERSION} — ${RELEASE_DATE}"$'\n'"$(cat $GITHUB_WORKSPACE/RELEASE_NOTES.md)"$'\n'
+
+          if [ -f "$CHANGELOG" ]; then
+            if head -1 "$CHANGELOG" | grep -q '^---'; then
+              FRONTMATTER_END=$(awk '/^---/{count++; if(count==2){print NR; exit}}' "$CHANGELOG")
+              head -n "$FRONTMATTER_END" "$CHANGELOG" > /tmp/changelog.tmp
+              echo "" >> /tmp/changelog.tmp
+              echo "$NEW_ENTRY" >> /tmp/changelog.tmp
+              tail -n "+$((FRONTMATTER_END + 1))" "$CHANGELOG" >> /tmp/changelog.tmp
+              mv /tmp/changelog.tmp "$CHANGELOG"
+            else
+              echo "$NEW_ENTRY" | cat - "$CHANGELOG" > /tmp/changelog.tmp && mv /tmp/changelog.tmp "$CHANGELOG"
+            fi
+          else
+            printf -- '---\ntitle: "macAppLibrary Changelog"\ndescription: "Release notes and version history for macAppLibrary."\nshowDate: false\nshowReadingTime: false\n---\n\n' > "$CHANGELOG"
+            echo "$NEW_ENTRY" >> "$CHANGELOG"
+          fi
+
+          cd /tmp/coefficiencies
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add .
+          git commit -m "release: macAppLibrary v${VERSION}"
+          git push
+
+      - name: Tag release
+        run: |
+          git tag "v${VERSION}"
+          git push origin "v${VERSION}"
