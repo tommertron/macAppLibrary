@@ -1,0 +1,8 @@
+{
+  "name": "Xcode",
+  "description": "Apple's integrated development environment for building apps for iOS, macOS, watchOS, tvOS, and visionOS with Swift and Objective-C.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Apple Inc"
+}

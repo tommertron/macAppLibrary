@@ -1,0 +1,8 @@
+{
+  "name": "ForkLift",
+  "description": "A dual-pane file manager with built-in FTP, SFTP, S3, and WebDAV support, plus syncing, archiving, and remote editing.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "BinaryNights"
+}

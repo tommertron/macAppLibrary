@@ -1,0 +1,8 @@
+{
+  "name": "Play",
+  "description": "A YouTube watch-later app that lets you save videos to a personal queue and watch them on your own schedule.",
+  "categories": [
+    "Entertainment"
+  ],
+  "developer": "Marcos Tanaka"
+}

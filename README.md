@@ -59,19 +59,19 @@ To contribute back, click **Submit to Community** on any app page, or use **File
 
 ## Community Data
 
-The community database lives in [`community-data.json`](community-data.json) at the root of this repo. Each entry is keyed by bundle ID:
+Each app in the community database is its own file under [`community-data/`](community-data/), named by bundle ID — e.g. `community-data/com.example.AppName.json`:
 
 ```json
 {
-  "com.example.AppName": {
-    "name": "App Name",
-    "description": "What this app does.",
-    "categories": ["Productivity"],
-    "developer": "Developer Name",
-    "url": "https://example.com"
-  }
+  "name": "App Name",
+  "description": "What this app does.",
+  "categories": ["Productivity"],
+  "developer": "Developer Name",
+  "url": "https://example.com"
 }
 ```
+
+The monolithic [`community-data.json`](community-data.json) at the repo root is regenerated automatically from the directory by CI on every merge to `main`, and is what the app actually fetches. This split keeps community submissions free of merge conflicts (each PR touches one file).
 
 Contributions via the in-app submit flow are welcome and appreciated.
 

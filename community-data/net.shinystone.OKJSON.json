@@ -1,0 +1,8 @@
+{
+  "name": "OK JSON",
+  "description": "A JSON viewer and formatter that integrates with browsers to display JSON responses in a readable, collapsible tree format.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Anybox LTD"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Hidden Bar",
+  "description": "Hidden Bar is a macOS utility that allows users to hide and organize menu bar icons to reduce clutter and improve screen space. It lets you selectively show or hide menu bar items with a simple click, keeping your menu bar clean while maintaining quick access to important applications.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Dwarves Foundation"
+}

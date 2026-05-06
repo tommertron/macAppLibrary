@@ -1,0 +1,8 @@
+{
+  "name": "Hazel",
+  "description": "An automated file organizer that watches folders and applies rules to sort, rename, tag, or delete files automatically.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Noodlesoft, LLC"
+}

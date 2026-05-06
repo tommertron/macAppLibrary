@@ -1,0 +1,8 @@
+{
+  "name": "Transmit",
+  "description": "A professional file transfer app for Mac supporting FTP, SFTP, S3, WebDAV, and many cloud services with a dual-pane interface.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Panic Inc"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Noir",
+  "description": "Automatically adds dark mode to websites in Safari that don't natively support it, reducing eye strain at night.",
+  "categories": [
+    "Utilities"
+  ]
+}

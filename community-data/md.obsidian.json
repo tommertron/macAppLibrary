@@ -1,0 +1,8 @@
+{
+  "name": "Obsidian",
+  "description": "A powerful knowledge base and note-taking app that works on local Markdown files with bidirectional linking and a plugin ecosystem.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Dynalist Inc"
+}

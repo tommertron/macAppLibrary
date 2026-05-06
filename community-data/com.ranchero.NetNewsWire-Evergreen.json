@@ -1,0 +1,8 @@
+{
+  "name": "NetNewsWire",
+  "description": "A free, open-source RSS reader for Mac and iOS with iCloud sync and a clean, native reading experience.",
+  "categories": [
+    "News"
+  ],
+  "developer": "Brent Simmons"
+}

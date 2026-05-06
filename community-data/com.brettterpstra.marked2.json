@@ -1,0 +1,8 @@
+{
+  "name": "Marked 2",
+  "description": "A Markdown preview app that works alongside any editor, rendering documents in real time with custom styles and export options.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Brett Terpstra"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "DaisyDisk",
+  "description": "A visual disk space analyzer that shows your drive as an interactive sunburst map, making it easy to find and reclaim space.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Software Ambience Corp"
+}

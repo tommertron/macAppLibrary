@@ -1,0 +1,8 @@
+{
+  "name": "Deliveries",
+  "description": "A package tracking app that monitors shipments from all major carriers and notifies you of delivery updates.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Junecloud LLC"
+}

@@ -1,4 +1,3 @@
-const COMMUNITY_FILE = "community-data.json";
 const BRANCH_BASE = "main";
 
 export default {
@@ -31,36 +30,40 @@ export default {
       "Content-Type": "application/json",
     };
 
-    // Fetch current file + sha
-    const fileRes = await fetch(
-      `https://api.github.com/repos/${repo}/contents/${COMMUNITY_FILE}?ref=${BRANCH_BASE}`,
-      { headers }
-    );
-    if (!fileRes.ok) {
-      return corsResponse(JSON.stringify({ error: "Failed to fetch community file" }), 502);
-    }
-    const fileData = await fileRes.json();
-    const fileSha = fileData.sha;
-    const rawBytes = Uint8Array.from(atob(fileData.content.replace(/\n/g, "")), c => c.charCodeAt(0));
-    const existing = JSON.parse(new TextDecoder().decode(rawBytes));
+    // One file per app — bundle ID becomes the filename.
+    const filePath = `community-data/${bundleID}.json`;
 
-    // Build the new entry
+    // Build the entry that will be written.
     const entry = { name, description, categories: categories ?? [] };
     if (developer) entry.developer = developer;
     if (url) entry.url = url;
 
-    const isNew = !(bundleID in existing);
-    existing[bundleID] = entry;
+    const updatedContent = btoa(unescape(encodeURIComponent(JSON.stringify(entry, null, 2) + "\n")));
 
-    const updatedContent = btoa(unescape(encodeURIComponent(JSON.stringify(existing, null, 2) + "\n")));
+    // Check whether this file already exists on main (update vs add).
+    let existingSha = null;
+    let isNew = true;
+    const existingRes = await fetch(
+      `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(filePath)}?ref=${BRANCH_BASE}`,
+      { headers }
+    );
+    if (existingRes.ok) {
+      const existingData = await existingRes.json();
+      existingSha = existingData.sha;
+      isNew = false;
+    } else if (existingRes.status !== 404) {
+      return corsResponse(JSON.stringify({ error: "Failed to check existing file" }), 502);
+    }
 
-    // Create a branch
-    const branchName = `submit/${bundleID.replace(/[^a-zA-Z0-9]/g, "-")}-${Date.now()}`;
-
+    // Branch off the latest main.
     const refRes = await fetch(`https://api.github.com/repos/${repo}/git/ref/heads/${BRANCH_BASE}`, { headers });
+    if (!refRes.ok) {
+      return corsResponse(JSON.stringify({ error: "Failed to fetch base ref" }), 502);
+    }
     const refData = await refRes.json();
     const baseSha = refData.object.sha;
 
+    const branchName = `submit/${bundleID.replace(/[^a-zA-Z0-9]/g, "-")}-${Date.now()}`;
     const createBranchRes = await fetch(`https://api.github.com/repos/${repo}/git/refs`, {
       method: "POST",
       headers,
@@ -70,29 +73,32 @@ export default {
       return corsResponse(JSON.stringify({ error: "Failed to create branch" }), 502);
     }
 
-    // Commit the updated file to the branch
-    const commitRes = await fetch(`https://api.github.com/repos/${repo}/contents/${COMMUNITY_FILE}`, {
+    // Write the per-bundle file on the new branch.
+    const commitBody = {
+      message: `Add community data for ${name} (${bundleID})`,
+      content: updatedContent,
+      branch: branchName,
+    };
+    if (existingSha) commitBody.sha = existingSha;
+
+    const commitRes = await fetch(`https://api.github.com/repos/${repo}/contents/${encodeURIComponent(filePath)}`, {
       method: "PUT",
       headers,
-      body: JSON.stringify({
-        message: `Add community data for ${name} (${bundleID})`,
-        content: updatedContent,
-        sha: fileSha,
-        branch: branchName,
-      }),
+      body: JSON.stringify(commitBody),
     });
     if (!commitRes.ok) {
-      return corsResponse(JSON.stringify({ error: "Failed to commit file" }), 502);
+      const err = await commitRes.text();
+      return corsResponse(JSON.stringify({ error: "Failed to commit file", detail: err }), 502);
     }
 
-    // Open the PR
+    // Open the PR.
     const action = isNew ? "Add" : "Update";
     const prRes = await fetch(`https://api.github.com/repos/${repo}/pulls`, {
       method: "POST",
       headers,
       body: JSON.stringify({
         title: `[Community] ${action} ${name}`,
-        body: `Community submission from macAppLibrary app.\n\n**Bundle ID:** \`${bundleID}\`\n**Name:** ${name}\n**Developer:** ${developer ?? "—"}\n**URL:** ${url ?? "—"}\n\n> Please review the description and category before merging.`,
+        body: `Community submission from macAppLibrary app.\n\n**Bundle ID:** \`${bundleID}\`\n**Name:** ${name}\n**Developer:** ${developer ?? "—"}\n**URL:** ${url ?? "—"}\n\n> Please review the description and category before merging. After merge, \`community-data.json\` is regenerated automatically.`,
         head: branchName,
         base: BRANCH_BASE,
       }),

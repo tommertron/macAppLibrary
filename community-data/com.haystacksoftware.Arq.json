@@ -1,0 +1,10 @@
+{
+  "name": "Arq",
+  "description": "Backup Software",
+  "categories": [
+    "Utilities",
+    "Backup"
+  ],
+  "developer": "Haystack Software LLC",
+  "url": "https://www.arqbackup.com/"
+}

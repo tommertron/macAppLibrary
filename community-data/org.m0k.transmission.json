@@ -1,0 +1,8 @@
+{
+  "name": "Transmission",
+  "description": "A lightweight, open-source BitTorrent client for Mac with a minimal interface and low resource usage.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "The Transmission Project"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Mela",
+  "description": "A recipe manager for collecting, organizing, and cooking from recipes, with import from the web and meal planning features.",
+  "categories": [
+    "Food & Drink"
+  ],
+  "developer": "Silvio Rizzi"
+}

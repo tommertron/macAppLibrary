@@ -1,0 +1,8 @@
+{
+  "name": "Find Any File",
+  "description": "A powerful file search tool that goes beyond Spotlight, searching by name, type, date, or content even in system and hidden folders.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Thomas Tempelmann"
+}

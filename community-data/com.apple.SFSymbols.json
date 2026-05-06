@@ -1,0 +1,8 @@
+{
+  "name": "SF Symbols",
+  "description": "Apple's browser and reference tool for the SF Symbols icon library, used by developers to find and export symbols for their apps.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Apple Inc"
+}
