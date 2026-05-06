@@ -26,6 +26,7 @@
 		AA0000000000000000000214 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000114 /* KeychainHelper.swift */; };
 		AA0000000000000000000215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000115 /* Assets.xcassets */; };
 		AA0000000000000000000217 /* AppLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000117 /* AppLibraryStore.swift */; };
+		AA0000000000000000000218 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000118 /* UpdateService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		AA0000000000000000000115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA0000000000000000000116 /* macAppLibrary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macAppLibrary.entitlements; sourceTree = "<group>"; };
 		AA0000000000000000000117 /* AppLibraryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLibraryStore.swift; sourceTree = "<group>"; };
+		AA0000000000000000000118 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -116,6 +118,7 @@
 				AA0000000000000000000111 /* PersistenceService.swift */,
 				AA0000000000000000000112 /* CommunityService.swift */,
 				AA0000000000000000000113 /* AIService.swift */,
+				AA0000000000000000000118 /* UpdateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				AA0000000000000000000212 /* CommunityService.swift in Sources */,
 				AA0000000000000000000213 /* AIService.swift in Sources */,
 				AA0000000000000000000214 /* KeychainHelper.swift in Sources */,
+				AA0000000000000000000218 /* UpdateService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +295,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tommertron.macAppLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -312,7 +316,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tommertron.macAppLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

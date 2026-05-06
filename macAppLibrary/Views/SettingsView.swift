@@ -2,8 +2,18 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(AppLibraryStore.self) private var store
+    @Environment(UpdateService.self) private var updateService
     @State private var apiKey = ""
     @State private var isSaved = false
+    @State private var updateStatus: UpdateCheckStatus = .idle
+
+    enum UpdateCheckStatus: Equatable {
+        case idle
+        case checking
+        case upToDate(latest: String)
+        case available(UpdateInfo)
+        case failed(String)
+    }
 
     var body: some View {
         Form {
@@ -75,14 +85,56 @@ struct SettingsView: View {
                 }
             }
 
+            Section("Updates") {
+                LabeledContent("Current Version", value: updateService.currentVersion)
+                if let last = updateService.lastChecked {
+                    LabeledContent("Last Checked", value: last.formatted(date: .abbreviated, time: .shortened))
+                }
+
+                HStack {
+                    Button("Check for Updates") {
+                        Task { await runUpdateCheck() }
+                    }
+                    .disabled(updateStatus == .checking)
+
+                    switch updateStatus {
+                    case .idle:
+                        EmptyView()
+                    case .checking:
+                        ProgressView().controlSize(.small)
+                    case .upToDate(let latest):
+                        Label("You're on the latest version (\(latest))", systemImage: "checkmark.circle.fill")
+                            .foregroundStyle(.green)
+                            .font(.caption)
+                    case .available(let info):
+                        Button("Download \(info.latestVersion)") {
+                            updateService.openDownloadPage()
+                        }
+                    case .failed(let message):
+                        Label(message, systemImage: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.orange)
+                            .font(.caption)
+                    }
+                }
+            }
+
             Section("About") {
-                LabeledContent("Version", value: "1.0")
                 LabeledContent("Source", value: "github.com/tommertron/macAppLibrary")
             }
         }
         .formStyle(.grouped)
         .frame(width: 480)
         .padding()
+    }
+
+    private func runUpdateCheck() async {
+        updateStatus = .checking
+        do {
+            let info = try await updateService.check()
+            updateStatus = info.isUpdateAvailable ? .available(info) : .upToDate(latest: info.latestVersion)
+        } catch {
+            updateStatus = .failed("Couldn't check: \(error.localizedDescription)")
+        }
     }
 }
 
@@ -113,4 +165,5 @@ private struct ThresholdRow: View {
 #Preview {
     SettingsView()
         .environment(AppLibraryStore())
+        .environment(UpdateService())
 }
