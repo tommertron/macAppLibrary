@@ -10,7 +10,7 @@ struct SettingsView: View {
     enum UpdateCheckStatus: Equatable {
         case idle
         case checking
-        case upToDate(latest: String)
+        case upToDate
         case available(UpdateInfo)
         case failed(String)
     }
@@ -86,7 +86,6 @@ struct SettingsView: View {
             }
 
             Section("Updates") {
-                LabeledContent("Current Version", value: updateService.currentVersion)
                 if let last = updateService.lastChecked {
                     LabeledContent("Last Checked", value: last.formatted(date: .abbreviated, time: .shortened))
                 }
@@ -102,8 +101,8 @@ struct SettingsView: View {
                         EmptyView()
                     case .checking:
                         ProgressView().controlSize(.small)
-                    case .upToDate(let latest):
-                        Label("You're on the latest version (\(latest))", systemImage: "checkmark.circle.fill")
+                    case .upToDate:
+                        Label("Up to date", systemImage: "checkmark.circle.fill")
                             .foregroundStyle(.green)
                             .font(.caption)
                     case .available(let info):
@@ -119,6 +118,8 @@ struct SettingsView: View {
             }
 
             Section("About") {
+                LabeledContent("Version", value: updateService.currentVersion)
+                LabeledContent("Build", value: updateService.currentBuild)
                 LabeledContent("Source", value: "github.com/tommertron/macAppLibrary")
             }
         }
@@ -131,7 +132,7 @@ struct SettingsView: View {
         updateStatus = .checking
         do {
             let info = try await updateService.check()
-            updateStatus = info.isUpdateAvailable ? .available(info) : .upToDate(latest: info.latestVersion)
+            updateStatus = info.isUpdateAvailable ? .available(info) : .upToDate
         } catch {
             updateStatus = .failed("Couldn't check: \(error.localizedDescription)")
         }

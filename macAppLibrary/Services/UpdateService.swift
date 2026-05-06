@@ -27,6 +27,10 @@ final class UpdateService {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
     }
 
+    var currentBuild: String {
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
+    }
+
     private struct Manifest: Decodable {
         let version: String
         let downloadURL: URL

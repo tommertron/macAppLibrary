@@ -63,6 +63,12 @@ struct macAppLibraryApp: App {
                 }
                 .disabled(store.isSubmittingAllToCommunity)
             }
+
+            CommandGroup(replacing: .help) {
+                Button("macAppLibrary Help") {
+                    NSWorkspace.shared.open(URL(string: "https://coefficiencies.com/apps/macapplibrary/")!)
+                }
+            }
         }
 
         Settings {
