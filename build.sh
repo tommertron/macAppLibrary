@@ -2,7 +2,7 @@
 set -e
 
 APP_NAME="macAppLibrary"
-VERSION="1.0"
+VERSION=$(awk -F'= ' '/MARKETING_VERSION/ {gsub(/;/, "", $2); print $2; exit}' "${APP_NAME}.xcodeproj/project.pbxproj")
 TEAM_ID="4RQBJ49K9T"
 IDENTITY="Developer ID Application: Thomas Robertson (${TEAM_ID})"
 
@@ -47,9 +47,17 @@ hdiutil create \
 echo "✅ DMG created: ${DMG_NAME}"
 
 echo "🔏 Notarizing (this takes a minute or two)..."
-xcrun notarytool submit "${DMG_NAME}" \
-    --keychain-profile "macAppLibrary" \
-    --wait
+if [ -n "${APPLE_ID}" ] && [ -n "${APPLE_APP_PASSWORD}" ]; then
+    xcrun notarytool submit "${DMG_NAME}" \
+        --apple-id "${APPLE_ID}" \
+        --password "${APPLE_APP_PASSWORD}" \
+        --team-id "${TEAM_ID}" \
+        --wait
+else
+    xcrun notarytool submit "${DMG_NAME}" \
+        --keychain-profile "macAppLibrary" \
+        --wait
+fi
 echo "📎 Stapling ticket..."
 xcrun stapler staple "${DMG_NAME}"
 echo "✅ Notarized and stapled"
