@@ -22,6 +22,8 @@ xcodebuild archive \
     -configuration Release \
     -archivePath "${ARCHIVE_PATH}" \
     DEVELOPMENT_TEAM="${TEAM_ID}" \
+    CODE_SIGN_STYLE=Manual \
+    CODE_SIGN_IDENTITY="Developer ID Application" \
     -quiet
 
 echo "📦 Exporting signed app..."
