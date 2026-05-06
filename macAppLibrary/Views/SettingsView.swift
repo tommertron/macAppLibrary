@@ -75,16 +75,6 @@ struct SettingsView: View {
                 }
             }
 
-            Section("Community Contributions") {
-                VStack(alignment: .leading, spacing: 6) {
-                    Label("PR Submission — Coming Soon", systemImage: "arrow.triangle.branch")
-                        .fontWeight(.medium)
-                    Text("Submitting missing apps to the community database will create a GitHub pull request for review. This will be handled by a Cloudflare Worker so no GitHub account is required.")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-            }
-
             Section("Updates") {
                 if let last = updateService.lastChecked {
                     LabeledContent("Last Checked", value: last.formatted(date: .abbreviated, time: .shortened))
