@@ -10,6 +10,9 @@ on:
       - 'macAppLibrary.xcodeproj/**'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: macos-latest
