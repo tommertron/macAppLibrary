@@ -1,0 +1,44 @@
+name: Regenerate community-data.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'community-data/**'
+      - '.github/workflows/regenerate-community-data.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Concatenate per-bundle files into community-data.json
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          src = pathlib.Path('community-data')
+          merged = {}
+          for f in sorted(src.glob('*.json')):
+              merged[f.stem] = json.loads(f.read_text())
+          pathlib.Path('community-data.json').write_text(
+              json.dumps(merged, indent=2) + '\n'
+          )
+          print(f'Merged {len(merged)} entries into community-data.json')
+          PY
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet community-data.json; then
+            echo "No changes to community-data.json"
+            exit 0
+          fi
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add community-data.json
+          git commit -m "Regenerate community-data.json [skip ci]"
+          git push

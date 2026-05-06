@@ -1,0 +1,8 @@
+{
+  "name": "VLC",
+  "description": "A free, open-source media player that plays virtually any video or audio format without additional codecs.",
+  "categories": [
+    "Video"
+  ],
+  "developer": "VideoLAN"
+}

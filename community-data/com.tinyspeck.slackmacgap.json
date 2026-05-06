@@ -1,0 +1,8 @@
+{
+  "name": "Slack",
+  "description": "A team communication platform with channels, direct messages, file sharing, and integrations for workplace collaboration.",
+  "categories": [
+    "Business"
+  ],
+  "developer": "Slack Technologies LLC, a Salesforce company"
+}

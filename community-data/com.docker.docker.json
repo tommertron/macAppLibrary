@@ -1,0 +1,8 @@
+{
+  "name": "Docker",
+  "description": "A platform for building, running, and sharing containerized applications on your Mac via a friendly desktop interface.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Docker, Inc"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Tailscale",
+  "description": "A zero-config VPN built on WireGuard that connects your devices in a private mesh network for secure remote access.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Tailscale Inc"
+}

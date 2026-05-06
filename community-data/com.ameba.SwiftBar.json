@@ -1,0 +1,8 @@
+{
+  "name": "SwiftBar",
+  "description": "A menu bar app that runs any script or executable and displays its output, making it easy to build custom menu bar plugins.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Ameba Labs"
+}

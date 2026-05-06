@@ -3,12 +3,17 @@ import SwiftUI
 @main
 struct macAppLibraryApp: App {
     @State private var store = AppLibraryStore()
+    @State private var updateService = UpdateService()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(store)
+                .environment(updateService)
                 .frame(minWidth: 900, minHeight: 600)
+                .task {
+                    await updateService.checkAndPromptIfDue()
+                }
         }
         .defaultSize(width: 1200, height: 800)
         .commands {
@@ -58,11 +63,18 @@ struct macAppLibraryApp: App {
                 }
                 .disabled(store.isSubmittingAllToCommunity)
             }
+
+            CommandGroup(replacing: .help) {
+                Button("macAppLibrary Help") {
+                    NSWorkspace.shared.open(URL(string: "https://coefficiencies.com/apps/macapplibrary/")!)
+                }
+            }
         }
 
         Settings {
             SettingsView()
                 .environment(store)
+                .environment(updateService)
         }
     }
 }

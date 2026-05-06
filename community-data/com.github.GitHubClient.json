@@ -1,0 +1,8 @@
+{
+  "name": "GitHub Desktop",
+  "description": "GitHub's official desktop client for managing repositories, pull requests, and branches with a visual interface.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "GitHub, Inc"
+}

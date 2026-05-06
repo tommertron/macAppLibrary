@@ -1,0 +1,7 @@
+{
+  "name": "Data Jar",
+  "description": "A structured data store for shortcuts and automation, letting you persist and access data across automations and apps.",
+  "categories": [
+    "Utilities"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Name Mangler",
+  "description": "A batch file renamer with a live preview, supporting pattern matching, sequences, metadata insertion, and complex rename chains.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Many Tricks"
+}

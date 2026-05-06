@@ -1,0 +1,8 @@
+{
+  "name": "Calca",
+  "description": "A symbolic calculator that lets you write math expressions and see live results inline, like a scratchpad for calculations.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Krueger Systems, Inc"
+}

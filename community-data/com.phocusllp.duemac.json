@@ -1,0 +1,8 @@
+{
+  "name": "Due",
+  "description": "A reminders app that nags you until things are done, with natural language input and persistent alerts that don't let you forget.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Due Pte. Ltd"
+}

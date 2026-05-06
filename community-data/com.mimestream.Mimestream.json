@@ -1,0 +1,8 @@
+{
+  "name": "Mimestream",
+  "description": "A native Gmail client for Mac built with SwiftUI, offering a fast, beautiful email experience with full Google account integration.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Mimestream, LLC"
+}

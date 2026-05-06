@@ -1,0 +1,8 @@
+{
+  "name": "Pastebot",
+  "description": "A clipboard manager with filters, transformations, and syncing, letting you search and reuse anything you've ever copied.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Tapbots LLC"
+}

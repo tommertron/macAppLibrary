@@ -1,0 +1,8 @@
+{
+  "name": "Longplay",
+  "description": "A music player focused on albums, presenting your library as a beautiful grid of cover art for intentional, front-to-back listening.",
+  "categories": [
+    "Music & Audio"
+  ],
+  "developer": "Adrian Sch\u00f6nig"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "NepTunes",
+  "description": "A menu bar music controller for Spotify and Apple Music, showing now-playing info and allowing playback control without switching apps.",
+  "categories": [
+    "Music & Audio"
+  ]
+}
