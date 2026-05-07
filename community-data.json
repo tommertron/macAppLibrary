@@ -15,6 +15,11 @@
     ],
     "developer": "Acqualia Software"
   },
+  "biz.papercut.pcng.client": {
+    "name": "PaperCut MF",
+    "description": "An enterprise print management application that manages secure printing, print quotas, authentication, and communication with managed printers and print servers.",
+    "categories": []
+  },
   "br.com.marcosatanaka.musicbox": {
     "name": "MusicBox",
     "description": "A music save-for-later app that lets you capture songs, albums, and playlists from any source to enjoy or explore later.",
@@ -38,6 +43,14 @@
       "Productivity"
     ],
     "developer": "Anybox LTD"
+  },
+  "ch.sudo.cyberduck": {
+    "name": "Cyberduck",
+    "description": "A file transfer application that allows users to connect to and manage files on FTP, SFTP, WebDAV, cloud storage, and other remote server services through a graphical interface.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "David Kocher.    Yves Langisch"
   },
   "com.agiletortoise.Drafts-OSX": {
     "name": "Drafts",
@@ -157,6 +170,14 @@
     ],
     "developer": "Keeper Security, Inc",
     "url": "https://www.keepersecurity.com/"
+  },
+  "com.cascadea.app": {
+    "name": "Cascadea",
+    "description": "A Safari extension and compantion app that allows users and developers to customize website appearance and behavior using custom CSS themes, UserCSS styles, and built-in style editing tools.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Michael Freuden"
   },
   "com.chabomakers.Antinote": {
     "name": "Antinote",
@@ -326,6 +347,14 @@
     "developer": "Logitech, Inc",
     "url": "https://www.logitech.com/en-us/software/logi-options-plus"
   },
+  "com.mactrackerapp.Mactracker": {
+    "name": "Mactracker",
+    "description": "A reference application that provides detailed technical specifications, release information, software support data, and historical information for Apple hardware, software, and accessories.",
+    "categories": [
+      "Reference"
+    ],
+    "developer": "8.2.1,   Ian Page"
+  },
   "com.manytricks.NameMangler": {
     "name": "Name Mangler",
     "description": "A batch file renamer with a live preview, supporting pattern matching, sequences, metadata insertion, and complex rename chains.",
@@ -341,6 +370,54 @@
       "News"
     ],
     "developer": "Instant Paper, Inc"
+  },
+  "com.microsoft.Excel": {
+    "name": "Microsoft Excel",
+    "description": "A spreadsheet application used to organize, calculate, analyze, and visualize data using formulas, charts, tables, and automation tools.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Microsoft Corporation"
+  },
+  "com.microsoft.Outlook": {
+    "name": "Microsoft Outlook",
+    "description": "An email and calendar application used to manage email, contacts, calendars, tasks, and meeting scheduling within personal and organizational environments.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Microsoft Corporation"
+  },
+  "com.microsoft.Powerpoint": {
+    "name": "Microsoft PowerPoint",
+    "description": "A presentation application used to create and deliver slide-based presentations with text, images, charts, video, animations, and speaker notes.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Microsoft Corporation"
+  },
+  "com.microsoft.Word": {
+    "name": "Microsoft Word",
+    "description": "A word processing application used to create, edit, format, and collaborate on documents such as letters, reports, forms, and other text-based content.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Microsoft Corporation"
+  },
+  "com.microsoft.onenote.mac": {
+    "name": "Microsoft OneNote",
+    "description": "A digital note-taking application used to create, organize, and synchronize notebooks containing text, drawings, images, audio recordings, and other reference material across devices.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Microsoft Corporation"
+  },
+  "com.microsoft.teams2": {
+    "name": "Microsoft Teams",
+    "description": "A collaboration and communication platform that provides chat, video meetings, calling, file sharing, and integration with Microsoft 365 services for teams and organizations.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Microsoft"
   },
   "com.mimestream.Mimestream": {
     "name": "Mimestream",
@@ -372,6 +449,14 @@
       "Utilities"
     ],
     "developer": "Noodlesoft, LLC"
+  },
+  "com.okta.mobile": {
+    "name": "Okta Verify",
+    "description": "A multi-factor authentication application that provides secure sign-in verification using push notifications, one-time passcodes, and device-based authentication for organizational accounts and services.",
+    "categories": [
+      "Business"
+    ],
+    "developer": "Okta"
   },
   "com.openai.chat": {
     "name": "ChatGPT",
@@ -450,6 +535,14 @@
     "developer": "Moballo",
     "url": "https://sequel-ace.com/"
   },
+  "com.sindresorhus.Pure-Paste": {
+    "name": "Pure Paste",
+    "description": "A lightweight clipboard utility that automatically removes formatting from copied text so pasted content matches the style of the destination application.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Sindre Sorhus"
+  },
   "com.sindresorhus.Supercharge": {
     "name": "Supercharge",
     "description": "A collection of small Mac utilities and enhancements packed into one app \u2014 window management, system tweaks, and productivity boosts.",
@@ -489,6 +582,14 @@
     ],
     "developer": "Slack Technologies LLC, a Salesforce company"
   },
+  "com.todesktop.230313mzl4w4u92": {
+    "name": "Cursor",
+    "description": "An AI-powered code editor built on Visual Studio Code that assists developers with code generation, editing, debugging, and project navigation using integrated artificial intelligence tools.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Anysphere"
+  },
   "com.todoist.mac.Todoist": {
     "name": "Todoist",
     "description": "A cross-platform task manager with natural language input, projects, priorities, and collaboration features for teams and individuals.",
@@ -513,6 +614,14 @@
     ],
     "developer": "Valerijs Boguckis"
   },
+  "de.icab.iCab": {
+    "name": "iCab",
+    "description": "A lightweight web browser that provides tabbed browsing, privacy controls, filtering tools, download management, and extensive customization options for advanced users.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Alexander Clauss"
+  },
   "dev.leitmotif.taska": {
     "name": "Taska",
     "description": "A GitHub Issues and project management client for Mac, giving developers a native interface for tracking and managing tasks.",
@@ -533,6 +642,13 @@
     "description": "A structured data store for shortcuts and automation, letting you persist and access data across automations and apps.",
     "categories": [
       "Utilities"
+    ]
+  },
+  "edu.umich.mprint.mprint-installer": {
+    "name": "mprint_installer",
+    "description": "A University of Michigan utility that installs and configures MPrint campus printers, queues, and printing support software on macOS systems.",
+    "categories": [
+      "Developer Tools"
     ]
   },
   "io.raindrop.macapp": {
@@ -635,6 +751,13 @@
       "Utilities"
     ],
     "developer": "The Transmission Project"
+  },
+  "org.mozilla.firefox": {
+    "name": "Firefox",
+    "description": "A popular web browser that provides standards-based internet browsing with support for extensions, privacy protections, tabbed browsing, and cross-platform synchronization.",
+    "categories": [
+      "Productivity"
+    ]
   },
   "org.tempel.findanyfile": {
     "name": "Find Any File",
