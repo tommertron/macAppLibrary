@@ -1,0 +1,8 @@
+{
+  "name": "Cursor",
+  "description": "An AI-powered code editor built on Visual Studio Code that assists developers with code generation, editing, debugging, and project navigation using integrated artificial intelligence tools.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Anysphere"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "mprint_installer",
+  "description": "A University of Michigan utility that installs and configures MPrint campus printers, queues, and printing support software on macOS systems.",
+  "categories": [
+    "Developer Tools"
+  ]
+}

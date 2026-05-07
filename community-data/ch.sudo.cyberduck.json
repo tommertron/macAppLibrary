@@ -1,0 +1,8 @@
+{
+  "name": "Cyberduck",
+  "description": "A file transfer application that allows users to connect to and manage files on FTP, SFTP, WebDAV, cloud storage, and other remote server services through a graphical interface.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "David Kocher.    Yves Langisch"
+}

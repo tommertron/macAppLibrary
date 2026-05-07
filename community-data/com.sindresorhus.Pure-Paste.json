@@ -1,0 +1,8 @@
+{
+  "name": "Pure Paste",
+  "description": "A lightweight clipboard utility that automatically removes formatting from copied text so pasted content matches the style of the destination application.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Sindre Sorhus"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Okta Verify",
+  "description": "A multi-factor authentication application that provides secure sign-in verification using push notifications, one-time passcodes, and device-based authentication for organizational accounts and services.",
+  "categories": [
+    "Business"
+  ],
+  "developer": "Okta"
+}

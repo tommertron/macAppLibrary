@@ -1,0 +1,8 @@
+{
+  "name": "Cascadea",
+  "description": "A Safari extension and compantion app that allows users and developers to customize website appearance and behavior using custom CSS themes, UserCSS styles, and built-in style editing tools.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Michael Freuden"
+}
