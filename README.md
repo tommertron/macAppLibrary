@@ -75,6 +75,20 @@ The monolithic [`community-data.json`](community-data.json) at the repo root is 
 
 Contributions via the in-app submit flow are welcome and appreciated.
 
+## Local API
+
+While macAppLibrary is open, it runs a local HTTP server on `127.0.0.1` so other tools — Raycast extensions, CLIs, MCP servers, Alfred workflows — can read your library, edit metadata, pull/submit community data, and trigger AI descriptions.
+
+**Discovery.** On launch the app writes:
+
+```
+~/Library/Application Support/macAppLibrary/api.json
+```
+
+containing `{host, port, token, pid, apiVersion}` with mode `0600`. Clients should read this file, verify `kill(pid, 0) == 0` (the file can linger across crashes — it is overwritten atomically on the next launch), then send `Authorization: Bearer <token>` on every request except `/v1/health` and `/v1/version`.
+
+**Reference.** Full OpenAPI documentation: <https://tommertron.github.io/macAppLibrary/>
+
 ## Building from Source
 
 Requires Xcode 15+ and macOS 14.0+.
