@@ -48,12 +48,15 @@ final class APIServer {
     private(set) var port: UInt16 = 0
     private var connections: Set<ObjectIdentifier> = []
     private var connectionHandles: [ObjectIdentifier: NWConnection] = [:]
+    private var mcp: MCPServer?
 
+    static let mcpEnabledKey = "mcpServerEnabled"
     private static let tokenKey = "macAppLibrary.api.token"
     private static let appVersion = "1.0.0"
 
     init(store: AppLibraryStore) {
         self.store = store
+        self.mcp = MCPServer(store: store)
     }
 
     func start() {
@@ -212,6 +215,33 @@ final class APIServer {
 
         guard let store else {
             return .error("unavailable", message: "Store not initialized", status: 500)
+        }
+
+        // MCP — gated on the Settings toggle
+        if req.path == "/mcp" {
+            guard UserDefaults.standard.bool(forKey: Self.mcpEnabledKey) else {
+                return .error("mcp_disabled", message: "MCP server is disabled in Settings", status: 404)
+            }
+            switch req.method {
+            case "POST":
+                guard let mcp else {
+                    return .error("unavailable", message: "MCP not initialized", status: 500)
+                }
+                let (status, data) = await mcp.handle(req.body)
+                if let data {
+                    return HTTPResponse(
+                        status: status,
+                        headers: ["Content-Type": "application/json; charset=utf-8"],
+                        body: data
+                    )
+                }
+                return .empty(status: status)
+            case "GET":
+                // SSE / server-initiated streaming not supported in this version.
+                return .error("not_supported", message: "GET /mcp (SSE) not supported. Use POST.", status: 405)
+            default:
+                return .error("method_not_allowed", message: "Use POST /mcp", status: 405)
+            }
         }
 
         // Refresh running apps cheaply on read

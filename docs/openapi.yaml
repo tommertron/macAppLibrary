@@ -42,6 +42,23 @@ info:
     All endpoints live under `/v1/`. Breaking changes will land under `/v2/`
     once they exist. Adding optional fields is non-breaking.
 
+    ## MCP (Model Context Protocol)
+
+    The same server can also expose an MCP endpoint at `POST /mcp` for use
+    with Claude Desktop and other MCP-aware tools. It is **off by default**
+    and must be turned on in macAppLibrary → Settings → MCP Server.
+
+    Transport: streamable HTTP, single-response mode (no SSE). Authentication
+    uses the same Bearer token as the REST API. Protocol version: `2025-03-26`.
+
+    Tools exposed: `list_apps`, `get_app`, `update_app_metadata`, `quit_app`,
+    `list_categories`, `get_community_data`, `pull_community_data`,
+    `submit_to_community`, `generate_ai_description`. Each maps onto the same
+    operation as its REST counterpart.
+
+    To configure Claude Desktop, click "Copy Claude Desktop config" in
+    macAppLibrary Settings and paste into `claude_desktop_config.json`.
+
 servers:
   - url: http://127.0.0.1:{port}
     description: Local app instance (port from discovery file)
@@ -64,6 +81,8 @@ tags:
     description: Community database read and submit
   - name: AI
     description: AI-assisted metadata generation
+  - name: MCP
+    description: Model Context Protocol endpoint (off by default; enable in app Settings)
 
 paths:
   /v1/health:
@@ -261,6 +280,63 @@ paths:
                 type: array
                 items: { $ref: "#/components/schemas/Category" }
         "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /mcp:
+    post:
+      tags: [MCP]
+      summary: Model Context Protocol endpoint
+      description: |
+        JSON-RPC 2.0 over HTTP. Off by default — enable in macAppLibrary →
+        Settings → MCP Server. Supports `initialize`, `tools/list`,
+        `tools/call`, and `ping`. Tool surface mirrors the REST API; see the
+        spec overview at the top of this page for the tool list.
+
+        Notifications (messages without an `id`) receive `204 No Content`.
+        SSE / `GET /mcp` is not supported in this version.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: A JSON-RPC 2.0 request or notification object.
+              properties:
+                jsonrpc: { type: string, enum: ["2.0"] }
+                id:
+                  oneOf:
+                    - { type: string }
+                    - { type: integer }
+                method: { type: string }
+                params: { type: object }
+              required: [jsonrpc, method]
+      responses:
+        "200":
+          description: JSON-RPC response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jsonrpc: { type: string, enum: ["2.0"] }
+                  id: {}
+                  result: {}
+                  error:
+                    type: object
+                    properties:
+                      code: { type: integer }
+                      message: { type: string }
+        "202": { description: Accepted (notification, no response body) }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404":
+          description: "MCP server is disabled in Settings (`error: mcp_disabled`)"
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+        "405":
+          description: GET /mcp not supported
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
 
   /v1/community/{bundleID}:
     parameters:

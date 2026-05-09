@@ -29,6 +29,7 @@
 		AA0000000000000000000218 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000118 /* UpdateService.swift */; };
 		AA0000000000000000000219 /* APIDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000119 /* APIDTOs.swift */; };
 		AA0000000000000000000220 /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000120 /* APIServer.swift */; };
+		AA0000000000000000000221 /* MCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000121 /* MCPServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		AA0000000000000000000118 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		AA0000000000000000000119 /* APIDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDTOs.swift; sourceTree = "<group>"; };
 		AA0000000000000000000120 /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
+		AA0000000000000000000121 /* MCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -125,6 +127,7 @@
 				AA0000000000000000000118 /* UpdateService.swift */,
 				AA0000000000000000000119 /* APIDTOs.swift */,
 				AA0000000000000000000120 /* APIServer.swift */,
+				AA0000000000000000000121 /* MCPServer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				AA0000000000000000000218 /* UpdateService.swift in Sources */,
 				AA0000000000000000000219 /* APIDTOs.swift in Sources */,
 				AA0000000000000000000220 /* APIServer.swift in Sources */,
+				AA0000000000000000000221 /* MCPServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

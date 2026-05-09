@@ -6,6 +6,8 @@ struct SettingsView: View {
     @State private var apiKey = ""
     @State private var isSaved = false
     @State private var updateStatus: UpdateCheckStatus = .idle
+    @AppStorage(APIServer.mcpEnabledKey) private var mcpEnabled = false
+    @State private var apiInfo: APIDiscoveryInfo?
 
     enum UpdateCheckStatus: Equatable {
         case idle
@@ -75,6 +77,39 @@ struct SettingsView: View {
                 }
             }
 
+            Section("MCP Server") {
+                Toggle("Enable MCP server", isOn: $mcpEnabled)
+
+                Text("Lets MCP-aware tools (Claude Desktop, IDE plugins) read and edit your library. Off by default.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
+                if mcpEnabled, let info = apiInfo {
+                    let url = "http://127.0.0.1:\(info.port)/mcp"
+                    LabeledContent("URL") {
+                        HStack {
+                            Text(url).font(.system(.body, design: .monospaced)).textSelection(.enabled)
+                            Button {
+                                NSPasteboard.general.clearContents()
+                                NSPasteboard.general.setString(url, forType: .string)
+                            } label: { Image(systemName: "doc.on.doc") }
+                            .buttonStyle(.borderless)
+                        }
+                    }
+                    Button("Copy Claude Desktop config") {
+                        NSPasteboard.general.clearContents()
+                        NSPasteboard.general.setString(claudeDesktopConfig(url: url, token: info.token), forType: .string)
+                    }
+                    Text("Auth uses the same Bearer token as the REST API. The full token is in the copied config snippet.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                } else if mcpEnabled {
+                    Text("Waiting for API server to publish discovery info…")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
             Section("Updates") {
                 if let last = updateService.lastChecked {
                     LabeledContent("Last Checked", value: last.formatted(date: .abbreviated, time: .shortened))
@@ -114,8 +149,24 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(width: 480)
+        .frame(width: 520)
         .padding()
+        .onAppear { apiInfo = APIDiscoveryInfo.load() }
+    }
+
+    private func claudeDesktopConfig(url: String, token: String) -> String {
+        """
+        {
+          "mcpServers": {
+            "macAppLibrary": {
+              "url": "\(url)",
+              "headers": {
+                "Authorization": "Bearer \(token)"
+              }
+            }
+          }
+        }
+        """
     }
 
     private func runUpdateCheck() async {
@@ -126,6 +177,25 @@ struct SettingsView: View {
         } catch {
             updateStatus = .failed("Couldn't check: \(error.localizedDescription)")
         }
+    }
+}
+
+struct APIDiscoveryInfo {
+    let host: String
+    let port: Int
+    let token: String
+
+    static func load() -> APIDiscoveryInfo? {
+        let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        let url = support.appendingPathComponent("macAppLibrary/api.json")
+        guard
+            let data = try? Data(contentsOf: url),
+            let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+            let host = json["host"] as? String,
+            let port = json["port"] as? Int,
+            let token = json["token"] as? String
+        else { return nil }
+        return APIDiscoveryInfo(host: host, port: port, token: token)
     }
 }
 
