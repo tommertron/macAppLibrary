@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>macAppLibrary API</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/tommertron/macAppLibrary/main/macAppLibraryIcon.png" />
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <script id="api-reference" data-url="./openapi.yaml"></script>
+    <script>
+      var configuration = {
+        theme: 'purple',
+        layout: 'modern',
+        defaultHttpClient: { targetKey: 'shell', clientKey: 'curl' },
+        hideDownloadButton: false,
+        metaData: {
+          title: 'macAppLibrary API',
+          description: 'Local HTTP API exposed by the macAppLibrary macOS app.'
+        }
+      };
+      document.getElementById('api-reference').dataset.configuration = JSON.stringify(configuration);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+  </body>
+</html>

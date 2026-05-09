@@ -1,0 +1,526 @@
+openapi: 3.1.0
+info:
+  title: macAppLibrary API
+  version: 1.0.0
+  summary: Local HTTP API exposed by the macAppLibrary macOS app.
+  description: |
+    macAppLibrary runs a local HTTP server on `127.0.0.1` while the app is open,
+    so other tools (Raycast extensions, CLIs, MCP servers, Alfred workflows) can
+    query installed apps, edit metadata, pull or submit community data, and ask
+    the app to generate AI descriptions.
+
+    ## Discovery
+
+    On launch the app writes:
+
+    ```
+    ~/Library/Application Support/macAppLibrary/api.json
+    ```
+
+    Containing:
+
+    ```json
+    {
+      "host": "127.0.0.1",
+      "port": 64039,
+      "token": "…hex…",
+      "pid": 12345,
+      "apiVersion": "v1"
+    }
+    ```
+
+    Permissions are `0600` (owner-only). Clients should:
+
+    1. Read the file.
+    2. Verify `kill(pid, 0) == 0` to confirm the app is still running — the file
+       can linger across crashes; it is overwritten atomically on the next launch.
+    3. Use `host:port` and send `Authorization: Bearer <token>` on every
+       request except `/v1/health` and `/v1/version`.
+
+    ## Versioning
+
+    All endpoints live under `/v1/`. Breaking changes will land under `/v2/`
+    once they exist. Adding optional fields is non-breaking.
+
+    ## MCP (Model Context Protocol)
+
+    The same server can also expose an MCP endpoint at `POST /mcp` for use
+    with Claude Desktop and other MCP-aware tools. It is **off by default**
+    and must be turned on in macAppLibrary → Settings → MCP Server.
+
+    Transport: streamable HTTP, single-response mode (no SSE). Authentication
+    uses the same Bearer token as the REST API. Protocol version: `2025-03-26`.
+
+    Tools exposed: `list_apps`, `get_app`, `update_app_metadata`, `quit_app`,
+    `list_categories`, `get_community_data`, `pull_community_data`,
+    `submit_to_community`, `generate_ai_description`. Each maps onto the same
+    operation as its REST counterpart.
+
+    To configure Claude Desktop, click "Copy Claude Desktop config" in
+    macAppLibrary Settings and paste into `claude_desktop_config.json`.
+
+servers:
+  - url: http://127.0.0.1:{port}
+    description: Local app instance (port from discovery file)
+    variables:
+      port:
+        default: "64039"
+        description: Ephemeral port from ~/Library/Application Support/macAppLibrary/api.json
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: System
+    description: Health, version, and discovery
+  - name: Apps
+    description: Read and update installed apps
+  - name: Categories
+    description: Category aggregations
+  - name: Community
+    description: Community database read and submit
+  - name: AI
+    description: AI-assisted metadata generation
+  - name: MCP
+    description: Model Context Protocol endpoint (off by default; enable in app Settings)
+
+paths:
+  /v1/health:
+    get:
+      tags: [System]
+      summary: Liveness probe
+      security: []
+      responses:
+        "200":
+          description: Server is up
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/HealthResponse" }
+
+  /v1/version:
+    get:
+      tags: [System]
+      summary: App and API version
+      security: []
+      responses:
+        "200":
+          description: Version info
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VersionResponse" }
+
+  /v1/apps:
+    get:
+      tags: [Apps]
+      summary: List installed apps
+      parameters:
+        - in: query
+          name: category
+          schema: { type: string }
+          description: Filter to apps that have this category in their effective categories.
+        - in: query
+          name: developer
+          schema: { type: string }
+          description: Filter to apps whose effective developer matches exactly.
+        - in: query
+          name: running
+          schema: { type: boolean }
+          description: If `true`, return only currently-running apps.
+      responses:
+        "200":
+          description: Array of apps. Per-field overrides (community/user breakdown) are omitted on list responses; use the detail endpoint for those.
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/AppSummary" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /v1/apps/{bundleID}:
+    parameters:
+      - $ref: "#/components/parameters/BundleID"
+    get:
+      tags: [Apps]
+      summary: Get one app
+      responses:
+        "200":
+          description: Full app detail with community + user override breakdown
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AppDetail" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+    patch:
+      tags: [Apps]
+      summary: Update user-set metadata for an app
+      description: |
+        Partial update. Missing keys are left untouched. Empty strings clear
+        a field (the user override is removed and the effective value falls
+        back to community/system data).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/AppUpdateRequest" }
+      responses:
+        "200":
+          description: The updated app
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AppDetail" }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /v1/apps/{bundleID}/quit:
+    parameters:
+      - $ref: "#/components/parameters/BundleID"
+    post:
+      tags: [Apps]
+      summary: Politely terminate a running app
+      description: Sends a normal terminate request (not force-kill). The target app may show "save changes?" dialogs.
+      responses:
+        "204": { description: Terminate signal sent }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404":
+          description: "App not found, or not currently running (`error: not_running`)"
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+        "500":
+          description: Terminate failed
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+
+  /v1/apps/{bundleID}/community/pull:
+    parameters:
+      - $ref: "#/components/parameters/BundleID"
+    post:
+      tags: [Community]
+      summary: Apply community fields to user fields
+      description: Mirror of the in-app "Pull All" button. Overwrites any user-set values for description, developer, categories, and websiteURL with the community values, where present.
+      responses:
+        "200":
+          description: The updated app
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AppDetail" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /v1/apps/{bundleID}/community/submit:
+    parameters:
+      - $ref: "#/components/parameters/BundleID"
+    post:
+      tags: [Community]
+      summary: Submit current app metadata to the community database
+      description: |
+        Calls the existing submission Worker, which opens a pull request on the
+        macAppLibrary repo. Submissions are reviewed before merging. The app
+        must have a non-empty effective description.
+      responses:
+        "200":
+          description: Submission accepted; PR opened
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/SubmitResponse" }
+        "400":
+          description: "Missing description (`error: missing_description`)"
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "502":
+          description: Worker call failed
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+
+  /v1/apps/{bundleID}/ai-describe:
+    parameters:
+      - $ref: "#/components/parameters/BundleID"
+    post:
+      tags: [AI]
+      summary: Generate and persist an AI description
+      description: |
+        Uses the Anthropic API key configured in the macAppLibrary Settings
+        (stored in the user's Keychain). The generated text is written to the
+        app's user description and persisted.
+      responses:
+        "200":
+          description: Description generated and saved
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AIDescribeResponse" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "412":
+          description: "No Anthropic API key configured (`error: no_api_key`)"
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+        "502":
+          description: Anthropic API call failed
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+
+  /v1/categories:
+    get:
+      tags: [Categories]
+      summary: List categories with app counts
+      responses:
+        "200":
+          description: Categories sorted by name
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Category" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /mcp:
+    post:
+      tags: [MCP]
+      summary: Model Context Protocol endpoint
+      description: |
+        JSON-RPC 2.0 over HTTP. Off by default — enable in macAppLibrary →
+        Settings → MCP Server. Supports `initialize`, `tools/list`,
+        `tools/call`, and `ping`. Tool surface mirrors the REST API; see the
+        spec overview at the top of this page for the tool list.
+
+        Notifications (messages without an `id`) receive `204 No Content`.
+        SSE / `GET /mcp` is not supported in this version.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: A JSON-RPC 2.0 request or notification object.
+              properties:
+                jsonrpc: { type: string, enum: ["2.0"] }
+                id:
+                  oneOf:
+                    - { type: string }
+                    - { type: integer }
+                method: { type: string }
+                params: { type: object }
+              required: [jsonrpc, method]
+      responses:
+        "200":
+          description: JSON-RPC response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jsonrpc: { type: string, enum: ["2.0"] }
+                  id: {}
+                  result: {}
+                  error:
+                    type: object
+                    properties:
+                      code: { type: integer }
+                      message: { type: string }
+        "202": { description: Accepted (notification, no response body) }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404":
+          description: "MCP server is disabled in Settings (`error: mcp_disabled`)"
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+        "405":
+          description: GET /mcp not supported
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+
+  /v1/community/{bundleID}:
+    parameters:
+      - $ref: "#/components/parameters/BundleID"
+    get:
+      tags: [Community]
+      summary: Look up community data for a bundle ID
+      description: Fetches the community database live (does not require the app to know about the bundle ID).
+      responses:
+        "200":
+          description: "Community entry, or `exists: false` if absent"
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/CommunityData" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "502":
+          description: Failed to fetch community DB
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: hex
+      description: Token from `~/Library/Application Support/macAppLibrary/api.json`
+
+  parameters:
+    BundleID:
+      name: bundleID
+      in: path
+      required: true
+      schema: { type: string }
+      description: macOS bundle identifier (e.g. `com.apple.Safari`)
+
+  responses:
+    Unauthorized:
+      description: Missing or invalid bearer token
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ErrorResponse" }
+    NotFound:
+      description: No app with the given bundle ID
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ErrorResponse" }
+    BadRequest:
+      description: Invalid request body
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ErrorResponse" }
+
+  schemas:
+    HealthResponse:
+      type: object
+      required: [status, appVersion, apiVersion]
+      properties:
+        status: { type: string, example: ok }
+        appVersion: { type: string, example: "1.0.0" }
+        apiVersion: { type: string, example: v1 }
+
+    VersionResponse:
+      type: object
+      required: [appVersion, apiVersion]
+      properties:
+        appVersion: { type: string }
+        apiVersion: { type: string }
+        build: { type: string, nullable: true }
+
+    ErrorResponse:
+      type: object
+      required: [error, message]
+      properties:
+        error:
+          type: string
+          description: Machine-readable error code (e.g. `not_found`, `no_api_key`).
+        message:
+          type: string
+          description: Human-readable explanation.
+
+    AppSummary:
+      type: object
+      required: [bundleID, name, bundlePath, categories, isFavorite, isRunning]
+      properties:
+        bundleID: { type: string }
+        name: { type: string }
+        bundlePath: { type: string }
+        version: { type: string, nullable: true }
+        developer:
+          type: string
+          nullable: true
+          description: Effective developer (user override → community → bundle metadata)
+        description:
+          type: string
+          nullable: true
+          description: Effective description (user override → community)
+        categories:
+          type: array
+          items: { type: string }
+          description: Effective categories (user override → community → system)
+        websiteURL: { type: string, nullable: true }
+        isFavorite: { type: boolean }
+        isRunning: { type: boolean }
+        sizeBytes: { type: integer, format: int64, nullable: true }
+        lastLaunched: { type: string, format: date-time, nullable: true }
+        lastModified: { type: string, format: date-time, nullable: true }
+        dateAdded: { type: string, format: date-time, nullable: true }
+        systemCategory: { type: string, nullable: true }
+
+    AppDetail:
+      allOf:
+        - $ref: "#/components/schemas/AppSummary"
+        - type: object
+          properties:
+            community:
+              type: object
+              nullable: true
+              description: Raw community values (before override merge)
+              properties:
+                description: { type: string, nullable: true }
+                categories:
+                  type: array
+                  items: { type: string }
+                developer: { type: string, nullable: true }
+                websiteURL: { type: string, nullable: true }
+            user:
+              type: object
+              nullable: true
+              description: User-set overrides
+              properties:
+                description: { type: string, nullable: true }
+                developer: { type: string, nullable: true }
+                categories:
+                  type: array
+                  items: { type: string }
+                notes: { type: string, nullable: true }
+                websiteURL: { type: string, nullable: true }
+
+    AppUpdateRequest:
+      type: object
+      description: All fields optional. Empty string clears the user override.
+      properties:
+        description: { type: string }
+        developer: { type: string }
+        categories:
+          type: array
+          items: { type: string }
+        notes: { type: string }
+        websiteURL: { type: string }
+        isFavorite: { type: boolean }
+
+    Category:
+      type: object
+      required: [name, appCount]
+      properties:
+        name: { type: string }
+        appCount: { type: integer }
+
+    CommunityData:
+      type: object
+      required: [bundleID, categories, exists]
+      properties:
+        bundleID: { type: string }
+        description: { type: string, nullable: true }
+        categories:
+          type: array
+          items: { type: string }
+        developer: { type: string, nullable: true }
+        websiteURL: { type: string, nullable: true }
+        exists:
+          type: boolean
+          description: Whether the bundle ID has an entry in the community database.
+
+    SubmitResponse:
+      type: object
+      required: [prURL, prNumber]
+      properties:
+        prURL: { type: string, format: uri }
+        prNumber: { type: integer }
+
+    AIDescribeResponse:
+      type: object
+      required: [description]
+      properties:
+        description: { type: string }

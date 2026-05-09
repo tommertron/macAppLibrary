@@ -4,6 +4,7 @@ import SwiftUI
 struct macAppLibraryApp: App {
     @State private var store = AppLibraryStore()
     @State private var updateService = UpdateService()
+    @State private var apiServer: APIServer?
 
     var body: some Scene {
         WindowGroup {
@@ -13,6 +14,11 @@ struct macAppLibraryApp: App {
                 .frame(minWidth: 900, minHeight: 600)
                 .task {
                     await updateService.checkAndPromptIfDue()
+                    if apiServer == nil {
+                        let server = APIServer(store: store)
+                        server.start()
+                        apiServer = server
+                    }
                 }
         }
         .defaultSize(width: 1200, height: 800)

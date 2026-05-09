@@ -24,8 +24,8 @@ If your app is in the community database, you can pull information automatically
 
 ## Screenshots
 
-![Gallery View](macAppLibrary-Gallery-View_compressed.png)
-![List View](macAppLibrary-List-View_compressed.png)
+![Gallery View](https://coefficiencies.com/apps/macapplibrary/macAppLibrary-Gallery-View_compressed_hu_7bcf405e13cc3a04.png)
+![List View](https://coefficiencies.com/apps/macapplibrary/macAppLibrary-List-View_compressed_hu_ce2e4adf06c15c15.png)
 
 ## Features
 
@@ -74,6 +74,33 @@ Each app in the community database is its own file under [`community-data/`](com
 The monolithic [`community-data.json`](community-data.json) at the repo root is regenerated automatically from the directory by CI on every merge to `main`, and is what the app actually fetches. This split keeps community submissions free of merge conflicts (each PR touches one file).
 
 Contributions via the in-app submit flow are welcome and appreciated.
+
+## Local API
+
+While macAppLibrary is open, it runs a local HTTP server on `127.0.0.1` so other tools — Raycast extensions, CLIs, MCP servers, Alfred workflows — can read your library, edit metadata, pull/submit community data, and trigger AI descriptions.
+
+**Discovery.** On launch the app writes:
+
+```
+~/Library/Application Support/macAppLibrary/api.json
+```
+
+containing `{host, port, token, pid, apiVersion}` with mode `0600`. Clients should read this file, verify `kill(pid, 0) == 0` (the file can linger across crashes — it is overwritten atomically on the next launch), then send `Authorization: Bearer <token>` on every request except `/v1/health` and `/v1/version`.
+
+**Reference.** Full OpenAPI documentation: <https://tommertron.github.io/macAppLibrary/>
+
+### MCP (Claude Desktop, etc.)
+
+The same server can expose an [MCP](https://modelcontextprotocol.io) endpoint at `POST /mcp` so MCP-aware tools — Claude Desktop, IDE plugins — can read and edit your library directly. It's off by default; turn it on under **Settings → MCP Server**.
+
+**Connecting to Claude Desktop.** Requires [Claude Desktop](https://claude.ai/download) to be installed.
+
+- **One click:** click **Install for Claude Desktop**. macAppLibrary builds a `.mcpb` extension with this server's port and bearer token baked in, then hands it to Claude Desktop, which shows its native install prompt. The extension is then manageable in Claude Desktop's Extensions UI. Uses Claude Desktop's bundled Node runtime — no separate install required.
+- **Manual fallback:** click **Copy config** for an `mcp-remote`-based stdio config you can paste into `~/Library/Application Support/Claude/claude_desktop_config.json`. This path requires [Node.js](https://nodejs.org).
+
+The bearer token used in either flow is the same one served by the REST API and is stored in your Keychain.
+
+Tools exposed: `list_apps`, `get_app`, `update_app_metadata`, `quit_app`, `list_categories`, `get_community_data`, `pull_community_data`, `submit_to_community`, `generate_ai_description`. Each mirrors its REST counterpart.
 
 ## Building from Source
 
