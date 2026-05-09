@@ -60,6 +60,13 @@
     ],
     "developer": "Agile Tortoise"
   },
+  "com.amazon.Lassen": {
+    "name": "Amazon Kindle",
+    "description": "Amazon Kindle for macOS is an e-reader app that allows users to read books, magazines, and other publications purchased from Amazon's Kindle store. The app syncs reading progress across devices and provides features like adjustable fonts, bookmarks, and highlighting.",
+    "categories": [
+      "Reference"
+    ]
+  },
   "com.ameba.SwiftBar": {
     "name": "SwiftBar",
     "description": "A menu bar app that runs any script or executable and displays its output, making it easy to build custom menu bar plugins.",
@@ -75,6 +82,13 @@
       "Productivity"
     ],
     "developer": "Anthropic PBC"
+  },
+  "com.apphousekitchen.aldente-pro": {
+    "name": "AlDente",
+    "description": "AlDente is a macOS app that helps preserve battery health by limiting the maximum charge level of your Mac's battery to a user-defined threshold. It allows you to set charging caps and manage power settings to extend your MacBook's battery lifespan.",
+    "categories": [
+      "Utilities"
+    ]
   },
   "com.apple.SFSymbols": {
     "name": "SF Symbols",
@@ -152,6 +166,14 @@
       "Utilities"
     ],
     "developer": "BinaryNights"
+  },
+  "com.brainfevermedia.anamorphicpro": {
+    "name": "Anamorphic Pro",
+    "description": "Anamorphic Pro is a macOS app that allows users to create anamorphic lens effects and cinematic looks on images and video footage. It provides tools to simulate the characteristic visual qualities of anamorphic cinematography, including lens flares, bokeh, and aspect ratio adjustments.",
+    "categories": [
+      "Photography"
+    ],
+    "developer": "BrainFeverMedia"
   },
   "com.brettterpstra.marked2": {
     "name": "Marked 2",
@@ -330,6 +352,14 @@
     ],
     "developer": "Junecloud LLC"
   },
+  "com.khanov.BlockerX": {
+    "name": "1Blocker",
+    "description": "1Blocker is a content blocker and privacy app for Safari that filters ads, trackers, and malicious websites to improve browsing speed and protect user privacy. It also includes features for managing cookies, blocking scripts, and customizing filtering rules.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "1Blocker, LLC"
+  },
   "com.kruegersystems.calca.mac": {
     "name": "Calca",
     "description": "A symbolic calculator that lets you write math expressions and see live results inline, like a scratchpad for calculations.",
@@ -346,6 +376,13 @@
     ],
     "developer": "Logitech, Inc",
     "url": "https://www.logitech.com/en-us/software/logi-options-plus"
+  },
+  "com.macroplant.adapter": {
+    "name": "Adapter",
+    "description": "Adapter is a free video, audio, and image conversion application for macOS that allows users to convert media files between various formats with batch processing capabilities.",
+    "categories": [
+      "Utilities"
+    ]
   },
   "com.mactrackerapp.Mactracker": {
     "name": "Mactracker",
@@ -519,12 +556,25 @@
       "Music & Audio"
     ]
   },
+  "com.rogueamoeba.audiohijack": {
+    "name": "Audio Hijack",
+    "description": "Audio Hijack is a professional audio recording and routing application for macOS that allows users to capture audio from any application or source on their computer. It enables mixing, effects processing, and high-quality recording of audio streams that would normally be difficult or impossible to record directly.",
+    "categories": []
+  },
   "com.rogueamoeba.farrago": {
     "name": "Farrago",
     "description": "A soundboard app for Mac that lets you organize and trigger audio clips instantly \u2014 great for podcasters, streamers, and presenters.",
     "categories": [
       "Music & Audio"
     ]
+  },
+  "com.runningwithcrayons.Alfred": {
+    "name": "Alfred",
+    "description": "Alfred is a productivity application that serves as a powerful alternative to Spotlight, offering fast file search, application launching, and custom workflows to automate tasks on macOS. It enables users to access files, execute commands, and control their Mac through a keyboard-driven interface with customizable hotkeys and advanced features like clipboard history and snippets.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Running with Crayons"
   },
   "com.sequel-ace.sequel-ace": {
     "name": "Sequel Ace",
@@ -613,6 +663,14 @@
       "Productivity"
     ],
     "developer": "Valerijs Boguckis"
+  },
+  "company.thebrowser.Browser": {
+    "name": "Arc",
+    "description": "Arc is a web browser developed by The Browser Company that reimagines browser design with features like split view browsing, customizable spaces for organizing tabs, and AI-powered tools to enhance web browsing productivity. It offers a modern alternative to traditional browsers with a focus on user control and efficient tab and window management.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "The Browser Company"
   },
   "de.icab.iCab": {
     "name": "iCab",
@@ -728,6 +786,14 @@
     "categories": [
       "Utilities"
     ]
+  },
+  "org.adblockplus.adblockplussafarimac": {
+    "name": "Adblock Plus",
+    "description": "Adblock Plus for Safari is a macOS extension that blocks advertisements on websites by filtering ad content as you browse. It helps reduce visual clutter and can improve page load times by preventing ads from loading in Safari.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "present eyeo"
   },
   "org.audacityteam.audacity": {
     "name": "Audacity",
