@@ -30,6 +30,7 @@
 		AA0000000000000000000219 /* APIDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000119 /* APIDTOs.swift */; };
 		AA0000000000000000000220 /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000120 /* APIServer.swift */; };
 		AA0000000000000000000221 /* MCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000121 /* MCPServer.swift */; };
+		AA0000000000000000000222 /* ClaudeDesktopInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		AA0000000000000000000119 /* APIDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDTOs.swift; sourceTree = "<group>"; };
 		AA0000000000000000000120 /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
 		AA0000000000000000000121 /* MCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPServer.swift; sourceTree = "<group>"; };
+		AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeDesktopInstaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -128,6 +130,7 @@
 				AA0000000000000000000119 /* APIDTOs.swift */,
 				AA0000000000000000000120 /* APIServer.swift */,
 				AA0000000000000000000121 /* MCPServer.swift */,
+				AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				AA0000000000000000000219 /* APIDTOs.swift in Sources */,
 				AA0000000000000000000220 /* APIServer.swift in Sources */,
 				AA0000000000000000000221 /* MCPServer.swift in Sources */,
+				AA0000000000000000000222 /* ClaudeDesktopInstaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

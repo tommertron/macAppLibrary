@@ -91,7 +91,14 @@ containing `{host, port, token, pid, apiVersion}` with mode `0600`. Clients shou
 
 ### MCP (Claude Desktop, etc.)
 
-The same server can expose an [MCP](https://modelcontextprotocol.io) endpoint at `POST /mcp` so MCP-aware tools — Claude Desktop, IDE plugins — can read and edit your library directly. It's off by default; turn it on under **Settings → MCP Server**, then click **Copy Claude Desktop config** and paste into `~/Library/Application Support/Claude/claude_desktop_config.json`.
+The same server can expose an [MCP](https://modelcontextprotocol.io) endpoint at `POST /mcp` so MCP-aware tools — Claude Desktop, IDE plugins — can read and edit your library directly. It's off by default; turn it on under **Settings → MCP Server**.
+
+**Connecting to Claude Desktop.** Two options, both require [Claude Desktop](https://claude.ai/download) to be installed:
+
+- **One click:** click **Install for Claude Desktop**. macAppLibrary merges its entry into `~/Library/Application Support/Claude/claude_desktop_config.json` and offers to restart Claude Desktop so the new server is picked up.
+- **Manual:** click **Copy config** and paste the snippet into `~/Library/Application Support/Claude/claude_desktop_config.json` yourself, then restart Claude Desktop.
+
+The bearer token in the config is the same one used by the REST API and is stored in your Keychain.
 
 Tools exposed: `list_apps`, `get_app`, `update_app_metadata`, `quit_app`, `list_categories`, `get_community_data`, `pull_community_data`, `submit_to_community`, `generate_ai_description`. Each mirrors its REST counterpart.
 

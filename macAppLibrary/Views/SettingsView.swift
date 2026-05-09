@@ -8,6 +8,13 @@ struct SettingsView: View {
     @State private var updateStatus: UpdateCheckStatus = .idle
     @AppStorage(APIServer.mcpEnabledKey) private var mcpEnabled = false
     @State private var apiInfo: APIDiscoveryInfo?
+    @State private var claudeInstallStatus: ClaudeInstallStatus = .idle
+
+    enum ClaudeInstallStatus: Equatable {
+        case idle
+        case success(restartNeeded: Bool, alreadyInstalled: Bool)
+        case failure(String)
+    }
 
     enum UpdateCheckStatus: Equatable {
         case idle
@@ -96,13 +103,47 @@ struct SettingsView: View {
                             .buttonStyle(.borderless)
                         }
                     }
-                    Button("Copy Claude Desktop config") {
-                        NSPasteboard.general.clearContents()
-                        NSPasteboard.general.setString(claudeDesktopConfig(url: url, token: info.token), forType: .string)
+                    HStack {
+                        Button("Install for Claude Desktop") {
+                            installForClaudeDesktop(port: info.port, token: info.token)
+                        }
+                        .buttonStyle(.borderedProminent)
+
+                        Button("Copy config") {
+                            NSPasteboard.general.clearContents()
+                            NSPasteboard.general.setString(claudeDesktopConfig(url: url, token: info.token), forType: .string)
+                        }
                     }
-                    Text("Auth uses the same Bearer token as the REST API. The full token is in the copied config snippet.")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+
+                    switch claudeInstallStatus {
+                    case .idle:
+                        Text("Adds macAppLibrary to Claude Desktop's MCP server list. You'll need to restart Claude Desktop afterwards.")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    case .success(let restartNeeded, let alreadyInstalled):
+                        HStack(alignment: .firstTextBaseline) {
+                            Label(
+                                alreadyInstalled
+                                    ? "Already installed in Claude Desktop"
+                                    : "Installed in Claude Desktop",
+                                systemImage: "checkmark.circle.fill"
+                            )
+                            .foregroundStyle(.green)
+                            .font(.caption)
+                            if restartNeeded {
+                                Button("Restart Claude Desktop") {
+                                    restartClaudeDesktop()
+                                }
+                                .buttonStyle(.link)
+                                .font(.caption)
+                            }
+                        }
+                    case .failure(let message):
+                        Label(message, systemImage: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.orange)
+                            .font(.caption)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                 } else if mcpEnabled {
                     Text("Waiting for API server to publish discovery info…")
                         .font(.caption)
@@ -167,6 +208,32 @@ struct SettingsView: View {
           }
         }
         """
+    }
+
+    private func installForClaudeDesktop(port: Int, token: String) {
+        do {
+            let result = try ClaudeDesktopInstaller.install(port: port, token: token)
+            let claudeRunning = NSWorkspace.shared.runningApplications
+                .contains { $0.bundleIdentifier == "com.anthropic.claudefordesktop" }
+            claudeInstallStatus = .success(
+                restartNeeded: claudeRunning && result != .alreadyInstalled,
+                alreadyInstalled: result == .alreadyInstalled
+            )
+        } catch {
+            claudeInstallStatus = .failure(error.localizedDescription)
+        }
+    }
+
+    private func restartClaudeDesktop() {
+        let bundleID = "com.anthropic.claudefordesktop"
+        let running = NSWorkspace.shared.runningApplications.filter { $0.bundleIdentifier == bundleID }
+        running.forEach { $0.terminate() }
+
+        let claudeURL = URL(fileURLWithPath: "/Applications/Claude.app")
+        let config = NSWorkspace.OpenConfiguration()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            NSWorkspace.shared.openApplication(at: claudeURL, configuration: config) { _, _ in }
+        }
     }
 
     private func runUpdateCheck() async {
