@@ -12,7 +12,7 @@ struct SettingsView: View {
 
     enum ClaudeInstallStatus: Equatable {
         case idle
-        case success(restartNeeded: Bool, alreadyInstalled: Bool)
+        case success
         case failure(String)
     }
 
@@ -117,27 +117,14 @@ struct SettingsView: View {
 
                     switch claudeInstallStatus {
                     case .idle:
-                        Text("Adds macAppLibrary to Claude Desktop's MCP server list. Requires Node.js (for `npx`). You'll need to restart Claude Desktop afterwards.")
+                        Text("Builds an MCP extension with this server's port and token, then hands it to Claude Desktop to install. Uses Claude Desktop's bundled Node — no separate install required.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                    case .success(let restartNeeded, let alreadyInstalled):
-                        HStack(alignment: .firstTextBaseline) {
-                            Label(
-                                alreadyInstalled
-                                    ? "Already installed in Claude Desktop"
-                                    : "Installed in Claude Desktop",
-                                systemImage: "checkmark.circle.fill"
-                            )
+                    case .success:
+                        Label("Sent to Claude Desktop — confirm the install prompt over there.", systemImage: "checkmark.circle.fill")
                             .foregroundStyle(.green)
                             .font(.caption)
-                            if restartNeeded {
-                                Button("Restart Claude Desktop") {
-                                    restartClaudeDesktop()
-                                }
-                                .buttonStyle(.link)
-                                .font(.caption)
-                            }
-                        }
+                            .fixedSize(horizontal: false, vertical: true)
                     case .failure(let message):
                         Label(message, systemImage: "exclamationmark.triangle.fill")
                             .foregroundStyle(.orange)
@@ -222,27 +209,12 @@ struct SettingsView: View {
 
     private func installForClaudeDesktop(port: Int, token: String) {
         do {
-            let result = try ClaudeDesktopInstaller.install(port: port, token: token)
-            let claudeRunning = NSWorkspace.shared.runningApplications
-                .contains { $0.bundleIdentifier == "com.anthropic.claudefordesktop" }
-            claudeInstallStatus = .success(
-                restartNeeded: claudeRunning && result != .alreadyInstalled,
-                alreadyInstalled: result == .alreadyInstalled
-            )
+            _ = try ClaudeDesktopInstaller.installMCPB(port: port, token: token)
+            // Claude Desktop now owns the install flow — show a soft-success
+            // hint while it presents its own prompt.
+            claudeInstallStatus = .success
         } catch {
             claudeInstallStatus = .failure(error.localizedDescription)
-        }
-    }
-
-    private func restartClaudeDesktop() {
-        let bundleID = "com.anthropic.claudefordesktop"
-        let running = NSWorkspace.shared.runningApplications.filter { $0.bundleIdentifier == bundleID }
-        running.forEach { $0.terminate() }
-
-        let claudeURL = URL(fileURLWithPath: "/Applications/Claude.app")
-        let config = NSWorkspace.OpenConfiguration()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            NSWorkspace.shared.openApplication(at: claudeURL, configuration: config) { _, _ in }
         }
     }
 

@@ -25,6 +25,7 @@
 		AA0000000000000000000213 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000113 /* AIService.swift */; };
 		AA0000000000000000000214 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000114 /* KeychainHelper.swift */; };
 		AA0000000000000000000215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000115 /* Assets.xcassets */; };
+		AA0000000000000000000223 /* mcpb in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000123 /* mcpb */; };
 		AA0000000000000000000217 /* AppLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000117 /* AppLibraryStore.swift */; };
 		AA0000000000000000000218 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000118 /* UpdateService.swift */; };
 		AA0000000000000000000219 /* APIDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000119 /* APIDTOs.swift */; };
@@ -60,6 +61,7 @@
 		AA0000000000000000000120 /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
 		AA0000000000000000000121 /* MCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPServer.swift; sourceTree = "<group>"; };
 		AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeDesktopInstaller.swift; sourceTree = "<group>"; };
+		AA0000000000000000000123 /* mcpb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mcpb; path = mcpb; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000301 /* macAppLibrary */,
+				AA0000000000000000000123 /* mcpb */,
 				AA0000000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0000000000000000000215 /* Assets.xcassets in Resources */,
+				AA0000000000000000000223 /* mcpb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

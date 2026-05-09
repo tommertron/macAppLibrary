@@ -1,0 +1,7 @@
+{
+  "name": "macapplibrary-mcp-proxy",
+  "version": "1.0.0",
+  "description": "stdio <-> HTTP bridge for the macAppLibrary local MCP server",
+  "main": "server/index.js",
+  "private": true
+}

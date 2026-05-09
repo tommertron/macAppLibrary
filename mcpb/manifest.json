@@ -1,0 +1,42 @@
+{
+  "mcpb_version": "0.1",
+  "name": "macapplibrary",
+  "display_name": "macAppLibrary",
+  "version": "1.0.0",
+  "description": "Read and edit your macAppLibrary library directly from Claude.",
+  "author": {
+    "name": "Tom Robertson",
+    "url": "https://coefficiencies.com/apps/macapplibrary/"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": {
+        "MACAPPLIBRARY_PORT": "${user_config.port}",
+        "MACAPPLIBRARY_TOKEN": "${user_config.bearer_token}"
+      }
+    }
+  },
+  "user_config": {
+    "port": {
+      "type": "string",
+      "title": "macAppLibrary port",
+      "description": "Local port the macAppLibrary HTTP server is listening on (see ~/Library/Application Support/macAppLibrary/api.json)",
+      "required": true
+    },
+    "bearer_token": {
+      "type": "string",
+      "title": "Bearer token",
+      "description": "Auth token from ~/Library/Application Support/macAppLibrary/api.json",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin"]
+  }
+}
