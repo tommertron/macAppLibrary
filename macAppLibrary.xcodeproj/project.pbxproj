@@ -27,6 +27,8 @@
 		AA0000000000000000000215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000115 /* Assets.xcassets */; };
 		AA0000000000000000000217 /* AppLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000117 /* AppLibraryStore.swift */; };
 		AA0000000000000000000218 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000118 /* UpdateService.swift */; };
+		AA0000000000000000000219 /* APIDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000119 /* APIDTOs.swift */; };
+		AA0000000000000000000220 /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000120 /* APIServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		AA0000000000000000000116 /* macAppLibrary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macAppLibrary.entitlements; sourceTree = "<group>"; };
 		AA0000000000000000000117 /* AppLibraryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLibraryStore.swift; sourceTree = "<group>"; };
 		AA0000000000000000000118 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000119 /* APIDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDTOs.swift; sourceTree = "<group>"; };
+		AA0000000000000000000120 /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -119,6 +123,8 @@
 				AA0000000000000000000112 /* CommunityService.swift */,
 				AA0000000000000000000113 /* AIService.swift */,
 				AA0000000000000000000118 /* UpdateService.swift */,
+				AA0000000000000000000119 /* APIDTOs.swift */,
+				AA0000000000000000000120 /* APIServer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 				AA0000000000000000000213 /* AIService.swift in Sources */,
 				AA0000000000000000000214 /* KeychainHelper.swift in Sources */,
 				AA0000000000000000000218 /* UpdateService.swift in Sources */,
+				AA0000000000000000000219 /* APIDTOs.swift in Sources */,
+				AA0000000000000000000220 /* APIServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
