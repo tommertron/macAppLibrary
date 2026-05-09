@@ -1,0 +1,7 @@
+{
+  "name": "AlDente",
+  "description": "AlDente is a macOS app that helps preserve battery health by limiting the maximum charge level of your Mac's battery to a user-defined threshold. It allows you to set charging caps and manage power settings to extend your MacBook's battery lifespan.",
+  "categories": [
+    "Utilities"
+  ]
+}

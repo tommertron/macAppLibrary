@@ -1,0 +1,8 @@
+{
+  "name": "Alfred",
+  "description": "Alfred is a productivity application that serves as a powerful alternative to Spotlight, offering fast file search, application launching, and custom workflows to automate tasks on macOS. It enables users to access files, execute commands, and control their Mac through a keyboard-driven interface with customizable hotkeys and advanced features like clipboard history and snippets.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Running with Crayons"
+}
