@@ -1,5 +1,5 @@
 {
-  "mcpb_version": "0.1",
+  "manifest_version": "0.1",
   "name": "macapplibrary",
   "display_name": "macAppLibrary",
   "version": "1.0.0",
