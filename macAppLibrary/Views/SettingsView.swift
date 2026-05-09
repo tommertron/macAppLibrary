@@ -117,7 +117,7 @@ struct SettingsView: View {
 
                     switch claudeInstallStatus {
                     case .idle:
-                        Text("Adds macAppLibrary to Claude Desktop's MCP server list. You'll need to restart Claude Desktop afterwards.")
+                        Text("Adds macAppLibrary to Claude Desktop's MCP server list. Requires Node.js (for `npx`). You'll need to restart Claude Desktop afterwards.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     case .success(let restartNeeded, let alreadyInstalled):
@@ -200,9 +200,19 @@ struct SettingsView: View {
         {
           "mcpServers": {
             "macAppLibrary": {
-              "url": "\(url)",
-              "headers": {
-                "Authorization": "Bearer \(token)"
+              "command": "npx",
+              "args": [
+                "-y",
+                "mcp-remote",
+                "\(url)",
+                "--header",
+                "Authorization:${AUTH_HEADER}",
+                "--allow-http",
+                "--transport",
+                "http-only"
+              ],
+              "env": {
+                "AUTH_HEADER": "Bearer \(token)"
               }
             }
           }

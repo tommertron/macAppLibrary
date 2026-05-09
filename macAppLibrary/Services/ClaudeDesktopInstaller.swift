@@ -67,9 +67,19 @@ enum ClaudeDesktopInstaller {
         }
 
         let entry: [String: Any] = [
-            "url": "http://127.0.0.1:\(port)/mcp",
-            "headers": [
-                "Authorization": "Bearer \(token)"
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-remote",
+                "http://127.0.0.1:\(port)/mcp",
+                "--header",
+                "Authorization:${AUTH_HEADER}",
+                "--allow-http",
+                "--transport",
+                "http-only"
+            ],
+            "env": [
+                "AUTH_HEADER": "Bearer \(token)"
             ]
         ]
 

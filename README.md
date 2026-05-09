@@ -24,8 +24,8 @@ If your app is in the community database, you can pull information automatically
 
 ## Screenshots
 
-![Gallery View](macAppLibrary-Gallery-View_compressed.png)
-![List View](macAppLibrary-List-View_compressed.png)
+![Gallery View](https://coefficiencies.com/apps/macapplibrary/macAppLibrary-Gallery-View_compressed_hu_7bcf405e13cc3a04.png)
+![List View](https://coefficiencies.com/apps/macapplibrary/macAppLibrary-List-View_compressed_hu_ce2e4adf06c15c15.png)
 
 ## Features
 
@@ -93,7 +93,7 @@ containing `{host, port, token, pid, apiVersion}` with mode `0600`. Clients shou
 
 The same server can expose an [MCP](https://modelcontextprotocol.io) endpoint at `POST /mcp` so MCP-aware tools — Claude Desktop, IDE plugins — can read and edit your library directly. It's off by default; turn it on under **Settings → MCP Server**.
 
-**Connecting to Claude Desktop.** Two options, both require [Claude Desktop](https://claude.ai/download) to be installed:
+**Connecting to Claude Desktop.** Two options, both require [Claude Desktop](https://claude.ai/download) and [Node.js](https://nodejs.org) (for `npx`) to be installed. Claude Desktop only supports stdio MCP servers natively, so the config uses [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) as a thin stdio→HTTP bridge to the local server.
 
 - **One click:** click **Install for Claude Desktop**. macAppLibrary merges its entry into `~/Library/Application Support/Claude/claude_desktop_config.json` and offers to restart Claude Desktop so the new server is picked up.
 - **Manual:** click **Copy config** and paste the snippet into `~/Library/Application Support/Claude/claude_desktop_config.json` yourself, then restart Claude Desktop.
