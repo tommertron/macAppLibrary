@@ -22,6 +22,38 @@ struct ErrorResponse: Codable {
     let message: String
 }
 
+struct CategoryDTO: Codable {
+    let name: String
+    let appCount: Int
+}
+
+struct AppUpdateRequest: Decodable {
+    let description: String?
+    let developer: String?
+    let categories: [String]?
+    let notes: String?
+    let websiteURL: String?
+    let isFavorite: Bool?
+}
+
+struct CommunityDataDTO: Codable {
+    let bundleID: String
+    let description: String?
+    let categories: [String]
+    let developer: String?
+    let websiteURL: String?
+    let exists: Bool
+}
+
+struct SubmitResponseDTO: Codable {
+    let prURL: String
+    let prNumber: Int
+}
+
+struct AIDescribeResponseDTO: Codable {
+    let description: String
+}
+
 struct AppDTO: Codable {
     let bundleID: String
     let name: String

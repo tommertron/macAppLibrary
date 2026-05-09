@@ -214,34 +214,200 @@ final class APIServer {
             return .error("unavailable", message: "Store not initialized", status: 500)
         }
 
+        // Refresh running apps cheaply on read
+        store.refreshRunningApps()
+
         switch (req.method, req.path) {
         case ("GET", "/v1/apps"):
-            let running = store.runningBundleIDs
-            let apps = store.apps
-            let category = req.query["category"]
-            let developer = req.query["developer"]
-            let filtered = apps.filter { app in
-                if let category, !app.effectiveCategories.contains(category) { return false }
-                if let developer, app.effectiveDeveloper != developer { return false }
-                return true
+            return handleListApps(req, store: store)
+
+        case ("GET", "/v1/categories"):
+            var counts: [String: Int] = [:]
+            for app in store.apps {
+                for cat in app.effectiveCategories { counts[cat, default: 0] += 1 }
             }
-            let dtos = filtered.map { AppDTO($0, isRunning: running.contains($0.bundleID), includeOverrides: false) }
+            let dtos = counts
+                .map { CategoryDTO(name: $0.key, appCount: $0.value) }
+                .sorted { $0.name < $1.name }
             return .json(dtos)
 
-        case ("GET", let p) where p.hasPrefix("/v1/apps/"):
-            let id = String(p.dropFirst("/v1/apps/".count))
-            guard !id.isEmpty, !id.contains("/") else {
-                return .error("not_found", message: "Unknown route", status: 404)
-            }
+        default:
+            break
+        }
+
+        // /v1/community/{bundleID}
+        if req.method == "GET", let id = pathParam(req.path, prefix: "/v1/community/") {
+            return await handleGetCommunity(bundleID: id)
+        }
+
+        // Routes under /v1/apps/{bundleID}[/...]
+        if let (id, suffix) = parseAppPath(req.path) {
             guard let app = store.apps.first(where: { $0.bundleID == id }) else {
                 return .error("not_found", message: "No app with bundleID \(id)", status: 404)
             }
-            let running = store.runningBundleIDs.contains(app.bundleID)
-            return .json(AppDTO(app, isRunning: running, includeOverrides: true))
-
-        default:
-            return .error("not_found", message: "Unknown route \(req.method) \(req.path)", status: 404)
+            switch (req.method, suffix) {
+            case ("GET", ""):
+                let running = store.runningBundleIDs.contains(app.bundleID)
+                return .json(AppDTO(app, isRunning: running, includeOverrides: true))
+            case ("PATCH", ""):
+                return handlePatchApp(req, app: app, store: store)
+            case ("POST", "/quit"):
+                return handleQuit(bundleID: app.bundleID)
+            case ("POST", "/community/pull"):
+                store.pullCommunityFieldsToUser(for: app.bundleID)
+                let updated = store.apps.first { $0.bundleID == app.bundleID } ?? app
+                let running = store.runningBundleIDs.contains(updated.bundleID)
+                return .json(AppDTO(updated, isRunning: running, includeOverrides: true))
+            case ("POST", "/community/submit"):
+                return await handleSubmit(app: app)
+            case ("POST", "/ai-describe"):
+                return await handleAIDescribe(app: app, store: store)
+            default:
+                return .error("not_found", message: "Unknown route \(req.method) \(req.path)", status: 404)
+            }
         }
+
+        return .error("not_found", message: "Unknown route \(req.method) \(req.path)", status: 404)
+    }
+
+    // MARK: Handlers
+
+    private func handleListApps(_ req: HTTPRequest, store: AppLibraryStore) -> HTTPResponse {
+        let running = store.runningBundleIDs
+        let category = req.query["category"]
+        let developer = req.query["developer"]
+        let runningOnly = req.query["running"] == "true"
+        let filtered = store.apps.filter { app in
+            if let category, !app.effectiveCategories.contains(category) { return false }
+            if let developer, app.effectiveDeveloper != developer { return false }
+            if runningOnly, !running.contains(app.bundleID) { return false }
+            return true
+        }
+        let dtos = filtered.map { AppDTO($0, isRunning: running.contains($0.bundleID), includeOverrides: false) }
+        return .json(dtos)
+    }
+
+    private func handlePatchApp(_ req: HTTPRequest, app: AppEntry, store: AppLibraryStore) -> HTTPResponse {
+        let update: AppUpdateRequest
+        do {
+            update = try JSONDecoder().decode(AppUpdateRequest.self, from: req.body)
+        } catch {
+            return .error("bad_request", message: "Invalid JSON body: \(error.localizedDescription)", status: 400)
+        }
+        var modified = app
+        if let v = update.description { modified.userDescription = v.isEmpty ? nil : v }
+        if let v = update.developer { modified.userDeveloper = v.isEmpty ? nil : v }
+        if let v = update.categories { modified.userCategories = v }
+        if let v = update.notes { modified.userNotes = v.isEmpty ? nil : v }
+        if let v = update.websiteURL { modified.userWebsiteURL = v.isEmpty ? nil : v }
+        if let v = update.isFavorite { modified.isFavorite = v }
+        store.updateApp(modified)
+        let running = store.runningBundleIDs.contains(modified.bundleID)
+        return .json(AppDTO(modified, isRunning: running, includeOverrides: true))
+    }
+
+    private func handleQuit(bundleID: String) -> HTTPResponse {
+        let running = NSWorkspace.shared.runningApplications.filter { $0.bundleIdentifier == bundleID }
+        guard !running.isEmpty else {
+            return .error("not_running", message: "App is not currently running", status: 404)
+        }
+        var anyTerminated = false
+        for app in running {
+            if app.terminate() { anyTerminated = true }
+        }
+        return anyTerminated
+            ? .empty(status: 204)
+            : .error("terminate_failed", message: "Could not terminate app", status: 500)
+    }
+
+    private func handleGetCommunity(bundleID: String) async -> HTTPResponse {
+        do {
+            let db = try await CommunityService().fetchCommunityData()
+            if let entry = db[bundleID] {
+                return .json(CommunityDataDTO(
+                    bundleID: bundleID,
+                    description: entry.description,
+                    categories: entry.categories,
+                    developer: entry.developer,
+                    websiteURL: entry.url,
+                    exists: true
+                ))
+            }
+            return .json(CommunityDataDTO(
+                bundleID: bundleID,
+                description: nil,
+                categories: [],
+                developer: nil,
+                websiteURL: nil,
+                exists: false
+            ))
+        } catch {
+            return .error("upstream_error", message: "Failed to fetch community data: \(error.localizedDescription)", status: 502)
+        }
+    }
+
+    private func handleSubmit(app: AppEntry) async -> HTTPResponse {
+        guard let description = app.effectiveDescription, !description.isEmpty else {
+            return .error("missing_description", message: "App must have a description before submitting", status: 400)
+        }
+        let submission = CommunitySubmission(
+            bundleID: app.bundleID,
+            name: app.name,
+            description: description,
+            categories: app.effectiveCategories,
+            developer: app.effectiveDeveloper,
+            url: app.effectiveWebsiteURL
+        )
+        do {
+            let result = try await CommunityService().submitEntry(submission)
+            return .json(SubmitResponseDTO(prURL: result.prURL, prNumber: result.prNumber))
+        } catch {
+            return .error("upstream_error", message: "Submit failed: \(error.localizedDescription)", status: 502)
+        }
+    }
+
+    private func handleAIDescribe(app: AppEntry, store: AppLibraryStore) async -> HTTPResponse {
+        guard let apiKey = KeychainHelper.load(for: "anthropic-api-key"), !apiKey.isEmpty else {
+            return .error("no_api_key", message: "No Anthropic API key configured. Add one in app Settings.", status: 412)
+        }
+        do {
+            let desc = try await AIService().generateDescription(
+                appName: app.name,
+                bundleID: app.bundleID,
+                apiKey: apiKey
+            )
+            var modified = app
+            modified.userDescription = desc
+            store.updateApp(modified)
+            return .json(AIDescribeResponseDTO(description: desc))
+        } catch {
+            return .error("ai_error", message: error.localizedDescription, status: 502)
+        }
+    }
+
+    // MARK: Path helpers
+
+    private func pathParam(_ path: String, prefix: String) -> String? {
+        guard path.hasPrefix(prefix) else { return nil }
+        let id = String(path.dropFirst(prefix.count))
+        guard !id.isEmpty, !id.contains("/") else { return nil }
+        return id
+    }
+
+    /// Parses /v1/apps/{bundleID} and /v1/apps/{bundleID}/{action}.
+    /// Returns (bundleID, suffix) where suffix is "" for the bare resource or "/action[/sub]".
+    private func parseAppPath(_ path: String) -> (String, String)? {
+        let prefix = "/v1/apps/"
+        guard path.hasPrefix(prefix) else { return nil }
+        let rest = String(path.dropFirst(prefix.count))
+        guard !rest.isEmpty else { return nil }
+        if let slash = rest.firstIndex(of: "/") {
+            let id = String(rest[..<slash])
+            let suffix = String(rest[slash...])
+            guard !id.isEmpty else { return nil }
+            return (id, suffix)
+        }
+        return (rest, "")
     }
 
     private func authorize(_ req: HTTPRequest) -> Bool {
