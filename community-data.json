@@ -648,6 +648,15 @@
     ],
     "developer": "Doist"
   },
+  "com.tommertron.macAppLibrary": {
+    "name": "macAppLibrary",
+    "description": "A native Mac app that catalogs your installed applications, augments them with community-sourced metadata, and exposes the library to AI tools via a built-in MCP server.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Tom Robertson",
+    "url": "https://coefficiencies.com/apps/macapplibrary/"
+  },
   "com.utmapp.UTM": {
     "name": "UTM",
     "description": "Virtual Machine Emulator",
