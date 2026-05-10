@@ -397,14 +397,13 @@ final class APIServer {
     }
 
     private func handleAIDescribe(app: AppEntry, store: AppLibraryStore) async -> HTTPResponse {
-        guard let apiKey = KeychainHelper.load(for: "anthropic-api-key"), !apiKey.isEmpty else {
-            return .error("no_api_key", message: "No Anthropic API key configured. Add one in app Settings.", status: 412)
+        guard AIProviderSettings.hasChosenProvider else {
+            return .error("no_provider", message: "No AI provider configured. Open Settings and pick one.", status: 412)
         }
         do {
             let desc = try await AIService().generateDescription(
                 appName: app.name,
-                bundleID: app.bundleID,
-                apiKey: apiKey
+                bundleID: app.bundleID
             )
             var modified = app
             modified.userDescription = desc

@@ -3,10 +3,11 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(AppLibraryStore.self) private var store
     @Environment(UpdateService.self) private var updateService
-    @State private var apiKey = ""
-    @State private var isSaved = false
     @State private var updateStatus: UpdateCheckStatus = .idle
     @AppStorage(APIServer.mcpEnabledKey) private var mcpEnabled = false
+    @AppStorage("menubarEnabled") private var menubarEnabled = true
+    @AppStorage(JSONDataExporter.enabledKey) private var jsonExportEnabled = false
+    @AppStorage(JSONDataExporter.customPathKey) private var jsonExportCustomPath = ""
     @State private var apiInfo: APIDiscoveryInfo?
     @State private var claudeInstallStatus: ClaudeInstallStatus = .idle
 
@@ -26,36 +27,8 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
-            Section("Anthropic API Key") {
-                SecureField("sk-ant-…", text: $apiKey)
-                    .onAppear { apiKey = KeychainHelper.load(for: "anthropic-api-key") ?? "" }
-
-                HStack {
-                    Button("Save Key") {
-                        KeychainHelper.save(apiKey, for: "anthropic-api-key")
-                        isSaved = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { isSaved = false }
-                    }
-                    .disabled(apiKey.isEmpty)
-
-                    if isSaved {
-                        Label("Saved", systemImage: "checkmark.circle.fill")
-                            .foregroundStyle(.green)
-                            .transition(.opacity)
-                    }
-
-                    Spacer()
-
-                    Button("Clear Key", role: .destructive) {
-                        KeychainHelper.delete(for: "anthropic-api-key")
-                        apiKey = ""
-                    }
-                    .disabled(apiKey.isEmpty)
-                }
-
-                Text("Used only to generate app descriptions. Stored securely in your Keychain.")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+            Section("AI Provider") {
+                AIProviderConfigView()
             }
 
             Section("Smart Lists") {
@@ -82,6 +55,55 @@ struct SettingsView: View {
                 Button("Refresh Community Data") {
                     Task { await store.refresh() }
                 }
+            }
+
+            Section("JSON Data Export") {
+                Toggle("Export library to JSON file", isOn: $jsonExportEnabled)
+                    .onChange(of: jsonExportEnabled) { _, newValue in
+                        if newValue {
+                            Task { await store.exportJSONNow() }
+                        }
+                    }
+
+                LabeledContent("Location") {
+                    HStack {
+                        Text(jsonExportCustomPath.isEmpty ? JSONDataExporter.defaultDirectory.path : jsonExportCustomPath)
+                            .font(.system(.caption, design: .monospaced))
+                            .textSelection(.enabled)
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                        Spacer()
+                        Button("Choose…") { chooseExportDirectory() }
+                        if !jsonExportCustomPath.isEmpty {
+                            Button("Reset") { jsonExportCustomPath = "" }
+                        }
+                    }
+                }
+
+                HStack {
+                    Button("Export Now") {
+                        Task { await store.exportJSONNow() }
+                    }
+                    .disabled(!jsonExportEnabled)
+
+                    Button("Reveal in Finder") {
+                        let dir = JSONDataExporter.resolvedDirectory
+                        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+                        NSWorkspace.shared.activateFileViewerSelecting([dir.appendingPathComponent("apps.json")])
+                    }
+                    .disabled(!jsonExportEnabled)
+                }
+
+                Text("Writes apps.json whenever your library changes. Useful for Raycast/Alfred/CLI workflows that need offline access.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Section("Menubar") {
+                Toggle("Show macAppLibrary in menubar", isOn: $menubarEnabled)
+                Text("Adds a menubar icon with quick access to favourites, running apps, and categories.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
 
             Section("MCP Server") {
@@ -215,6 +237,21 @@ struct SettingsView: View {
             claudeInstallStatus = .success
         } catch {
             claudeInstallStatus = .failure(error.localizedDescription)
+        }
+    }
+
+    private func chooseExportDirectory() {
+        let panel = NSOpenPanel()
+        panel.canChooseFiles = false
+        panel.canChooseDirectories = true
+        panel.allowsMultipleSelection = false
+        panel.canCreateDirectories = true
+        panel.prompt = "Choose"
+        if panel.runModal() == .OK, let url = panel.url {
+            jsonExportCustomPath = url.path
+            if jsonExportEnabled {
+                Task { await store.exportJSONNow() }
+            }
         }
     }
 

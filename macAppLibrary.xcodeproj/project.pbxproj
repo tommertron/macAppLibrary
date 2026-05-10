@@ -32,6 +32,10 @@
 		AA0000000000000000000220 /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000120 /* APIServer.swift */; };
 		AA0000000000000000000221 /* MCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000121 /* MCPServer.swift */; };
 		AA0000000000000000000222 /* ClaudeDesktopInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */; };
+		AA0000000000000000000224 /* MenuBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000124 /* MenuBarContent.swift */; };
+		AA0000000000000000000225 /* JSONDataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000125 /* JSONDataExporter.swift */; };
+		AA0000000000000000000226 /* AIProviderConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000126 /* AIProviderConfigView.swift */; };
+		AA0000000000000000000227 /* AIProviderFirstRunSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000127 /* AIProviderFirstRunSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		AA0000000000000000000121 /* MCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPServer.swift; sourceTree = "<group>"; };
 		AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeDesktopInstaller.swift; sourceTree = "<group>"; };
 		AA0000000000000000000123 /* mcpb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mcpb; path = mcpb; sourceTree = SOURCE_ROOT; };
+		AA0000000000000000000124 /* MenuBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContent.swift; sourceTree = "<group>"; };
+		AA0000000000000000000125 /* JSONDataExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataExporter.swift; sourceTree = "<group>"; };
+		AA0000000000000000000126 /* AIProviderConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProviderConfigView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000127 /* AIProviderFirstRunSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProviderFirstRunSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -117,6 +125,9 @@
 				658F19772FA2A7D700512642 /* GalleryCardView.swift */,
 				658F19792FA2A7EC00512642 /* GalleryExpandedDetailView.swift */,
 				658F197B2FA2A7FE00512642 /* GalleryView.swift */,
+				AA0000000000000000000124 /* MenuBarContent.swift */,
+				AA0000000000000000000126 /* AIProviderConfigView.swift */,
+				AA0000000000000000000127 /* AIProviderFirstRunSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +145,7 @@
 				AA0000000000000000000120 /* APIServer.swift */,
 				AA0000000000000000000121 /* MCPServer.swift */,
 				AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */,
+				AA0000000000000000000125 /* JSONDataExporter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,6 +250,10 @@
 				AA0000000000000000000220 /* APIServer.swift in Sources */,
 				AA0000000000000000000221 /* MCPServer.swift in Sources */,
 				AA0000000000000000000222 /* ClaudeDesktopInstaller.swift in Sources */,
+				AA0000000000000000000224 /* MenuBarContent.swift in Sources */,
+				AA0000000000000000000225 /* JSONDataExporter.swift in Sources */,
+				AA0000000000000000000226 /* AIProviderConfigView.swift in Sources */,
+				AA0000000000000000000227 /* AIProviderFirstRunSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +331,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tommertron.macAppLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -336,7 +352,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tommertron.macAppLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -44,6 +44,9 @@ struct ContentView: View {
         } message: {
             Text(store.errorMessage ?? "")
         }
+        .sheet(isPresented: $store.needsAIProviderPick) {
+            AIProviderFirstRunSheet(isPresented: $store.needsAIProviderPick)
+        }
     }
 }
 

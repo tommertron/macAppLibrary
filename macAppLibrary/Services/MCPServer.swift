@@ -256,14 +256,13 @@ final class MCPServer {
         guard var app = store.apps.first(where: { $0.bundleID == id }) else {
             throw ToolError("not_found", "No app with bundleID \(id)")
         }
-        guard let apiKey = KeychainHelper.load(for: "anthropic-api-key"), !apiKey.isEmpty else {
-            throw ToolError("no_api_key", "No Anthropic API key configured. Add one in macAppLibrary Settings.")
+        guard AIProviderSettings.hasChosenProvider else {
+            throw ToolError("no_provider", "No AI provider configured. Open macAppLibrary Settings and pick a provider.")
         }
         do {
             let desc = try await AIService().generateDescription(
                 appName: app.name,
-                bundleID: app.bundleID,
-                apiKey: apiKey
+                bundleID: app.bundleID
             )
             app.userDescription = desc
             store.updateApp(app)
