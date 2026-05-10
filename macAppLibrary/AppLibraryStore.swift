@@ -365,6 +365,7 @@ final class AppLibraryStore {
         }
 
         await loadMetadata()
+        scheduleJSONExport()
     }
 
     func refreshRunningApps() {
@@ -407,12 +408,26 @@ final class AppLibraryStore {
             isFavorite: app.isFavorite
         )
         Task { await persistence.save(data, for: app.bundleID) }
+        scheduleJSONExport()
     }
+
+    func scheduleJSONExport() {
+        guard JSONDataExporter.isEnabled else { return }
+        let snapshot = ExportSnapshot(apps: apps)
+        Task { await JSONDataExporter.shared.scheduleExport(snapshot: snapshot) }
+    }
+
+    func exportJSONNow() async {
+        let snapshot = ExportSnapshot(apps: apps)
+        await JSONDataExporter.shared.writeNow(snapshot: snapshot)
+    }
+
+    var needsAIProviderPick: Bool = false
 
     func generateDescription(for appID: String) async {
         guard let idx = apps.firstIndex(where: { $0.id == appID }) else { return }
-        guard let apiKey = KeychainHelper.load(for: "anthropic-api-key"), !apiKey.isEmpty else {
-            errorMessage = "No API key set. Add one in Settings."
+        guard AIProviderSettings.hasChosenProvider else {
+            needsAIProviderPick = true
             return
         }
         generatingDescriptionFor = appID
@@ -421,8 +436,7 @@ final class AppLibraryStore {
             let app = apps[idx]
             let desc = try await aiService.generateDescription(
                 appName: app.name,
-                bundleID: app.bundleID,
-                apiKey: apiKey
+                bundleID: app.bundleID
             )
             apps[idx].userDescription = desc
             let data = UserAppData(

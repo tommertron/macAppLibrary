@@ -5,6 +5,7 @@ struct macAppLibraryApp: App {
     @State private var store = AppLibraryStore()
     @State private var updateService = UpdateService()
     @State private var apiServer: APIServer?
+    @AppStorage("menubarEnabled") private var menubarEnabled = true
 
     var body: some Scene {
         WindowGroup {
@@ -81,6 +82,11 @@ struct macAppLibraryApp: App {
             SettingsView()
                 .environment(store)
                 .environment(updateService)
+        }
+
+        MenuBarExtra("macAppLibrary", systemImage: "square.grid.2x2", isInserted: $menubarEnabled) {
+            MenuBarContent()
+                .environment(store)
         }
     }
 }
