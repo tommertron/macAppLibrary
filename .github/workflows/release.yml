@@ -124,10 +124,10 @@ jobs:
             "${VERSION}" "${VERSION}" > "$STATIC/latest.json"
 
           if [ -f "$DEST/_index.md" ]; then
-            sed -i '' -E "s|\[Download macAppLibrary [^ ]+ \(\.dmg\)\]\(/apps/macapplibrary/macAppLibrary-[^)]+\.dmg\)|[Download macAppLibrary ${VERSION} (.dmg)](/apps/macapplibrary/macAppLibrary-${VERSION}.dmg)|g" "$DEST/_index.md"
+            sed -i '' -E "s|/apps/macapplibrary/macAppLibrary-[0-9]+(\.[0-9]+)+\.dmg|/apps/macapplibrary/macAppLibrary-${VERSION}.dmg|g" "$DEST/_index.md"
 
             if ! grep -q "View Changelog" "$DEST/_index.md"; then
-              sed -i '' -E "s|(\[Download macAppLibrary [^ ]+ \(\.dmg\)\]\([^)]+\.dmg\))|\1\n\n[View Changelog](/apps/macapplibrary/changelog/)|" "$DEST/_index.md"
+              sed -i '' -E "s|(\[Download macAppLibrary\]\([^)]+\.dmg\))|\1\n\n[View Changelog](/apps/macapplibrary/changelog/)|" "$DEST/_index.md"
             fi
           fi
 
