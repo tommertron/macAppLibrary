@@ -2,7 +2,8 @@
   "name": "1Blocker",
   "description": "1Blocker is a content blocker and privacy app for Safari that filters ads, trackers, and malicious websites to improve browsing speed and protect user privacy. It also includes features for managing cookies, blocking scripts, and customizing filtering rules.",
   "categories": [
-    "Productivity"
+    "Utilities"
   ],
-  "developer": "1Blocker, LLC"
+  "developer": "1Blocker, LLC",
+  "url": "https://1blocker.com"
 }
