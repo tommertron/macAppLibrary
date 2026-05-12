@@ -1,0 +1,9 @@
+{
+  "name": "BlockBlock Helper",
+  "description": "BlockBlock Helper is a privileged helper tool for the BlockBlock security application that monitors and detects persistent component installations on macOS. It runs with elevated privileges to watch for software attempting to establish persistence mechanisms, such as launch agents, daemons, or login items.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Objective-See",
+  "url": "https://objective-see.org/products/blockblock.html"
+}
