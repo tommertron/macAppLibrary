@@ -1,0 +1,10 @@
+{
+  "name": "ChatGPT Atlas",
+  "description": "Chromium-based Web browser by OpenAI with ChatGPT built in, offering a chat sidebar, agent mode, and integration with your ChatGPT history.",
+  "categories": [
+    "Web Browsers",
+    "AI"
+  ],
+  "developer": "OpenAI",
+  "url": "https://chatgpt.com/atlas"
+}
