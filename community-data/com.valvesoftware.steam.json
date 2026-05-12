@@ -1,0 +1,9 @@
+{
+  "name": "Steam",
+  "description": "Cross platform, games-focused digital distribution platform and storefront that allows users to purchase, download, and launch video games and software. It provides social features, cloud saves, and automatic updates for installed titles.",
+  "categories": [
+    "Games"
+  ],
+  "developer": "Valve Corporation",
+  "url": "https://store.steampowered.com"
+}
