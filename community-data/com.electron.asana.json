@@ -1,0 +1,9 @@
+{
+  "name": "Asana",
+  "description": "Asana is a project management and team collaboration app that allows users to organize tasks, track project progress, and coordinate work across teams. It provides tools for creating task lists, setting deadlines, assigning responsibilities, and communicating within projects.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Asana",
+  "url": "https://asana.com/download"
+}
