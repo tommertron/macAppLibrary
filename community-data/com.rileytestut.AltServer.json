@@ -1,0 +1,9 @@
+{
+  "name": "AltServer",
+  "description": "Application to install and refresh AltStore (an alternative iOS app marketplace) on iPhone or iPad, by signing apps with an Apple ID over a local network or USB connection.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Riley Testut",
+  "url": "https://altstore.io"
+}
