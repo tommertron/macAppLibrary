@@ -52,6 +52,15 @@
     ],
     "developer": "David Kocher.    Yves Langisch"
   },
+  "com.1password.1password": {
+    "name": "1Password",
+    "description": "1Password is a password manager that securely stores and autofills passwords, credit cards, secure notes, and other sensitive information across websites and apps. It uses end-to-end encryption to protect stored data and syncs across devices.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "1Password",
+    "url": "https://1password.com"
+  },
   "com.agiletortoise.Drafts-OSX": {
     "name": "Drafts",
     "description": "A quick-capture writing app where text starts here \u2014 capture ideas fast and then send them anywhere with powerful actions.",
