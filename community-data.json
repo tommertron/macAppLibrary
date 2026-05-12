@@ -683,6 +683,15 @@
     ],
     "developer": "Valerijs Boguckis"
   },
+  "com.valvesoftware.steam": {
+    "name": "Steam",
+    "description": "Cross platform, games-focused digital distribution platform and storefront that allows users to purchase, download, and launch video games and software. It provides social features, cloud saves, and automatic updates for installed titles.",
+    "categories": [
+      "Games"
+    ],
+    "developer": "Valve Corporation",
+    "url": "https://store.steampowered.com"
+  },
   "company.thebrowser.Browser": {
     "name": "Arc",
     "description": "Arc is a web browser developed by The Browser Company that reimagines browser design with features like split view browsing, customizable spaces for organizing tabs, and AI-powered tools to enhance web browsing productivity. It offers a modern alternative to traditional browsers with a focus on user control and efficient tab and window management.",
