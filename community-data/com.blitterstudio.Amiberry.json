@@ -1,0 +1,10 @@
+{
+  "name": "Amiberry",
+  "description": "Amiga emulator, built on WinUAE, runs software and games designed for Commodore Amiga computers. It supports a wide range of Amiga hardware targets, and has modern features like drag-and-drop, shaders, RetroArch controller mapping, and custom bezels.",
+  "categories": [
+    "Games",
+    "Emulators"
+  ],
+  "developer": "Dimitris Panokostas",
+  "url": "https://amiberry.com"
+}
