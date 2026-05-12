@@ -1,0 +1,9 @@
+{
+  "name": "AppZapper",
+  "description": "Uninstaller utility that removes applications along with their associated files, such as preferences, caches, and support files, ensuring a clean uninstall rather than simply dragging apps to the Trash.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Austin Sarner and Brian Ball",
+  "url": "https://appzapper.com"
+}
