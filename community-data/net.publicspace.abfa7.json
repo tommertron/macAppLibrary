@@ -1,0 +1,9 @@
+{
+  "name": "A Better Finder Attributes 7",
+  "description": "A Better Finder Attributes is a macOS utility that allows users to batch edit file metadata, including creation and modification dates, EXIF & IPTC data in photos, and file flags. It also has tools for working with invisible files. It integrates with the Finder as a contextual menu plugin for quick access.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Frank Reiff",
+  "url": "https://www.publicspace.net/ABetterFinderAttributes"
+}
