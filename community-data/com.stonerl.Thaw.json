@@ -1,0 +1,9 @@
+{
+  "name": "Thaw",
+  "description": "Menu bar management tool. Its primary function is hiding and showing menu bar items; it can also customize the menu bar’s appearance. Extremely useful when running many menu bar items and facing clutter or running out of space.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Toni Förster\n   Jordan Baird (Ice)",
+  "url": "https://github.com/stonerl/Thaw"
+}
