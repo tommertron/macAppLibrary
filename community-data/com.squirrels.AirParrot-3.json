@@ -1,0 +1,11 @@
+{
+  "name": "AirParrot 3",
+  "description": "AirParrot allows users to wirelessly stream or mirror their screen, audio, and media files to devices such as Apple TV, Chromecast, and AirPlay receivers. It extends macOS's native AirPlay functionality by adding support for additional streaming targets; and extra features such as streaming a single application instead of the whole screen, or transcoding video so you can stream almost anything, regardless of the receiving device’s compatibility.",
+  "categories": [
+    "Utilities",
+    "Video",
+    "Music & Audio"
+  ],
+  "developer": "Squirrels LLC",
+  "url": "https://www.airsquirrels.com/airparrot"
+}
