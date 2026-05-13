@@ -3,5 +3,7 @@
   "description": "OpenAI's coding assistant that helps developers write, debug, and understand code across multiple languages.",
   "categories": [
     "Developer Tools"
-  ]
+  ],
+  "developer": "OpenAI",
+  "url": "https://openai.com/codex"
 }
