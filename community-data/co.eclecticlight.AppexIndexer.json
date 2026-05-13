@@ -1,0 +1,10 @@
+{
+  "name": "AppexIndexer",
+  "description": "AppexIndexer indexes app extensions (appex bundles) installed on the system, helping users discover and understand the various extensions provided by installed applications.",
+  "categories": [
+    "Utilities",
+    "Developer Tools"
+  ],
+  "developer": "EHN & DIJ Oakley",
+  "url": "https://eclecticlight.co/2025/04/10/discover-appexes-with-appexindexer/"
+}
