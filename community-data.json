@@ -160,6 +160,15 @@
       "Developer Tools"
     ]
   },
+  "com.appzapper.appzapper2": {
+    "name": "AppZapper",
+    "description": "Uninstaller utility that removes applications along with their associated files, such as preferences, caches, and support files, ensuring a clean uninstall rather than simply dragging apps to the Trash.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Austin Sarner and Brian Ball",
+    "url": "https://appzapper.com"
+  },
   "com.barebones.bbedit": {
     "name": "BBEdit",
     "description": "A professional text editor for macOS with powerful search, syntax highlighting, and scripting for developers and writers alike.",
@@ -201,6 +210,15 @@
     ],
     "developer": "Keeper Security, Inc",
     "url": "https://www.keepersecurity.com/"
+  },
+  "com.canva.affinity": {
+    "name": "Affinity",
+    "description": "Professional-class design, photo editing and page layout software.",
+    "categories": [
+      "Graphics & Design"
+    ],
+    "developer": "Canva",
+    "url": "https://www.affinity.studio"
   },
   "com.cascadea.app": {
     "name": "Cascadea",
@@ -361,6 +379,15 @@
     ],
     "developer": "Junecloud LLC"
   },
+  "com.katsurashareware.AmorphousDiskMark": {
+    "name": "AmorphousDiskMark",
+    "description": "AmorphousDiskMark measures storage read/write performance in MB/s and IOPS. It is inspired by the Windows application CrystalDiskMark and uses a very similar UI, with permission from the CrystalDiskMark author.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Katsura Shareware",
+    "url": "https://www.katsurashareware.com/amorphousdiskmark"
+  },
   "com.khanov.BlockerX": {
     "name": "1Blocker",
     "description": "1Blocker is a content blocker and privacy app for Safari that filters ads, trackers, and malicious websites to improve browsing speed and protect user privacy. It also includes features for managing cookies, blocking scripts, and customizing filtering rules.",
@@ -473,6 +500,16 @@
     ],
     "developer": "Mimestream, LLC"
   },
+  "com.mothersruin.Apparency": {
+    "name": "Apparency",
+    "description": "Inspect macOS applications, revealing code signatures, entitlements, version information, and other metadata about applications and their contents. See identifiers and versions, what document types and URLs an application supports, and what platforms it\u2019s compiled for.",
+    "categories": [
+      "Utilities",
+      "Developer Tools"
+    ],
+    "developer": "Randy Saldinger, dba Mothers Ruin Software",
+    "url": "https://www.mothersruin.com/software/Apparency"
+  },
   "com.ngocluu.goodlinks": {
     "name": "GoodLinks",
     "description": "A clean read-later app for saving links with tagging, full-text search, and an integrated reader view.",
@@ -496,6 +533,15 @@
     ],
     "developer": "Noodlesoft, LLC"
   },
+  "com.objective-see.blockblock.helper": {
+    "name": "BlockBlock Helper",
+    "description": "BlockBlock Helper is a privileged helper tool for the BlockBlock security application that monitors and detects persistent component installations on macOS. It runs with elevated privileges to watch for software attempting to establish persistence mechanisms, such as launch agents, daemons, or login items.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Objective-See",
+    "url": "https://objective-see.org/products/blockblock.html"
+  },
   "com.okta.mobile": {
     "name": "Okta Verify",
     "description": "A multi-factor authentication application that provides secure sign-in verification using push notifications, one-time passcodes, and device-based authentication for organizational accounts and services.",
@@ -503,6 +549,16 @@
       "Business"
     ],
     "developer": "Okta"
+  },
+  "com.openai.atlas": {
+    "name": "ChatGPT Atlas",
+    "description": "Chromium-based Web browser by OpenAI with ChatGPT built in, offering a chat sidebar, agent mode, and integration with your ChatGPT history.",
+    "categories": [
+      "Web Browsers",
+      "AI"
+    ],
+    "developer": "OpenAI",
+    "url": "https://chatgpt.com/atlas"
   },
   "com.openai.chat": {
     "name": "ChatGPT",
@@ -594,6 +650,15 @@
     ],
     "developer": "Moballo",
     "url": "https://sequel-ace.com/"
+  },
+  "com.sindresorhus.Actions": {
+    "name": "Actions",
+    "description": "Actions provides a large collection of additional actions for the Shortcuts app, extending its automation capabilities with functions not available by default. They cover a wide range including text transformations, parsing CSV, JSON and Markdown, storing values in the Keychain, checking Dark mode\u2026 180+ total.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Sindre Sorhus",
+    "url": "https://sindresorhus.com/actions"
   },
   "com.sindresorhus.Pure-Paste": {
     "name": "Pure Paste",
@@ -783,6 +848,15 @@
       "Developer Tools"
     ],
     "url": "https://www.moderncsv.com/"
+  },
+  "net.publicspace.abfa7": {
+    "name": "A Better Finder Attributes 7",
+    "description": "A Better Finder Attributes is a macOS utility that allows users to batch edit file metadata, including creation and modification dates, EXIF & IPTC data in photos, and file flags. It also has tools for working with invisible files. It integrates with the Finder as a contextual menu plugin for quick access.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Frank Reiff",
+    "url": "https://www.publicspace.net/ABetterFinderAttributes"
   },
   "net.publicspace.abfr12": {
     "name": "A Better Finder Rename 12",
