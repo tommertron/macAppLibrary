@@ -52,6 +52,16 @@
     ],
     "developer": "David Kocher.    Yves Langisch"
   },
+  "co.eclecticlight.AppexIndexer": {
+    "name": "AppexIndexer",
+    "description": "AppexIndexer indexes app extensions (appex bundles) installed on the system, helping users discover and understand the various extensions provided by installed applications.",
+    "categories": [
+      "Utilities",
+      "Developer Tools"
+    ],
+    "developer": "EHN & DIJ Oakley",
+    "url": "https://eclecticlight.co/2025/04/10/discover-appexes-with-appexindexer/"
+  },
   "com.1password.1password": {
     "name": "1Password",
     "description": "1Password is a password manager that securely stores and autofills passwords, credit cards, secure notes, and other sensitive information across websites and apps. It uses end-to-end encryption to protect stored data and syncs across devices.",
@@ -60,6 +70,42 @@
     ],
     "developer": "1Password",
     "url": "https://1password.com"
+  },
+  "com.1password.safari": {
+    "name": "1Password for Safari",
+    "description": "1Password for Safari is a browser extension that integrates 1Password's password management functionality directly into Safari, allowing users to autofill saved logins, passwords, credit cards, and other credentials on websites. (It doesn\u2019t require the desktop app to be installed; it can sync directly to a 1Password account.)",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "1Password",
+    "url": "https://apps.apple.com/us/app/1password-for-safari"
+  },
+  "com.ACDSystems.ACDSeePhotoStudio10": {
+    "name": "ACDSee Photo Studio 10",
+    "description": "ACDSee Photo Studio is a comprehensive photo management and editing application for macOS that allows users to organize, browse, and edit their photo libraries. It offers tools for non-destructive editing, RAW processing, and asset management for photographers of all skill levels.",
+    "categories": [
+      "Photography"
+    ],
+    "developer": "ACD Systems International",
+    "url": "https://www.acdsee.com/en/products/photo-studio-mac"
+  },
+  "com.acdsystems.acdseePhotoFlash": {
+    "name": "ACDSee Photo Flash",
+    "description": "Minimalist app for brightening underexposed photos using ACDSee\u2019s \u201cLighting and Contrast Enhancement (LCE)\u201d technology to avoid excessive grain and blowout. (Discontinued; replaced with Light EQ by ACDSee.)",
+    "categories": [
+      "Photography"
+    ],
+    "developer": "ACD Systems International"
+  },
+  "com.adobe.adobedigitaleditions.app": {
+    "name": "Adobe Digital Editions",
+    "description": "Adobe Digital Editions is an e-book reader and library manager for DRM-protected EPUB books.",
+    "categories": [
+      "",
+      "Books"
+    ],
+    "developer": "Adobe Systems",
+    "url": "https://www.adobe.com/solutions/ebook/digital-editions/download.html"
   },
   "com.agiletortoise.Drafts-OSX": {
     "name": "Drafts",
@@ -98,6 +144,15 @@
     "categories": [
       "Utilities"
     ]
+  },
+  "com.apple.Aperture3": {
+    "name": "Aperture",
+    "description": "Aperture was a professional photo management and editing application developed by Apple, allowing photographers to import, organize, edit, and export large libraries of images with advanced tools for color correction, retouching, and metadata management. Apple discontinued the app in 2014.",
+    "categories": [
+      "Photography"
+    ],
+    "developer": "Apple",
+    "url": "https://support.apple.com/en-us/100504"
   },
   "com.apple.SFSymbols": {
     "name": "SF Symbols",
@@ -185,6 +240,16 @@
     ],
     "developer": "BinaryNights"
   },
+  "com.blitterstudio.Amiberry": {
+    "name": "Amiberry",
+    "description": "Amiga emulator, built on WinUAE, runs software and games designed for Commodore Amiga computers. It supports a wide range of Amiga hardware targets, and has modern features like drag-and-drop, shaders, RetroArch controller mapping, and custom bezels.",
+    "categories": [
+      "Games",
+      "Emulators"
+    ],
+    "developer": "Dimitris Panokostas",
+    "url": "https://amiberry.com"
+  },
   "com.brainfevermedia.anamorphicpro": {
     "name": "Anamorphic Pro",
     "description": "Anamorphic Pro is a macOS app that allows users to create anamorphic lens effects and cinematic looks on images and video footage. It provides tools to simulate the characteristic visual qualities of anamorphic cinematography, including lens flares, bokeh, and aspect ratio adjustments.",
@@ -200,6 +265,15 @@
       "Productivity"
     ],
     "developer": "Brett Terpstra"
+  },
+  "com.byteproject.Ascension": {
+    "name": "Ascension",
+    "description": "Ascension is a macOS utility that allows users to manage and switch between different versions of Xcode installed on their system, making it easy to set the active developer tools path.",
+    "categories": [
+      "Graphics & Design"
+    ],
+    "developer": "Stefan Vogt",
+    "url": "https://github.com/ansilove/Ascension"
   },
   "com.callpod.keepermac.lite": {
     "name": "Keeper Password Manager",
@@ -292,6 +366,15 @@
     ],
     "developer": "Edovia Inc"
   },
+  "com.electron.asana": {
+    "name": "Asana",
+    "description": "Asana is a project management and team collaboration app that allows users to organize tasks, track project progress, and coordinate work across teams. It provides tools for creating task lists, setting deadlines, assigning responsibilities, and communicating within projects.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Asana",
+    "url": "https://asana.com/download"
+  },
   "com.ethanbills.DockDoor": {
     "name": "DockDoor",
     "description": "Adds window previews to your Mac Dock on hover, so you can see and switch between open windows of each app at a glance.",
@@ -331,12 +414,40 @@
     ],
     "developer": "GitHub, Inc"
   },
+  "com.glouel.AerialUpdater": {
+    "name": "Aerial Companion",
+    "description": "Aerial Companion is a helper app that manages updates and installation of the Aerial screensaver, which displays Apple TV aerial video screensavers (as well as third-party video screen savers) on Mac computers.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Guillaume Louel",
+    "url": "https://aerialscreensaver.github.io"
+  },
   "com.google.Chrome": {
     "name": "Google Chrome",
     "description": "Google's fast, cross-platform web browser with a vast extension library and deep Google service integration.",
     "categories": [
       "Utilities"
     ]
+  },
+  "com.google.android.mtpviewer": {
+    "name": "Android File Transfer",
+    "description": "Android File Transfer enables users to browse and transfer files between a Mac and an Android device connected via USB. It uses the Media Transfer Protocol (MTP) to provide access to the Android device's storage. (Discontinued.)",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Google",
+    "url": "https://web.archive.org/web/20240501030920/https://www.android.com/filetransfer/"
+  },
+  "com.googlecode.iterm2": {
+    "name": "iTerm2",
+    "description": "Terminal emulator offering advanced capabilities such as split panes, search, autocomplete, tmux integration, inline images, automatic profile switching, instant replay, and extensive customization options.",
+    "categories": [
+      "Productivity",
+      "Developer Tools"
+    ],
+    "developer": "George Nachman",
+    "url": "https://iterm2.com"
   },
   "com.haystacksoftware.Arq": {
     "name": "Arq",
@@ -467,6 +578,15 @@
       "Productivity"
     ],
     "developer": "Microsoft Corporation"
+  },
+  "com.microsoft.VSCode": {
+    "name": "Code",
+    "description": "Free, open-source code editor that supports syntax highlighting, intelligent code completion, debugging, and version control integration across a wide range of programming languages and frameworks; with a thriving extension ecosystem.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Microsoft",
+    "url": "https://code.visualstudio.com"
   },
   "com.microsoft.Word": {
     "name": "Microsoft Word",
@@ -621,6 +741,15 @@
       "Music & Audio"
     ]
   },
+  "com.rileytestut.AltServer": {
+    "name": "AltServer",
+    "description": "Application to install and refresh AltStore (an alternative iOS app marketplace) on iPhone or iPad, by signing apps with an Apple ID over a local network or USB connection.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Riley Testut",
+    "url": "https://altstore.io"
+  },
   "com.rogueamoeba.audiohijack": {
     "name": "Audio Hijack",
     "description": "Audio Hijack is a professional audio recording and routing application for macOS that allows users to capture audio from any application or source on their computer. It enables mixing, effects processing, and high-quality recording of audio streams that would normally be difficult or impossible to record directly.",
@@ -676,6 +805,17 @@
     ],
     "developer": "Sindre Sorhus"
   },
+  "com.squirrels.AirParrot-3": {
+    "name": "AirParrot 3",
+    "description": "AirParrot allows users to wirelessly stream or mirror their screen, audio, and media files to devices such as Apple TV, Chromecast, and AirPlay receivers. It extends macOS's native AirPlay functionality by adding support for additional streaming targets; and extra features such as streaming a single application instead of the whole screen, or transcoding video so you can stream almost anything, regardless of the receiving device\u2019s compatibility.",
+    "categories": [
+      "Utilities",
+      "Video",
+      "Music & Audio"
+    ],
+    "developer": "Squirrels LLC",
+    "url": "https://www.airsquirrels.com/airparrot"
+  },
   "com.stairways.keyboardmaestro.editor": {
     "name": "Keyboard Maestro",
     "description": "A powerful macro and automation tool for macOS that can automate virtually anything \u2014 keystrokes, menus, scripts, and more.",
@@ -683,6 +823,15 @@
       "Utilities"
     ],
     "developer": "Stairways Software"
+  },
+  "com.stonerl.Thaw": {
+    "name": "Thaw",
+    "description": "Menu bar management tool. Its primary function is hiding and showing menu bar items; it can also customize the menu bar\u2019s appearance. Extremely useful when running many menu bar items and facing clutter or running out of space.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Toni F\u00f6rster\n   Jordan Baird (Ice)",
+    "url": "https://github.com/stonerl/Thaw"
   },
   "com.tapbots.Ivory": {
     "name": "Ivory",
