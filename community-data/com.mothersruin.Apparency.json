@@ -1,0 +1,10 @@
+{
+  "name": "Apparency",
+  "description": "Inspect macOS applications, revealing code signatures, entitlements, version information, and other metadata about applications and their contents. See identifiers and versions, what document types and URLs an application supports, and what platforms it’s compiled for.",
+  "categories": [
+    "Utilities",
+    "Developer Tools"
+  ],
+  "developer": "Randy Saldinger, dba Mothers Ruin Software",
+  "url": "https://www.mothersruin.com/software/Apparency"
+}
