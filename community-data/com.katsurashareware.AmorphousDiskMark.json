@@ -1,0 +1,9 @@
+{
+  "name": "AmorphousDiskMark",
+  "description": "AmorphousDiskMark measures storage read/write performance in MB/s and IOPS. It is inspired by the Windows application CrystalDiskMark and uses a very similar UI, with permission from the CrystalDiskMark author.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Katsura Shareware",
+  "url": "https://www.katsurashareware.com/amorphousdiskmark"
+}
