@@ -1,0 +1,9 @@
+{
+  "name": "ACDSee Photo Studio 10",
+  "description": "ACDSee Photo Studio is a comprehensive photo management and editing application for macOS that allows users to organize, browse, and edit their photo libraries. It offers tools for non-destructive editing, RAW processing, and asset management for photographers of all skill levels.",
+  "categories": [
+    "Photography"
+  ],
+  "developer": "ACD Systems International",
+  "url": "https://www.acdsee.com/en/products/photo-studio-mac"
+}
