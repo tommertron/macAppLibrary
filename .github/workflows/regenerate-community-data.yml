@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: regenerate-community-data
+  cancel-in-progress: false
+
 jobs:
   regenerate:
     runs-on: ubuntu-latest
