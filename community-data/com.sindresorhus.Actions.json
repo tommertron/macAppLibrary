@@ -1,0 +1,9 @@
+{
+  "name": "Actions",
+  "description": "Actions provides a large collection of additional actions for the Shortcuts app, extending its automation capabilities with functions not available by default. They cover a wide range including text transformations, parsing CSV, JSON and Markdown, storing values in the Keychain, checking Dark mode… 180+ total.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Sindre Sorhus",
+  "url": "https://sindresorhus.com/actions"
+}
