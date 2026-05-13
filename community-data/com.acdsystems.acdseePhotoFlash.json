@@ -1,0 +1,8 @@
+{
+  "name": "ACDSee Photo Flash",
+  "description": "Minimalist app for brightening underexposed photos using ACDSee’s “Lighting and Contrast Enhancement (LCE)” technology to avoid excessive grain and blowout. (Discontinued; replaced with Light EQ by ACDSee.)",
+  "categories": [
+    "Photography"
+  ],
+  "developer": "ACD Systems International"
+}
