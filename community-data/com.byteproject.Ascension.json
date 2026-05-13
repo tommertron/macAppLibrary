@@ -1,0 +1,9 @@
+{
+  "name": "Ascension",
+  "description": "Ascension is a macOS utility that allows users to manage and switch between different versions of Xcode installed on their system, making it easy to set the active developer tools path.",
+  "categories": [
+    "Graphics & Design"
+  ],
+  "developer": "Stefan Vogt",
+  "url": "https://github.com/ansilove/Ascension"
+}
