@@ -1,0 +1,9 @@
+{
+  "name": "Android File Transfer",
+  "description": "Android File Transfer enables users to browse and transfer files between a Mac and an Android device connected via USB. It uses the Media Transfer Protocol (MTP) to provide access to the Android device's storage. (Discontinued.)",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Google",
+  "url": "https://web.archive.org/web/20240501030920/https://www.android.com/filetransfer/"
+}
