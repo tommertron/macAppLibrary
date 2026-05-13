@@ -1,0 +1,9 @@
+{
+  "name": "Aerial Companion",
+  "description": "Aerial Companion is a helper app that manages updates and installation of the Aerial screensaver, which displays Apple TV aerial video screensavers (as well as third-party video screen savers) on Mac computers.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Guillaume Louel",
+  "url": "https://aerialscreensaver.github.io"
+}
