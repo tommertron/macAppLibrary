@@ -113,7 +113,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Agile Tortoise"
+    "developer": "Agile Tortoise",
+    "url": "https://getdrafts.com"
   },
   "com.amazon.Lassen": {
     "name": "Amazon Kindle",
@@ -404,7 +405,8 @@
     "categories": [
       "Graphics & Design"
     ],
-    "developer": "Flying Meat Inc"
+    "developer": "Flying Meat Inc",
+    "url": "https://flyingmeat.com/acorn"
   },
   "com.github.GitHubClient": {
     "name": "GitHub Desktop",
@@ -427,8 +429,10 @@
     "name": "Google Chrome",
     "description": "Google's fast, cross-platform web browser with a vast extension library and deep Google service integration.",
     "categories": [
-      "Utilities"
-    ]
+      "Web Browsers"
+    ],
+    "developer": "Google",
+    "url": "https://www.google.com/chrome"
   },
   "com.google.android.mtpviewer": {
     "name": "Android File Transfer",
@@ -503,9 +507,10 @@
     "name": "1Blocker",
     "description": "1Blocker is a content blocker and privacy app for Safari that filters ads, trackers, and malicious websites to improve browsing speed and protect user privacy. It also includes features for managing cookies, blocking scripts, and customizing filtering rules.",
     "categories": [
-      "Productivity"
+      "Utilities"
     ],
-    "developer": "1Blocker, LLC"
+    "developer": "1Blocker, LLC",
+    "url": "https://1blocker.com"
   },
   "com.kruegersystems.calca.mac": {
     "name": "Calca",
@@ -682,17 +687,22 @@
   },
   "com.openai.chat": {
     "name": "ChatGPT",
-    "description": "OpenAI's desktop app for conversational AI, offering GPT-4 for answering questions, writing, coding, and analysis.",
+    "description": "OpenAI's desktop app for conversational AI, offering current GPT models for answering questions, writing, coding, and analysis.",
     "categories": [
-      "Productivity"
-    ]
+      "Productivity",
+      "AI"
+    ],
+    "developer": "OpenAI",
+    "url": "https://chatgpt.com/download"
   },
   "com.openai.codex": {
     "name": "Codex",
     "description": "OpenAI's coding assistant that helps developers write, debug, and understand code across multiple languages.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "developer": "OpenAI",
+    "url": "https://openai.com/codex"
   },
   "com.panic.transmit.mas": {
     "name": "Transmit",
@@ -1013,7 +1023,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Frank Reiff"
+    "developer": "Frank Reiff",
+    "url": "https://www.publicspace.net/ABetterFinderRename"
   },
   "net.shinyfrog.bear": {
     "name": "Bear",
