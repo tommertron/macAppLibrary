@@ -1,0 +1,9 @@
+{
+  "name": "Code",
+  "description": "Free, open-source code editor that supports syntax highlighting, intelligent code completion, debugging, and version control integration across a wide range of programming languages and frameworks; with a thriving extension ecosystem.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Microsoft",
+  "url": "https://code.visualstudio.com"
+}
