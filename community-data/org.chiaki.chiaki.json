@@ -1,0 +1,9 @@
+{
+  "name": "Chiaki",
+  "description": "Chiaki is a free and open-source client for PlayStation Remote Play, allowing users to stream and play PlayStation 4 and PlayStation 5 games on their Mac over a local network or the internet.",
+  "categories": [
+    "Games"
+  ],
+  "developer": "thestr4ng3r",
+  "url": "https://git.sr.ht/~thestr4ng3r/chiaki"
+}
