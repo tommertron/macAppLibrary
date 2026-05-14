@@ -1,0 +1,9 @@
+{
+  "name": "Backdrop",
+  "description": "Backdrop is a utility that places a solid color or chosen background behind a specific app window, temporarily hiding your desktop and other background elements. This is useful to focus attention during screen sharing, presentations, or recordings.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Apps From Outer Space",
+  "url": "https://appsfromouterspace.com/apps/backdrop"
+}
