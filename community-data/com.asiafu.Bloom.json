@@ -1,0 +1,9 @@
+{
+  "name": "Bloom",
+  "description": "Bloom is a file manager intended to replace Finder with a more refined experience. Features include multi-pane layouts, a refined search experience, and a compact mode for working side-by-side with other applications.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "INCHMAN",
+  "url": "https://bloomapp.club"
+}
