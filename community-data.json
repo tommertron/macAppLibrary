@@ -1365,6 +1365,15 @@
       "Utilities"
     ]
   },
+  "sh.cider.genten.mac": {
+    "name": "Cider",
+    "description": "Cider is a third-party Apple Music client that provides an alternative interface for streaming and managing your library. Features include Chromecast support, visual customization, custom themes and plugins, last.fm and Discord integration.",
+    "categories": [
+      "Music"
+    ],
+    "developer": "Cider Collective",
+    "url": "https://cider.sh"
+  },
   "us.zoom.xos": {
     "name": "Zoom",
     "description": "A video conferencing platform for meetings, webinars, and collaboration with screen sharing and recording features.",
