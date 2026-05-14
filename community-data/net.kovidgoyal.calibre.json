@@ -1,0 +1,9 @@
+{
+  "name": "calibre",
+  "description": "Calibre is a comprehensive e-book manager that allows users to organize, convert, edit, and transfer e-books across various formats and devices. It includes a built-in e-book viewer and supports downloading news from the web as e-books. It has a deeply customizable database and interface, and is open source.",
+  "categories": [
+    "Books"
+  ],
+  "developer": "Kovid Goyal",
+  "url": "https://calibre-ebook.com"
+}
