@@ -1,0 +1,9 @@
+{
+  "name": "chiaki-ng",
+  "description": "Chiaki-ng is an open-source client for PlayStation Remote Play, allowing users to stream and play PlayStation 4 and PlayStation 5 games on their Mac over a local network or the internet. Based on the original Chiaki, chiaki-ng is meant to be a faster moving and more community oriented project.",
+  "categories": [
+    "Games"
+  ],
+  "developer": "thestr4ng3r and chiaki-ng team",
+  "url": "https://streetpea.github.io/chiaki-ng/"
+}
