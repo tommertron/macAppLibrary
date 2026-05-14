@@ -1,0 +1,9 @@
+{
+  "name": "Cog",
+  "description": "Cog is a free, open-source audio player that supports a wide variety of audio formats, including FLAC, MP3, Ogg Vorbis, Windows Media Audio, ATRAC3, Monkey’s Audio (APE), RealAudio, MIDI, SID, dozens of tracker formats, game formats like GBS, NSF, VGM, and many others. It provides a clean, minimal interface for music playback with support for playlists and audio format plugins. It support gapless playback and last.fm scrobbling.",
+  "categories": [
+    "Music"
+  ],
+  "developer": "Christopher Snowhill, Vincent Spader, et al",
+  "url": "https://cog.losno.co"
+}
