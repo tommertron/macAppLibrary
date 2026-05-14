@@ -1,0 +1,9 @@
+{
+  "name": "Clean Text",
+  "description": "Clean Text cleans and transforms text from the clipboard, removing unwanted formatting, fixing spacing and line breaks, converting text case, and more. It streamlines pasting plain, properly formatted text into other applications. It also offers tools for transforming text like regular expressions, Unicode 𝓯𝓪𝓷𝓬𝔂 𝖙𝖊𝖝𝖙, converting quote mark types (like curly quotes), or applying AI text suggestions.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Apimac",
+  "url": "https://www.apimac.com/mac/cleantext"
+}
