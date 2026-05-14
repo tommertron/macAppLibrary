@@ -1,0 +1,9 @@
+{
+  "name": "Aseprite",
+  "description": "Aseprite is a pixel art editor for creating sprites, tilesets, and pixel-based animations. It offers frame-by-frame animation support, layering, and drawing tools tailored specifically for pixel art workflows.",
+  "categories": [
+    "Graphics & Design"
+  ],
+  "developer": "Igara Studio S.A",
+  "url": "https://www.aseprite.org"
+}
