@@ -1,0 +1,9 @@
+{
+  "name": "Burn",
+  "description": "Burn is a free disc burning application that allows users to create and burn audio, data, video, and MP3 CDs and DVDs. It supports various disc formats and provides a straightforward interface for writing files to optical media.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Kiwi Fruitware",
+  "url": "https://burn-osx.sourceforge.io/Pages/English/home.html"
+}
