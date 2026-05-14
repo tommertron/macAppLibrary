@@ -467,6 +467,15 @@
     ],
     "developer": "Software Ambience Corp"
   },
+  "com.devon-technologies.sphereexpress": {
+    "name": "DEVONsphere Express",
+    "description": "DEVONsphere is a menubar utility for searching your Mac and finding data related to the frontmost document. Find related items, use advanced search operators like boolean search, and surface context-aware results.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "DEVONtechnologies",
+    "url": "https://www.devontechnologies.com/apps/devonsphere"
+  },
   "com.disc-soft.DAEMONToolsLite": {
     "name": "DAEMON Tools",
     "description": "DAEMON Tools is a disk mounting utility that primarily allows users to create virtual drives and mount image files such as ISO, MDF, and other disc formats. It can also create disk images from physical discs or files on your computer. Depending on purchased features, it can also create bootable USB devices, act as an iSCSI initiator, and burn discs.",
@@ -491,6 +500,15 @@
       "Utilities"
     ],
     "developer": "Dwarves Foundation"
+  },
+  "com.edovia.Default-Handler": {
+    "name": "Default Handler",
+    "description": "Default Handler lets you change the default handler for URL schemes. Edovia created this to make it easy to set their Screens app as the default handler for the vnc: URL scheme, as App Store sandboxing doesn\u2019t allow for choosing this at runtime \u2014 apps must designate a default handler in the app bundle settings, a static configuration. However, this works for other URL schemes and applications as well, not just Screens and the vnc scheme.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Edovia, Inc",
+    "url": "https://blog.edovia.com/en/introducing-default-handler"
   },
   "com.edovia.screens.5": {
     "name": "Screens 5",
@@ -1170,6 +1188,16 @@
     "categories": [
       "Developer Tools"
     ]
+  },
+  "developer.apple.wwdc-Release": {
+    "name": "Developer",
+    "description": "The Developer app by Apple provides developer news, features, and videos, including WWDC sessions.",
+    "categories": [
+      "Reference",
+      "Developer Tools"
+    ],
+    "developer": "Apple",
+    "url": "https://apps.apple.com/us/app/apple-developer/id640199958"
   },
   "dk.simonbs.DataJar": {
     "name": "Data Jar",
