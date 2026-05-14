@@ -1,0 +1,9 @@
+{
+  "name": "Beamer",
+  "description": "Beamer streams video and audio files from your Mac directly to an Apple TV or Chromecast, allowing you to play local media on your television without needing to transfer files or use iTunes.",
+  "categories": [
+    "Video"
+  ],
+  "developer": "Softorino Inc.",
+  "url": "https://softorino.com/beamer"
+}
