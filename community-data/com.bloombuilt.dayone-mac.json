@@ -1,0 +1,9 @@
+{
+  "name": "Day One",
+  "description": "Day One is a journaling app for writing, organizing, and preserving personal journal entries. It’s designed to help you get and stay in the habit of journaling, and to protect your data with encryption, sync, and backup.",
+  "categories": [
+    "Lifestyle"
+  ],
+  "developer": "Automattic, Inc",
+  "url": "https://dayoneapp.com"
+}
