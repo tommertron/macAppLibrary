@@ -1,0 +1,9 @@
+{
+  "name": "Blender",
+  "description": "Blender is a free and open-source 3D creation suite that supports the full pipeline of modeling, rigging, animation, simulation, rendering, compositing, and motion tracking. It also includes a video editor and features for editing game assets.",
+  "categories": [
+    "Graphics & Design"
+  ],
+  "developer": "Blender Foundation",
+  "url": "https://www.blender.org"
+}
