@@ -1,0 +1,10 @@
+{
+  "name": "Brewlet",
+  "description": "Brewlet provides a menu bar interface for managing Homebrew packages, allowing users to check for and install updates directly from the menu.",
+  "categories": [
+    "System Administration",
+    "Utilities"
+  ],
+  "developer": "zzada",
+  "url": "https://github.com/zkokaja/Brewlet"
+}
