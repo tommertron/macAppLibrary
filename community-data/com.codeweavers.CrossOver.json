@@ -1,0 +1,10 @@
+{
+  "name": "CrossOver",
+  "description": "CrossOver is a distribution and front-end for Wine that lets Windows applications and games run without an emulator, translating Windows commands and function calls for seamless integration and native-like performance.",
+  "categories": [
+    "Games",
+    "Productivity"
+  ],
+  "developer": "CodeWeavers",
+  "url": "https://www.codeweavers.com/crossover"
+}
