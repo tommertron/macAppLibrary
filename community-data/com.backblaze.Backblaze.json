@@ -1,0 +1,10 @@
+{
+  "name": "Backblaze",
+  "description": "Client for the Backblaze cloud backup service, which provides unlimited secure storage for personal computer backups.",
+  "categories": [
+    "Backup",
+    "Utilities"
+  ],
+  "developer": "Backblaze",
+  "url": "https://www.backblaze.com"
+}
