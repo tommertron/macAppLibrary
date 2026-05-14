@@ -1,0 +1,9 @@
+{
+  "name": "BookMacster",
+  "description": "BookMacster manages and syncs bookmarks across multiple web browsers, allowing users to maintain a unified bookmark library that can be shared or distributed to different browsers on one or more Macs.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Sheep Systems",
+  "url": "https://www.sheepsystems.com/products/bookmacster.html"
+}
