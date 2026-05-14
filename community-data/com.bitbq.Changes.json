@@ -1,0 +1,10 @@
+{
+  "name": "Changes",
+  "description": "Changes is a diff and merge tool for macOS that allows developers to compare files and folders side by side, highlighting differences and enabling easy merging of changes between versions. [Appears abandoned, last update Nov. 22, 2017.]",
+  "categories": [
+    "Developer Tools",
+    "Obsolete"
+  ],
+  "developer": "MartianCraft LLC",
+  "url": "https://changesapp.com"
+}
