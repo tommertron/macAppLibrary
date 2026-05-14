@@ -1,0 +1,9 @@
+{
+  "name": "DEVONthink",
+  "description": "DEVONthink is a document and information manager that allows users to store, organize, search, and cross-reference files, notes, bookmarks, and other data in a unified database. It uses AI-assisted tools to help identify relationships between documents and supports features like web clipping, smart rules, and scripting for advanced workflow automation. Tagging, smart groups, wiki links, task lists, reminders, Markdown and rich text support, OCR, deep linking, custom metadata, and a host of other powerful features.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "DEVONtechnologies",
+  "url": "https://www.devontechnologies.com/apps/devonthink"
+}
