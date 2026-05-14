@@ -1,4 +1,13 @@
 {
+  "ComicTagger": {
+    "name": "ComicTagger",
+    "description": "ComicTagger allows tagging digital comic book files with metadata, supporting CBZ and CBR, using data sourced from online databases like Comic Vine. Batch processing, automatic issue matching, and a CLI that allows for scripting.",
+    "categories": [
+      "Books"
+    ],
+    "developer": "ComicTagger team",
+    "url": "https://github.com/comictagger/comictagger"
+  },
   "andrewnicolaou.BrewServicesMenubar": {
     "name": "BrewServicesMenubar",
     "description": "An OS X menu item for starting and stopping homebrew services. Reads the `homebrew services` command, showing you the status of your services and allowing them to be started, stopped and restarted.",
