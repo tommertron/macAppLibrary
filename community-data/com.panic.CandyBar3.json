@@ -1,0 +1,9 @@
+{
+  "name": "CandyBar",
+  "description": "CandyBar was an icon management tool. In its heyday it was a customization tool: every system icon on your Mac could be changed. CandyBar 3 combined with the icon library tool Pixadex, providing library features, like Apple’s Photos app, for managing a library of icons. Although CandyBar was mostly discontinued in 2012, the icon library features continue to be useful, and the CandyBar Sugar Free Edition from 2022 brings it into the Apple Silicon era, albeit completely unsupported and with some bugs.",
+  "categories": [
+    "Graphics & Design"
+  ],
+  "developer": "Panic",
+  "url": "https://blog.iconfactory.com/2022/04/candybar-sugar-free-edition/"
+}
