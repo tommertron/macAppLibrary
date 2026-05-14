@@ -1,0 +1,10 @@
+{
+  "name": "Audiobook Builder",
+  "description": "Converts audio CDs or audio files into Apple-style m4b audiobooks. Join audio, create chapter stops with names and artwork, encode in AAC or HE-AAC, and output to Books, Music or iTunes.",
+  "categories": [
+    "Music & Audio",
+    "Books"
+  ],
+  "developer": "Splasm Software",
+  "url": "https://www.splasm.com/audiobookbuilder"
+}
