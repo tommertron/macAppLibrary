@@ -1,0 +1,10 @@
+{
+  "name": "BrewServicesMenubar",
+  "description": "An OS X menu item for starting and stopping homebrew services. Reads the `homebrew services` command, showing you the status of your services and allowing them to be started, stopped and restarted.",
+  "categories": [
+    "Utilities",
+    "System Administration"
+  ],
+  "developer": "Andrew Nicolaou",
+  "url": "https://github.com/andrewn/brew-services-menubar"
+}
