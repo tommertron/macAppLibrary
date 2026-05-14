@@ -1,4 +1,14 @@
 {
+  "andrewnicolaou.BrewServicesMenubar": {
+    "name": "BrewServicesMenubar",
+    "description": "An OS X menu item for starting and stopping homebrew services. Reads the `homebrew services` command, showing you the status of your services and allowing them to be started, stopped and restarted.",
+    "categories": [
+      "Utilities",
+      "System Administration"
+    ],
+    "developer": "Andrew Nicolaou",
+    "url": "https://github.com/andrewn/brew-services-menubar"
+  },
   "app.longplay.Longplay-Mac": {
     "name": "Longplay",
     "description": "A music player focused on albums, presenting your library as a beautiful grid of cover art for intentional, front-to-back listening.",
@@ -89,6 +99,15 @@
     "developer": "ACD Systems International",
     "url": "https://www.acdsee.com/en/products/photo-studio-mac"
   },
+  "com.LittleFin.Chronicle-Touch": {
+    "name": "Chronicle",
+    "description": "Chronicle is a bill and subscription tracking app. Track payment due dates, monitor their monthly expenses, avoid late payments.",
+    "categories": [
+      "Finance"
+    ],
+    "developer": "LittleFin LLC",
+    "url": "https://chronicleapp.com"
+  },
   "com.acdsystems.acdseePhotoFlash": {
     "name": "ACDSee Photo Flash",
     "description": "Minimalist app for brightening underexposed photos using ACDSee\u2019s \u201cLighting and Contrast Enhancement (LCE)\u201d technology to avoid excessive grain and blowout. (Discontinued; replaced with Light EQ by ACDSee.)",
@@ -115,6 +134,17 @@
     ],
     "developer": "Agile Tortoise",
     "url": "https://getdrafts.com"
+  },
+  "com.ahoylabs.faraday": {
+    "name": "Backyard AI",
+    "description": "Backyard AI allows users to run and chat with LLMs and characters locally on their device. [Deprecated as of June 2025, there will be no more updates to the desktop app.]",
+    "categories": [
+      "AI",
+      "Entertainment",
+      "Obsolete"
+    ],
+    "developer": "Ahoy Labs",
+    "url": "https://backyard.ai"
   },
   "com.amazon.Lassen": {
     "name": "Amazon Kindle",
@@ -225,6 +255,35 @@
     "developer": "Austin Sarner and Brian Ball",
     "url": "https://appzapper.com"
   },
+  "com.asiafu.Bloom": {
+    "name": "Bloom",
+    "description": "Bloom is a file manager intended to replace Finder with a more refined experience. Features include multi-pane layouts, a refined search experience, and a compact mode for working side-by-side with other applications.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "INCHMAN",
+    "url": "https://bloomapp.club"
+  },
+  "com.backblaze.Backblaze": {
+    "name": "Backblaze",
+    "description": "Client for the Backblaze cloud backup service, which provides unlimited secure storage for personal computer backups.",
+    "categories": [
+      "Backup",
+      "Utilities"
+    ],
+    "developer": "Backblaze",
+    "url": "https://www.backblaze.com"
+  },
+  "com.backblaze.BackblazeRestore": {
+    "name": "BackblazeRestore",
+    "description": "A utility to download and restore files backed up to a Backblaze cloud backup account. For large restores, this can be faster and more reliable than downloading from the Web interface, including resuming interrupted downloads.",
+    "categories": [
+      "Backup",
+      "Utilities"
+    ],
+    "developer": "Backblaze",
+    "url": "https://www.backblaze.com/cloud-backup/personal"
+  },
   "com.barebones.bbedit": {
     "name": "BBEdit",
     "description": "A professional text editor for macOS with powerful search, syntax highlighting, and scripting for developers and writers alike.",
@@ -240,6 +299,16 @@
       "Utilities"
     ],
     "developer": "BinaryNights"
+  },
+  "com.bitbq.Changes": {
+    "name": "Changes",
+    "description": "Changes is a diff and merge tool for macOS that allows developers to compare files and folders side by side, highlighting differences and enabling easy merging of changes between versions. [Appears abandoned, last update Nov. 22, 2017.]",
+    "categories": [
+      "Developer Tools",
+      "Obsolete"
+    ],
+    "developer": "MartianCraft LLC",
+    "url": "https://changesapp.com"
   },
   "com.blitterstudio.Amiberry": {
     "name": "Amiberry",
@@ -294,6 +363,15 @@
     ],
     "developer": "Canva",
     "url": "https://www.affinity.studio"
+  },
+  "com.cardinal.one": {
+    "name": "Cardinal",
+    "description": "Cardinal is a file search app, meant to be extremely fast at searching by file name, with an interface and syntax inspired by the Windows file search app Everything.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Donough Liu et al",
+    "url": "https://github.com/cardisoft/cardinal"
   },
   "com.cascadea.app": {
     "name": "Cascadea",
@@ -486,6 +564,15 @@
     ],
     "developer": "William C. Gustafson"
   },
+  "com.johnhaney.mac.Backdrop": {
+    "name": "Backdrop",
+    "description": "Backdrop is a utility that places a solid color or chosen background behind a specific app window, temporarily hiding your desktop and other background elements. This is useful to focus attention during screen sharing, presentations, or recordings.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Apps From Outer Space",
+    "url": "https://appsfromouterspace.com/apps/backdrop"
+  },
   "com.junecloud.Deliveries": {
     "name": "Deliveries",
     "description": "A package tracking app that monitors shipments from all major carriers and notifies you of delivery updates.",
@@ -511,6 +598,15 @@
     ],
     "developer": "1Blocker, LLC",
     "url": "https://1blocker.com"
+  },
+  "com.kiwifruitware.Burn": {
+    "name": "Burn",
+    "description": "Burn is a free disc burning application that allows users to create and burn audio, data, video, and MP3 CDs and DVDs. It supports various disc formats and provides a straightforward interface for writing files to optical media.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Kiwi Fruitware",
+    "url": "https://burn-osx.sourceforge.io/Pages/English/home.html"
   },
   "com.kruegersystems.calca.mac": {
     "name": "Calca",
@@ -559,6 +655,15 @@
       "News"
     ],
     "developer": "Instant Paper, Inc"
+  },
+  "com.metaclassy.byword": {
+    "name": "Byword",
+    "description": "Byword is a minimalist, Markdown-focused text editor, offering a clean, distraction-free interface with support for exporting and publishing to platforms like WordPress, Medium, and Tumblr.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Metaclassy, Lda",
+    "url": "https://www.bywordapp.com"
   },
   "com.microsoft.Excel": {
     "name": "Microsoft Excel",
@@ -704,6 +809,15 @@
     "developer": "OpenAI",
     "url": "https://openai.com/codex"
   },
+  "com.panic.CandyBar3": {
+    "name": "CandyBar",
+    "description": "CandyBar was an icon management tool. In its heyday it was a customization tool: every system icon on your Mac could be changed. CandyBar 3 combined with the icon library tool Pixadex, providing library features, like Apple\u2019s Photos app, for managing a library of icons. Although CandyBar was mostly discontinued in 2012, the icon library features continue to be useful, and the CandyBar Sugar Free Edition from 2022 brings it into the Apple Silicon era, albeit completely unsupported and with some bugs.",
+    "categories": [
+      "Graphics & Design"
+    ],
+    "developer": "Panic",
+    "url": "https://blog.iconfactory.com/2022/04/candybar-sugar-free-edition/"
+  },
   "com.panic.transmit.mas": {
     "name": "Transmit",
     "description": "A professional file transfer app for Mac supporting FTP, SFTP, S3, WebDAV, and many cloud services with a dual-pane interface.",
@@ -790,6 +904,15 @@
     "developer": "Moballo",
     "url": "https://sequel-ace.com/"
   },
+  "com.sheepsystems.BookMacster": {
+    "name": "BookMacster",
+    "description": "BookMacster manages and syncs bookmarks across multiple web browsers, allowing users to maintain a unified bookmark library that can be shared or distributed to different browsers on one or more Macs.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Sheep Systems",
+    "url": "https://www.sheepsystems.com/products/bookmacster.html"
+  },
   "com.sindresorhus.Actions": {
     "name": "Actions",
     "description": "Actions provides a large collection of additional actions for the Shortcuts app, extending its automation capabilities with functions not available by default. They cover a wide range including text transformations, parsing CSV, JSON and Markdown, storing values in the Keychain, checking Dark mode\u2026 180+ total.",
@@ -814,6 +937,16 @@
       "Utilities"
     ],
     "developer": "Sindre Sorhus"
+  },
+  "com.splasm.audiobookbuilder2": {
+    "name": "Audiobook Builder",
+    "description": "Converts audio CDs or audio files into Apple-style m4b audiobooks. Join audio, create chapter stops with names and artwork, encode in AAC or HE-AAC, and output to Books, Music or iTunes.",
+    "categories": [
+      "Music & Audio",
+      "Books"
+    ],
+    "developer": "Splasm Software",
+    "url": "https://www.splasm.com/audiobookbuilder"
   },
   "com.squirrels.AirParrot-3": {
     "name": "AirParrot 3",
@@ -891,6 +1024,15 @@
     "developer": "Tom Robertson",
     "url": "https://coefficiencies.com/apps/macapplibrary/"
   },
+  "com.tupil.beamer": {
+    "name": "Beamer",
+    "description": "Beamer streams video and audio files from your Mac directly to an Apple TV or Chromecast, allowing you to play local media on your television without needing to transfer files or use iTunes.",
+    "categories": [
+      "Video"
+    ],
+    "developer": "Softorino Inc.",
+    "url": "https://softorino.com/beamer"
+  },
   "com.utmapp.UTM": {
     "name": "UTM",
     "description": "Virtual Machine Emulator",
@@ -915,6 +1057,15 @@
     ],
     "developer": "Valve Corporation",
     "url": "https://store.steampowered.com"
+  },
+  "com.wikibuy.mac-app": {
+    "name": "Capital One Shopping",
+    "description": "Capital One Shopping is a browser extension companion app. The extension finds and applies coupon codes and compares prices across retailers while you shop online. [Formerly Wikibuy.]",
+    "categories": [
+      "Shopping"
+    ],
+    "developer": "Wikibuy LLC",
+    "url": "https://capitaloneshopping.com"
   },
   "company.thebrowser.Browser": {
     "name": "Arc",
@@ -961,6 +1112,16 @@
       "Developer Tools"
     ]
   },
+  "io.balena.etcher": {
+    "name": "balenaEtcher",
+    "description": "balenaEtcher is a tool for writing OS images, such as Linux distributions or embedded system firmware, to SD cards and USB drives. It is meant to be simple for end users, extensible for developers, and work on any platform.",
+    "categories": [
+      "Utilities",
+      "System Administration"
+    ],
+    "developer": "Balena",
+    "url": "https://etcher.balena.io"
+  },
   "io.raindrop.macapp": {
     "name": "Raindrop.io",
     "description": "A cross-platform bookmarking manager with collections, tags, full-text search, and a browser extension for saving anything from the web.",
@@ -1000,6 +1161,13 @@
     ],
     "developer": "Damir Tursunovic"
   },
+  "net.battle.app": {
+    "name": "Battle.net",
+    "description": "Desktop client for Blizzard/Activision games, such as World of Warcraft, Overwatch 2, Diablo IV, and Hearthstone. It manages game installation and updates, friends lists, and in-game purchases across Blizzard's titles, as well as some additional Xbox Game Studios titles like Call of Duty Modern Warfare, Black Ops, Sea of Thieves, and Avowed.",
+    "categories": [],
+    "developer": "Blizzard Entertainment",
+    "url": "https://battle.net"
+  },
   "net.galliumdigital.Modern-CSV": {
     "name": "Modern CSV",
     "description": "Read and manipulate CSV Files",
@@ -1007,6 +1175,24 @@
       "Developer Tools"
     ],
     "url": "https://www.moderncsv.com/"
+  },
+  "net.kovidgoyal.calibre": {
+    "name": "calibre",
+    "description": "Calibre is a comprehensive e-book manager that allows users to organize, convert, edit, and transfer e-books across various formats and devices. It includes a built-in e-book viewer and supports downloading news from the web as e-books. It has a deeply customizable database and interface, and is open source.",
+    "categories": [
+      "Books"
+    ],
+    "developer": "Kovid Goyal",
+    "url": "https://calibre-ebook.com"
+  },
+  "net.publicspace.Boring-Old-Menu-Bar": {
+    "name": "Boring Old Menu Bar",
+    "description": "Boring Old Menu Bar restores the Catalina-style menu bar appearance, without transparency. It also adds some additional color options, and support for rounded corners.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Frank Reiff",
+    "url": "https://www.publicspace.net/BoringOldMenuBar/index.html"
   },
   "net.publicspace.abfa7": {
     "name": "A Better Finder Attributes 7",
@@ -1057,12 +1243,39 @@
     ],
     "developer": "present eyeo"
   },
+  "org.aseprite.Aseprite": {
+    "name": "Aseprite",
+    "description": "Aseprite is a pixel art editor for creating sprites, tilesets, and pixel-based animations. It offers frame-by-frame animation support, layering, and drawing tools tailored specifically for pixel art workflows.",
+    "categories": [
+      "Graphics & Design"
+    ],
+    "developer": "Igara Studio S.A",
+    "url": "https://www.aseprite.org"
+  },
   "org.audacityteam.audacity": {
     "name": "Audacity",
     "description": "A free, open-source audio editor and recorder for multi-track editing, mixing, and effects processing.",
     "categories": [
       "Music & Audio"
     ]
+  },
+  "org.blenderfoundation.blender": {
+    "name": "Blender",
+    "description": "Blender is a free and open-source 3D creation suite that supports the full pipeline of modeling, rigging, animation, simulation, rendering, compositing, and motion tracking. It also includes a video editor and features for editing game assets.",
+    "categories": [
+      "Graphics & Design"
+    ],
+    "developer": "Blender Foundation",
+    "url": "https://www.blender.org"
+  },
+  "org.chiaki.chiaki": {
+    "name": "Chiaki",
+    "description": "Chiaki is a free and open-source client for PlayStation Remote Play, allowing users to stream and play PlayStation 4 and PlayStation 5 games on their Mac over a local network or the internet.",
+    "categories": [
+      "Games"
+    ],
+    "developer": "thestr4ng3r",
+    "url": "https://git.sr.ht/~thestr4ng3r/chiaki"
   },
   "org.jwz.cyberizer": {
     "name": "Cyberizer",
@@ -1086,6 +1299,15 @@
     "categories": [
       "Productivity"
     ]
+  },
+  "org.streetpea.chiaking": {
+    "name": "chiaki-ng",
+    "description": "Chiaki-ng is an open-source client for PlayStation Remote Play, allowing users to stream and play PlayStation 4 and PlayStation 5 games on their Mac over a local network or the internet. Based on the original Chiaki, chiaki-ng is meant to be a faster moving and more community oriented project.",
+    "categories": [
+      "Games"
+    ],
+    "developer": "thestr4ng3r and chiaki-ng team",
+    "url": "https://streetpea.github.io/chiaki-ng/"
   },
   "org.tempel.findanyfile": {
     "name": "Find Any File",
@@ -1148,5 +1370,15 @@
       "Business"
     ],
     "developer": "Zoom Communications, Inc"
+  },
+  "zzada.Brewlet": {
+    "name": "Brewlet",
+    "description": "Brewlet provides a menu bar interface for managing Homebrew packages, allowing users to check for and install updates directly from the menu.",
+    "categories": [
+      "System Administration",
+      "Utilities"
+    ],
+    "developer": "zzada",
+    "url": "https://github.com/zkokaja/Brewlet"
   }
 }
