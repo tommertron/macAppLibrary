@@ -1,0 +1,9 @@
+{
+  "name": "DEVONsphere Express",
+  "description": "DEVONsphere is a menubar utility for searching your Mac and finding data related to the frontmost document. Find related items, use advanced search operators like boolean search, and surface context-aware results.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "DEVONtechnologies",
+  "url": "https://www.devontechnologies.com/apps/devonsphere"
+}
