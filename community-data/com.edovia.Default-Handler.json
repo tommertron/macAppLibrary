@@ -1,0 +1,9 @@
+{
+  "name": "Default Handler",
+  "description": "Default Handler lets you change the default handler for URL schemes. Edovia created this to make it easy to set their Screens app as the default handler for the vnc: URL scheme, as App Store sandboxing doesn’t allow for choosing this at runtime — apps must designate a default handler in the app bundle settings, a static configuration. However, this works for other URL schemes and applications as well, not just Screens and the vnc scheme.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Edovia, Inc",
+  "url": "https://blog.edovia.com/en/introducing-default-handler"
+}
