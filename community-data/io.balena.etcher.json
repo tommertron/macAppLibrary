@@ -1,0 +1,10 @@
+{
+  "name": "balenaEtcher",
+  "description": "balenaEtcher is a tool for writing OS images, such as Linux distributions or embedded system firmware, to SD cards and USB drives. It is meant to be simple for end users, extensible for developers, and work on any platform.",
+  "categories": [
+    "Utilities",
+    "System Administration"
+  ],
+  "developer": "Balena",
+  "url": "https://etcher.balena.io"
+}
