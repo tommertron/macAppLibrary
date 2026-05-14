@@ -169,6 +169,15 @@
     ],
     "developer": "Anthropic PBC"
   },
+  "com.apimac.CleanText": {
+    "name": "Clean Text",
+    "description": "Clean Text cleans and transforms text from the clipboard, removing unwanted formatting, fixing spacing and line breaks, converting text case, and more. It streamlines pasting plain, properly formatted text into other applications. It also offers tools for transforming text like regular expressions, Unicode \ud835\udcef\ud835\udcea\ud835\udcf7\ud835\udcec\ud835\udd02 \ud835\udd99\ud835\udd8a\ud835\udd9d\ud835\udd99, converting quote mark types (like curly quotes), or applying AI text suggestions.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Apimac",
+    "url": "https://www.apimac.com/mac/cleantext"
+  },
   "com.apphousekitchen.aldente-pro": {
     "name": "AlDente",
     "description": "AlDente is a macOS app that helps preserve battery health by limiting the maximum charge level of your Mac's battery to a user-defined threshold. It allows you to set charging caps and manage power settings to extend your MacBook's battery lifespan.",
@@ -404,6 +413,15 @@
     "categories": [
       "Utilities"
     ]
+  },
+  "com.coconut-flavour.coconutBattery": {
+    "name": "coconutBattery",
+    "description": "coconutBattery displays live information about the health, age and status of the battery in your Mac or a connected iPhone or iPad.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "coconut-flavour",
+    "url": "https://coconut-flavour.com/coconutbattery"
   },
   "com.culturedcode.ThingsMac": {
     "name": "Things 3",
@@ -1278,6 +1296,15 @@
     ],
     "developer": "thestr4ng3r",
     "url": "https://git.sr.ht/~thestr4ng3r/chiaki"
+  },
+  "org.cogx.cog": {
+    "name": "Cog",
+    "description": "Cog is a free, open-source audio player that supports a wide variety of audio formats, including FLAC, MP3, Ogg Vorbis, Windows Media Audio, ATRAC3, Monkey\u2019s Audio (APE), RealAudio, MIDI, SID, dozens of tracker formats, game formats like GBS, NSF, VGM, and many others. It provides a clean, minimal interface for music playback with support for playlists and audio format plugins. It support gapless playback and last.fm scrobbling.",
+    "categories": [
+      "Music"
+    ],
+    "developer": "Christopher Snowhill, Vincent Spader, et al",
+    "url": "https://cog.losno.co"
   },
   "org.jwz.cyberizer": {
     "name": "Cyberizer",
