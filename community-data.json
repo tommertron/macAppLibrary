@@ -1257,7 +1257,9 @@
     "description": "A free, open-source audio editor and recorder for multi-track editing, mixing, and effects processing.",
     "categories": [
       "Music & Audio"
-    ]
+    ],
+    "developer": "Audacity Team",
+    "url": "https://www.audacityteam.org"
   },
   "org.blenderfoundation.blender": {
     "name": "Blender",
