@@ -1,0 +1,9 @@
+{
+  "name": "Cardinal",
+  "description": "Cardinal is a file search app, meant to be extremely fast at searching by file name, with an interface and syntax inspired by the Windows file search app Everything.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Donough Liu et al",
+  "url": "https://github.com/cardisoft/cardinal"
+}
