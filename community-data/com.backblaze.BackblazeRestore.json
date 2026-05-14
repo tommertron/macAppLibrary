@@ -1,0 +1,10 @@
+{
+  "name": "BackblazeRestore",
+  "description": "A utility to download and restore files backed up to a Backblaze cloud backup account. For large restores, this can be faster and more reliable than downloading from the Web interface, including resuming interrupted downloads.",
+  "categories": [
+    "Backup",
+    "Utilities"
+  ],
+  "developer": "Backblaze",
+  "url": "https://www.backblaze.com/cloud-backup/personal"
+}
