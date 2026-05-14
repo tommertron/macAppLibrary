@@ -1,0 +1,9 @@
+{
+  "name": "DAEMON Tools",
+  "description": "DAEMON Tools is a disk mounting utility that primarily allows users to create virtual drives and mount image files such as ISO, MDF, and other disc formats. It can also create disk images from physical discs or files on your computer. Depending on purchased features, it can also create bootable USB devices, act as an iSCSI initiator, and burn discs.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Disc Soft",
+  "url": "https://www.daemon-tools.cc/macos"
+}
