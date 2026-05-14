@@ -21,37 +21,41 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Concatenate per-bundle files into community-data.json
+      - name: Regenerate and push
         run: |
-          python3 - <<'PY'
+          set -e
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+
+          regenerate() {
+            python3 - <<'PY'
           import json, pathlib
           src = pathlib.Path('community-data')
-          merged = {}
-          for f in sorted(src.glob('*.json')):
-              merged[f.stem] = json.loads(f.read_text())
+          merged = {f.stem: json.loads(f.read_text()) for f in sorted(src.glob('*.json'))}
           pathlib.Path('community-data.json').write_text(
               json.dumps(merged, indent=2) + '\n'
           )
           print(f'Merged {len(merged)} entries into community-data.json')
           PY
+          }
 
-      - name: Commit if changed
-        run: |
-          if git diff --quiet community-data.json; then
-            echo "No changes to community-data.json"
-            exit 0
-          fi
-          git config user.email "github-actions@github.com"
-          git config user.name "GitHub Actions"
-          git add community-data.json
-          git commit -m "Regenerate community-data.json [skip ci]"
-          # Other merges may have advanced origin/main between checkout and now.
-          # Regenerate is idempotent (always rebuilds from community-data/),
-          # so rebase + retry is safe.
+          # community-data.json is fully derivable from community-data/*.json,
+          # so on a push race we don't try to merge — we discard our work,
+          # take whatever main looks like now, regenerate fresh, and push again.
           for attempt in 1 2 3 4 5; do
-            if git push; then exit 0; fi
-            echo "Push rejected on attempt $attempt; rebasing and retrying."
-            git pull --rebase origin main
+            regenerate
+            if git diff --quiet community-data.json; then
+              echo "No changes to community-data.json"
+              exit 0
+            fi
+            git add community-data.json
+            git commit -m "Regenerate community-data.json [skip ci]"
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt; resetting to origin/main and retrying."
+            git fetch origin main
+            git reset --hard origin/main
           done
           echo "Push still failing after retries." >&2
           exit 1
