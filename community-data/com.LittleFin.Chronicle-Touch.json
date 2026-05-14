@@ -1,0 +1,9 @@
+{
+  "name": "Chronicle",
+  "description": "Chronicle is a bill and subscription tracking app. Track payment due dates, monitor their monthly expenses, avoid late payments.",
+  "categories": [
+    "Finance"
+  ],
+  "developer": "LittleFin LLC",
+  "url": "https://chronicleapp.com"
+}
