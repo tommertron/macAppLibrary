@@ -1,0 +1,9 @@
+{
+  "name": "Dash",
+  "description": "Dash is an API documentation browser and code snippet manager that provides offline access to over 200 documentation sets for various programming languages, frameworks, and tools.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Kapeli",
+  "url": "https://kapeli.com/dash"
+}
