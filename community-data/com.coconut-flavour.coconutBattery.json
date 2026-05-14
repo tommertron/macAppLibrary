@@ -1,0 +1,9 @@
+{
+  "name": "coconutBattery",
+  "description": "coconutBattery displays live information about the health, age and status of the battery in your Mac or a connected iPhone or iPad.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "coconut-flavour",
+  "url": "https://coconut-flavour.com/coconutbattery"
+}
