@@ -432,6 +432,16 @@
     "developer": "coconut-flavour",
     "url": "https://coconut-flavour.com/coconutbattery"
   },
+  "com.codeweavers.CrossOver": {
+    "name": "CrossOver",
+    "description": "CrossOver is a distribution and front-end for Wine that lets Windows applications and games run without an emulator, translating Windows commands and function calls for seamless integration and native-like performance.",
+    "categories": [
+      "Games",
+      "Productivity"
+    ],
+    "developer": "CodeWeavers",
+    "url": "https://www.codeweavers.com/crossover"
+  },
   "com.culturedcode.ThingsMac": {
     "name": "Things 3",
     "description": "An award-winning personal task manager with a clean, delightful design for capturing, organizing, and completing your to-dos.",
@@ -447,6 +457,15 @@
       "Utilities"
     ],
     "developer": "Software Ambience Corp"
+  },
+  "com.disc-soft.DAEMONToolsLite": {
+    "name": "DAEMON Tools",
+    "description": "DAEMON Tools is a disk mounting utility that primarily allows users to create virtual drives and mount image files such as ISO, MDF, and other disc formats. It can also create disk images from physical discs or files on your computer. Depending on purchased features, it can also create bootable USB devices, act as an iSCSI initiator, and burn discs.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Disc Soft",
+    "url": "https://www.daemon-tools.cc/macos"
   },
   "com.docker.docker": {
     "name": "Docker",
@@ -607,6 +626,15 @@
       "Utilities"
     ],
     "developer": "Junecloud LLC"
+  },
+  "com.kapeli.dashdoc": {
+    "name": "Dash",
+    "description": "Dash is an API documentation browser and code snippet manager that provides offline access to over 200 documentation sets for various programming languages, frameworks, and tools.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Kapeli",
+    "url": "https://kapeli.com/dash"
   },
   "com.katsurashareware.AmorphousDiskMark": {
     "name": "AmorphousDiskMark",
