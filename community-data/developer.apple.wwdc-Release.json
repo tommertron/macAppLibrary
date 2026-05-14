@@ -1,0 +1,10 @@
+{
+  "name": "Developer",
+  "description": "The Developer app by Apple provides developer news, features, and videos, including WWDC sessions.",
+  "categories": [
+    "Reference",
+    "Developer Tools"
+  ],
+  "developer": "Apple",
+  "url": "https://apps.apple.com/us/app/apple-developer/id640199958"
+}
