@@ -45,4 +45,13 @@ jobs:
           git config user.name "GitHub Actions"
           git add community-data.json
           git commit -m "Regenerate community-data.json [skip ci]"
-          git push
+          # Other merges may have advanced origin/main between checkout and now.
+          # Regenerate is idempotent (always rebuilds from community-data/),
+          # so rebase + retry is safe.
+          for attempt in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "Push rejected on attempt $attempt; rebasing and retrying."
+            git pull --rebase origin main
+          done
+          echo "Push still failing after retries." >&2
+          exit 1
