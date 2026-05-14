@@ -1,0 +1,9 @@
+{
+  "name": "DBeaver Community",
+  "description": "DBeaver Community is a free, open-source database management supporting many databases including MySQL, PostgreSQL, SQLite, Oracle, and others. Browse, query, and manage data and structures, execute scripts, back up and restore tables or complete databases, and more.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "DBeaver",
+  "url": "https://dbeaver.io"
+}
