@@ -338,6 +338,15 @@
     "developer": "Dimitris Panokostas",
     "url": "https://amiberry.com"
   },
+  "com.bloombuilt.dayone-mac": {
+    "name": "Day One",
+    "description": "Day One is a journaling app for writing, organizing, and preserving personal journal entries. It\u2019s designed to help you get and stay in the habit of journaling, and to protect your data with encryption, sync, and backup.",
+    "categories": [
+      "Lifestyle"
+    ],
+    "developer": "Automattic, Inc",
+    "url": "https://dayoneapp.com"
+  },
   "com.brainfevermedia.anamorphicpro": {
     "name": "Anamorphic Pro",
     "description": "Anamorphic Pro is a macOS app that allows users to create anamorphic lens effects and cinematic looks on images and video footage. It provides tools to simulate the characteristic visual qualities of anamorphic cinematography, including lens flares, bokeh, and aspect ratio adjustments.",
@@ -1022,6 +1031,15 @@
     ],
     "developer": "Stairways Software"
   },
+  "com.standingstonegames.ddo": {
+    "name": "DDO",
+    "description": "Dungeons & Dragons Online (DDO) is a free action MMORPG with authentic D&D gameplay. Narrators and celebrity guests act as dungeon masters, just like a tabletop adventure. The game features iconic D&D monsters and locations, parties of up to six players (12 in raids), non-linear campaign options, and deep character customization.",
+    "categories": [
+      "Games"
+    ],
+    "developer": "Standing Stone Games",
+    "url": "https://www.ddo.com"
+  },
   "com.stonerl.Thaw": {
     "name": "Thaw",
     "description": "Menu bar management tool. Its primary function is hiding and showing menu bar items; it can also customize the menu bar\u2019s appearance. Extremely useful when running many menu bar items and facing clutter or running out of space.",
@@ -1342,6 +1360,15 @@
     ],
     "developer": "Christopher Snowhill, Vincent Spader, et al",
     "url": "https://cog.losno.co"
+  },
+  "org.jkiss.dbeaver.core.product": {
+    "name": "DBeaver Community",
+    "description": "DBeaver Community is a free, open-source database management supporting many databases including MySQL, PostgreSQL, SQLite, Oracle, and others. Browse, query, and manage data and structures, execute scripts, back up and restore tables or complete databases, and more.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "DBeaver",
+    "url": "https://dbeaver.io"
   },
   "org.jwz.cyberizer": {
     "name": "Cyberizer",
