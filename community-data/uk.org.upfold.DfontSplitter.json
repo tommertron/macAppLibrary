@@ -1,0 +1,9 @@
+{
+  "name": "DfontSplitter",
+  "description": "DfontSplitter is a utility that splits Mac OS X .dfont (data fork font) files into individual TrueType font files (.ttf). Also works with Font Suitcase and TTC formats.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Peter Upfold",
+  "url": "https://peter.upfold.org.uk/projects/dfontsplitter"
+}
