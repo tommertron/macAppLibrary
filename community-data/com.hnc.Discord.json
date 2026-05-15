@@ -3,5 +3,7 @@
   "description": "A voice, video, and text communication platform popular with gaming, developer, and hobby communities.",
   "categories": [
     "Social Networking"
-  ]
+  ],
+  "developer": "Discord Inc.",
+  "url": "https://discord.com"
 }
