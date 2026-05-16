@@ -1,0 +1,6 @@
+{
+  "name": "Consul",
+  "description": "Consul is a macOS menu bar app that provides a native interface for managing and interacting with HashiCorp Consul clusters, allowing users to browse services, nodes, and key-value pairs.",
+  "categories": [],
+  "url": "https://getconsul.app/"
+}
