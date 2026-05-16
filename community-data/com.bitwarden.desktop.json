@@ -1,0 +1,9 @@
+{
+  "name": "Bitwarden",
+  "description": "Bitwarden is an open-source password manager that securely stores and manages passwords, login credentials, and other sensitive information in an encrypted vault. It supports autofill, password generation, and syncing across devices via cloud or self-hosted servers.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Bitwarden",
+  "url": "https://bitwarden.com"
+}
