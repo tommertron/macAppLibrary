@@ -1,0 +1,9 @@
+{
+  "name": "HandBrake",
+  "description": "HandBrake is a free, open-source video transcoder that converts video files from a wide range of formats into modern, widely supported codecs and containers. It supports batch encoding, presets, and advanced options for controlling video quality, resolution, and compression.",
+  "categories": [
+    "Video"
+  ],
+  "developer": "HandBrake Team.\nGPLv2 license",
+  "url": "https://handbrake.fr/"
+}
