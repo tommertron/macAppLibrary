@@ -1,0 +1,8 @@
+{
+  "name": "BetterMouse",
+  "description": "BetterMouse is a macOS utility that enhances third-party mouse functionality by providing customizable scroll acceleration, smooth scrolling, and button remapping to improve the experience of using non-Apple mice on macOS.",
+  "categories": [
+    "Utilities"
+  ],
+  "url": "https://better-mouse.com/"
+}
