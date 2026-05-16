@@ -1,0 +1,9 @@
+{
+  "name": "CotEditor",
+  "description": "CotEditor is a lightweight, open-source plain-text editor for macOS designed for editing web pages, scripts, and other text files, with features like syntax highlighting, regular expression search, and multi-cursor editing.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "nakamuxu\n ,  usami-k\n  jp",
+  "url": "https://coteditor.com/"
+}
