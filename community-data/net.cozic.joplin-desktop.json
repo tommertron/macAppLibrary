@@ -1,0 +1,8 @@
+{
+  "name": "Joplin",
+  "description": "Joplin is an open-source note-taking and to-do application that supports Markdown editing and organizes notes into notebooks. It offers end-to-end encrypted synchronization across devices via services like Dropbox, OneDrive, or Nextcloud.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Laurent Cozic"
+}
