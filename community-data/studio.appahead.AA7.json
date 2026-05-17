@@ -1,0 +1,8 @@
+{
+  "name": "Folder Quick Look",
+  "description": "Folder Quick Look enhances macOS's Quick Look feature to support previewing the contents of folders, allowing users to browse folder contents directly in Quick Look without opening Finder.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "App ahead GmbH"
+}
