@@ -1,0 +1,10 @@
+{
+  "name": "NordVPN",
+  "description": "NordVPN is a virtual private network client that encrypts internet traffic and routes it through servers in various countries to protect user privacy and bypass geographic restrictions. It allows users to connect to VPN servers worldwide directly from the macOS menu bar or its main interface.",
+  "categories": [
+    "Utilities",
+    "VPN"
+  ],
+  "developer": "Nordvpn S.A",
+  "url": "https://nordvpn.com"
+}
