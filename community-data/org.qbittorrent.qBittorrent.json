@@ -1,0 +1,7 @@
+{
+  "name": "qBittorrent",
+  "description": "qBittorrent is a free, open-source BitTorrent client that allows users to download and manage torrent files. It features an integrated torrent search engine, RSS feed support, and a web-based remote interface.",
+  "categories": [],
+  "developer": "The qBittorrent project",
+  "url": "https://www.qbittorrent.org/"
+}
