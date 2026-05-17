@@ -1,0 +1,9 @@
+{
+  "name": "ocenaudio",
+  "description": "ocenaudio is a cross-platform audio editor that allows users to record, edit, and analyze audio files with support for a wide range of formats and real-time preview of effects.",
+  "categories": [
+    "Music"
+  ],
+  "developer": "ocenaudio Team",
+  "url": "https://www.ocenaudio.com/"
+}
