@@ -1,0 +1,9 @@
+{
+  "name": "Latest",
+  "description": "Latest is a free and open source app for macOS that checks if all your apps are up to date. Get a quick overview of which apps changed and what changed and update them right away. Latest currently supports apps downloaded from the Mac App Store and apps that use Sparkle for updates, which covers most of the apps on the market.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Max Langer",
+  "url": "https://max.codes/latest/"
+}
