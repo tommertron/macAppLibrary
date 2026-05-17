@@ -1,0 +1,9 @@
+{
+  "name": "FileBot",
+  "description": "FileBot is a powerful media file renaming and organization tool that automatically matches movies, TV shows, and anime against online databases to rename and sort files with accurate metadata. It also supports subtitle downloading and media library management.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Point Planck Limited",
+  "url": "https://www.filebot.net/"
+}
