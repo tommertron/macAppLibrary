@@ -1,0 +1,8 @@
+{
+  "name": "Thorium",
+  "description": "Thorium is a free, open-source EPUB reader developed by EDRLab that allows users to read digital books and publications, supporting formats such as EPUB 2, EPUB 3, audiobooks, and PDF, with features including bookmarks, annotations, and accessibility support.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "EDRLab"
+}
