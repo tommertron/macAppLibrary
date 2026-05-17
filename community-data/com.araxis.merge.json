@@ -1,0 +1,8 @@
+{
+  "name": "Araxis Merge",
+  "description": "Araxis Merge is a professional file comparison and merging tool that allows users to visually diff and merge text files, source code, and folders. It supports two-way and three-way comparisons and is commonly used for resolving conflicts in software development workflows.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "K'ed by aqzs"
+}
