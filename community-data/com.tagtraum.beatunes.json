@@ -1,0 +1,9 @@
+{
+  "name": "beaTunes5",
+  "description": "beaTunes5 is a music analysis and playlist management app that analyzes your iTunes or Music library to detect BPM, key, and other audio properties. It helps DJs and music enthusiasts create harmonically and rhythmically compatible playlists based on the analyzed data.",
+  "categories": [
+    "Music"
+  ],
+  "developer": "beaTunes 5.2.35,   tagtraum industries incorporated",
+  "url": "https://www.beatunes.com/"
+}
