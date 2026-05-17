@@ -1,0 +1,7 @@
+{
+  "name": "BuhoNTFS",
+  "description": "BuhoNTFS enables macOS users to read and write to NTFS-formatted drives, which are natively read-only on macOS. It provides full read/write access to Windows-formatted NTFS disks and external storage devices.",
+  "categories": [],
+  "developer": "Dr.Buho Inc",
+  "url": "https://www.drbuho.com/buhontfs"
+}
