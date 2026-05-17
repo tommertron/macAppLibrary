@@ -1,0 +1,9 @@
+{
+  "name": "Mp3tag",
+  "description": "Mp3tag is a powerful metadata editor for audio files that allows users to edit tags, album artwork, and other information for formats such as MP3, FLAC, AAC, and more. It supports batch editing and can automatically fetch metadata from online databases like MusicBrainz and Discogs.",
+  "categories": [
+    "Music"
+  ],
+  "developer": "Florian Heidenreich",
+  "url": "https://www.mp3tag.de/"
+}
