@@ -1,0 +1,9 @@
+{
+  "name": "Yoink",
+  "description": "Yoink is a macOS utility that provides a temporary shelf or holding area for files, links, and other items while you navigate between folders or applications during drag-and-drop operations. It simplifies file management by letting you stage items in a floating window before dropping them at their destination.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Eternal Storms Software",
+  "url": "https://eternalstorms.at/yoink/mac/"
+}
