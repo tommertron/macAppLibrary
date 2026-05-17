@@ -1,0 +1,6 @@
+{
+  "name": "LocalAI",
+  "description": "LocalAI is a macOS launcher application that allows users to run open-source AI language models locally on their own hardware, enabling private, offline AI inference without relying on cloud-based services.",
+  "categories": [],
+  "url": "https://localai.io/"
+}
