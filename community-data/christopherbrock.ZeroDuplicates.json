@@ -1,0 +1,8 @@
+{
+  "name": "Zero Duplicates",
+  "description": "Zero Duplicates is a macOS utility that scans your Mac for duplicate files, helping you identify and remove redundant copies to free up storage space.",
+  "categories": [
+    "Utilities"
+  ],
+  "url": "https://zeroduplicates.com"
+}
