@@ -1,0 +1,9 @@
+{
+  "name": "Nimble Commander",
+  "description": "Nimble Commander is a dual-pane file manager for macOS that allows users to navigate, manage, and manipulate files and directories efficiently using a keyboard-driven interface inspired by classic Orthodox file managers.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Michael Kazakov",
+  "url": "https://magnumbytes.com/"
+}
