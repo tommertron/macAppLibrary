@@ -1,0 +1,8 @@
+{
+  "name": "SteuerMac 2026",
+  "description": "SteuerMac 2026 is a German tax preparation application for macOS that helps users complete and submit their annual income tax returns to German tax authorities. It guides users through the tax filing process, calculates tax liability, and supports electronic submission via the ELSTER system.",
+  "categories": [
+    "Finance"
+  ],
+  "developer": "Buhl Tax Service GmbH"
+}
