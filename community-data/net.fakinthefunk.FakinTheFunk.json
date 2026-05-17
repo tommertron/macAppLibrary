@@ -1,0 +1,8 @@
+{
+  "name": "Fakin' The Funk?",
+  "description": "Fakin' The Funk? is a macOS app that analyzes music files to detect audio that has been fraudulently upsampled or transcoded from a lower-quality source, identifying tracks falsely presented as lossless or high-resolution audio.",
+  "categories": [
+    "Utilities"
+  ],
+  "url": "https://fakinthefunk.net/en/"
+}
