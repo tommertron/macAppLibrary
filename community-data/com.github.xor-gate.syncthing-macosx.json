@@ -1,0 +1,9 @@
+{
+  "name": "Syncthing",
+  "description": "Syncthing is an open-source continuous file synchronization application that securely syncs files between two or more computers in real time without relying on a central server or cloud service.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Syncthing for macOS authors (github.com/syncthing/syncthing-macos)",
+  "url": "https://syncthing.net/"
+}
