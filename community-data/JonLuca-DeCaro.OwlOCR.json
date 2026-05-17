@@ -1,0 +1,9 @@
+{
+  "name": "OwlOCR",
+  "description": "OwlOCR is a macOS app that uses optical character recognition (OCR) to extract and copy text from images, screenshots, and other visual content on your screen.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "JonLuca DeCaro",
+  "url": "https://www.owlocr.com/"
+}
