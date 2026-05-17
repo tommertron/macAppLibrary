@@ -1,0 +1,9 @@
+{
+  "name": "WireGuard",
+  "description": "WireGuard is a VPN client for macOS that allows users to create and manage secure, encrypted network tunnels using the WireGuard protocol. It supports importing and configuring VPN tunnel profiles to route network traffic privately and securely.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "WireGuard LLC",
+  "url": "https://www.wireguard.com/"
+}
