@@ -1,0 +1,9 @@
+{
+  "name": "Privileges",
+  "description": "Privileges is a macOS application developed by SAP that allows users to temporarily grant or revoke local administrator rights on their Mac, promoting the security best practice of operating as a standard user and elevating privileges only when needed.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "SAP SE",
+  "url": "https://github.com/SAP/macOS-enterprise-privileges"
+}
