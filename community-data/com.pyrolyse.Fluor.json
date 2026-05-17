@@ -1,0 +1,8 @@
+{
+  "name": "Fluor",
+  "description": "Fluor is a macOS utility that allows you to automatically switch the behavior of the Touch Bar function keys between standard F-keys and special media/system keys on a per-app basis.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Pierre TACCHI"
+}
