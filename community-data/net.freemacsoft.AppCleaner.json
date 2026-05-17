@@ -1,0 +1,9 @@
+{
+  "name": "AppCleaner",
+  "description": "AppCleaner is a free utility that allows users to thoroughly uninstall macOS applications by detecting and removing all associated files, including preferences, caches, and support files, rather than just the main application bundle.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "FreeMacSoft",
+  "url": "https://freemacsoft.net/appcleaner/"
+}
