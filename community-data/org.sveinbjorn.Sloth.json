@@ -1,0 +1,9 @@
+{
+  "name": "Sloth",
+  "description": "Sloth is a macOS utility that displays all open files, directories, sockets, pipes, and devices in use by running processes on the system. It provides a graphical interface for the Unix `lsof` command, allowing users to easily browse and filter system resource usage.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Sveinbjorn Thordarson. BSD License",
+  "url": "https://sveinbjorn.org/sloth"
+}
