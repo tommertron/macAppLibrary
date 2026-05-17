@@ -1,0 +1,8 @@
+{
+  "name": "Foldery",
+  "description": "Foldery is a macOS utility that lets users customize the color and appearance of folders in Finder, allowing them to change folder icons to different colors, gradients, or custom images for better organization and visual identification.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Manuel Sainz de Baranda y Goñi.\n  Sofía Ortega Sosa"
+}
