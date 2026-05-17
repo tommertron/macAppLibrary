@@ -1,0 +1,8 @@
+{
+  "name": "dupeguru",
+  "description": "dupeGuru is a cross-platform tool that scans your computer to find and remove duplicate files, supporting comparison by filename or file contents across multiple folders.",
+  "categories": [
+    "Productivity"
+  ],
+  "url": "https://dupeguru.voltaicideas.net/"
+}
