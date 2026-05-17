@@ -1,0 +1,6 @@
+{
+  "name": "AppleOnDeviceOpenAI",
+  "description": "A SwiftUI application that creates an OpenAI-compatible API server using Apple's on-device Foundation Models. This allows you to use Apple Intelligence models locally through familiar OpenAI API endpoints.\n\n",
+  "categories": [],
+  "url": "https://github.com/gety-ai/apple-on-device-openai"
+}
