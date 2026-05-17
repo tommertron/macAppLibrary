@@ -1,0 +1,8 @@
+{
+  "name": "Thunderbird",
+  "description": "Thunderbird is a free, open-source email client developed by Mozilla that allows users to manage multiple email accounts, calendars, and contacts from a single desktop application.",
+  "categories": [
+    "Productivity"
+  ],
+  "url": "https://www.thunderbird.net/"
+}
