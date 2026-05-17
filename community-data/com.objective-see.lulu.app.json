@@ -1,0 +1,7 @@
+{
+  "name": "LuLu",
+  "description": "LuLu is a free, open-source macOS firewall that monitors and blocks unauthorized outgoing network connections. It alerts users when an application attempts to connect to the internet, allowing them to permit or deny the connection.",
+  "categories": [],
+  "developer": "Objective-See",
+  "url": "https://objective-see.org/products/lulu.html"
+}
