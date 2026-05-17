@@ -1,0 +1,9 @@
+{
+  "name": "OmniDiskSweeper",
+  "description": "OmniDiskSweeper scans your Mac's drives and displays files and folders sorted by size, helping you quickly identify and delete large items to free up disk space.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "The Omni Group",
+  "url": "https://www.omnigroup.com/more"
+}
