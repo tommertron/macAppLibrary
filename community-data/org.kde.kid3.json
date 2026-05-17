@@ -1,0 +1,9 @@
+{
+  "name": "Kid3",
+  "description": "Kid3 is a cross-platform audio tag editor that allows users to edit metadata tags in MP3, FLAC, Ogg, and other audio file formats. It supports batch editing, tag formatting, and importing tag data from online databases.",
+  "categories": [
+    "Music & Audio"
+  ],
+  "developer": "Urs Fleisch",
+  "url": "https://kid3.kde.org/"
+}
