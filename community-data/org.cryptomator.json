@@ -1,0 +1,9 @@
+{
+  "name": "Cryptomator",
+  "description": "Cryptomator is a client-side encryption app for macOS that protects files stored in cloud services such as Dropbox, Google Drive, and iCloud by creating encrypted vaults that are transparently accessible as virtual drives.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "cryptomator.org",
+  "url": "https://cryptomator.org/"
+}
