@@ -1,0 +1,8 @@
+{
+  "name": "SoulseekQt",
+  "description": "SoulseekQt is a peer-to-peer file sharing client for macOS that connects users to the Soulseek network, primarily used for sharing and downloading music files. It allows users to search for files, browse other users' shared libraries, and transfer files directly between peers.",
+  "categories": [
+    "Filesharing"
+  ],
+  "url": "https://www.slsknet.org"
+}
