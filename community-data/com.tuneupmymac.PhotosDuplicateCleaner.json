@@ -1,0 +1,8 @@
+{
+  "name": "Photos Duplicate Cleaner",
+  "description": "Photos Duplicate Cleaner scans your macOS Photos library to identify and remove duplicate images, helping you free up storage space and keep your photo collection organized.",
+  "categories": [
+    "Photography"
+  ],
+  "developer": "Systweak"
+}
