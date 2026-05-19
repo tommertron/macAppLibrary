@@ -127,6 +127,15 @@
     "developer": "LittleFin LLC",
     "url": "https://chronicleapp.com"
   },
+  "com.MrKai77.Loop": {
+    "name": "Loop",
+    "description": "Loop is a macOS window manager that allows users to elegantly arrange and resize windows using a radial menu triggered by holding a key, enabling quick snapping of windows to various screen positions and sizes.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Loop",
+    "url": "https://github.com/MrKai77/Loop"
+  },
   "com.acdsystems.acdseePhotoFlash": {
     "name": "ACDSee Photo Flash",
     "description": "Minimalist app for brightening underexposed photos using ACDSee\u2019s \u201cLighting and Contrast Enhancement (LCE)\u201d technology to avoid excessive grain and blowout. (Discontinued; replaced with Light EQ by ACDSee.)",
@@ -196,6 +205,15 @@
       "Productivity"
     ],
     "developer": "Anthropic PBC"
+  },
+  "com.aone.keka": {
+    "name": "Keka",
+    "description": "Keka is a file archiver for macOS that allows users to compress files into formats such as ZIP, 7z, and TAR, and extract a wide variety of archive formats including RAR, ZIP, 7z, and more.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "aONe",
+    "url": "https://www.keka.io/"
   },
   "com.apimac.CleanText": {
     "name": "Clean Text",
@@ -891,6 +909,15 @@
     "developer": "Randy Saldinger, dba Mothers Ruin Software",
     "url": "https://www.mothersruin.com/software/Apparency"
   },
+  "com.mowglii.ItsycalApp": {
+    "name": "Itsycal",
+    "description": "Itsycal is a tiny menu bar calendar app for macOS that displays a small calendar popup when you click its icon in the menu bar. It can also show your upcoming events from the macOS Calendar app.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "\u2212\u2009 mowglii.com",
+    "url": "https://www.mowglii.com/itsycal/"
+  },
   "com.naotanhaocan.BetterMouse": {
     "name": "BetterMouse",
     "description": "BetterMouse is a macOS utility that enhances third-party mouse functionality by providing customizable scroll acceleration, smooth scrolling, and button remapping to improve the experience of using non-Apple mice on macOS.",
@@ -930,6 +957,13 @@
     ],
     "developer": "Objective-See",
     "url": "https://objective-see.org/products/blockblock.html"
+  },
+  "com.objective-see.lulu.app": {
+    "name": "LuLu",
+    "description": "LuLu is a free, open-source macOS firewall that monitors and blocks unauthorized outgoing network connections. It alerts users when an application attempts to connect to the internet, allowing them to permit or deny the connection.",
+    "categories": [],
+    "developer": "Objective-See",
+    "url": "https://objective-see.org/products/lulu.html"
   },
   "com.okta.mobile": {
     "name": "Okta Verify",
