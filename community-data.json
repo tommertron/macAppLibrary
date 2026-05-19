@@ -1135,6 +1135,15 @@
     "developer": "Objective-See",
     "url": "https://objective-see.org/products/lulu.html"
   },
+  "com.ocenaudio": {
+    "name": "ocenaudio",
+    "description": "ocenaudio is a cross-platform audio editor that allows users to record, edit, and analyze audio files with support for a wide range of formats and real-time preview of effects.",
+    "categories": [
+      "Music"
+    ],
+    "developer": "ocenaudio Team",
+    "url": "https://www.ocenaudio.com/"
+  },
   "com.okta.mobile": {
     "name": "Okta Verify",
     "description": "A multi-factor authentication application that provides secure sign-in verification using push notifications, one-time passcodes, and device-based authentication for organizational accounts and services.",
@@ -1307,6 +1316,14 @@
     "developer": "Moballo",
     "url": "https://sequel-ace.com/"
   },
+  "com.shazam.mac.Shazam": {
+    "name": "Shazam",
+    "description": "Shazam is a music recognition app that identifies songs playing around you by listening to a short audio sample. It displays song titles, artists, and lyrics, and can sync discoveries with your music streaming services.",
+    "categories": [
+      "Music"
+    ],
+    "developer": "Apple Inc"
+  },
   "com.sheepsystems.BookMacster": {
     "name": "BookMacster",
     "description": "BookMacster manages and syncs bookmarks across multiple web browsers, allowing users to maintain a unified bookmark library that can be shared or distributed to different browsers on one or more Macs.",
@@ -1350,6 +1367,13 @@
     ],
     "developer": "Splasm Software",
     "url": "https://www.splasm.com/audiobookbuilder"
+  },
+  "com.spotify.client": {
+    "name": "Spotify",
+    "description": "Spotify is a music and podcast streaming app that provides access to millions of tracks, albums, playlists, and podcasts. It allows users to search, browse, and play audio content either on-demand with a premium subscription or in shuffle mode with the free tier.",
+    "categories": [
+      "Music"
+    ]
   },
   "com.squirrels.AirParrot-3": {
     "name": "AirParrot 3",
