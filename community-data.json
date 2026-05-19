@@ -572,6 +572,15 @@
     "developer": "CodeWeavers",
     "url": "https://www.codeweavers.com/crossover"
   },
+  "com.colliderli.iina": {
+    "name": "IINA",
+    "description": "IINA is a modern, open-source media player for macOS that supports a wide range of video and audio formats. It is built on mpv and features a clean native interface with support for online streaming, subtitles, and Touch Bar integration.",
+    "categories": [
+      "Video"
+    ],
+    "developer": "Collider LI, et al.\nReleased under GPLv3",
+    "url": "https://iina.io/"
+  },
   "com.company.doublecmd": {
     "name": "Double Commander",
     "description": "Double Commander is a cross-platform open-source file manager featuring a dual-panel interface, designed as a feature-rich alternative to Total Commander with support for plugins, archive handling, and advanced file operations.",
