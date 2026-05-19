@@ -1,0 +1,7 @@
+{
+  "name": "Restic-Browser",
+  "description": "Restic-Browser is a macOS GUI application for browsing and restoring backups created with the Restic backup tool, allowing users to explore snapshot contents and recover files without using the command line.",
+  "categories": [
+    "Developer Tools"
+  ]
+}
