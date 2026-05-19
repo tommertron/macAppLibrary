@@ -1048,6 +1048,15 @@
     "developer": "OpenAI",
     "url": "https://openai.com/codex"
   },
+  "com.overmacs.photosweeperpaddle": {
+    "name": "PhotoSweeper X",
+    "description": "PhotoSweeper X is a duplicate photo finder and cleaner for macOS that helps users identify and remove similar or identical photos from their photo libraries, including those managed by Photos, Lightroom, and other apps.",
+    "categories": [
+      "Photography"
+    ],
+    "developer": "Overmacs Team",
+    "url": "https://overmacs.com/"
+  },
   "com.panic.CandyBar3": {
     "name": "CandyBar",
     "description": "CandyBar was an icon management tool. In its heyday it was a customization tool: every system icon on your Mac could be changed. CandyBar 3 combined with the icon library tool Pixadex, providing library features, like Apple\u2019s Photos app, for managing a library of icons. Although CandyBar was mostly discontinued in 2012, the icon library features continue to be useful, and the CandyBar Sugar Free Edition from 2022 brings it into the Apple Silicon era, albeit completely unsupported and with some bugs.",
@@ -1080,6 +1089,14 @@
       "Graphics & Design"
     ],
     "developer": "Apple Inc"
+  },
+  "com.privateinternetaccess.vpn": {
+    "name": "Private Internet Access",
+    "description": "Private Internet Access is a VPN client for macOS that encrypts your internet connection and routes your traffic through secure servers to protect your privacy and mask your IP address.",
+    "categories": [
+      "VPN"
+    ],
+    "url": "https://www.privateinternetaccess.com/"
   },
   "com.ranchero.NetNewsWire-Evergreen": {
     "name": "NetNewsWire",
