@@ -1,0 +1,9 @@
+{
+  "name": "Vanderplanki",
+  "description": "Vanderplanki is an archiving solution developed by the founders of MailStore in Germany for the centralized and easy backup of emails from all mailboxes. The software is available for Windows, macOS, and Linux and offers fast full-text search and zero-knowledge encryption.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Stefan Schultze Software",
+  "url": "https://www.vanderplanki.com/"
+}
