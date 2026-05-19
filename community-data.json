@@ -1953,6 +1953,15 @@
       "Productivity"
     ]
   },
+  "org.pdfsam.basic": {
+    "name": "PDFsam Basic",
+    "description": "PDFsam Basic is a free, open-source application for splitting, merging, rotating, and rearranging PDF files. It provides a straightforward interface for performing common PDF manipulation tasks without requiring an internet connection.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Sober Lemur S.r.l",
+    "url": "https://pdfsam.org/download-pdfsam-basic/"
+  },
   "org.restic.browser": {
     "name": "Restic-Browser",
     "description": "Restic-Browser is a macOS GUI application for browsing and restoring backups created with the Restic backup tool, allowing users to explore snapshot contents and recover files without using the command line.",
