@@ -1169,6 +1169,12 @@
     ],
     "developer": "Mimestream, LLC"
   },
+  "com.mixedinkey.application": {
+    "name": "Mixed In Key 11",
+    "description": "Mixed In Key 11 is a music analysis app for DJs and producers that detects the musical key and BPM of audio tracks, helping users create harmonically compatible playlists and mixes.",
+    "categories": [],
+    "url": "https://mixedinkey.com/pro/"
+  },
   "com.mothersruin.Apparency": {
     "name": "Apparency",
     "description": "Inspect macOS applications, revealing code signatures, entitlements, version information, and other metadata about applications and their contents. See identifiers and versions, what document types and URLs an application supports, and what platforms it\u2019s compiled for.",
