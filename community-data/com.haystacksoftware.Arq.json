@@ -1,6 +1,6 @@
 {
   "name": "Arq",
-  "description": "Backup Software",
+  "description": "Arq is a backup application for macOS that automatically backs up your files to cloud storage services (such as Amazon S3, Google Drive, Backblaze B2, and others) or local destinations. It uses strong encryption and deduplication to securely store and efficiently manage backup data.",
   "categories": [
     "Utilities",
     "Backup"
