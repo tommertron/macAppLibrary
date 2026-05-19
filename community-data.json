@@ -1595,6 +1595,14 @@
     "developer": "Balena",
     "url": "https://etcher.balena.io"
   },
+  "io.github.edrlab.thorium": {
+    "name": "Thorium",
+    "description": "Thorium is a free, open-source EPUB reader developed by EDRLab that allows users to read digital books and publications, supporting formats such as EPUB 2, EPUB 3, audiobooks, and PDF, with features including bookmarks, annotations, and accessibility support.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "EDRLab"
+  },
   "io.raindrop.macapp": {
     "name": "Raindrop.io",
     "description": "A cross-platform bookmarking manager with collections, tags, full-text search, and a browser extension for saving anything from the web.",
@@ -1641,6 +1649,14 @@
     "developer": "Blizzard Entertainment",
     "url": "https://battle.net"
   },
+  "net.cozic.joplin-desktop": {
+    "name": "Joplin",
+    "description": "Joplin is an open-source note-taking and to-do application that supports Markdown editing and organizes notes into notebooks. It offers end-to-end encrypted synchronization across devices via services like Dropbox, OneDrive, or Nextcloud.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Laurent Cozic"
+  },
   "net.ericmann.parachute": {
     "name": "Parachute Backup",
     "description": "Parachute is a set-and-forget backup companion for iCloud Photos and iCloud Drive. It automatically syncs your memories, photos, videos, and documents to your own storage.",
@@ -1666,6 +1682,14 @@
     ],
     "developer": "Kovid Goyal",
     "url": "https://calibre-ebook.com"
+  },
+  "net.pornel.ImageOptim": {
+    "name": "ImageOptim",
+    "description": "ImageOptim is a macOS app that compresses and optimizes images by removing unnecessary metadata and applying lossless or lossy compression, reducing file sizes without significantly affecting visual quality. It supports common formats including PNG, JPEG, and GIF.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Free, Open Source (GNU GPL)"
   },
   "net.publicspace.Boring-Old-Menu-Bar": {
     "name": "Boring Old Menu Bar",
@@ -1810,6 +1834,13 @@
     "description": "A popular web browser that provides standards-based internet browsing with support for extensions, privacy protections, tabbed browsing, and cross-platform synchronization.",
     "categories": [
       "Productivity"
+    ]
+  },
+  "org.restic.browser": {
+    "name": "Restic-Browser",
+    "description": "Restic-Browser is a macOS GUI application for browsing and restoring backups created with the Restic backup tool, allowing users to explore snapshot contents and recover files without using the command line.",
+    "categories": [
+      "Developer Tools"
     ]
   },
   "org.streetpea.chiaking": {
