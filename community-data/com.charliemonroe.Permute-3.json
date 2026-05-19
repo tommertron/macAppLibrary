@@ -1,0 +1,9 @@
+{
+  "name": "Permute 3",
+  "description": "Permute 3 is a media converter for macOS that converts audio, video, and image files between a wide variety of formats. It features a simple drag-and-drop interface and supports batch conversions.",
+  "categories": [
+    "Video"
+  ],
+  "developer": "Charlie Monroe Software",
+  "url": "https://software.charliemonroe.net/permute/"
+}
