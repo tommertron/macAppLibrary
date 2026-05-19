@@ -774,6 +774,13 @@
     "developer": "Asana",
     "url": "https://asana.com/download"
   },
+  "com.epsteinapps.Hover-for-Safari": {
+    "name": "Hover for Safari",
+    "description": "Hover for Safari is a browser extension for Safari on macOS that displays a larger preview image when you hover your cursor over thumbnails or small images on websites.",
+    "categories": [
+      "Utilities"
+    ]
+  },
   "com.ethanbills.DockDoor": {
     "name": "DockDoor",
     "description": "Adds window previews to your Mac Dock on hover, so you can see and switch between open windows of each app at a glance.",
@@ -857,6 +864,12 @@
     ],
     "developer": "Google",
     "url": "https://web.archive.org/web/20240501030920/https://www.android.com/filetransfer/"
+  },
+  "com.googlecode.iterm2.iTermAI": {
+    "name": "iTermAI",
+    "description": "iTermAI is an AI-powered assistant integration built into iTerm2, the macOS terminal emulator, that allows users to interact with large language models directly within the terminal to get help with commands, scripts, and other shell-related tasks.",
+    "categories": [],
+    "url": "https://iterm2.com"
   },
   "com.googlecode.iterm2": {
     "name": "iTerm2",
@@ -2125,6 +2138,12 @@
     "categories": [],
     "developer": "Robert Kausch",
     "url": "https://www.freac.org/"
+  },
+  "org.jdownloader.launcher": {
+    "name": "JDownloader2",
+    "description": "JDownloader 2 is a free, open-source download manager that automates downloading files from file-hosting services, streaming sites, and direct links, supporting parallel downloads and automatic CAPTCHA solving.",
+    "categories": [],
+    "url": "https://jdownloader.org/jdownloader2"
   },
   "org.jkiss.dbeaver.core.product": {
     "name": "DBeaver Community",
