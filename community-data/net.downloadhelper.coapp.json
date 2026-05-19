@@ -1,0 +1,9 @@
+{
+  "name": "DownloadHelper CoApp",
+  "description": "DownloadHelper CoApp is a companion application for the Video DownloadHelper browser extension that enables downloading and converting web videos. It handles the backend processing tasks, such as video conversion and file management, that the browser extension alone cannot perform.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "VdhCoApp developers",
+  "url": "https://www.downloadhelper.net/"
+}
