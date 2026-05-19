@@ -1,0 +1,9 @@
+{
+  "name": "IINA",
+  "description": "IINA is a modern, open-source media player for macOS that supports a wide range of video and audio formats. It is built on mpv and features a clean native interface with support for online streaming, subtitles, and Touch Bar integration.",
+  "categories": [
+    "Video"
+  ],
+  "developer": "Collider LI, et al.\nReleased under GPLv3",
+  "url": "https://iina.io/"
+}
