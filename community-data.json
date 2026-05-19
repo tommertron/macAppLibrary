@@ -470,6 +470,15 @@
     "developer": "CodeWeavers",
     "url": "https://www.codeweavers.com/crossover"
   },
+  "com.coteditor.CotEditor": {
+    "name": "CotEditor",
+    "description": "CotEditor is a lightweight, open-source plain-text editor for macOS designed for editing web pages, scripts, and other text files, with features like syntax highlighting, regular expression search, and multi-cursor editing.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "nakamuxu\n ,  usami-k\n  jp",
+    "url": "https://coteditor.com/"
+  },
   "com.culturedcode.ThingsMac": {
     "name": "Things 3",
     "description": "An award-winning personal task manager with a clean, delightful design for capturing, organizing, and completing your to-dos.",
@@ -1226,6 +1235,12 @@
       "Productivity"
     ],
     "developer": "Alexander Clauss"
+  },
+  "de.kuatsu.consul": {
+    "name": "Consul",
+    "description": "Consul is a macOS menu bar app that provides a native interface for managing and interacting with HashiCorp Consul clusters, allowing users to browse services, nodes, and key-value pairs.",
+    "categories": [],
+    "url": "https://getconsul.app/"
   },
   "dev.leitmotif.taska": {
     "name": "Taska",
