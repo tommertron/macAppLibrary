@@ -1,0 +1,9 @@
+{
+  "name": "VirtualDJ",
+  "description": "VirtualDJ is a professional DJ software application that allows users to mix and blend audio and video tracks, featuring tools for beat matching, scratching, looping, and applying effects. It supports a wide range of DJ hardware controllers and is used by both amateur and professional DJs for live performances and music production.",
+  "categories": [
+    "Music"
+  ],
+  "developer": "Atomix Development",
+  "url": "https://virtualdj.com/"
+}
