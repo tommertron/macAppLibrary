@@ -248,6 +248,13 @@
     "developer": "And a Dinosaur",
     "url": "https://apps.apple.com/de/app/vinegar-tube-cleaner/id1591303229"
   },
+  "com.annapurnainteractive.Stray": {
+    "name": "Stray-Mac-Shipping",
+    "description": "Stray is a third-person adventure game for macOS in which the player controls a stray cat navigating a cyberpunk city inhabited by robots, solving puzzles and uncovering mysteries to find a way home.",
+    "categories": [
+      "Adventure Games"
+    ]
+  },
   "com.anthropic.claudefordesktop": {
     "name": "Claude",
     "description": "Anthropic's AI assistant desktop app, offering thoughtful conversation, writing help, coding support, and in-depth analysis.",
