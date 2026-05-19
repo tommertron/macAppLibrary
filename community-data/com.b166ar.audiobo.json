@@ -1,0 +1,9 @@
+{
+  "name": "AudioBo",
+  "description": "AudioBo is an audiobook tool for Mac that helps you fix chapters, edit metadata, fetch book details online, and build proper audiobooks for Apple Books, classic iPods, and beyond.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Orso Labs.\nhttps://orsolabs.dev",
+  "url": "https://orsolabs.dev/audiobo/"
+}
