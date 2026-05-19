@@ -1,0 +1,9 @@
+{
+  "name": "AnythingLLM",
+  "description": "AnythingLLM is a desktop application that allows users to chat with and query documents, files, and other content using large language models (LLMs), supporting both cloud-based and locally running AI models. It enables users to build private, customizable AI-powered workspaces without requiring data to leave their machine.",
+  "categories": [
+    "Ai Tools"
+  ],
+  "developer": "Mintplex Labs",
+  "url": "https://anythingllm.com/"
+}
