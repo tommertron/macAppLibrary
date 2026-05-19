@@ -2212,6 +2212,13 @@
     ],
     "url": "https://www.thunderbird.net/"
   },
+  "org.nicotine_plus.Nicotine": {
+    "name": "Nicotine+",
+    "description": "Nicotine+ is a graphical client for the Soulseek peer-to-peer file sharing network, allowing users to search for, download, and share files with other Soulseek users. It also supports chat rooms and private messaging within the Soulseek community.",
+    "categories": [],
+    "developer": "Nicotine+ Contributors\n  Nicotine Contributors\n  PySoulSeek Contributors",
+    "url": "https://nicotine-plus.org/"
+  },
   "org.pdfsam.basic": {
     "name": "PDFsam Basic",
     "description": "PDFsam Basic is a free, open-source application for splitting, merging, rotating, and rearranging PDF files. It provides a straightforward interface for performing common PDF manipulation tasks without requiring an internet connection.",
