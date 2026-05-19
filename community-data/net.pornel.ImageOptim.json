@@ -1,0 +1,8 @@
+{
+  "name": "ImageOptim",
+  "description": "ImageOptim is a macOS app that compresses and optimizes images by removing unnecessary metadata and applying lossless or lossy compression, reducing file sizes without significantly affecting visual quality. It supports common formats including PNG, JPEG, and GIF.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "Free, Open Source (GNU GPL)"
+}
