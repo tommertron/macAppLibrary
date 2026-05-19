@@ -1,0 +1,8 @@
+{
+  "name": "wBlock",
+  "description": "wBlock is a macOS app for managing and customizing content blocking rules for Safari, allowing users to enable, disable, and organize ad-blocking and privacy filter lists.",
+  "categories": [
+    "Utilities"
+  ],
+  "url": "https://github.com/0xCUB3/wBlock"
+}
