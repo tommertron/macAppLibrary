@@ -282,6 +282,13 @@
       "Utilities"
     ]
   },
+  "com.apple.TestFlight": {
+    "name": "TestFlight",
+    "description": "TestFlight is Apple's beta testing platform that allows users to install and test pre-release versions of iOS, macOS, and other Apple platform apps. It enables developers to distribute beta builds to testers and collect feedback before a public App Store release.",
+    "categories": [
+      "Developer Tools"
+    ]
+  },
   "com.apple.dt.Xcode": {
     "name": "Xcode",
     "description": "Apple's integrated development environment for building apps for iOS, macOS, watchOS, tvOS, and visionOS with Swift and Objective-C.",
@@ -1074,6 +1081,12 @@
     ],
     "developer": "Panic Inc"
   },
+  "com.paulpacifico.shutterencoder": {
+    "name": "Shutter Encoder",
+    "description": "Shutter Encoder is a free, professional-grade video, audio, and image conversion tool that supports a wide range of formats and codecs, leveraging FFmpeg for encoding, decoding, and transcoding tasks.",
+    "categories": [],
+    "url": "https://www.shutterencoder.com/"
+  },
   "com.phocusllp.duemac": {
     "name": "Due",
     "description": "A reminders app that nags you until things are done, with natural language input and persistent alerts that don't let you forget.",
@@ -1348,6 +1361,15 @@
       "Productivity"
     ],
     "developer": "The Browser Company"
+  },
+  "corp.sap.privileges": {
+    "name": "Privileges",
+    "description": "Privileges is a macOS application developed by SAP that allows users to temporarily grant or revoke local administrator rights on their Mac, promoting the security best practice of operating as a standard user and elevating privileges only when needed.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "SAP SE",
+    "url": "https://github.com/SAP/macOS-enterprise-privileges"
   },
   "de.icab.iCab": {
     "name": "iCab",
@@ -1672,6 +1694,15 @@
     ],
     "developer": "thestr4ng3r and chiaki-ng team",
     "url": "https://streetpea.github.io/chiaki-ng/"
+  },
+  "org.sveinbjorn.Sloth": {
+    "name": "Sloth",
+    "description": "Sloth is a macOS utility that displays all open files, directories, sockets, pipes, and devices in use by running processes on the system. It provides a graphical interface for the Unix `lsof` command, allowing users to easily browse and filter system resource usage.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Sveinbjorn Thordarson. BSD License",
+    "url": "https://sveinbjorn.org/sloth"
   },
   "org.tempel.findanyfile": {
     "name": "Find Any File",
