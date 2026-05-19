@@ -8,6 +8,16 @@
     "developer": "ComicTagger team",
     "url": "https://github.com/comictagger/comictagger"
   },
+  "One-Geek-Army.Disk-Jockey": {
+    "name": "Disk Jockey",
+    "description": "Disk Jockey is a creator and analyser for retro computer disk images, supporting Apple II, Atari ST, Amiga, classic Macintosh, and more. It can display file contents from retro file systems like HFS and ProDOS. It can even view Amiga and Atari ST images in Degas, NEOChrome, Tiny Stuff and Spectrum 512 formats and export to PNG. ",
+    "categories": [
+      "Utilities",
+      "Emulators"
+    ],
+    "developer": "One Geek Army",
+    "url": "https://diskjockey.onegeekarmy.eu"
+  },
   "andrewnicolaou.BrewServicesMenubar": {
     "name": "BrewServicesMenubar",
     "description": "An OS X menu item for starting and stopping homebrew services. Reads the `homebrew services` command, showing you the status of your services and allowing them to be started, stopped and restarted.",
@@ -731,6 +741,15 @@
     ],
     "developer": "8.2.1,   Ian Page"
   },
+  "com.manytricks.Displaperture": {
+    "name": "Displaperture",
+    "description": "Displaperture adds rounded corners to your display, allowing you to adjust the corner radius to match the aesthetic of modern Mac hardware or your personal preference. Originally meant to evoke classic Mac nostalgia, the app has been around so long \u2014 since 2007 \u2014 that the aesthetic now seems modern again.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Many Tricks",
+    "url": "https://manytricks.com/displaperture"
+  },
   "com.manytricks.NameMangler": {
     "name": "Name Mangler",
     "description": "A batch file renamer with a live preview, supporting pattern matching, sequences, metadata insertion, and complex rename chains.",
@@ -1398,6 +1417,16 @@
     "developer": "Christopher Snowhill, Vincent Spader, et al",
     "url": "https://cog.losno.co"
   },
+  "org.dolphin-emu.dolphin": {
+    "name": "Dolphin",
+    "description": "Dolphin is an open-source emulator for Nintendo GameCube and Wii games, allowing users to play titles from those consoles on their Mac with support for enhanced graphics, save states, and controller customization.",
+    "categories": [
+      "Games",
+      "Emulators"
+    ],
+    "developer": "Dolphin Emulator Project",
+    "url": "https://dolphin-emu.org"
+  },
   "org.jkiss.dbeaver.core.product": {
     "name": "DBeaver Community",
     "description": "DBeaver Community is a free, open-source database management supporting many databases including MySQL, PostgreSQL, SQLite, Oracle, and others. Browse, query, and manage data and structures, execute scripts, back up and restore tables or complete databases, and more.",
@@ -1501,6 +1530,15 @@
     ],
     "developer": "Cider Collective",
     "url": "https://cider.sh"
+  },
+  "uk.org.upfold.DfontSplitter": {
+    "name": "DfontSplitter",
+    "description": "DfontSplitter is a utility that splits Mac OS X .dfont (data fork font) files into individual TrueType font files (.ttf). Also works with Font Suitcase and TTC formats.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "Peter Upfold",
+    "url": "https://peter.upfold.org.uk/projects/dfontsplitter"
   },
   "us.zoom.xos": {
     "name": "Zoom",
