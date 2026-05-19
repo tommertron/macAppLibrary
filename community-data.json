@@ -1328,6 +1328,15 @@
     "categories": [],
     "url": "https://getconsul.app/"
   },
+  "de.robertpaulkothe.OfflineFinder": {
+    "name": "Offline Files",
+    "description": "With Offline Files you can browse indexed drives and see thumbnails, even when the disk is on the shelf. With Spotlight search and image recognition.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Paul Kothe",
+    "url": "https://apps.apple.com/de/app/offline-files/id6757367718"
+  },
   "dev.leitmotif.taska": {
     "name": "Taska",
     "description": "A GitHub Issues and project management client for Mac, giving developers a native interface for tracking and managing tasks.",
