@@ -383,6 +383,14 @@
     "developer": "Austin Sarner and Brian Ball",
     "url": "https://appzapper.com"
   },
+  "com.araxis.merge": {
+    "name": "Araxis Merge",
+    "description": "Araxis Merge is a professional file comparison and merging tool that allows users to visually diff and merge text files, source code, and folders. It supports two-way and three-way comparisons and is commonly used for resolving conflicts in software development workflows.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "K'ed by aqzs"
+  },
   "com.asiafu.Bloom": {
     "name": "Bloom",
     "description": "Bloom is a file manager intended to replace Finder with a more refined experience. Features include multi-pane layouts, a refined search experience, and a compact mode for working side-by-side with other applications.",
@@ -712,6 +720,14 @@
     "categories": [
       "Utilities"
     ]
+  },
+  "com.firmshell.msgviewerpro": {
+    "name": "Msg Viewer Pro",
+    "description": "Msg Viewer Pro is a macOS application that allows users to open, view, and read Microsoft Outlook .msg email files without requiring Microsoft Outlook to be installed. It supports viewing email content, attachments, and metadata from .msg format files.",
+    "categories": [
+      "Business"
+    ],
+    "developer": "FirmShell Ltd"
   },
   "com.flexibits.cardhop.mac": {
     "name": "Cardhop",
@@ -1179,6 +1195,14 @@
     "description": "Shutter Encoder is a free, professional-grade video, audio, and image conversion tool that supports a wide range of formats and codecs, leveraging FFmpeg for encoding, decoding, and transcoding tasks.",
     "categories": [],
     "url": "https://www.shutterencoder.com/"
+  },
+  "com.pdfkey.pdfkeypro": {
+    "name": "PDFKey Pro",
+    "description": "PDFKey Pro is a macOS utility that removes password protection and restrictions from PDF files, allowing users to unlock encrypted PDFs for printing, copying, and editing.",
+    "categories": [
+      "Business"
+    ],
+    "developer": "Bitgamma s.a.s"
   },
   "com.phocusllp.duemac": {
     "name": "Due",
