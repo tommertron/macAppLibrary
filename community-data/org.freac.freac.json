@@ -1,0 +1,7 @@
+{
+  "name": "fre:ac - free audio converter",
+  "description": "fre:ac is a free audio converter and CD ripper that supports a wide range of formats including MP3, AAC, FLAC, and Ogg Vorbis. It allows users to convert audio files between formats and extract tracks from audio CDs.",
+  "categories": [],
+  "developer": "Robert Kausch",
+  "url": "https://www.freac.org/"
+}
