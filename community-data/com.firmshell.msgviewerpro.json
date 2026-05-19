@@ -1,0 +1,8 @@
+{
+  "name": "Msg Viewer Pro",
+  "description": "Msg Viewer Pro is a macOS application that allows users to open, view, and read Microsoft Outlook .msg email files without requiring Microsoft Outlook to be installed. It supports viewing email content, attachments, and metadata from .msg format files.",
+  "categories": [
+    "Business"
+  ],
+  "developer": "FirmShell Ltd"
+}
