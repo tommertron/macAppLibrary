@@ -1031,6 +1031,12 @@
     "categories": [],
     "url": "https://github.com/gety-ai/apple-on-device-openai"
   },
+  "com.localai.launcher": {
+    "name": "LocalAI",
+    "description": "LocalAI is a macOS launcher application that allows users to run open-source AI language models locally on their own hardware, enabling private, offline AI inference without relying on cloud-based services.",
+    "categories": [],
+    "url": "https://localai.io/"
+  },
   "com.logi.optionsplus": {
     "name": "logioptionsplus",
     "description": "Preference settings for Logitech Devices",
@@ -2178,6 +2184,12 @@
       "Utilities"
     ],
     "developer": "The Transmission Project"
+  },
+  "org.mediathekview.MediathekView": {
+    "name": "MediathekView",
+    "description": "MediathekView is a free, open-source media library browser for German-speaking public broadcasters (ARD, ZDF, ORF, SRF, and others), allowing users to search, stream, and download TV and radio content from their online media libraries.",
+    "categories": [],
+    "url": "https://mediathekview.de/"
   },
   "org.mozilla.firefox": {
     "name": "Firefox",
