@@ -1,0 +1,9 @@
+{
+  "name": "AirBattery",
+  "description": "AirBattery displays the battery levels of connected Apple devices and AirPods in the macOS menu bar, mimicking the iOS battery widget experience. It provides real-time battery status for Bluetooth accessories paired with your Mac.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "lihaoyun6",
+  "url": "https://lihaoyun6.github.io/airbattery/"
+}
