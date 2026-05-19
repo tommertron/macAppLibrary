@@ -165,6 +165,15 @@
     "developer": "Ahoy Labs",
     "url": "https://backyard.ai"
   },
+  "com.algoriddim.djay-iphone-free": {
+    "name": "djay Pro",
+    "description": "djay Pro is a professional DJ application for macOS that allows users to mix music from their library, streaming services, and other sources using virtual turntables, a mixer, and advanced tools like beat matching, looping, and audio effects.",
+    "categories": [
+      "Music"
+    ],
+    "developer": "Algoriddim GmbH",
+    "url": "https://www.algoriddim.com/apps"
+  },
   "com.amazon.Lassen": {
     "name": "Amazon Kindle",
     "description": "Amazon Kindle for macOS is an e-reader app that allows users to read books, magazines, and other publications purchased from Amazon's Kindle store. The app syncs reading progress across devices and provides features like adjustable fonts, bookmarks, and highlighting.",
@@ -469,6 +478,12 @@
     ],
     "developer": "CodeWeavers",
     "url": "https://www.codeweavers.com/crossover"
+  },
+  "com.company.doublecmd": {
+    "name": "Double Commander",
+    "description": "Double Commander is a cross-platform open-source file manager featuring a dual-panel interface, designed as a feature-rich alternative to Total Commander with support for plugins, archive handling, and advanced file operations.",
+    "categories": [],
+    "url": "https://doublecmd.sourceforge.io/"
   },
   "com.coteditor.CotEditor": {
     "name": "CotEditor",
@@ -1280,6 +1295,15 @@
     "categories": [
       "Developer Tools"
     ]
+  },
+  "fr.handbrake.HandBrake": {
+    "name": "HandBrake",
+    "description": "HandBrake is a free, open-source video transcoder that converts video files from a wide range of formats into modern, widely supported codecs and containers. It supports batch encoding, presets, and advanced options for controlling video quality, resolution, and compression.",
+    "categories": [
+      "Video"
+    ],
+    "developer": "HandBrake Team.\nGPLv2 license",
+    "url": "https://handbrake.fr/"
   },
   "io.balena.etcher": {
     "name": "balenaEtcher",
