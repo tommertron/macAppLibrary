@@ -79,6 +79,15 @@
     ],
     "developer": "Acqualia Software"
   },
+  "at.EternalStorms.Yoink-demo": {
+    "name": "Yoink",
+    "description": "Yoink is a macOS utility that provides a temporary shelf or holding area for files, links, and other items while you navigate between folders or applications during drag-and-drop operations. It simplifies file management by letting you stage items in a floating window before dropping them at their destination.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Eternal Storms Software",
+    "url": "https://eternalstorms.at/yoink/mac/"
+  },
   "biz.papercut.pcng.client": {
     "name": "PaperCut MF",
     "description": "An enterprise print management application that manages secure printing, print quotas, authentication, and communication with managed printers and print servers.",
@@ -934,6 +943,15 @@
       "Productivity"
     ],
     "developer": "Krueger Systems, Inc"
+  },
+  "com.lihaoyun6.AirBattery": {
+    "name": "AirBattery",
+    "description": "AirBattery displays the battery levels of connected Apple devices and AirPods in the macOS menu bar, mimicking the iOS battery widget experience. It provides real-time battery status for Bluetooth accessories paired with your Mac.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "lihaoyun6",
+    "url": "https://lihaoyun6.github.io/airbattery/"
   },
   "com.logi.optionsplus": {
     "name": "logioptionsplus",
@@ -1952,6 +1970,14 @@
     "categories": [
       "Productivity"
     ]
+  },
+  "org.mozilla.thunderbird": {
+    "name": "Thunderbird",
+    "description": "Thunderbird is a free, open-source email client developed by Mozilla that allows users to manage multiple email accounts, calendars, and contacts from a single desktop application.",
+    "categories": [
+      "Productivity"
+    ],
+    "url": "https://www.thunderbird.net/"
   },
   "org.pdfsam.basic": {
     "name": "PDFsam Basic",
