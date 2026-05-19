@@ -821,6 +821,13 @@
     "developer": "Flying Meat Inc",
     "url": "https://flyingmeat.com/acorn"
   },
+  "com.fujitsu.pfu.ScanSnapHome": {
+    "name": "ScanSnapHomeMain",
+    "description": "ScanSnapHome is the companion desktop application for Fujitsu ScanSnap document scanners, allowing users to manage scan settings, organize scanned documents, and send scans to various destinations such as cloud services, email, or local folders.",
+    "categories": [],
+    "developer": "PFU Limited",
+    "url": "https://www.scansnapit.com"
+  },
   "com.github.GitHubClient": {
     "name": "GitHub Desktop",
     "description": "GitHub's official desktop client for managing repositories, pull requests, and branches with a visual interface.",
@@ -890,6 +897,14 @@
     "developer": "Governikus GmbH & Co. KG",
     "url": "https://www.ausweisapp.bund.de/"
   },
+  "com.groosoft.AllowRightClick": {
+    "name": "Right Click",
+    "description": "Right Click is a macOS utility that re-enables right-clicking on websites that have disabled or blocked the context menu. It overrides JavaScript-based restrictions to restore standard right-click functionality across all web content.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "groosoft"
+  },
   "com.gtrigonakis.TextWorkflow": {
     "name": "Text Workflow",
     "description": "Text Workflow is a macOS utility that allows users to transform and manipulate text through a series of customizable actions and filters, streamlining common text processing tasks.",
@@ -954,6 +969,12 @@
     ],
     "developer": "MENGUS ARNAUD",
     "url": "https://webssh.net/"
+  },
+  "com.jelleglebbeek.youtube-dl-gui": {
+    "name": "Open Video Downloader",
+    "description": "Open Video Downloader is a macOS graphical interface for youtube-dl that allows users to download videos and audio from YouTube and hundreds of other websites by simply entering a URL.",
+    "categories": [],
+    "url": "https://jely2002.github.io/youtube-dl-gui/"
   },
   "com.johnhaney.mac.Backdrop": {
     "name": "Backdrop",
@@ -2227,6 +2248,13 @@
     ],
     "developer": "Sober Lemur S.r.l",
     "url": "https://pdfsam.org/download-pdfsam-basic/"
+  },
+  "org.qbittorrent.qBittorrent": {
+    "name": "qBittorrent",
+    "description": "qBittorrent is a free, open-source BitTorrent client that allows users to download and manage torrent files. It features an integrated torrent search engine, RSS feed support, and a web-based remote interface.",
+    "categories": [],
+    "developer": "The qBittorrent project",
+    "url": "https://www.qbittorrent.org/"
   },
   "org.restic.browser": {
     "name": "Restic-Browser",
