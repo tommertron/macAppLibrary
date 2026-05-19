@@ -758,6 +758,15 @@
     "developer": "George Nachman",
     "url": "https://iterm2.com"
   },
+  "com.governikus.ausweisapp2": {
+    "name": "AusweisApp",
+    "description": "AusweisApp is the official German government application that allows users to use their electronic ID card (ePerso) or electronic residence permit for secure online authentication and digital signatures. It enables citizens to access eGovernment services and other online platforms that require verified identity confirmation.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Governikus GmbH & Co. KG",
+    "url": "https://www.ausweisapp.bund.de/"
+  },
   "com.haystacksoftware.Arq": {
     "name": "Arq",
     "description": "Backup Software",
