@@ -1,0 +1,7 @@
+{
+  "name": "Spek",
+  "description": "Spek is a free acoustic spectrum analyzer that displays the frequency spectrum of audio files. It supports a wide range of audio formats and visualizes the spectrogram to help users analyze the quality and characteristics of audio recordings.",
+  "categories": [],
+  "developer": "Alexander Kojevnikov and contributors",
+  "url": "https://www.spek.cc/"
+}
