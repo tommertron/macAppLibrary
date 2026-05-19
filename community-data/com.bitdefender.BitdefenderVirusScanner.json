@@ -1,0 +1,7 @@
+{
+  "name": "BitdefenderVirusScanner",
+  "description": "Bitdefender Virus Scanner is a free macOS security application that scans your Mac for malware, viruses, and other threats, including those that may target Windows systems. It allows users to perform on-demand scans of specific locations or the entire system to detect and remove malicious files.",
+  "categories": [
+    "Utilities"
+  ]
+}
