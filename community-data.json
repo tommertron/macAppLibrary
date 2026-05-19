@@ -1941,6 +1941,13 @@
     ],
     "developer": "Tailscale Inc"
   },
+  "jp.tmkk.XLD": {
+    "name": "XLD",
+    "description": "XLD (X Lossless Decoder) is a macOS application for decoding, converting, and encoding audio files across various formats, including lossless formats such as FLAC, Apple Lossless, and WAV. It also supports ripping audio CDs with accurate rip verification.",
+    "categories": [],
+    "developer": "tmkk",
+    "url": "https://tmkk.undo.jp/xld/index_e.html"
+  },
   "md.obsidian.Obsidian-Web-Clipper": {
     "name": "Obsidian Web Clipper",
     "description": "A browser extension for clipping web content directly into your Obsidian vault with formatting and metadata preserved.",
