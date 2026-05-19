@@ -108,6 +108,14 @@
     ],
     "developer": "David Kocher.    Yves Langisch"
   },
+  "christopherbrock.ZeroDuplicates": {
+    "name": "Zero Duplicates",
+    "description": "Zero Duplicates is a macOS utility that scans your Mac for duplicate files, helping you identify and remove redundant copies to free up storage space.",
+    "categories": [
+      "Utilities"
+    ],
+    "url": "https://zeroduplicates.com"
+  },
   "club.refactoring.tolaria": {
     "name": "Tolaria",
     "description": "Tolaria is a desktop app for macOS, Windows, and Linux for managing markdown knowledge bases. ",
@@ -368,6 +376,15 @@
     "developer": "INCHMAN",
     "url": "https://bloomapp.club"
   },
+  "com.atomixproductions.virtualdj": {
+    "name": "VirtualDJ",
+    "description": "VirtualDJ is a professional DJ software application that allows users to mix and blend audio and video tracks, featuring tools for beat matching, scratching, looping, and applying effects. It supports a wide range of DJ hardware controllers and is used by both amateur and professional DJs for live performances and music production.",
+    "categories": [
+      "Music"
+    ],
+    "developer": "Atomix Development",
+    "url": "https://virtualdj.com/"
+  },
   "com.backblaze.Backblaze": {
     "name": "Backblaze",
     "description": "Client for the Backblaze cloud backup service, which provides unlimited secure storage for personal computer backups.",
@@ -526,6 +543,15 @@
     "categories": [
       "Utilities"
     ]
+  },
+  "com.charliemonroe.Permute-3": {
+    "name": "Permute 3",
+    "description": "Permute 3 is a media converter for macOS that converts audio, video, and image files between a wide variety of formats. It features a simple drag-and-drop interface and supports batch conversions.",
+    "categories": [
+      "Video"
+    ],
+    "developer": "Charlie Monroe Software",
+    "url": "https://software.charliemonroe.net/permute/"
   },
   "com.coconut-flavour.coconutBattery": {
     "name": "coconutBattery",
@@ -763,6 +789,15 @@
       "Utilities"
     ],
     "developer": "William C. Gustafson"
+  },
+  "com.itimeteo.webssh": {
+    "name": "WebSSH",
+    "description": "WebSSH is a macOS app that allows users to connect to remote servers via SSH and SFTP protocols. It provides a terminal interface for managing remote systems along with a file browser for transferring and managing files over secure connections.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "developer": "MENGUS ARNAUD",
+    "url": "https://webssh.net/"
   },
   "com.johnhaney.mac.Backdrop": {
     "name": "Backdrop",
@@ -1790,6 +1825,14 @@
     ],
     "developer": "Cider Collective",
     "url": "https://cider.sh"
+  },
+  "skula.wBlock": {
+    "name": "wBlock",
+    "description": "wBlock is a macOS app for managing and customizing content blocking rules for Safari, allowing users to enable, disable, and organize ad-blocking and privacy filter lists.",
+    "categories": [
+      "Utilities"
+    ],
+    "url": "https://github.com/0xCUB3/wBlock"
   },
   "uk.org.upfold.DfontSplitter": {
     "name": "DfontSplitter",
