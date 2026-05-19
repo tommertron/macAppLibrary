@@ -802,6 +802,15 @@
     ],
     "developer": "GitHub, Inc"
   },
+  "com.github.xor-gate.syncthing-macosx": {
+    "name": "Syncthing",
+    "description": "Syncthing is an open-source continuous file synchronization application that securely syncs files between two or more computers in real time without relying on a central server or cloud service.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Syncthing for macOS authors (github.com/syncthing/syncthing-macos)",
+    "url": "https://syncthing.net/"
+  },
   "com.glouel.AerialUpdater": {
     "name": "Aerial Companion",
     "description": "Aerial Companion is a helper app that manages updates and installation of the Aerial screensaver, which displays Apple TV aerial video screensavers (as well as third-party video screen savers) on Mac computers.",
@@ -847,6 +856,13 @@
     ],
     "developer": "Governikus GmbH & Co. KG",
     "url": "https://www.ausweisapp.bund.de/"
+  },
+  "com.gtrigonakis.TextWorkflow": {
+    "name": "Text Workflow",
+    "description": "Text Workflow is a macOS utility that allows users to transform and manipulate text through a series of customizable actions and filters, streamlining common text processing tasks.",
+    "categories": [
+      "Utilities"
+    ]
   },
   "com.haystacksoftware.Arq": {
     "name": "Arq",
@@ -1761,6 +1777,15 @@
     ],
     "developer": "Marcel Dierkes",
     "url": "https://keepingyouawake.app/"
+  },
+  "io.airtv.Converter": {
+    "name": "Video Converter",
+    "description": "Video Converter is a macOS application that converts video files between different formats. It supports a variety of input and output formats, allowing users to transcode media for compatibility with different devices and platforms.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Justin Bush & Francesco Virga",
+    "url": "https://apps.apple.com/us/app/video-converter/id1518836004"
   },
   "io.balena.etcher": {
     "name": "balenaEtcher",
