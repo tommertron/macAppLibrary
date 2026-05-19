@@ -1,0 +1,9 @@
+{
+  "name": "Video Converter",
+  "description": "Video Converter is a macOS application that converts video files between different formats. It supports a variety of input and output formats, allowing users to transcode media for compatibility with different devices and platforms.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Justin Bush & Francesco Virga",
+  "url": "https://apps.apple.com/us/app/video-converter/id1518836004"
+}
