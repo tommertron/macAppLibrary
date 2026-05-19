@@ -123,7 +123,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "David Kocher.    Yves Langisch"
+    "developer": "David Kocher.    Yves Langisch",
+    "url": "https://cyberduck.io"
   },
   "christopherbrock.ZeroDuplicates": {
     "name": "Zero Duplicates",
@@ -786,7 +787,8 @@
     "description": "Adds window previews to your Mac Dock on hover, so you can see and switch between open windows of each app at a glance.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://dockdoor.net/"
   },
   "com.firmshell.msgviewerpro": {
     "name": "Msg Viewer Pro",
@@ -922,7 +924,7 @@
   },
   "com.haystacksoftware.Arq": {
     "name": "Arq",
-    "description": "Backup Software",
+    "description": "Arq is a backup application for macOS that automatically backs up your files to cloud storage services (such as Amazon S3, Google Drive, Backblaze B2, and others) or local destinations. It uses strong encryption and deduplication to securely store and efficiently manage backup data.",
     "categories": [
       "Utilities",
       "Backup"
@@ -943,7 +945,9 @@
     "description": "A voice, video, and text communication platform popular with gaming, developer, and hobby communities.",
     "categories": [
       "Social Networking"
-    ]
+    ],
+    "developer": "Discord Inc.",
+    "url": "https://discord.com"
   },
   "com.iconfactory.Tot": {
     "name": "Tot",
