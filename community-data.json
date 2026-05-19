@@ -37,6 +37,14 @@
     "developer": "Andrew Nicolaou",
     "url": "https://github.com/andrewn/brew-services-menubar"
   },
+  "app.cyan.markedit": {
+    "name": "MarkEdit",
+    "description": "MarkEdit is a lightweight, native Markdown text editor for macOS that allows users to write, edit, and preview Markdown documents with a clean, minimal interface.",
+    "categories": [
+      "Productivity"
+    ],
+    "url": "https://github.com/MarkEdit-app/MarkEdit"
+  },
   "app.longplay.Longplay-Mac": {
     "name": "Longplay",
     "description": "A music player focused on albums, presenting your library as a beautiful grid of cover art for intentional, front-to-back listening.",
@@ -1694,6 +1702,15 @@
     ],
     "url": "https://github.com/keycastr/keycastr"
   },
+  "io.mountainduck": {
+    "name": "Mountain Duck",
+    "description": "Mountain Duck lets you mount server and cloud storage as a disk in Finder on macOS, supporting protocols and services such as FTP, SFTP, WebDAV, Amazon S3, Google Drive, and Dropbox.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "iterate",
+    "url": "https://mountainduck.io/"
+  },
   "io.raindrop.macapp": {
     "name": "Raindrop.io",
     "description": "A cross-platform bookmarking manager with collections, tags, full-text search, and a browser extension for saving anything from the web.",
@@ -1831,6 +1848,15 @@
     "categories": [
       "Utilities"
     ]
+  },
+  "no.mifi.losslesscut-mac": {
+    "name": "LosslessCut",
+    "description": "LosslessCut is a video and audio editing app that allows users to quickly trim, cut, and split media files without re-encoding, preserving the original quality. It supports a wide range of formats and is designed for fast, lossless trimming operations.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Mikael Finstad",
+    "url": "https://losslesscut.app/"
   },
   "org.adblockplus.adblockplussafarimac": {
     "name": "Adblock Plus",
