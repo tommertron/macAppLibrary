@@ -489,6 +489,13 @@
     "developer": "MartianCraft LLC",
     "url": "https://changesapp.com"
   },
+  "com.bitdefender.BitdefenderVirusScanner": {
+    "name": "BitdefenderVirusScanner",
+    "description": "Bitdefender Virus Scanner is a free macOS security application that scans your Mac for malware, viruses, and other threats, including those that may target Windows systems. It allows users to perform on-demand scans of specific locations or the entire system to detect and remove malicious files.",
+    "categories": [
+      "Utilities"
+    ]
+  },
   "com.bitwarden.desktop": {
     "name": "Bitwarden",
     "description": "Bitwarden is an open-source password manager that securely stores and manages passwords, login credentials, and other sensitive information in an encrypted vault. It supports autofill, password generation, and syncing across devices via cloud or self-hosted servers.",
