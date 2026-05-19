@@ -385,6 +385,15 @@
     "developer": "Atomix Development",
     "url": "https://virtualdj.com/"
   },
+  "com.b166ar.audiobo": {
+    "name": "AudioBo",
+    "description": "AudioBo is an audiobook tool for Mac that helps you fix chapters, edit metadata, fetch book details online, and build proper audiobooks for Apple Books, classic iPods, and beyond.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Orso Labs.\nhttps://orsolabs.dev",
+    "url": "https://orsolabs.dev/audiobo/"
+  },
   "com.backblaze.Backblaze": {
     "name": "Backblaze",
     "description": "Client for the Backblaze cloud backup service, which provides unlimited secure storage for personal computer backups.",
