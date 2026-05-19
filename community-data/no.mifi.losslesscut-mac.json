@@ -1,0 +1,9 @@
+{
+  "name": "LosslessCut",
+  "description": "LosslessCut is a video and audio editing app that allows users to quickly trim, cut, and split media files without re-encoding, preserving the original quality. It supports a wide range of formats and is designed for fast, lossless trimming operations.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Mikael Finstad",
+  "url": "https://losslesscut.app/"
+}
