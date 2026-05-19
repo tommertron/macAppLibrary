@@ -1009,6 +1009,15 @@
     ],
     "developer": "Instant Paper, Inc"
   },
+  "com.max-langer.Latest": {
+    "name": "Latest",
+    "description": "Latest is a free and open source app for macOS that checks if all your apps are up to date. Get a quick overview of which apps changed and what changed and update them right away. Latest currently supports apps downloaded from the Mac App Store and apps that use Sparkle for updates, which covers most of the apps on the market.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Max Langer",
+    "url": "https://max.codes/latest/"
+  },
   "com.metaclassy.byword": {
     "name": "Byword",
     "description": "Byword is a minimalist, Markdown-focused text editor, offering a clean, distraction-free interface with support for exporting and publishing to platforms like WordPress, Medium, and Tumblr.",
@@ -1328,6 +1337,14 @@
     ],
     "developer": "READMEANSRUN",
     "url": "https://readmeansrun.com/router/"
+  },
+  "com.redcode.Foldery": {
+    "name": "Foldery",
+    "description": "Foldery is a macOS utility that lets users customize the color and appearance of folders in Finder, allowing them to change folder icons to different colors, gradients, or custom images for better organization and visual identification.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Manuel Sainz de Baranda y Go\u00f1i.\n  Sof\u00eda Ortega Sosa"
   },
   "com.reederapp.5.macOS": {
     "name": "Reeder",
@@ -1710,6 +1727,15 @@
     "developer": "Michael Kazakov",
     "url": "https://magnumbytes.com/"
   },
+  "info.marcel-dierkes.KeepingYouAwake": {
+    "name": "KeepingYouAwake",
+    "description": "KeepingYouAwake is a small menu bar utility for macOS (Version 10.13 and newer) that can prevent your Mac from entering sleep mode for a predefined duration or as long as it is activated.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Marcel Dierkes",
+    "url": "https://keepingyouawake.app/"
+  },
   "io.balena.etcher": {
     "name": "balenaEtcher",
     "description": "balenaEtcher is a tool for writing OS images, such as Linux distributions or embedded system firmware, to SD cards and USB drives. It is meant to be simple for end users, extensible for developers, and work on any platform.",
@@ -1815,6 +1841,15 @@
       "Utilities"
     ],
     "url": "https://fakinthefunk.net/en/"
+  },
+  "net.filebot.FileBot.pkg": {
+    "name": "FileBot",
+    "description": "FileBot is a powerful media file renaming and organization tool that automatically matches movies, TV shows, and anime against online databases to rename and sort files with accurate metadata. It also supports subtitle downloading and media library management.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Point Planck Limited",
+    "url": "https://www.filebot.net/"
   },
   "net.freemacsoft.AppCleaner": {
     "name": "AppCleaner",
