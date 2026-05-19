@@ -8,6 +8,15 @@
     "developer": "ComicTagger team",
     "url": "https://github.com/comictagger/comictagger"
   },
+  "JonLuca-DeCaro.OwlOCR": {
+    "name": "OwlOCR",
+    "description": "OwlOCR is a macOS app that uses optical character recognition (OCR) to extract and copy text from images, screenshots, and other visual content on your screen.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "JonLuca DeCaro",
+    "url": "https://www.owlocr.com/"
+  },
   "One-Geek-Army.Disk-Jockey": {
     "name": "Disk Jockey",
     "description": "Disk Jockey is a creator and analyser for retro computer disk images, supporting Apple II, Atari ST, Amiga, classic Macintosh, and more. It can display file contents from retro file systems like HFS and ProDOS. It can even view Amiga and Atari ST images in Degas, NEOChrome, Tiny Stuff and Spectrum 512 formats and export to PNG. ",
@@ -1306,6 +1315,15 @@
     "developer": "Wikibuy LLC",
     "url": "https://capitaloneshopping.com"
   },
+  "com.witt-software.PDF-Squeezer": {
+    "name": "PDF Squeezer",
+    "description": "PDF Squeezer is a macOS app that reduces the file size of PDF documents by compressing images and removing unnecessary data. It supports batch processing and allows users to customize compression settings to balance file size and quality.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Daniel Witt",
+    "url": "https://www.witt-software.com/pdfsqueezer/"
+  },
   "company.thebrowser.Browser": {
     "name": "Arc",
     "description": "Arc is a web browser developed by The Browser Company that reimagines browser design with features like split view browsing, customizable spaces for organizing tabs, and AI-powered tools to enhance web browsing productivity. It offers a modern alternative to traditional browsers with a focus on user control and efficient tab and window management.",
@@ -1457,6 +1475,15 @@
     "categories": [],
     "developer": "Blizzard Entertainment",
     "url": "https://battle.net"
+  },
+  "net.ericmann.parachute": {
+    "name": "Parachute Backup",
+    "description": "Parachute is a set-and-forget backup companion for iCloud Photos and iCloud Drive. It automatically syncs your memories, photos, videos, and documents to your own storage.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Leitmotif GmbH",
+    "url": "https://parachuteapps.com/parachute"
   },
   "net.galliumdigital.Modern-CSV": {
     "name": "Modern CSV",
