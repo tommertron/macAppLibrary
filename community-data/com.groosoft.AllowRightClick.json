@@ -1,0 +1,8 @@
+{
+  "name": "Right Click",
+  "description": "Right Click is a macOS utility that re-enables right-clicking on websites that have disabled or blocked the context menu. It overrides JavaScript-based restrictions to restore standard right-click functionality across all web content.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "groosoft"
+}
