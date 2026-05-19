@@ -159,6 +159,14 @@
     "developer": "ACD Systems International",
     "url": "https://www.acdsee.com/en/products/photo-studio-mac"
   },
+  "com.BuhlData.WISOsteuerMac2026": {
+    "name": "SteuerMac 2026",
+    "description": "SteuerMac 2026 is a German tax preparation application for macOS that helps users complete and submit their annual income tax returns to German tax authorities. It guides users through the tax filing process, calculates tax liability, and supports electronic submission via the ELSTER system.",
+    "categories": [
+      "Finance"
+    ],
+    "developer": "Buhl Tax Service GmbH"
+  },
   "com.LittleFin.Chronicle-Touch": {
     "name": "Chronicle",
     "description": "Chronicle is a bill and subscription tracking app. Track payment due dates, monitor their monthly expenses, avoid late payments.",
@@ -1244,6 +1252,15 @@
     ],
     "developer": "Raycast Technologies Ltd."
   },
+  "com.readmeansrun.Router": {
+    "name": "Router",
+    "description": "Router is the best way to view & edit .GPX, .TCX, .KML, .LOC, Garmin (.FIT), and Pioneer (.DB) GPS route files on your Mac.",
+    "categories": [
+      "Healthcare Fitness"
+    ],
+    "developer": "READMEANSRUN",
+    "url": "https://readmeansrun.com/router/"
+  },
   "com.replay.sleeve": {
     "name": "Sleeve",
     "description": "A floating album art display for your desktop that shows the current track from Spotify or Apple Music in a stylish overlay.",
@@ -1370,6 +1387,15 @@
     ],
     "developer": "Toni F\u00f6rster\n   Jordan Baird (Ice)",
     "url": "https://github.com/stonerl/Thaw"
+  },
+  "com.tagtraum.beatunes": {
+    "name": "beaTunes5",
+    "description": "beaTunes5 is a music analysis and playlist management app that analyzes your iTunes or Music library to detect BPM, key, and other audio properties. It helps DJs and music enthusiasts create harmonically and rhythmically compatible playlists based on the analyzed data.",
+    "categories": [
+      "Music"
+    ],
+    "developer": "beaTunes 5.2.35,   tagtraum industries incorporated",
+    "url": "https://www.beatunes.com/"
   },
   "com.tapbots.Ivory": {
     "name": "Ivory",
