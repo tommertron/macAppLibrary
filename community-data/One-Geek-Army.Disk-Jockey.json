@@ -1,0 +1,10 @@
+{
+  "name": "Disk Jockey",
+  "description": "Disk Jockey is a creator and analyser for retro computer disk images, supporting Apple II, Atari ST, Amiga, classic Macintosh, and more. It can display file contents from retro file systems like HFS and ProDOS. It can even view Amiga and Atari ST images in Degas, NEOChrome, Tiny Stuff and Spectrum 512 formats and export to PNG. ",
+  "categories": [
+    "Utilities",
+    "Emulators"
+  ],
+  "developer": "One Geek Army",
+  "url": "https://diskjockey.onegeekarmy.eu"
+}
