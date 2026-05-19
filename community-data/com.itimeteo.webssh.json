@@ -1,0 +1,9 @@
+{
+  "name": "WebSSH",
+  "description": "WebSSH is a macOS app that allows users to connect to remote servers via SSH and SFTP protocols. It provides a terminal interface for managing remote systems along with a file browser for transferring and managing files over secure connections.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "developer": "MENGUS ARNAUD",
+  "url": "https://webssh.net/"
+}
