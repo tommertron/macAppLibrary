@@ -1,0 +1,9 @@
+{
+  "name": "Parcel",
+  "description": "Parcel is a delivery tracking app for macOS that allows users to track packages and shipments from a wide range of carriers in one place. It provides notifications and status updates on the progress of deliveries.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Ivan Pavlov",
+  "url": "https://parcelapp.net/"
+}
