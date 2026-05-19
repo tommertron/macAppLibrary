@@ -1,0 +1,9 @@
+{
+  "name": "Mountain Duck",
+  "description": "Mountain Duck lets you mount server and cloud storage as a disk in Finder on macOS, supporting protocols and services such as FTP, SFTP, WebDAV, Amazon S3, Google Drive, and Dropbox.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "iterate",
+  "url": "https://mountainduck.io/"
+}
