@@ -1,0 +1,9 @@
+{
+  "name": "Loop",
+  "description": "Loop is a macOS window manager that allows users to elegantly arrange and resize windows using a radial menu triggered by holding a key, enabling quick snapping of windows to various screen positions and sizes.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Loop",
+  "url": "https://github.com/MrKai77/Loop"
+}
