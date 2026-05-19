@@ -108,6 +108,12 @@
     ],
     "developer": "David Kocher.    Yves Langisch"
   },
+  "club.refactoring.tolaria": {
+    "name": "Tolaria",
+    "description": "Tolaria is a desktop app for macOS, Windows, and Linux for managing markdown knowledge bases. ",
+    "categories": [],
+    "url": "https://tolaria.md/"
+  },
   "co.eclecticlight.AppexIndexer": {
     "name": "AppexIndexer",
     "description": "AppexIndexer indexes app extensions (appex bundles) installed on the system, helping users discover and understand the various extensions provided by installed applications.",
@@ -224,6 +230,15 @@
       "Utilities"
     ],
     "developer": "Ameba Labs"
+  },
+  "com.andadinosaur.Vinegar": {
+    "name": "Vinegar",
+    "description": "Vinegar is a Safari browser extension that replaces the YouTube web player with a minimal HTML video element, enabling native playback controls and Picture in Picture support.",
+    "categories": [
+      "Video"
+    ],
+    "developer": "And a Dinosaur",
+    "url": "https://apps.apple.com/de/app/vinegar-tube-cleaner/id1591303229"
   },
   "com.anthropic.claudefordesktop": {
     "name": "Claude",
@@ -1335,6 +1350,15 @@
     ],
     "developer": "Valve Corporation",
     "url": "https://store.steampowered.com"
+  },
+  "com.vanderplanki": {
+    "name": "Vanderplanki",
+    "description": "Vanderplanki is an archiving solution developed by the founders of MailStore in Germany for the centralized and easy backup of emails from all mailboxes. The software is available for Windows, macOS, and Linux and offers fast full-text search and zero-knowledge encryption.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Stefan Schultze Software",
+    "url": "https://www.vanderplanki.com/"
   },
   "com.wikibuy.mac-app": {
     "name": "Capital One Shopping",
