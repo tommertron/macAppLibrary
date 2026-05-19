@@ -1,0 +1,9 @@
+{
+  "name": "MacDown 3000",
+  "description": "MacDown 3000 is a Markdown editor for macOS that provides a split-pane interface with a live preview, allowing users to write and render Markdown documents simultaneously.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Tzu-ping Chung.\n   Schuyler Erle",
+  "url": "https://macdown.app/"
+}
