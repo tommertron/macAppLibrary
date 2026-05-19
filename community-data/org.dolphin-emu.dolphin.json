@@ -1,0 +1,10 @@
+{
+  "name": "Dolphin",
+  "description": "Dolphin is an open-source emulator for Nintendo GameCube and Wii games, allowing users to play titles from those consoles on their Mac with support for enhanced graphics, save states, and controller customization.",
+  "categories": [
+    "Games",
+    "Emulators"
+  ],
+  "developer": "Dolphin Emulator Project",
+  "url": "https://dolphin-emu.org"
+}
