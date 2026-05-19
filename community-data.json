@@ -249,6 +249,14 @@
     "developer": "Algoriddim GmbH",
     "url": "https://www.algoriddim.com/apps"
   },
+  "com.alienator88.Pearcleaner": {
+    "name": "Pearcleaner",
+    "description": "A free, source-available and fair-code licensed mac app cleaner.",
+    "categories": [
+      "Utilities"
+    ],
+    "url": "https://github.com/alienator88/Pearcleaner"
+  },
   "com.amazon.Lassen": {
     "name": "Amazon Kindle",
     "description": "Amazon Kindle for macOS is an e-reader app that allows users to read books, magazines, and other publications purchased from Amazon's Kindle store. The app syncs reading progress across devices and provides features like adjustable fonts, bookmarks, and highlighting.",
@@ -1120,6 +1128,15 @@
     "developer": "\u2212\u2009 mowglii.com",
     "url": "https://www.mowglii.com/itsycal/"
   },
+  "com.mr-brightside.ParcelOSX": {
+    "name": "Parcel",
+    "description": "Parcel is a delivery tracking app for macOS that allows users to track packages and shipments from a wide range of carriers in one place. It provides notifications and status updates on the progress of deliveries.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Ivan Pavlov",
+    "url": "https://parcelapp.net/"
+  },
   "com.naotanhaocan.BetterMouse": {
     "name": "BetterMouse",
     "description": "BetterMouse is a macOS utility that enhances third-party mouse functionality by providing customizable scroll acceleration, smooth scrolling, and button remapping to improve the experience of using non-Apple mice on macOS.",
@@ -1211,6 +1228,15 @@
       "Business"
     ],
     "developer": "Okta"
+  },
+  "com.omnigroup.OmniDiskSweeper": {
+    "name": "OmniDiskSweeper",
+    "description": "OmniDiskSweeper scans your Mac's drives and displays files and folders sorted by size, helping you quickly identify and delete large items to free up disk space.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "The Omni Group",
+    "url": "https://www.omnigroup.com/more"
   },
   "com.openai.atlas": {
     "name": "ChatGPT Atlas",
