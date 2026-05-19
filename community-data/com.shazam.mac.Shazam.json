@@ -1,0 +1,8 @@
+{
+  "name": "Shazam",
+  "description": "Shazam is a music recognition app that identifies songs playing around you by listening to a short audio sample. It displays song titles, artists, and lyrics, and can sync discoveries with your music streaming services.",
+  "categories": [
+    "Music"
+  ],
+  "developer": "Apple Inc"
+}
