@@ -1,0 +1,9 @@
+{
+  "name": "PDF Squeezer",
+  "description": "PDF Squeezer is a macOS app that reduces the file size of PDF documents by compressing images and removing unnecessary data. It supports batch processing and allows users to customize compression settings to balance file size and quality.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Daniel Witt",
+  "url": "https://www.witt-software.com/pdfsqueezer/"
+}
