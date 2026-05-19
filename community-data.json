@@ -1144,6 +1144,15 @@
     "developer": "ocenaudio Team",
     "url": "https://www.ocenaudio.com/"
   },
+  "com.ohzi.compress": {
+    "name": "Compress",
+    "description": "Compress is the tool you need that converts videos in any format to nicely sized lossless MP4 in a short time, with the most seamless user interface.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "OHZI Interactive",
+    "url": "https://compress.mov/"
+  },
   "com.okta.mobile": {
     "name": "Okta Verify",
     "description": "A multi-factor authentication application that provides secure sign-in verification using push notifications, one-time passcodes, and device-based authentication for organizational accounts and services.",
@@ -1269,6 +1278,14 @@
     ],
     "developer": "READMEANSRUN",
     "url": "https://readmeansrun.com/router/"
+  },
+  "com.reederapp.5.macOS": {
+    "name": "Reeder",
+    "description": "Reeder is an RSS and news feed reader for macOS that allows users to subscribe to and read articles from websites, blogs, and other content sources. It supports syncing with various services such as Feedbin, Feedly, and iCloud, and offers a clean, distraction-free reading experience.",
+    "categories": [
+      "News"
+    ],
+    "url": "https://reederapp.com/classic/"
   },
   "com.replay.sleeve": {
     "name": "Sleeve",
@@ -1468,6 +1485,14 @@
     ],
     "developer": "Tom Robertson",
     "url": "https://coefficiencies.com/apps/macapplibrary/"
+  },
+  "com.tuneupmymac.PhotosDuplicateCleaner": {
+    "name": "Photos Duplicate Cleaner",
+    "description": "Photos Duplicate Cleaner scans your macOS Photos library to identify and remove duplicate images, helping you free up storage space and keep your photo collection organized.",
+    "categories": [
+      "Photography"
+    ],
+    "developer": "Systweak"
   },
   "com.tupil.beamer": {
     "name": "Beamer",
