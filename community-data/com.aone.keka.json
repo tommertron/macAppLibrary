@@ -1,0 +1,9 @@
+{
+  "name": "Keka",
+  "description": "Keka is a file archiver for macOS that allows users to compress files into formats such as ZIP, 7z, and TAR, and extract a wide variety of archive formats including RAR, ZIP, 7z, and more.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "aONe",
+  "url": "https://www.keka.io/"
+}
