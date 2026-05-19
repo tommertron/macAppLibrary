@@ -1675,6 +1675,12 @@
     "developer": "Tom Robertson",
     "url": "https://coefficiencies.com/apps/macapplibrary/"
   },
+  "com.topazlabs.Topaz-Video": {
+    "name": "Topaz Video",
+    "description": "Topaz Video AI is a video enhancement application that uses artificial intelligence to upscale, sharpen, and improve video quality, as well as perform tasks like motion interpolation to increase frame rates and reduce noise.",
+    "categories": [],
+    "url": "https://www.topazlabs.com/topaz-video"
+  },
   "com.tuneupmymac.PhotosDuplicateCleaner": {
     "name": "Photos Duplicate Cleaner",
     "description": "Photos Duplicate Cleaner scans your macOS Photos library to identify and remove duplicate images, helping you free up storage space and keep your photo collection organized.",
@@ -1752,6 +1758,14 @@
     ],
     "developer": "Daniel Witt",
     "url": "https://www.witt-software.com/pdfsqueezer/"
+  },
+  "com.yourcompany.SoulseekQt": {
+    "name": "SoulseekQt",
+    "description": "SoulseekQt is a peer-to-peer file sharing client for macOS that connects users to the Soulseek network, primarily used for sharing and downloading music files. It allows users to search for files, browse other users' shared libraries, and transfer files directly between peers.",
+    "categories": [
+      "Filesharing"
+    ],
+    "url": "https://www.slsknet.org"
   },
   "company.thebrowser.Browser": {
     "name": "Arc",
@@ -2262,6 +2276,13 @@
     "categories": [
       "Developer Tools"
     ]
+  },
+  "org.spek-project": {
+    "name": "Spek",
+    "description": "Spek is a free acoustic spectrum analyzer that displays the frequency spectrum of audio files. It supports a wide range of audio formats and visualizes the spectrogram to help users analyze the quality and characteristics of audio recordings.",
+    "categories": [],
+    "developer": "Alexander Kojevnikov and contributors",
+    "url": "https://www.spek.cc/"
   },
   "org.streetpea.chiaking": {
     "name": "chiaki-ng",
