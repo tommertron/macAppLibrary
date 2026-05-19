@@ -1,0 +1,9 @@
+{
+  "name": "Itsycal",
+  "description": "Itsycal is a tiny menu bar calendar app for macOS that displays a small calendar popup when you click its icon in the menu bar. It can also show your upcoming events from the macOS Calendar app.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "−  mowglii.com",
+  "url": "https://www.mowglii.com/itsycal/"
+}
