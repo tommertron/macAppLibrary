@@ -1,0 +1,9 @@
+{
+  "name": "PhotoSweeper X",
+  "description": "PhotoSweeper X is a duplicate photo finder and cleaner for macOS that helps users identify and remove similar or identical photos from their photo libraries, including those managed by Photos, Lightroom, and other apps.",
+  "categories": [
+    "Photography"
+  ],
+  "developer": "Overmacs Team",
+  "url": "https://overmacs.com/"
+}
