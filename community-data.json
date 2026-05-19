@@ -733,6 +733,13 @@
     ],
     "developer": "Docker, Inc"
   },
+  "com.drbuho.disktool.BuhoNTFS": {
+    "name": "BuhoNTFS",
+    "description": "BuhoNTFS enables macOS users to read and write to NTFS-formatted drives, which are natively read-only on macOS. It provides full read/write access to Windows-formatted NTFS disks and external storage devices.",
+    "categories": [],
+    "developer": "Dr.Buho Inc",
+    "url": "https://www.drbuho.com/buhontfs"
+  },
   "com.dwarvesv.minimalbar": {
     "name": "Hidden Bar",
     "description": "Hidden Bar is a macOS utility that allows users to hide and organize menu bar icons to reduce clutter and improve screen space. It lets you selectively show or hide menu bar items with a simple click, keeping your menu bar clean while maintaining quick access to important applications.",
@@ -876,6 +883,14 @@
     "categories": [
       "Utilities"
     ]
+  },
+  "com.hardcoded-software.dupeguru": {
+    "name": "dupeguru",
+    "description": "dupeGuru is a cross-platform tool that scans your computer to find and remove duplicate files, supporting comparison by filename or file contents across multiple folders.",
+    "categories": [
+      "Productivity"
+    ],
+    "url": "https://dupeguru.voltaicideas.net/"
   },
   "com.haystacksoftware.Arq": {
     "name": "Arq",
@@ -1904,6 +1919,15 @@
     ],
     "developer": "Laurent Cozic"
   },
+  "net.downloadhelper.coapp": {
+    "name": "DownloadHelper CoApp",
+    "description": "DownloadHelper CoApp is a companion application for the Video DownloadHelper browser extension that enables downloading and converting web videos. It handles the backend processing tasks, such as video conversion and file management, that the browser extension alone cannot perform.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "VdhCoApp developers",
+    "url": "https://www.downloadhelper.net/"
+  },
   "net.ericmann.parachute": {
     "name": "Parachute Backup",
     "description": "Parachute is a set-and-forget backup companion for iCloud Photos and iCloud Drive. It automatically syncs your memories, photos, videos, and documents to your own storage.",
@@ -2094,6 +2118,13 @@
     ],
     "developer": "Dolphin Emulator Project",
     "url": "https://dolphin-emu.org"
+  },
+  "org.freac.freac": {
+    "name": "fre:ac - free audio converter",
+    "description": "fre:ac is a free audio converter and CD ripper that supports a wide range of formats including MP3, AAC, FLAC, and Ogg Vorbis. It allows users to convert audio files between formats and extract tracks from audio CDs.",
+    "categories": [],
+    "developer": "Robert Kausch",
+    "url": "https://www.freac.org/"
   },
   "org.jkiss.dbeaver.core.product": {
     "name": "DBeaver Community",
