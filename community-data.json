@@ -1119,6 +1119,15 @@
     ],
     "url": "https://better-mouse.com/"
   },
+  "com.nektony.Duplicate-File-Finder-SIII": {
+    "name": "Duplicate File Finder 9",
+    "description": "Duplicate File Finder 9 scans your Mac to identify and remove duplicate files, freeing up storage space. It helps users find identical or similar files across folders and drives to reduce clutter and reclaim disk space.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Nektony",
+    "url": "https://nektony.com/duplicate-finder-free"
+  },
   "com.ngocluu.goodlinks": {
     "name": "GoodLinks",
     "description": "A clean read-later app for saving links with tagging, full-text search, and an integrated reader view.",
@@ -1799,6 +1808,14 @@
     "developer": "Leitmotif GmbH",
     "url": "https://parachuteapps.com/parachute"
   },
+  "net.fakinthefunk.FakinTheFunk": {
+    "name": "Fakin' The Funk?",
+    "description": "Fakin' The Funk? is a macOS app that analyzes music files to detect audio that has been fraudulently upsampled or transcoded from a lower-quality source, identifying tracks falsely presented as lossless or high-resolution audio.",
+    "categories": [
+      "Utilities"
+    ],
+    "url": "https://fakinthefunk.net/en/"
+  },
   "net.freemacsoft.AppCleaner": {
     "name": "AppCleaner",
     "description": "AppCleaner is a free utility that allows users to thoroughly uninstall macOS applications by detecting and removing all associated files, including preferences, caches, and support files, rather than just the main application bundle.",
@@ -1944,6 +1961,15 @@
     ],
     "developer": "Christopher Snowhill, Vincent Spader, et al",
     "url": "https://cog.losno.co"
+  },
+  "org.cryptomator": {
+    "name": "Cryptomator",
+    "description": "Cryptomator is a client-side encryption app for macOS that protects files stored in cloud services such as Dropbox, Google Drive, and iCloud by creating encrypted vaults that are transparently accessible as virtual drives.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "cryptomator.org",
+    "url": "https://cryptomator.org/"
   },
   "org.dolphin-emu.dolphin": {
     "name": "Dolphin",
