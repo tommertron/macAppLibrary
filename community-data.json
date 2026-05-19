@@ -1254,6 +1254,14 @@
     ],
     "url": "https://www.privateinternetaccess.com/"
   },
+  "com.pyrolyse.Fluor": {
+    "name": "Fluor",
+    "description": "Fluor is a macOS utility that allows you to automatically switch the behavior of the Touch Bar function keys between standard F-keys and special media/system keys on a per-app basis.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Pierre TACCHI"
+  },
   "com.ranchero.NetNewsWire-Evergreen": {
     "name": "NetNewsWire",
     "description": "A free, open-source RSS reader for Mac and iOS with iCloud sync and a clean, native reading experience.",
@@ -1678,6 +1686,14 @@
     ],
     "developer": "EDRLab"
   },
+  "io.github.keycastr": {
+    "name": "KeyCastr",
+    "description": "KeyCastr enables you to share your keystrokes when creating screencasts, presenting, or collaborating with others. You can choose to display command keys, all modified keys, or all keystrokes, and there is also an option to include mouse clicks.",
+    "categories": [
+      "Productivity"
+    ],
+    "url": "https://github.com/keycastr/keycastr"
+  },
   "io.raindrop.macapp": {
     "name": "Raindrop.io",
     "description": "A cross-platform bookmarking manager with collections, tags, full-text search, and a browser extension for saving anything from the web.",
@@ -2006,6 +2022,14 @@
       "Utilities"
     ],
     "url": "https://github.com/0xCUB3/wBlock"
+  },
+  "studio.appahead.AA7": {
+    "name": "Folder Quick Look",
+    "description": "Folder Quick Look enhances macOS's Quick Look feature to support previewing the contents of folders, allowing users to browse folder contents directly in Quick Look without opening Finder.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "App ahead GmbH"
   },
   "uk.org.upfold.DfontSplitter": {
     "name": "DfontSplitter",
