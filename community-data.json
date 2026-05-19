@@ -976,6 +976,16 @@
     ],
     "developer": "Noodlesoft, LLC"
   },
+  "com.nordvpn.macos": {
+    "name": "NordVPN",
+    "description": "NordVPN is a virtual private network client that encrypts internet traffic and routes it through servers in various countries to protect user privacy and bypass geographic restrictions. It allows users to connect to VPN servers worldwide directly from the macOS menu bar or its main interface.",
+    "categories": [
+      "Utilities",
+      "VPN"
+    ],
+    "developer": "Nordvpn S.A",
+    "url": "https://nordvpn.com"
+  },
   "com.objective-see.blockblock.helper": {
     "name": "BlockBlock Helper",
     "description": "BlockBlock Helper is a privileged helper tool for the BlockBlock security application that monitors and detects persistent component installations on macOS. It runs with elevated privileges to watch for software attempting to establish persistence mechanisms, such as launch agents, daemons, or login items.",
@@ -1365,6 +1375,23 @@
     ],
     "developer": "HandBrake Team.\nGPLv2 license",
     "url": "https://handbrake.fr/"
+  },
+  "h3p.Neon-Vision-Editor": {
+    "name": "Neon Vision Editor",
+    "description": "A lightweight, modern code editor for macOS built for speed, readability, and automatic syntax highlighting \u2014 minimal by design, with fast file access and a focused editing experience.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "url": "https://github.com/h3pdesign/Neon-Vision-Editor"
+  },
+  "info.filesmanager.Files": {
+    "name": "Nimble Commander",
+    "description": "Nimble Commander is a dual-pane file manager for macOS that allows users to navigate, manage, and manipulate files and directories efficiently using a keyboard-driven interface inspired by classic Orthodox file managers.",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Michael Kazakov",
+    "url": "https://magnumbytes.com/"
   },
   "io.balena.etcher": {
     "name": "balenaEtcher",
