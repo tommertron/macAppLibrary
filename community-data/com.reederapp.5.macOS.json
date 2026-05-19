@@ -1,0 +1,8 @@
+{
+  "name": "Reeder",
+  "description": "Reeder is an RSS and news feed reader for macOS that allows users to subscribe to and read articles from websites, blogs, and other content sources. It supports syncing with various services such as Feedbin, Feedly, and iCloud, and offers a clean, distraction-free reading experience.",
+  "categories": [
+    "News"
+  ],
+  "url": "https://reederapp.com/classic/"
+}
