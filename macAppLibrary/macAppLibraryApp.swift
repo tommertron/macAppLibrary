@@ -45,6 +45,10 @@ struct macAppLibraryApp: App {
                 .keyboardShortcut("r", modifiers: [.command, .shift])
                 .disabled(store.isRefreshingAllCommunity)
 
+                Button("Share Your Apps…") {
+                    store.showShareSheet = true
+                }
+
                 Button("Submit All Changes to Community…") {
                     let count = store.appsWithUserChanges.count
                     let alert = NSAlert()
@@ -83,6 +87,12 @@ struct macAppLibraryApp: App {
                 .environment(store)
                 .environment(updateService)
         }
+
+        Window("Library Infographic", id: "infographic-preview") {
+            InfographicPreviewWindow()
+                .environment(store)
+        }
+        .defaultSize(width: 1100, height: 800)
 
         MenuBarExtra("macAppLibrary", systemImage: "square.grid.2x2", isInserted: $menubarEnabled) {
             MenuBarContent()

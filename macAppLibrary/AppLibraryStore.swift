@@ -109,6 +109,11 @@ final class AppLibraryStore {
     var isRefreshingAllCommunity = false
     var isSubmittingAllToCommunity = false
 
+    // "Share Your Apps" infographic flow — sheet visibility and the shared
+    // config consulted by both the sheet and the preview window scene.
+    var showShareSheet = false
+    let shareConfig = InfographicConfig()
+
     // Sidebar pinned items — persisted as JSON array of encoded SidebarPin values
     var pinnedItems: [SidebarPin] = [] {
         didSet { Self.savePinnedItems(pinnedItems) }

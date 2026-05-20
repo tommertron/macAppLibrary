@@ -29,6 +29,14 @@ struct ContentView: View {
         }
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
+                Button {
+                    store.showShareSheet = true
+                } label: {
+                    Label("Share Your Apps", systemImage: "square.and.arrow.up")
+                }
+                .help("Create a shareable infographic of your library")
+            }
+            ToolbarItem(placement: .primaryAction) {
                 ViewModeToggle()
             }
         }
@@ -46,6 +54,9 @@ struct ContentView: View {
         }
         .sheet(isPresented: $store.needsAIProviderPick) {
             AIProviderFirstRunSheet(isPresented: $store.needsAIProviderPick)
+        }
+        .sheet(isPresented: $store.showShareSheet) {
+            ShareLibrarySheet(config: store.shareConfig)
         }
     }
 }

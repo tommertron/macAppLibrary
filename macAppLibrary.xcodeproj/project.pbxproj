@@ -36,6 +36,11 @@
 		AA0000000000000000000225 /* JSONDataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000125 /* JSONDataExporter.swift */; };
 		AA0000000000000000000226 /* AIProviderConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000126 /* AIProviderConfigView.swift */; };
 		AA0000000000000000000227 /* AIProviderFirstRunSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000127 /* AIProviderFirstRunSheet.swift */; };
+		AA0000000000000000000228 /* InfographicConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000128 /* InfographicConfig.swift */; };
+		AA0000000000000000000229 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000129 /* WebView.swift */; };
+		AA0000000000000000000230 /* InfographicRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000130 /* InfographicRenderer.swift */; };
+		AA0000000000000000000231 /* ShareLibrarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000131 /* ShareLibrarySheet.swift */; };
+		AA0000000000000000000232 /* InfographicPreviewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000132 /* InfographicPreviewWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		AA0000000000000000000125 /* JSONDataExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataExporter.swift; sourceTree = "<group>"; };
 		AA0000000000000000000126 /* AIProviderConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProviderConfigView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000127 /* AIProviderFirstRunSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProviderFirstRunSheet.swift; sourceTree = "<group>"; };
+		AA0000000000000000000128 /* InfographicConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfographicConfig.swift; sourceTree = "<group>"; };
+		AA0000000000000000000129 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000130 /* InfographicRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfographicRenderer.swift; sourceTree = "<group>"; };
+		AA0000000000000000000131 /* ShareLibrarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLibrarySheet.swift; sourceTree = "<group>"; };
+		AA0000000000000000000132 /* InfographicPreviewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfographicPreviewWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -110,6 +120,7 @@
 			children = (
 				AA0000000000000000000103 /* AppEntry.swift */,
 				AA0000000000000000000104 /* CommunityData.swift */,
+				AA0000000000000000000128 /* InfographicConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +139,9 @@
 				AA0000000000000000000124 /* MenuBarContent.swift */,
 				AA0000000000000000000126 /* AIProviderConfigView.swift */,
 				AA0000000000000000000127 /* AIProviderFirstRunSheet.swift */,
+				AA0000000000000000000129 /* WebView.swift */,
+				AA0000000000000000000131 /* ShareLibrarySheet.swift */,
+				AA0000000000000000000132 /* InfographicPreviewWindow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +160,7 @@
 				AA0000000000000000000121 /* MCPServer.swift */,
 				AA0000000000000000000122 /* ClaudeDesktopInstaller.swift */,
 				AA0000000000000000000125 /* JSONDataExporter.swift */,
+				AA0000000000000000000130 /* InfographicRenderer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -254,6 +269,11 @@
 				AA0000000000000000000225 /* JSONDataExporter.swift in Sources */,
 				AA0000000000000000000226 /* AIProviderConfigView.swift in Sources */,
 				AA0000000000000000000227 /* AIProviderFirstRunSheet.swift in Sources */,
+				AA0000000000000000000228 /* InfographicConfig.swift in Sources */,
+				AA0000000000000000000229 /* WebView.swift in Sources */,
+				AA0000000000000000000230 /* InfographicRenderer.swift in Sources */,
+				AA0000000000000000000231 /* ShareLibrarySheet.swift in Sources */,
+				AA0000000000000000000232 /* InfographicPreviewWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
