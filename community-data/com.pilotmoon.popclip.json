@@ -1,0 +1,8 @@
+{
+  "name": "PopClip",
+  "description": "PopClip is a macOS utility that appears when you select text, providing quick access to actions like copying, searching, and sharing without needing to open menus. It extends functionality through customizable extensions that can perform various operations on selected text, from translations to formatting to web searches.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Nicholas Moore, Pilotmoon Software"
+}
