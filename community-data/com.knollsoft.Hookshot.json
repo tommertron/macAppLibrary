@@ -1,0 +1,8 @@
+{
+  "name": "Rectangle Pro",
+  "description": "Rectangle Pro is a window management app for macOS that allows users to quickly snap and organize windows into custom layouts and grid positions using keyboard shortcuts and mouse gestures. It helps improve productivity by enabling efficient multitasking through intuitive window tiling and resizing capabilities.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Ryan Hanson"
+}
