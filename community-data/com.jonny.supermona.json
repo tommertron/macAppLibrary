@@ -1,0 +1,8 @@
+{
+  "name": "Mona",
+  "description": "Mona is a Mastodon client for macOS that provides a native interface for browsing, posting, and interacting with the Mastodon social network. It offers a streamlined experience with support for multiple accounts, timelines, and notifications.",
+  "categories": [
+    "Social Networking"
+  ],
+  "developer": "Jonny Kuang"
+}
