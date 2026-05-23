@@ -42,6 +42,7 @@
 		AA0000000000000000000231 /* ShareLibrarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000131 /* ShareLibrarySheet.swift */; };
 		AA0000000000000000000232 /* InfographicPreviewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000132 /* InfographicPreviewWindow.swift */; };
 		AA0000000000000000000233 /* PublishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000133 /* PublishService.swift */; };
+		AA0000000000000000000234 /* PublishNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000134 /* PublishNotifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		AA0000000000000000000129 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000130 /* InfographicRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfographicRenderer.swift; sourceTree = "<group>"; };
 		AA0000000000000000000133 /* PublishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000134 /* PublishNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishNotifier.swift; sourceTree = "<group>"; };
 		AA0000000000000000000131 /* ShareLibrarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLibrarySheet.swift; sourceTree = "<group>"; };
 		AA0000000000000000000132 /* InfographicPreviewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfographicPreviewWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 				AA0000000000000000000125 /* JSONDataExporter.swift */,
 				AA0000000000000000000130 /* InfographicRenderer.swift */,
 				AA0000000000000000000133 /* PublishService.swift */,
+				AA0000000000000000000134 /* PublishNotifier.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				AA0000000000000000000229 /* WebView.swift in Sources */,
 				AA0000000000000000000230 /* InfographicRenderer.swift in Sources */,
 				AA0000000000000000000233 /* PublishService.swift in Sources */,
+				AA0000000000000000000234 /* PublishNotifier.swift in Sources */,
 				AA0000000000000000000231 /* ShareLibrarySheet.swift in Sources */,
 				AA0000000000000000000232 /* InfographicPreviewWindow.swift in Sources */,
 			);

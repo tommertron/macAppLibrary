@@ -15,6 +15,7 @@ struct InfographicPreviewWindow: View {
     @State private var confirmingPublish = false
     @State private var publishPhase: PublishPhase?
     @State private var publishTask: Task<Void, Never>?
+    @State private var publishBackgrounded = false
 
     /// Stages of a publish, surfaced in the progress sheet.
     enum PublishPhase: Equatable, Identifiable {
@@ -117,7 +118,9 @@ struct InfographicPreviewWindow: View {
 
     private func startPublish() {
         config.persist()
+        publishBackgrounded = false
         publishPhase = .submitting
+        PublishNotifier.shared.requestAuthorization()
         publishTask = Task {
             do {
                 let url = try await PublishService.publish(apps: store.apps, config: config)
@@ -125,24 +128,32 @@ struct InfographicPreviewWindow: View {
                 NSPasteboard.general.clearContents()
                 NSPasteboard.general.setString(url.absoluteString, forType: .string)
                 if Task.isCancelled { return }
-                publishPhase = .building(url)
+                if !publishBackgrounded { publishPhase = .building(url) }
 
                 let live = await PublishService.waitUntilLive(url)
                 if Task.isCancelled { return }
-                publishPhase = .live(url, confirmed: live)
+                if publishBackgrounded {
+                    // Sheet was dismissed — deliver the result as a notification.
+                    PublishNotifier.shared.notifyLive(url: url, displayName: config.displayName, confirmed: live)
+                } else {
+                    publishPhase = .live(url, confirmed: live)
+                }
             } catch {
                 if Task.isCancelled { return }
-                publishPhase = .failed(error.localizedDescription)
+                if publishBackgrounded {
+                    PublishNotifier.shared.notifyFailed(message: error.localizedDescription)
+                } else {
+                    publishPhase = .failed(error.localizedDescription)
+                }
             }
         }
     }
 
-    /// "Continue in background" while building: stop polling, show the link now.
+    /// "Continue in Background" while building: hide the sheet but keep polling;
+    /// the result arrives as a notification.
     private func backgroundPublish() {
-        if case .building(let url) = publishPhase {
-            publishTask?.cancel()
-            publishPhase = .live(url, confirmed: false)
-        }
+        publishBackgrounded = true
+        publishPhase = nil
     }
 
     private func dismissPublish() {
@@ -223,6 +234,9 @@ private struct PublishProgressSheet: View {
                 .multilineTextAlignment(.center)
             Button("Continue in Background", action: onBackground)
                 .buttonStyle(.link)
+            Text("We’ll notify you when it’s ready.")
+                .font(.caption)
+                .foregroundStyle(.tertiary)
 
         case .live(let url, let confirmed):
             Image(systemName: confirmed ? "checkmark.circle.fill" : "clock.badge.checkmark")
