@@ -12,6 +12,11 @@ struct InfographicPreviewWindow: View {
 
     @State private var html: String = ""
 
+    @State private var isPublishing = false
+    @State private var confirmingPublish = false
+    @State private var publishedURL: URL?
+    @State private var publishError: String?
+
     private var config: InfographicConfig { store.shareConfig }
 
     var body: some View {
@@ -39,12 +44,83 @@ struct InfographicPreviewWindow: View {
                         Label("Save HTML…", systemImage: "square.and.arrow.down")
                     }
                     .help("Save the infographic as a standalone HTML file")
+
+                    Button {
+                        confirmingPublish = true
+                    } label: {
+                        if isPublishing {
+                            ProgressView().controlSize(.small)
+                        } else {
+                            Label("Publish…", systemImage: "square.and.arrow.up")
+                        }
+                    }
+                    .disabled(isPublishing)
+                    .help("Publish this infographic to a shareable page on coefficiencies.com")
                 }
             }
             .task { rerender() }
             .onChange(of: config.excludedBundleIDs) { _, _ in rerender() }
             .onChange(of: config.displayName) { _, _ in rerender() }
             .onChange(of: config.websiteURL) { _, _ in rerender() }
+            .confirmationDialog(
+                "Publish your library to the web?",
+                isPresented: $confirmingPublish,
+                titleVisibility: .visible
+            ) {
+                Button("Publish \(includedCount) Apps") {
+                    Task { await publish() }
+                }
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("This creates a public page on coefficiencies.com with your name, "
+                     + "website, and the apps shown here. You can take it down anytime.")
+            }
+            .alert("Library Published", isPresented: publishedBinding) {
+                Button("Open in Browser") {
+                    if let url = publishedURL { NSWorkspace.shared.open(url) }
+                    publishedURL = nil
+                }
+                Button("Done", role: .cancel) { publishedURL = nil }
+            } message: {
+                Text("""
+                Your library is live at:
+                \(publishedURL?.absoluteString ?? "")
+
+                The link has been copied to your clipboard. The page may take a \
+                minute to finish building before it loads.
+                """)
+            }
+            .alert("Couldn’t Publish", isPresented: publishErrorBinding) {
+                Button("OK", role: .cancel) { publishError = nil }
+            } message: {
+                Text(publishError ?? "")
+            }
+    }
+
+    private var includedCount: Int {
+        store.apps.filter { config.isIncluded($0.bundleID) }.count
+    }
+
+    private var publishedBinding: Binding<Bool> {
+        Binding(get: { publishedURL != nil }, set: { if !$0 { publishedURL = nil } })
+    }
+
+    private var publishErrorBinding: Binding<Bool> {
+        Binding(get: { publishError != nil }, set: { if !$0 { publishError = nil } })
+    }
+
+    private func publish() async {
+        isPublishing = true
+        defer { isPublishing = false }
+        config.persist()
+        do {
+            let url = try await PublishService.publish(apps: store.apps, config: config)
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(url.absoluteString, forType: .string)
+            publishedURL = url
+        } catch {
+            publishError = error.localizedDescription
+        }
     }
 
     private func rerender() {
