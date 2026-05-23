@@ -113,6 +113,35 @@ enum PublishService {
         }
     }
 
+    /// Polls `url` until it returns HTTP 200 (the build + deploy has finished),
+    /// or `timeout` elapses. The page genuinely doesn't exist during the build
+    /// window, so we cache-bust every probe to avoid re-seeing a stale 404 from
+    /// the browser/URL cache. Returns `true` if it went live, `false` on timeout
+    /// or cancellation.
+    static func waitUntilLive(_ url: URL, timeout: TimeInterval = 180, interval: TimeInterval = 4) async -> Bool {
+        let deadline = Date().addingTimeInterval(timeout)
+        while Date() < deadline {
+            if Task.isCancelled { return false }
+            if await isLive(url) { return true }
+            try? await Task.sleep(for: .seconds(interval))
+        }
+        return false
+    }
+
+    private static func isLive(_ url: URL) async -> Bool {
+        guard var comps = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return false }
+        comps.queryItems = (comps.queryItems ?? [])
+            + [URLQueryItem(name: "_cb", value: String(Int(Date().timeIntervalSince1970)))]
+        guard let busted = comps.url else { return false }
+
+        var request = URLRequest(url: busted)
+        request.httpMethod = "GET"
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        guard let (_, response) = try? await URLSession.shared.data(for: request),
+              let http = response as? HTTPURLResponse else { return false }
+        return http.statusCode == 200
+    }
+
     private static func trimmedOrNil(_ s: String?) -> String? {
         guard let trimmed = s?.trimmingCharacters(in: .whitespacesAndNewlines), !trimmed.isEmpty else {
             return nil
