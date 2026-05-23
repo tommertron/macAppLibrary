@@ -1,0 +1,24 @@
+name = "macapplibrary-publish"
+main = "src/index.js"
+compatibility_date = "2024-12-01"
+
+# Rate-limit counters (one key per IP per day). Create with:
+#   wrangler kv namespace create RL
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "RL"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+# Non-secret config. Override per-environment if you add [env.*] blocks.
+GITHUB_REPO  = "REPLACE_owner/coefficiencies"   # the Hugo site repo the worker commits to
+GITHUB_BRANCH = "main"                            # branch the deploy builds from
+SITE_BASE    = "https://coefficiencies.com"       # used to build the returned /shared/<slug>/ URL
+MAX_APPS     = "500"
+MAX_ICON_FETCHES = "30"                            # per publish; raise on a paid plan (1000 subreq budget)
+
+# Secrets — set with `wrangler secret put <NAME>` (never commit these):
+#   GITHUB_TOKEN        fine-grained PAT, Contents: read+write on GITHUB_REPO only
+#   TURNSTILE_SECRET    Cloudflare Turnstile secret key (if unset, captcha check is skipped)
+#   DELETE_SIGNING_KEY  any long random string; signs one-click delete links
+#   DISCORD_WEBHOOK     (optional) Discord webhook URL for publish + delete alerts
