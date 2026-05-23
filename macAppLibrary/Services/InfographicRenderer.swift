@@ -17,9 +17,14 @@ enum InfographicRenderer {
             .sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
 
         let total = included.count
-        let categoryCount = Set(included.flatMap { $0.effectiveCategories }).count
+        let favorites = included.filter(\.isFavorite)
+        let categoryCounts = categoryCounts(for: included)
 
-        let cards = included.map(card(for:)).joined(separator: "\n      ")
+        // Size loads asynchronously after the initial scan, so some entries may
+        // not have it yet — sum what's available and flag if any are missing.
+        let knownSizes = included.compactMap(\.sizeBytes)
+        let totalBytes = knownSizes.reduce(0, +)
+        let sizesIncomplete = knownSizes.count < total
 
         let safeName = htmlEscape(config.displayName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
                                   ? "My"
@@ -31,6 +36,15 @@ enum InfographicRenderer {
             let href = raw.contains("://") ? raw : "https://\(raw)"
             return #"<a class="site-link" href="\#(htmlEscape(href))">\#(htmlEscape(raw))</a>"#
         }()
+
+        let statsBand = statsBand(total: total,
+                                  totalBytes: totalBytes,
+                                  sizesIncomplete: sizesIncomplete,
+                                  favoriteCount: favorites.count,
+                                  categoryCount: categoryCounts.count)
+        let categorySection = categorySection(categoryCounts)
+        let favoritesSection = favoritesSection(favorites)
+        let cards = included.map(card(for:)).joined(separator: "\n      ")
 
         return """
         <!doctype html>
@@ -45,13 +59,15 @@ enum InfographicRenderer {
             <header class="hero">
               <h1>\(safeName)’s Mac App Library</h1>
               \(websiteLine)
-              <div class="stats">
-                <span class="stat-num">\(total)</span> app\(total == 1 ? "" : "s")
-                · <span class="stat-num">\(categoryCount)</span> categor\(categoryCount == 1 ? "y" : "ies")
-              </div>
             </header>
-            <section class="grid">
-              \(cards)
+            \(statsBand)
+            \(categorySection)
+            \(favoritesSection)
+            <section class="apps">
+              <h2 class="section-heading">All Apps</h2>
+              <div class="grid">
+                \(cards)
+              </div>
             </section>
             <footer class="footer">
               Created with <a href="https://coefficiencies.com/apps/macapplibrary/">macAppLibrary</a>
@@ -60,6 +76,103 @@ enum InfographicRenderer {
         </body>
         </html>
         """
+    }
+
+    // MARK: - Stats
+
+    private static func statsBand(total: Int,
+                                  totalBytes: Int64,
+                                  sizesIncomplete: Bool,
+                                  favoriteCount: Int,
+                                  categoryCount: Int) -> String {
+        var blocks: [String] = [
+            statBlock(num: "\(total)", label: total == 1 ? "App" : "Apps")
+        ]
+        if totalBytes > 0 {
+            let size = formatBytes(totalBytes)
+            blocks.append(statBlock(num: size,
+                                    label: sizesIncomplete ? "Total Size (so far)" : "Total Size"))
+        }
+        if favoriteCount > 0 {
+            blocks.append(statBlock(num: "\(favoriteCount)",
+                                    label: favoriteCount == 1 ? "Favorite" : "Favorites"))
+        }
+        blocks.append(statBlock(num: "\(categoryCount)",
+                                label: categoryCount == 1 ? "Category" : "Categories"))
+
+        return #"""
+        <section class="stats-band">
+              \#(blocks.joined(separator: "\n      "))
+            </section>
+        """#
+    }
+
+    private static func statBlock(num: String, label: String) -> String {
+        #"""
+        <div class="stat-block">
+                <div class="stat-num">\#(htmlEscape(num))</div>
+                <div class="stat-label">\#(htmlEscape(label))</div>
+              </div>
+        """#
+    }
+
+    /// App counts per category, highest first. Apps with multiple categories
+    /// are counted under each.
+    private static func categoryCounts(for apps: [AppEntry]) -> [(name: String, count: Int)] {
+        var counts: [String: Int] = [:]
+        for app in apps {
+            for cat in app.effectiveCategories where !cat.isEmpty {
+                counts[cat, default: 0] += 1
+            }
+        }
+        return counts
+            .map { (name: $0.key, count: $0.value) }
+            .sorted { $0.count != $1.count ? $0.count > $1.count
+                                           : $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
+    }
+
+    private static func categorySection(_ categories: [(name: String, count: Int)]) -> String {
+        guard !categories.isEmpty else { return "" }
+        let maxCount = categories.first?.count ?? 1
+        let rows = categories.map { cat -> String in
+            let pct = maxCount > 0 ? Int((Double(cat.count) / Double(maxCount)) * 100) : 0
+            return #"""
+            <div class="cat-row">
+                  <span class="cat-name">\#(htmlEscape(cat.name))</span>
+                  <span class="cat-bar"><span class="cat-fill" style="width:\#(pct)%"></span></span>
+                  <span class="cat-count">\#(cat.count)</span>
+                </div>
+            """#
+        }.joined(separator: "\n      ")
+
+        return #"""
+        <section class="cat-section">
+              <h2 class="section-heading">By Category</h2>
+              <div class="cat-list">
+                \#(rows)
+              </div>
+            </section>
+        """#
+    }
+
+    private static func favoritesSection(_ favorites: [AppEntry]) -> String {
+        guard !favorites.isEmpty else { return "" }
+        let cards = favorites.map(card(for:)).joined(separator: "\n      ")
+        return #"""
+        <section class="favorites">
+              <h2 class="section-heading">★ Favorites</h2>
+              <div class="grid">
+                \#(cards)
+              </div>
+            </section>
+        """#
+    }
+
+    private static func formatBytes(_ bytes: Int64) -> String {
+        let f = ByteCountFormatter()
+        f.allowedUnits = [.useGB, .useMB]
+        f.countStyle = .file
+        return f.string(fromByteCount: bytes)
     }
 
     // MARK: - Cards
@@ -192,8 +305,71 @@ enum InfographicRenderer {
       font-size: 0.95rem;
     }
     .site-link:hover { color: var(--accent-hover); text-decoration: underline; }
-    .stats { color: var(--muted); font-size: 0.95rem; }
-    .stat-num { color: var(--text); font-weight: 600; }
+
+    .stats-band {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem 2.5rem;
+      padding: 1.5rem 1rem;
+      margin-bottom: 2.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-block { text-align: center; min-width: 5rem; }
+    .stat-num {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 1.1;
+      color: var(--accent);
+    }
+    .stat-label {
+      margin-top: 0.25rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .section-heading {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.375rem;
+      margin: 0 0 1rem;
+    }
+    .cat-section, .favorites { margin-bottom: 2.5rem; }
+
+    .cat-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.5rem 2rem;
+    }
+    .cat-row {
+      display: grid;
+      grid-template-columns: 1fr 4rem auto;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .cat-name { font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .cat-bar {
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent-light, rgba(249,115,22,.15));
+      overflow: hidden;
+    }
+    .cat-fill { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+    .cat-count {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));

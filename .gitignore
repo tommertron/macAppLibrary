@@ -38,3 +38,7 @@ Pods/
 !default.perspectivev3
 *.xccheckout
 *.xcscmblueprint
+
+# Downloaded icon cache (head-start for the publish-workflow icon store).
+# Binary blobs — keep the manifest, not the PNGs.
+scripts/icon-cache/*.png
