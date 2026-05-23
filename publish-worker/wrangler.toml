@@ -7,11 +7,11 @@ compatibility_date = "2024-12-01"
 # then paste the returned id below.
 [[kv_namespaces]]
 binding = "RL"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "86f32941568e46a484cd94ab05778465"
 
 [vars]
 # Non-secret config. Override per-environment if you add [env.*] blocks.
-GITHUB_REPO  = "REPLACE_owner/coefficiencies"   # the Hugo site repo the worker commits to
+GITHUB_REPO  = "tommertron/coefficiencies"   # owner/repo the worker commits to (NOT a full URL)
 GITHUB_BRANCH = "main"                            # branch the deploy builds from
 SITE_BASE    = "https://coefficiencies.com"       # used to build the returned /shared/<slug>/ URL
 MAX_APPS     = "500"
@@ -22,3 +22,4 @@ MAX_ICON_FETCHES = "30"                            # per publish; raise on a pai
 #   TURNSTILE_SECRET    Cloudflare Turnstile secret key (if unset, captcha check is skipped)
 #   DELETE_SIGNING_KEY  any long random string; signs one-click delete links
 #   DISCORD_WEBHOOK     (optional) Discord webhook URL for publish + delete alerts
+
