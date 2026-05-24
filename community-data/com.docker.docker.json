@@ -4,5 +4,6 @@
   "categories": [
     "Developer Tools"
   ],
-  "developer": "Docker, Inc"
+  "developer": "Docker, Inc",
+  "url": "https://www.docker.com"
 }
