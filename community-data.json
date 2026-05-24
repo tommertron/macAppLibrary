@@ -51,7 +51,8 @@
     "categories": [
       "Music & Audio"
     ],
-    "developer": "Adrian Sch\u00f6nig"
+    "developer": "Adrian Sch\u00f6nig",
+    "url": "https://longplay.rocks"
   },
   "app.macdown.macdown3000": {
     "name": "MacDown 3000",
@@ -77,7 +78,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Acqualia Software"
+    "developer": "Acqualia Software",
+    "url": "https://soulver.app"
   },
   "at.EternalStorms.Yoink-demo": {
     "name": "Yoink",
@@ -100,7 +102,8 @@
     "categories": [
       "Music & Audio"
     ],
-    "developer": "Marcos Tanaka"
+    "developer": "Marcos Tanaka",
+    "url": "https://marcosatanaka.com"
   },
   "br.com.marcosatanaka.play": {
     "name": "Play",
@@ -108,7 +111,8 @@
     "categories": [
       "Entertainment"
     ],
-    "developer": "Marcos Tanaka"
+    "developer": "Marcos Tanaka",
+    "url": "https://marcosatanaka.com"
   },
   "cc.anybox.Anybox": {
     "name": "Anybox",
@@ -116,7 +120,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Anybox LTD"
+    "developer": "Anybox LTD",
+    "url": "https://anybox.app"
   },
   "ch.sudo.cyberduck": {
     "name": "Cyberduck",
@@ -279,7 +284,8 @@
     "description": "Amazon Kindle for macOS is an e-reader app that allows users to read books, magazines, and other publications purchased from Amazon's Kindle store. The app syncs reading progress across devices and provides features like adjustable fonts, bookmarks, and highlighting.",
     "categories": [
       "Reference"
-    ]
+    ],
+    "url": "https://www.amazon.com/kindleapp"
   },
   "com.ameba.SwiftBar": {
     "name": "SwiftBar",
@@ -304,7 +310,8 @@
     "description": "Stray is a third-person adventure game for macOS in which the player controls a stray cat navigating a cyberpunk city inhabited by robots, solving puzzles and uncovering mysteries to find a way home.",
     "categories": [
       "Adventure Games"
-    ]
+    ],
+    "url": "https://www.stray.game"
   },
   "com.anthropic.claudefordesktop": {
     "name": "Claude",
@@ -381,7 +388,8 @@
     "description": "TestFlight is Apple's beta testing platform that allows users to install and test pre-release versions of iOS, macOS, and other Apple platform apps. It enables developers to distribute beta builds to testers and collect feedback before a public App Store release.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "url": "https://developer.apple.com/testflight"
   },
   "com.apple.dt.Xcode": {
     "name": "Xcode",
@@ -389,14 +397,16 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Apple Inc"
+    "developer": "Apple Inc",
+    "url": "https://developer.apple.com/xcode"
   },
   "com.apple.iMovieApp": {
     "name": "iMovie",
     "description": "Apple's free video editing app for creating movies and trailers with a simple timeline, transitions, and effects.",
     "categories": [
       "Video"
-    ]
+    ],
+    "url": "https://www.apple.com/imovie"
   },
   "com.apple.iWork.Keynote": {
     "name": "Keynote",
@@ -430,7 +440,8 @@
     "description": "A full-featured SSH client and SFTP file manager for Mac and iOS, with key authentication and a built-in terminal.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "url": "https://secureshellfish.app/"
   },
   "com.appzapper.appzapper2": {
     "name": "AppZapper",
@@ -503,7 +514,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Bare Bones Software, Inc"
+    "developer": "Bare Bones Software, Inc",
+    "url": "https://www.barebones.com/products/bbedit"
   },
   "com.binarynights.ForkLift": {
     "name": "ForkLift",
@@ -529,7 +541,8 @@
     "description": "Bitdefender Virus Scanner is a free macOS security application that scans your Mac for malware, viruses, and other threats, including those that may target Windows systems. It allows users to perform on-demand scans of specific locations or the entire system to detect and remove malicious files.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://www.bitdefender.com/solutions/virus-scanner-for-mac.html"
   },
   "com.bitwarden.desktop": {
     "name": "Bitwarden",
@@ -565,7 +578,8 @@
     "categories": [
       "Photography"
     ],
-    "developer": "BrainFeverMedia"
+    "developer": "BrainFeverMedia",
+    "url": "https://www.brainfevermedia.com"
   },
   "com.brettterpstra.marked2": {
     "name": "Marked 2",
@@ -573,7 +587,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Brett Terpstra"
+    "developer": "Brett Terpstra",
+    "url": "https://marked2app.com"
   },
   "com.byteproject.Ascension": {
     "name": "Ascension",
@@ -618,7 +633,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Michael Freuden"
+    "developer": "Michael Freuden",
+    "url": "https://cascadea.app"
   },
   "com.chabomakers.Antinote": {
     "name": "Antinote",
@@ -635,14 +651,16 @@
     "description": "Wraps screenshots and screen recordings in device frames for clean app previews and marketing material.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "url": "https://framous.app"
   },
   "com.charliemchapman.dark-noise": {
     "name": "Dark Noise",
     "description": "An ambient sound app with dozens of high-quality sounds and mixes for focus, sleep, or relaxation.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://darknoise.app"
   },
   "com.charliemonroe.Permute-3": {
     "name": "Permute 3",
@@ -702,7 +720,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Cultured Code"
+    "developer": "Cultured Code",
+    "url": "https://culturedcode.com/things"
   },
   "com.daisydiskapp.DaisyDisk": {
     "name": "DaisyDisk",
@@ -710,7 +729,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Software Ambience Corp"
+    "developer": "Software Ambience Corp",
+    "url": "https://daisydiskapp.com"
   },
   "com.devon-technologies.sphereexpress": {
     "name": "DEVONsphere Express",
@@ -761,7 +781,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Dwarves Foundation"
+    "developer": "Dwarves Foundation",
+    "url": "https://github.com/dwarvesf/hidden"
   },
   "com.edovia.Default-Handler": {
     "name": "Default Handler",
@@ -778,7 +799,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Edovia Inc"
+    "developer": "Edovia Inc",
+    "url": "https://screens.app"
   },
   "com.electron.asana": {
     "name": "Asana",
@@ -794,7 +816,8 @@
     "description": "Hover for Safari is a browser extension for Safari on macOS that displays a larger preview image when you hover your cursor over thumbnails or small images on websites.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://epsteinapps.com/hover-for-safari"
   },
   "com.ethanbills.DockDoor": {
     "name": "DockDoor",
@@ -810,7 +833,8 @@
     "categories": [
       "Business"
     ],
-    "developer": "FirmShell Ltd"
+    "developer": "FirmShell Ltd",
+    "url": "https://www.firmshell.com/msg-viewer-pro.html"
   },
   "com.flexibits.cardhop.mac": {
     "name": "Cardhop",
@@ -818,7 +842,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Flexibits Inc"
+    "developer": "Flexibits Inc",
+    "url": "https://flexibits.com/cardhop"
   },
   "com.flexibits.fantastical2.mac": {
     "name": "Fantastical",
@@ -826,7 +851,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Flexibits Inc"
+    "developer": "Flexibits Inc",
+    "url": "https://flexibits.com/fantastical"
   },
   "com.flyingmeat.Acorn8": {
     "name": "Acorn",
@@ -920,14 +946,16 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "groosoft"
+    "developer": "groosoft",
+    "url": "https://apps.apple.com/us/app/right-click/id1364038646"
   },
   "com.gtrigonakis.TextWorkflow": {
     "name": "Text Workflow",
     "description": "Text Workflow is a macOS utility that allows users to transform and manipulate text through a series of customizable actions and filters, streamlining common text processing tasks.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://www.gtrigonakis.com/textworkflow"
   },
   "com.hardcoded-software.dupeguru": {
     "name": "dupeguru",
@@ -970,7 +998,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "The Iconfactory"
+    "developer": "The Iconfactory",
+    "url": "https://tot.rocks"
   },
   "com.if.Amphetamine": {
     "name": "Amphetamine",
@@ -978,7 +1007,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "William C. Gustafson"
+    "developer": "William C. Gustafson",
+    "url": "https://apps.apple.com/us/app/amphetamine/id937984704"
   },
   "com.itimeteo.webssh": {
     "name": "WebSSH",
@@ -1019,7 +1049,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Junecloud LLC"
+    "developer": "Junecloud LLC",
+    "url": "https://junecloud.com/software/iphone/deliveries.html"
   },
   "com.kapeli.dashdoc": {
     "name": "Dash",
@@ -1072,7 +1103,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Krueger Systems, Inc"
+    "developer": "Krueger Systems, Inc",
+    "url": "https://calca.io"
   },
   "com.lihaoyun6.AirBattery": {
     "name": "AirBattery",
@@ -1118,7 +1150,8 @@
     "categories": [
       "Reference"
     ],
-    "developer": "8.2.1,   Ian Page"
+    "developer": "8.2.1,   Ian Page",
+    "url": "https://mactracker.ca"
   },
   "com.manytricks.Displaperture": {
     "name": "Displaperture",
@@ -1144,7 +1177,8 @@
     "categories": [
       "News"
     ],
-    "developer": "Instant Paper, Inc"
+    "developer": "Instant Paper, Inc",
+    "url": "https://www.instapaper.com"
   },
   "com.max-langer.Latest": {
     "name": "Latest",
@@ -1170,7 +1204,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Microsoft Corporation"
+    "developer": "Microsoft Corporation",
+    "url": "https://www.microsoft.com/microsoft-365/excel"
   },
   "com.microsoft.Outlook": {
     "name": "Microsoft Outlook",
@@ -1178,7 +1213,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Microsoft Corporation"
+    "developer": "Microsoft Corporation",
+    "url": "https://outlook.live.com/"
   },
   "com.microsoft.Powerpoint": {
     "name": "Microsoft PowerPoint",
@@ -1186,7 +1222,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Microsoft Corporation"
+    "developer": "Microsoft Corporation",
+    "url": "https://www.microsoft.com/microsoft-365/powerpoint"
   },
   "com.microsoft.VSCode": {
     "name": "Code",
@@ -1203,7 +1240,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Microsoft Corporation"
+    "developer": "Microsoft Corporation",
+    "url": "https://www.microsoft.com/microsoft-365/word"
   },
   "com.microsoft.onenote.mac": {
     "name": "Microsoft OneNote",
@@ -1211,7 +1249,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Microsoft Corporation"
+    "developer": "Microsoft Corporation",
+    "url": "https://www.onenote.com"
   },
   "com.microsoft.teams2": {
     "name": "Microsoft Teams",
@@ -1296,7 +1335,8 @@
     "description": "A clean read-later app for saving links with tagging, full-text search, and an integrated reader view.",
     "categories": [
       "News"
-    ]
+    ],
+    "url": "https://goodlinks.app"
   },
   "com.nick.Clic": {
     "name": "Clic",
@@ -1304,7 +1344,8 @@
     "categories": [
       "Audio"
     ],
-    "developer": "Clic for Sonos Inc."
+    "developer": "Clic for Sonos Inc.",
+    "url": "https://clic.dance"
   },
   "com.noodlesoft.Hazel": {
     "name": "Hazel",
@@ -1365,7 +1406,8 @@
     "categories": [
       "Business"
     ],
-    "developer": "Okta"
+    "developer": "Okta",
+    "url": "https://www.okta.com/what-we-do/multifactor-authentication.html"
   },
   "com.omnigroup.OmniDiskSweeper": {
     "name": "OmniDiskSweeper",
@@ -1429,7 +1471,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Panic Inc"
+    "developer": "Panic Inc",
+    "url": "https://panic.com/transmit"
   },
   "com.paulpacifico.shutterencoder": {
     "name": "Shutter Encoder",
@@ -1452,7 +1495,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Due Pte. Ltd"
+    "developer": "Due Pte. Ltd",
+    "url": "https://www.dueapp.com/"
   },
   "com.pilotmoon.popclip": {
     "name": "PopClip",
@@ -1469,7 +1513,8 @@
     "categories": [
       "Graphics & Design"
     ],
-    "developer": "Apple Inc"
+    "developer": "Apple Inc",
+    "url": "https://www.pixelmator.com/pro"
   },
   "com.privateinternetaccess.vpn": {
     "name": "Private Internet Access",
@@ -1521,7 +1566,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Manuel Sainz de Baranda y Go\u00f1i.\n  Sof\u00eda Ortega Sosa"
+    "developer": "Manuel Sainz de Baranda y Go\u00f1i.\n  Sof\u00eda Ortega Sosa",
+    "url": "https://zxe.io/software/Foldery"
   },
   "com.reederapp.5.macOS": {
     "name": "Reeder",
@@ -1536,7 +1582,8 @@
     "description": "A floating album art display for your desktop that shows the current track from Spotify or Apple Music in a stylish overlay.",
     "categories": [
       "Music & Audio"
-    ]
+    ],
+    "url": "https://replay.software/sleeve"
   },
   "com.rileytestut.AltServer": {
     "name": "AltServer",
@@ -1585,7 +1632,8 @@
     "categories": [
       "Music"
     ],
-    "developer": "Apple Inc"
+    "developer": "Apple Inc",
+    "url": "https://www.shazam.com"
   },
   "com.sheepsystems.BookMacster": {
     "name": "BookMacster",
@@ -1611,7 +1659,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Sindre Sorhus"
+    "developer": "Sindre Sorhus",
+    "url": "https://sindresorhus.com/pure-paste"
   },
   "com.sindresorhus.Supercharge": {
     "name": "Supercharge",
@@ -1637,7 +1686,8 @@
     "description": "Spotify is a music and podcast streaming app that provides access to millions of tracks, albums, playlists, and podcasts. It allows users to search, browse, and play audio content either on-demand with a premium subscription or in shuffle mode with the free tier.",
     "categories": [
       "Music"
-    ]
+    ],
+    "url": "https://www.spotify.com/"
   },
   "com.squirrels.AirParrot-3": {
     "name": "AirParrot 3",
@@ -1691,7 +1741,8 @@
     "description": "A polished Mastodon client from the creators of Tweetbot, with a beautiful timeline and support for multiple accounts.",
     "categories": [
       "Social Networking"
-    ]
+    ],
+    "url": "https://tapbots.com/ivory"
   },
   "com.tapbots.Pastebot2Mac": {
     "name": "Pastebot",
@@ -1699,7 +1750,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Tapbots LLC"
+    "developer": "Tapbots LLC",
+    "url": "https://tapbots.com/pastebot"
   },
   "com.tinyspeck.slackmacgap": {
     "name": "Slack",
@@ -1707,7 +1759,8 @@
     "categories": [
       "Business"
     ],
-    "developer": "Slack Technologies LLC, a Salesforce company"
+    "developer": "Slack Technologies LLC, a Salesforce company",
+    "url": "https://slack.com"
   },
   "com.todesktop.230313mzl4w4u92": {
     "name": "Cursor",
@@ -1724,7 +1777,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Doist"
+    "developer": "Doist",
+    "url": "https://todoist.com/"
   },
   "com.tommertron.macAppLibrary": {
     "name": "macAppLibrary",
@@ -1747,7 +1801,8 @@
     "categories": [
       "Photography"
     ],
-    "developer": "Systweak"
+    "developer": "Systweak",
+    "url": "https://www.systweak.com/mac-software"
   },
   "com.tupil.beamer": {
     "name": "Beamer",
@@ -1772,7 +1827,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Valerijs Boguckis"
+    "developer": "Valerijs Boguckis",
+    "url": "https://textsniper.app/"
   },
   "com.valvesoftware.steam": {
     "name": "Steam",
@@ -1875,7 +1931,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Leitmotif GmbH"
+    "developer": "Leitmotif GmbH",
+    "url": "https://taska.now/"
   },
   "dev.zed.Zed": {
     "name": "Zed",
@@ -1900,7 +1957,8 @@
     "description": "A structured data store for shortcuts and automation, letting you persist and access data across automations and apps.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://datajar.app"
   },
   "edu.umich.mprint.mprint-installer": {
     "name": "mprint_installer",
@@ -2005,7 +2063,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Tailscale Inc"
+    "developer": "Tailscale Inc",
+    "url": "https://tailscale.com"
   },
   "jp.tmkk.XLD": {
     "name": "XLD",
@@ -2019,7 +2078,8 @@
     "description": "A browser extension for clipping web content directly into your Obsidian vault with formatting and metadata preserved.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "url": "https://obsidian.md/"
   },
   "md.obsidian": {
     "name": "Obsidian",
@@ -2027,7 +2087,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Dynalist Inc"
+    "developer": "Dynalist Inc",
+    "url": "https://obsidian.md/"
   },
   "me.damir.dropover-mac": {
     "name": "Dropover",
@@ -2035,7 +2096,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Damir Tursunovic"
+    "developer": "Damir Tursunovic",
+    "url": "https://dropoverapp.com"
   },
   "net.battle.app": {
     "name": "Battle.net",
@@ -2156,7 +2218,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Shiny Frog"
+    "developer": "Shiny Frog",
+    "url": "https://bear.app"
   },
   "net.shinystone.OKJSON": {
     "name": "OK JSON",
@@ -2164,14 +2227,16 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Anybox LTD"
+    "developer": "Anybox LTD",
+    "url": "https://okjson.app"
   },
   "nl.jeffreykuiken.NoirApp.mac": {
     "name": "Noir",
     "description": "Automatically adds dark mode to websites in Safari that don't natively support it, reducing eye strain at night.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://getnoir.app"
   },
   "no.mifi.losslesscut-mac": {
     "name": "LosslessCut",
@@ -2188,7 +2253,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "present eyeo"
+    "developer": "present eyeo",
+    "url": "https://adblockplus.org"
   },
   "org.aseprite.Aseprite": {
     "name": "Aseprite",
@@ -2387,7 +2453,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Thomas Tempelmann"
+    "developer": "Thomas Tempelmann",
+    "url": "https://findanyfile.app"
   },
   "org.videolan.vlc": {
     "name": "VLC",
@@ -2412,7 +2479,8 @@
     "description": "A menu bar music controller for Spotify and Apple Music, showing now-playing info and allowing playback control without switching apps.",
     "categories": [
       "Music & Audio"
-    ]
+    ],
+    "url": "https://neptunesmac.app"
   },
   "pro.writer.mac": {
     "name": "iA Writer",
@@ -2420,7 +2488,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Information Architects Inc"
+    "developer": "Information Architects Inc",
+    "url": "https://ia.net/writer"
   },
   "recipes.mela.appkit": {
     "name": "Mela",
@@ -2428,14 +2497,16 @@
     "categories": [
       "Food & Drink"
     ],
-    "developer": "Silvio Rizzi"
+    "developer": "Silvio Rizzi",
+    "url": "https://mela.recipes"
   },
   "se.oblador.Hush": {
     "name": "Hush",
     "description": "A Safari content blocker that silences cookie consent notices and privacy popups, giving you a cleaner browsing experience.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://oblador.github.io/hush"
   },
   "sh.cider.genten.mac": {
     "name": "Cider",
@@ -2460,7 +2531,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "App ahead GmbH"
+    "developer": "App ahead GmbH",
+    "url": "https://appahead.studio/apps"
   },
   "uk.org.upfold.DfontSplitter": {
     "name": "DfontSplitter",
