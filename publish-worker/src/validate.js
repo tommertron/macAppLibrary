@@ -72,6 +72,7 @@ export function buildIndexMarkdown(clean, iconSet) {
   const L = [];
   L.push("---");
   L.push(`title: ${yaml(`${clean.displayName}'s Mac App Library`)}`);
+  L.push(`description: ${yaml(`See the Mac apps in ${clean.displayName}'s Mac App Library.`)}`);
   L.push(`displayName: ${yaml(clean.displayName)}`);
   if (clean.websiteURL) L.push(`websiteURL: ${yaml(clean.websiteURL)}`);
   L.push("showDate: false");
