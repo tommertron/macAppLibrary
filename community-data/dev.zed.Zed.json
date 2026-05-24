@@ -3,5 +3,6 @@
   "description": "A high-performance, collaborative code editor built in Rust with GPU rendering, real-time collaboration, and AI integration.",
   "categories": [
     "Developer Tools"
-  ]
+  ],
+  "url": "https://zed.dev"
 }
