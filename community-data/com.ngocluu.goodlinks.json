@@ -3,5 +3,6 @@
   "description": "A clean read-later app for saving links with tagging, full-text search, and an integrated reader view.",
   "categories": [
     "News"
-  ]
+  ],
+  "url": "https://goodlinks.app"
 }

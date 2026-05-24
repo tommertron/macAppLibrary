@@ -3,5 +3,6 @@
   "description": "A browser extension for clipping web content directly into your Obsidian vault with formatting and metadata preserved.",
   "categories": [
     "Productivity"
-  ]
+  ],
+  "url": "https://obsidian.md/"
 }
