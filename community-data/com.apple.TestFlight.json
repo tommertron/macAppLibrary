@@ -3,5 +3,6 @@
   "description": "TestFlight is Apple's beta testing platform that allows users to install and test pre-release versions of iOS, macOS, and other Apple platform apps. It enables developers to distribute beta builds to testers and collect feedback before a public App Store release.",
   "categories": [
     "Developer Tools"
-  ]
+  ],
+  "url": "https://developer.apple.com/testflight"
 }
