@@ -46,7 +46,9 @@
     "source": "favicon"
   },
   "biz.papercut.pcng.client": {
-    "source": "miss-nourl"
+    "domain": "www.papercut.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.papercut.com&sz=128",
+    "source": "favicon"
   },
   "br.com.marcosatanaka.musicbox": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/ec/fb/99ecfb75-85d4-e5e9-5610-83aae3c16d93/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
@@ -92,7 +94,9 @@
     "source": "favicon"
   },
   "com.BuhlData.WISOsteuerMac2026": {
-    "source": "miss-nourl"
+    "domain": "www.buhl.de",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.buhl.de&sz=128",
+    "source": "favicon"
   },
   "com.LittleFin.Chronicle-Touch": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/67/53/f2/6753f246-bc2c-f46d-c0ca-f2bd2c228e18/paid-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
@@ -109,7 +113,9 @@
     "source": "favicon"
   },
   "com.acdsystems.acdseePhotoFlash": {
-    "source": "miss-nourl"
+    "domain": "www.acdsee.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.acdsee.com&sz=128",
+    "source": "favicon"
   },
   "com.adobe.adobedigitaleditions.app": {
     "domain": "www.adobe.com",
@@ -144,7 +150,9 @@
     "source": "appstore"
   },
   "com.ameba.SwiftBar": {
-    "source": "miss-nourl"
+    "domain": "swiftbar.app",
+    "error": "HTTP Error 404: Not Found",
+    "source": "favicon-fail"
   },
   "com.andadinosaur.Vinegar": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/05/f8/e805f861-795c-a1fc-7668-ebe50de65a80/AppIcon-0-0-1x_U007epad-0-1-P3-85-220.png/512x512bb.jpg",
@@ -155,7 +163,9 @@
     "source": "appstore"
   },
   "com.anthropic.claudefordesktop": {
-    "source": "miss-nourl"
+    "domain": "claude.ai",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
+    "source": "favicon"
   },
   "com.anythingllm": {
     "domain": "anythingllm.com",
@@ -171,7 +181,9 @@
     "source": "appstore"
   },
   "com.apphousekitchen.aldente-pro": {
-    "source": "miss-nourl"
+    "domain": "apphousekitchen.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=apphousekitchen.com&sz=128",
+    "source": "favicon"
   },
   "com.apple.Aperture3": {
     "domain": "support.apple.com",
@@ -179,10 +191,14 @@
     "source": "favicon"
   },
   "com.apple.SFSymbols": {
-    "source": "miss-nourl"
+    "domain": "developer.apple.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=developer.apple.com&sz=128",
+    "source": "favicon"
   },
   "com.apple.Safari": {
-    "source": "miss-nourl"
+    "domain": "www.apple.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.apple.com&sz=128",
+    "source": "favicon-generic"
   },
   "com.apple.TestFlight": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/84/59/05/84590516-c48e-f8b0-63ab-d4fd2486518b/AppIcon-0-1x_U007epad-0-1-0-P3-85-220-0.png/512x512bb.jpg",
@@ -197,13 +213,19 @@
     "source": "appstore"
   },
   "com.apple.iWork.Keynote": {
-    "source": "miss-nourl"
+    "domain": "www.apple.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.apple.com&sz=128",
+    "source": "favicon-generic"
   },
   "com.apple.iWork.Numbers": {
-    "source": "miss-nourl"
+    "domain": "www.apple.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.apple.com&sz=128",
+    "source": "favicon-generic"
   },
   "com.apple.iWork.Pages": {
-    "source": "miss-nourl"
+    "domain": "www.apple.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.apple.com&sz=128",
+    "source": "favicon-generic"
   },
   "com.appliedphasor.secure-shellfish": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/06/09/14060988-e835-1a6b-2f3e-6d06bfdfb7f5/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
@@ -215,7 +237,9 @@
     "source": "favicon"
   },
   "com.araxis.merge": {
-    "source": "miss-nourl"
+    "domain": "www.araxis.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.araxis.com&sz=128",
+    "source": "favicon"
   },
   "com.asiafu.Bloom": {
     "domain": "bloomapp.club",
@@ -245,7 +269,9 @@
     "source": "appstore"
   },
   "com.binarynights.ForkLift": {
-    "source": "miss-nourl"
+    "domain": "binarynights.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=binarynights.com&sz=128",
+    "source": "favicon"
   },
   "com.bitbq.Changes": {
     "domain": "changesapp.com",
@@ -364,7 +390,9 @@
     "source": "favicon"
   },
   "com.docker.docker": {
-    "source": "miss-nourl"
+    "domain": "www.docker.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.docker.com&sz=128",
+    "source": "favicon"
   },
   "com.drbuho.disktool.BuhoNTFS": {
     "domain": "www.drbuho.com",
@@ -420,7 +448,9 @@
     "source": "favicon-fail"
   },
   "com.github.GitHubClient": {
-    "source": "miss-nourl"
+    "domain": "desktop.github.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=desktop.github.com&sz=128",
+    "source": "favicon"
   },
   "com.github.xor-gate.syncthing-macosx": {
     "domain": "syncthing.net",
@@ -498,8 +528,8 @@
   },
   "com.jelleglebbeek.youtube-dl-gui": {
     "domain": "jely2002.github.io",
-    "error": "HTTP Error 404: Not Found",
-    "source": "favicon-fail"
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=jely2002.github.io&sz=128",
+    "source": "favicon"
   },
   "com.johnhaney.mac.Backdrop": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/aa/69/b2/aa69b2f0-ff7f-f9ba-e3a0-e38eb78da12e/AppIcon-0-0-85-220-0-6-0-2x.png/512x512bb.png",
@@ -533,8 +563,8 @@
   },
   "com.lihaoyun6.AirBattery": {
     "domain": "lihaoyun6.github.io",
-    "error": "HTTP Error 404: Not Found",
-    "source": "favicon-fail"
+    "faviconUrl": "https://icons.duckduckgo.com/ip3/lihaoyun6.github.io.ico",
+    "source": "favicon"
   },
   "com.littlecarved.AppleOnDeviceOpenAI": {
     "domain": "github.com",
@@ -552,7 +582,9 @@
     "source": "favicon"
   },
   "com.macroplant.adapter": {
-    "source": "miss-nourl"
+    "domain": "macroplant.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=macroplant.com&sz=128",
+    "source": "favicon"
   },
   "com.mactrackerapp.Mactracker": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3b/78/6f/3b786f14-002e-42b4-7621-d97a305ad904/MactrackerIcon-0-0-85-220-0-6-0-2x.png/512x512bb.png",
@@ -563,7 +595,9 @@
     "source": "appstore"
   },
   "com.manytricks.NameMangler": {
-    "source": "miss-nourl"
+    "domain": "manytricks.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=manytricks.com&sz=128",
+    "source": "favicon"
   },
   "com.marcoarment.instapaperpro": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/25/b7/af25b71f-5c72-61fc-9de5-a6bba494b64f/AppIcon-0-0-1x_U007epad-0-8-0-0-85-220.png/512x512bb.jpg",
@@ -604,10 +638,14 @@
     "source": "appstore"
   },
   "com.microsoft.teams2": {
-    "source": "miss-nourl"
+    "domain": "www.microsoft.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.microsoft.com&sz=128",
+    "source": "favicon"
   },
   "com.mimestream.Mimestream": {
-    "source": "miss-nourl"
+    "domain": "mimestream.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=mimestream.com&sz=128",
+    "source": "favicon"
   },
   "com.mixedinkey.application": {
     "domain": "mixedinkey.com",
@@ -651,7 +689,9 @@
     "source": "appstore"
   },
   "com.noodlesoft.Hazel": {
-    "source": "miss-nourl"
+    "domain": "www.noodlesoft.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.noodlesoft.com&sz=128",
+    "source": "favicon"
   },
   "com.nordvpn.macos": {
     "domain": "nordvpn.com",
@@ -720,7 +760,9 @@
     "source": "favicon"
   },
   "com.pdfkey.pdfkeypro": {
-    "source": "miss-nourl"
+    "domain": "www.pdfkey.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.pdfkey.com&sz=128",
+    "source": "favicon"
   },
   "com.phocusllp.duemac": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/6c/04/f06c0494-003f-7022-0571-b5b601fcac91/AppIcon-Default-0-0-85-220-0-0-6-0-2x.png/512x512bb.png",
@@ -736,13 +778,19 @@
     "source": "favicon"
   },
   "com.pyrolyse.Fluor": {
-    "source": "miss-nourl"
+    "domain": "github.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+    "source": "favicon"
   },
   "com.ranchero.NetNewsWire-Evergreen": {
-    "source": "miss-nourl"
+    "domain": "netnewswire.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=netnewswire.com&sz=128",
+    "source": "favicon"
   },
   "com.raycast.macos": {
-    "source": "miss-nourl"
+    "domain": "www.raycast.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.raycast.com&sz=128",
+    "source": "favicon"
   },
   "com.readmeansrun.Router": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/c0/e0/78/c0e07874-f438-1b47-9794-976cebaeac71/AppIcon-0-0-85-220-0-0-0-0-4-0-0-0-2x-sRGB-0-0-0-0-0.png/512x512bb.png",
@@ -766,10 +814,14 @@
     "source": "favicon"
   },
   "com.rogueamoeba.audiohijack": {
-    "source": "miss-nourl"
+    "domain": "rogueamoeba.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=rogueamoeba.com&sz=128",
+    "source": "favicon"
   },
   "com.rogueamoeba.farrago": {
-    "source": "miss-nourl"
+    "domain": "rogueamoeba.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=rogueamoeba.com&sz=128",
+    "source": "favicon"
   },
   "com.runningwithcrayons.Alfred": {
     "domain": "www.alfredapp.com",
@@ -798,7 +850,9 @@
     "source": "appstore"
   },
   "com.sindresorhus.Supercharge": {
-    "source": "miss-nourl"
+    "domain": "sindresorhus.com",
+    "faviconUrl": "https://icons.duckduckgo.com/ip3/sindresorhus.com.ico",
+    "source": "favicon"
   },
   "com.splasm.audiobookbuilder2": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e1/91/61/e191618f-85b7-a7b8-9629-551a32567946/audiobook-0-0-85-220-0-0-4-0-2x.png/512x512bb.png",
@@ -814,7 +868,9 @@
     "source": "favicon"
   },
   "com.stairways.keyboardmaestro.editor": {
-    "source": "miss-nourl"
+    "domain": "www.keyboardmaestro.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.keyboardmaestro.com&sz=128",
+    "source": "favicon"
   },
   "com.standingstonegames.ddo": {
     "domain": "www.ddo.com",
@@ -844,7 +900,9 @@
     "source": "appstore"
   },
   "com.todesktop.230313mzl4w4u92": {
-    "source": "miss-nourl"
+    "domain": "cursor.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
+    "source": "favicon"
   },
   "com.todoist.mac.Todoist": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/22/3e/d2/223ed22b-8803-0624-03e5-0277c7d95249/AppIcon-0-0-85-220-0-0-6-0-2x.png/512x512bb.png",
@@ -904,7 +962,9 @@
     "source": "favicon"
   },
   "company.thebrowser.Browser": {
-    "source": "miss-nourl"
+    "domain": "arc.net",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=arc.net&sz=128",
+    "source": "favicon"
   },
   "corp.sap.privileges": {
     "domain": "github.com",
@@ -912,7 +972,9 @@
     "source": "favicon-generic"
   },
   "de.icab.iCab": {
-    "source": "miss-nourl"
+    "domain": "www.icab.de",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.icab.de&sz=128",
+    "source": "favicon"
   },
   "de.kuatsu.consul": {
     "domain": "getconsul.app",
@@ -928,7 +990,9 @@
     "source": "appstore"
   },
   "dev.zed.Zed": {
-    "source": "miss-nourl"
+    "domain": "zed.dev",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=zed.dev&sz=128",
+    "source": "favicon"
   },
   "developer.apple.wwdc-Release": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/79/a7/0f/79a70fb0-13bb-4c99-ac90-79af01c11a3b/AppIcon-Release-0-1x_U007epad-0-0-0-1-0-85-220-0.png/512x512bb.jpg",
@@ -939,7 +1003,9 @@
     "source": "appstore"
   },
   "edu.umich.mprint.mprint-installer": {
-    "source": "miss-nourl"
+    "domain": "its.umich.edu",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=its.umich.edu&sz=128",
+    "source": "favicon"
   },
   "fr.handbrake.HandBrake": {
     "domain": "handbrake.fr",
@@ -970,7 +1036,9 @@
     "source": "favicon"
   },
   "io.github.edrlab.thorium": {
-    "source": "miss-nourl"
+    "domain": "thorium.edrlab.org",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=thorium.edrlab.org&sz=128",
+    "source": "favicon"
   },
   "io.github.keycastr": {
     "domain": "github.com",
@@ -982,7 +1050,9 @@
     "source": "appstore"
   },
   "io.raindrop.macapp": {
-    "source": "miss-nourl"
+    "domain": "raindrop.io",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=raindrop.io&sz=128",
+    "source": "favicon"
   },
   "io.tailscale.ipn.macos": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/83/33/7f/83337ff2-83e0-3e14-2880-ee5903235f25/AppIcon-0-0-85-220-0-0-5-0-2x-0-0-0.png/512x512bb.png",
@@ -1011,7 +1081,9 @@
     "source": "favicon"
   },
   "net.cozic.joplin-desktop": {
-    "source": "miss-nourl"
+    "domain": "joplinapp.org",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=joplinapp.org&sz=128",
+    "source": "favicon"
   },
   "net.downloadhelper.coapp": {
     "domain": "www.downloadhelper.net",
@@ -1048,7 +1120,9 @@
     "source": "favicon"
   },
   "net.pornel.ImageOptim": {
-    "source": "miss-nourl"
+    "domain": "imageoptim.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=imageoptim.com&sz=128",
+    "source": "favicon"
   },
   "net.publicspace.Boring-Old-Menu-Bar": {
     "domain": "www.publicspace.net",
@@ -1135,7 +1209,9 @@
     "source": "favicon"
   },
   "org.jwz.cyberizer": {
-    "source": "miss-nourl"
+    "domain": "www.jwz.org",
+    "faviconUrl": "https://icons.duckduckgo.com/ip3/www.jwz.org.ico",
+    "source": "favicon"
   },
   "org.kde.kid3": {
     "domain": "kid3.kde.org",
@@ -1143,7 +1219,9 @@
     "source": "favicon"
   },
   "org.m0k.transmission": {
-    "source": "miss-nourl"
+    "domain": "transmissionbt.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=transmissionbt.com&sz=128",
+    "source": "favicon"
   },
   "org.mediathekview.MediathekView": {
     "domain": "mediathekview.de",
@@ -1151,7 +1229,9 @@
     "source": "favicon"
   },
   "org.mozilla.firefox": {
-    "source": "miss-nourl"
+    "domain": "www.mozilla.org",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.mozilla.org&sz=128",
+    "source": "favicon"
   },
   "org.mozilla.thunderbird": {
     "domain": "www.thunderbird.net",
@@ -1174,7 +1254,9 @@
     "source": "favicon"
   },
   "org.restic.browser": {
-    "source": "miss-nourl"
+    "domain": "github.com",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+    "source": "favicon"
   },
   "org.spek-project": {
     "domain": "www.spek.cc",
@@ -1188,18 +1270,22 @@
   },
   "org.sveinbjorn.Sloth": {
     "domain": "sveinbjorn.org",
-    "error": "HTTP Error 404: Not Found",
-    "source": "favicon-fail"
+    "faviconUrl": "https://icons.duckduckgo.com/ip3/sveinbjorn.org.ico",
+    "source": "favicon"
   },
   "org.tempel.findanyfile": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/1b/68/141b6828-8682-90ad-8134-d389ba0638a1/Classic.png/512x512bb.png",
     "source": "appstore"
   },
   "org.videolan.vlc": {
-    "source": "miss-nourl"
+    "domain": "www.videolan.org",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=www.videolan.org&sz=128",
+    "source": "favicon"
   },
   "org.whispersystems.signal-desktop": {
-    "source": "miss-nourl"
+    "domain": "signal.org",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=signal.org&sz=128",
+    "source": "favicon"
   },
   "pl.micropixels.NepTunes": {
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/71/84/6b/71846bb2-e8e7-55e7-a155-d0b9e7b3e49d/AppIcon-0-85-220-4-2x-0-0-0.png/512x512bb.png",
@@ -1235,7 +1321,9 @@
     "source": "appstore"
   },
   "us.zoom.xos": {
-    "source": "miss-nourl"
+    "domain": "zoom.us",
+    "faviconUrl": "https://www.google.com/s2/favicons?domain=zoom.us&sz=128",
+    "source": "favicon"
   },
   "zzada.Brewlet": {
     "domain": "github.com",
