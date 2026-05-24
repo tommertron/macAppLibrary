@@ -91,7 +91,8 @@
   "biz.papercut.pcng.client": {
     "name": "PaperCut MF",
     "description": "An enterprise print management application that manages secure printing, print quotas, authentication, and communication with managed printers and print servers.",
-    "categories": []
+    "categories": [],
+    "url": "https://www.papercut.com"
   },
   "br.com.marcosatanaka.musicbox": {
     "name": "MusicBox",
@@ -183,7 +184,8 @@
     "categories": [
       "Finance"
     ],
-    "developer": "Buhl Tax Service GmbH"
+    "developer": "Buhl Tax Service GmbH",
+    "url": "https://www.buhl.de/steuer/wiso-produkte/steuer-mac/"
   },
   "com.LittleFin.Chronicle-Touch": {
     "name": "Chronicle",
@@ -216,7 +218,8 @@
     "categories": [
       "Photography"
     ],
-    "developer": "ACD Systems International"
+    "developer": "ACD Systems International",
+    "url": "https://www.acdsee.com"
   },
   "com.adobe.adobedigitaleditions.app": {
     "name": "Adobe Digital Editions",
@@ -284,7 +287,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Ameba Labs"
+    "developer": "Ameba Labs",
+    "url": "https://swiftbar.app"
   },
   "com.andadinosaur.Vinegar": {
     "name": "Vinegar",
@@ -308,7 +312,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Anthropic PBC"
+    "developer": "Anthropic PBC",
+    "url": "https://claude.ai"
   },
   "com.anythingllm": {
     "name": "AnythingLLM",
@@ -342,7 +347,8 @@
     "description": "AlDente is a macOS app that helps preserve battery health by limiting the maximum charge level of your Mac's battery to a user-defined threshold. It allows you to set charging caps and manage power settings to extend your MacBook's battery lifespan.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://apphousekitchen.com"
   },
   "com.apple.Aperture3": {
     "name": "Aperture",
@@ -359,14 +365,16 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Apple Inc"
+    "developer": "Apple Inc",
+    "url": "https://developer.apple.com/sf-symbols/"
   },
   "com.apple.Safari": {
     "name": "Safari",
     "description": "Apple's built-in web browser with privacy-focused features, fast performance, and tight integration across Apple devices.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://www.apple.com/safari/"
   },
   "com.apple.TestFlight": {
     "name": "TestFlight",
@@ -396,7 +404,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Apple Inc"
+    "developer": "Apple Inc",
+    "url": "https://www.apple.com/keynote/"
   },
   "com.apple.iWork.Numbers": {
     "name": "Numbers",
@@ -404,7 +413,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Apple Inc"
+    "developer": "Apple Inc",
+    "url": "https://www.apple.com/numbers/"
   },
   "com.apple.iWork.Pages": {
     "name": "Pages",
@@ -412,7 +422,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Apple Inc"
+    "developer": "Apple Inc",
+    "url": "https://www.apple.com/pages/"
   },
   "com.appliedphasor.secure-shellfish": {
     "name": "ShellFish",
@@ -436,7 +447,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "K'ed by aqzs"
+    "developer": "K'ed by aqzs",
+    "url": "https://www.araxis.com"
   },
   "com.asiafu.Bloom": {
     "name": "Bloom",
@@ -499,7 +511,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "BinaryNights"
+    "developer": "BinaryNights",
+    "url": "https://binarynights.com"
   },
   "com.bitbq.Changes": {
     "name": "Changes",
@@ -732,7 +745,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Docker, Inc"
+    "developer": "Docker, Inc",
+    "url": "https://www.docker.com"
   },
   "com.drbuho.disktool.BuhoNTFS": {
     "name": "BuhoNTFS",
@@ -836,7 +850,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "GitHub, Inc"
+    "developer": "GitHub, Inc",
+    "url": "https://desktop.github.com"
   },
   "com.github.xor-gate.syncthing-macosx": {
     "name": "Syncthing",
@@ -995,7 +1010,8 @@
     "categories": [
       "Social Networking"
     ],
-    "developer": "Jonny Kuang"
+    "developer": "Jonny Kuang",
+    "url": "https://getmona.app"
   },
   "com.junecloud.Deliveries": {
     "name": "Deliveries",
@@ -1047,7 +1063,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Ryan Hanson"
+    "developer": "Ryan Hanson",
+    "url": "https://rectangleapp.com/pro"
   },
   "com.kruegersystems.calca.mac": {
     "name": "Calca",
@@ -1092,7 +1109,8 @@
     "description": "Adapter is a free video, audio, and image conversion application for macOS that allows users to convert media files between various formats with batch processing capabilities.",
     "categories": [
       "Utilities"
-    ]
+    ],
+    "url": "https://macroplant.com/adapter"
   },
   "com.mactrackerapp.Mactracker": {
     "name": "Mactracker",
@@ -1117,7 +1135,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Many Tricks"
+    "developer": "Many Tricks",
+    "url": "https://manytricks.com/namemangler/"
   },
   "com.marcoarment.instapaperpro": {
     "name": "Instapaper",
@@ -1200,7 +1219,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Microsoft"
+    "developer": "Microsoft",
+    "url": "https://www.microsoft.com/microsoft-teams"
   },
   "com.mimestream.Mimestream": {
     "name": "Mimestream",
@@ -1208,7 +1228,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Mimestream, LLC"
+    "developer": "Mimestream, LLC",
+    "url": "https://mimestream.com"
   },
   "com.mixedinkey.application": {
     "name": "Mixed In Key 11",
@@ -1291,7 +1312,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Noodlesoft, LLC"
+    "developer": "Noodlesoft, LLC",
+    "url": "https://www.noodlesoft.com"
   },
   "com.nordvpn.macos": {
     "name": "NordVPN",
@@ -1421,7 +1443,8 @@
     "categories": [
       "Business"
     ],
-    "developer": "Bitgamma s.a.s"
+    "developer": "Bitgamma s.a.s",
+    "url": "https://www.pdfkey.com"
   },
   "com.phocusllp.duemac": {
     "name": "Due",
@@ -1437,7 +1460,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Nicholas Moore, Pilotmoon Software"
+    "developer": "Nicholas Moore, Pilotmoon Software",
+    "url": "https://pilotmoon.com/popclip/"
   },
   "com.pixelmatorteam.pixelmator.x": {
     "name": "Pixelmator Pro",
@@ -1461,7 +1485,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Pierre TACCHI"
+    "developer": "Pierre TACCHI",
+    "url": "https://github.com/Pyroh/Fluor"
   },
   "com.ranchero.NetNewsWire-Evergreen": {
     "name": "NetNewsWire",
@@ -1469,7 +1494,8 @@
     "categories": [
       "News"
     ],
-    "developer": "Brent Simmons"
+    "developer": "Brent Simmons",
+    "url": "https://netnewswire.com"
   },
   "com.raycast.macos": {
     "name": "Raycast",
@@ -1477,7 +1503,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Raycast Technologies Ltd."
+    "developer": "Raycast Technologies Ltd.",
+    "url": "https://www.raycast.com"
   },
   "com.readmeansrun.Router": {
     "name": "Router",
@@ -1523,14 +1550,16 @@
   "com.rogueamoeba.audiohijack": {
     "name": "Audio Hijack",
     "description": "Audio Hijack is a professional audio recording and routing application for macOS that allows users to capture audio from any application or source on their computer. It enables mixing, effects processing, and high-quality recording of audio streams that would normally be difficult or impossible to record directly.",
-    "categories": []
+    "categories": [],
+    "url": "https://rogueamoeba.com/audiohijack/"
   },
   "com.rogueamoeba.farrago": {
     "name": "Farrago",
     "description": "A soundboard app for Mac that lets you organize and trigger audio clips instantly \u2014 great for podcasters, streamers, and presenters.",
     "categories": [
       "Music & Audio"
-    ]
+    ],
+    "url": "https://rogueamoeba.com/farrago/"
   },
   "com.runningwithcrayons.Alfred": {
     "name": "Alfred",
@@ -1590,7 +1619,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Sindre Sorhus"
+    "developer": "Sindre Sorhus",
+    "url": "https://sindresorhus.com/supercharge"
   },
   "com.splasm.audiobookbuilder2": {
     "name": "Audiobook Builder",
@@ -1626,7 +1656,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Stairways Software"
+    "developer": "Stairways Software",
+    "url": "https://www.keyboardmaestro.com"
   },
   "com.standingstonegames.ddo": {
     "name": "DDO",
@@ -1684,7 +1715,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Anysphere"
+    "developer": "Anysphere",
+    "url": "https://cursor.com"
   },
   "com.todoist.mac.Todoist": {
     "name": "Todoist",
@@ -1801,7 +1833,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "The Browser Company"
+    "developer": "The Browser Company",
+    "url": "https://arc.net"
   },
   "corp.sap.privileges": {
     "name": "Privileges",
@@ -1818,7 +1851,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Alexander Clauss"
+    "developer": "Alexander Clauss",
+    "url": "https://www.icab.de"
   },
   "de.kuatsu.consul": {
     "name": "Consul",
@@ -1848,7 +1882,8 @@
     "description": "A high-performance, collaborative code editor built in Rust with GPU rendering, real-time collaboration, and AI integration.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "url": "https://zed.dev"
   },
   "developer.apple.wwdc-Release": {
     "name": "Developer",
@@ -1872,7 +1907,8 @@
     "description": "A University of Michigan utility that installs and configures MPrint campus printers, queues, and printing support software on macOS systems.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "url": "https://its.umich.edu/computing/computers-software/mprint"
   },
   "fr.handbrake.HandBrake": {
     "name": "HandBrake",
@@ -1934,7 +1970,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "EDRLab"
+    "developer": "EDRLab",
+    "url": "https://thorium.edrlab.org"
   },
   "io.github.keycastr": {
     "name": "KeyCastr",
@@ -1959,7 +1996,8 @@
     "categories": [
       "Productivity"
     ],
-    "developer": "Rustem Mussabekov"
+    "developer": "Rustem Mussabekov",
+    "url": "https://raindrop.io"
   },
   "io.tailscale.ipn.macos": {
     "name": "Tailscale",
@@ -2012,7 +2050,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Laurent Cozic"
+    "developer": "Laurent Cozic",
+    "url": "https://joplinapp.org"
   },
   "net.downloadhelper.coapp": {
     "name": "DownloadHelper CoApp",
@@ -2081,7 +2120,8 @@
     "categories": [
       "Developer Tools"
     ],
-    "developer": "Free, Open Source (GNU GPL)"
+    "developer": "Free, Open Source (GNU GPL)",
+    "url": "https://imageoptim.com"
   },
   "net.publicspace.Boring-Old-Menu-Bar": {
     "name": "Boring Old Menu Bar",
@@ -2242,7 +2282,8 @@
     "categories": [
       "Entertainment"
     ],
-    "developer": "Jamie Zawinski"
+    "developer": "Jamie Zawinski",
+    "url": "https://www.jwz.org/cyberizer/"
   },
   "org.kde.kid3": {
     "name": "Kid3",
@@ -2259,7 +2300,8 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "The Transmission Project"
+    "developer": "The Transmission Project",
+    "url": "https://transmissionbt.com"
   },
   "org.mediathekview.MediathekView": {
     "name": "MediathekView",
@@ -2272,7 +2314,8 @@
     "description": "A popular web browser that provides standards-based internet browsing with support for extensions, privacy protections, tabbed browsing, and cross-platform synchronization.",
     "categories": [
       "Productivity"
-    ]
+    ],
+    "url": "https://www.mozilla.org/firefox/"
   },
   "org.mozilla.thunderbird": {
     "name": "Thunderbird",
@@ -2310,7 +2353,8 @@
     "description": "Restic-Browser is a macOS GUI application for browsing and restoring backups created with the Restic backup tool, allowing users to explore snapshot contents and recover files without using the command line.",
     "categories": [
       "Developer Tools"
-    ]
+    ],
+    "url": "https://github.com/emuell/restic-browser"
   },
   "org.spek-project": {
     "name": "Spek",
@@ -2351,7 +2395,8 @@
     "categories": [
       "Video"
     ],
-    "developer": "VideoLAN"
+    "developer": "VideoLAN",
+    "url": "https://www.videolan.org"
   },
   "org.whispersystems.signal-desktop": {
     "name": "Signal",
@@ -2359,7 +2404,8 @@
     "categories": [
       "Social Networking"
     ],
-    "developer": "Signal Messenger, LLC"
+    "developer": "Signal Messenger, LLC",
+    "url": "https://signal.org"
   },
   "pl.micropixels.NepTunes": {
     "name": "NepTunes",
@@ -2431,7 +2477,8 @@
     "categories": [
       "Business"
     ],
-    "developer": "Zoom Communications, Inc"
+    "developer": "Zoom Communications, Inc",
+    "url": "https://zoom.us"
   },
   "zzada.Brewlet": {
     "name": "Brewlet",
