@@ -23,14 +23,16 @@ struct AppScanner {
     }
 
     private static func scanDirectory(_ url: URL) -> [AppEntry] {
-        guard let items = try? FileManager.default.contentsOfDirectory(
+        // Recurse into subfolders (e.g. /Applications/Utilities, vendor folders)
+        // but treat .app bundles as leaves so we don't descend into their contents.
+        guard let enumerator = FileManager.default.enumerator(
             at: url,
             includingPropertiesForKeys: [.isDirectoryKey],
-            options: [.skipsHiddenFiles]
+            options: [.skipsHiddenFiles, .skipsPackageDescendants]
         ) else { return [] }
 
-        return items.compactMap { itemURL in
-            guard itemURL.pathExtension == "app" else { return nil }
+        return enumerator.compactMap { item in
+            guard let itemURL = item as? URL, itemURL.pathExtension == "app" else { return nil }
             return makeEntry(from: itemURL)
         }
     }
