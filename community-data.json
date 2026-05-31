@@ -1070,6 +1070,13 @@
     "developer": "Katsura Shareware",
     "url": "https://www.katsurashareware.com/amorphousdiskmark"
   },
+  "com.kewitschka.ZoneShare": {
+    "name": "Zone Share",
+    "description": "Perfect Screen Sharing for Ultrawide Monitors, Presentations & Lectures Share a specific screen area and draw, highlight, or annotate directly on it. Perfect for ultrawide displays.",
+    "categories": [
+      "Utilities"
+    ]
+  },
   "com.khanov.BlockerX": {
     "name": "1Blocker",
     "description": "1Blocker is a content blocker and privacy app for Safari that filters ads, trackers, and malicious websites to improve browsing speed and protect user privacy. It also includes features for managing cookies, blocking scripts, and customizing filtering rules.",
