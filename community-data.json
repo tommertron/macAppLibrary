@@ -1807,6 +1807,14 @@
     "categories": [],
     "url": "https://www.topazlabs.com/topaz-video"
   },
+  "com.tseiler.XSpeak": {
+    "name": "XSpeak",
+    "description": "XSpeak is your live meeting companion. It shows relevant facts and context as you talk Detects potential pressure and risks, helps you respond smarter Suggests what to say, right when you need it Transcribes every word and identifies speakers",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "Dmitrii Tseiler"
+  },
   "com.tuneupmymac.PhotosDuplicateCleaner": {
     "name": "Photos Duplicate Cleaner",
     "description": "Photos Duplicate Cleaner scans your macOS Photos library to identify and remove duplicate images, helping you free up storage space and keep your photo collection organized.",
