@@ -581,6 +581,11 @@
     "developer": "BrainFeverMedia",
     "url": "https://www.brainfevermedia.com"
   },
+  "com.brave.Browser": {
+    "name": "Brave Browser",
+    "description": "Brave Browser is a privacy-focused web browser that blocks ads and trackers by default while offering fast, secure internet browsing. It also includes built-in features such as a VPN, firewall, and a cryptocurrency wallet.",
+    "categories": []
+  },
   "com.brettterpstra.marked2": {
     "name": "Marked 2",
     "description": "A Markdown preview app that works alongside any editor, rendering documents in real time with custom styles and export options.",
