@@ -1,0 +1,8 @@
+{
+  "name": "todometer",
+  "description": "Todometer is a task management app for macOS that helps users organize and prioritize their to-do lists with a simple and intuitive interface, facilitating efficient tracking of tasks and deadlines.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "@cassidoo"
+}
