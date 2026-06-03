@@ -816,6 +816,14 @@
     "developer": "Asana",
     "url": "https://asana.com/download"
   },
+  "com.electron.todometer": {
+    "name": "todometer",
+    "description": "Todometer is a task management app for macOS that helps users organize and prioritize their to-do lists with a simple and intuitive interface, facilitating efficient tracking of tasks and deadlines.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "@cassidoo"
+  },
   "com.epsteinapps.Hover-for-Safari": {
     "name": "Hover for Safari",
     "description": "Hover for Safari is a browser extension for Safari on macOS that displays a larger preview image when you hover your cursor over thumbnails or small images on websites.",
