@@ -1,6 +1,6 @@
 {
   "name": "Keyboard Maestro",
-  "description": "A powerful macro and automation tool for macOS that can automate virtually anything \u2014 keystrokes, menus, scripts, and more.",
+  "description": "Keyboard Maestro is a comprehensive macOS automation utility that allows users to create custom macros for streamlining repetitive tasks by simulating keystrokes, mouse actions, and other system commands.",
   "categories": [
     "Utilities"
   ],
