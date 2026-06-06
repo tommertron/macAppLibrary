@@ -1,0 +1,8 @@
+{
+  "name": "LiquidFetch",
+  "description": "LiquidFetch is a macOS app that simplifies the process of downloading, installing, and managing applications, providing users with a streamlined experience for accessing their favorite software.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Apptorium"
+}
