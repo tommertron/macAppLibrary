@@ -443,6 +443,14 @@
     ],
     "url": "https://secureshellfish.app/"
   },
+  "com.apptorium.LiquidFetch": {
+    "name": "LiquidFetch",
+    "description": "LiquidFetch is a macOS app that simplifies the process of downloading, installing, and managing applications, providing users with a streamlined experience for accessing their favorite software.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Apptorium"
+  },
   "com.appzapper.appzapper2": {
     "name": "AppZapper",
     "description": "Uninstaller utility that removes applications along with their associated files, such as preferences, caches, and support files, ensuring a clean uninstall rather than simply dragging apps to the Trash.",
@@ -1727,7 +1735,7 @@
   },
   "com.stairways.keyboardmaestro.editor": {
     "name": "Keyboard Maestro",
-    "description": "A powerful macro and automation tool for macOS that can automate virtually anything \u2014 keystrokes, menus, scripts, and more.",
+    "description": "Keyboard Maestro is a comprehensive macOS automation utility that allows users to create custom macros for streamlining repetitive tasks by simulating keystrokes, mouse actions, and other system commands.",
     "categories": [
       "Utilities"
     ],
