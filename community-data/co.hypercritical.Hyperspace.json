@@ -1,0 +1,8 @@
+{
+  "name": "Hyperspace",
+  "description": "Scans a drive on your mac for duplicates and uses APFS-native functionality to create symlinks between them, keeping only the original, to save you space. ",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Hypercritical"
+}
