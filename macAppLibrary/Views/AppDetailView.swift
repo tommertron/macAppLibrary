@@ -150,12 +150,63 @@ struct AppDetailView: View {
 
 }
 
+// MARK: - Shared inline-edit affordance
+/// Consistent edit trigger used across the inline editors (developer, website,
+/// description, notes). Standardizes on a pencil icon button (issue #161).
+struct EditPencilButton: View {
+    let help: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: "pencil")
+                .font(.caption)
+        }
+        .buttonStyle(.plain)
+        .foregroundStyle(.secondary)
+        .help(help)
+    }
+}
+
+// MARK: - Save/Cancel bar for multi-line editors
+/// Save/Cancel controls for the multi-line editors (description, notes) with
+/// keyboard support (issue #162): ⌘-Return or ⌘-S saves, Esc cancels. Plain
+/// Return keeps inserting a newline because the shortcuts require ⌘.
+struct EditorSaveCancelBar: View {
+    let onSave: () -> Void
+    let onCancel: () -> Void
+
+    var body: some View {
+        HStack {
+            Button("Save") { onSave() }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.small)
+                .keyboardShortcut(.return, modifiers: .command)
+            Button("Cancel") { onCancel() }
+                .controlSize(.small)
+                .keyboardShortcut(.cancelAction)
+            Text("⌘↩ to save · esc to cancel")
+                .font(.caption2)
+                .foregroundStyle(.tertiary)
+        }
+        // ⌘S also saves. Hidden, zero-size — the key equivalent still registers.
+        .background(
+            Button("Save") { onSave() }
+                .keyboardShortcut("s", modifiers: .command)
+                .opacity(0)
+                .frame(width: 0, height: 0)
+                .accessibilityHidden(true)
+        )
+    }
+}
+
 // MARK: - Editable developer field
 struct DeveloperField: View {
     let app: AppEntry
     let store: AppLibraryStore
     @State private var isEditing = false
     @State private var text = ""
+    @FocusState private var focused: Bool
 
     var body: some View {
         HStack(spacing: 4) {
@@ -163,24 +214,22 @@ struct DeveloperField: View {
                 TextField("Developer name", text: $text)
                     .textFieldStyle(.roundedBorder)
                     .frame(width: 200)
+                    .focused($focused)
                     .onSubmit { commit() }
+                    .onAppear { focused = true }
                 Button("Save") { commit() }
                     .controlSize(.small)
                 Button("Cancel") { isEditing = false }
                     .controlSize(.small)
+                    .keyboardShortcut(.cancelAction)
             } else if let dev = app.effectiveDeveloper {
                 Text(dev)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
-                Button {
+                EditPencilButton(help: "Edit developer") {
                     text = app.userDeveloper ?? app.effectiveDeveloper ?? ""
                     isEditing = true
-                } label: {
-                    Image(systemName: "pencil")
-                        .font(.caption)
                 }
-                .buttonStyle(.plain)
-                .foregroundStyle(.tertiary)
                 CommunityPullButton(
                     state: communityStringPullState(app.communityDeveloper, current: app.effectiveDeveloper),
                     action: {
@@ -224,6 +273,7 @@ struct WebsiteRow: View {
     let store: AppLibraryStore
     @State private var isEditing = false
     @State private var urlText = ""
+    @FocusState private var focused: Bool
 
     var body: some View {
         GridRow {
@@ -235,24 +285,21 @@ struct WebsiteRow: View {
                     TextField("https://example.com", text: $urlText)
                         .textFieldStyle(.roundedBorder)
                         .frame(maxWidth: 250)
+                        .focused($focused)
                         .onSubmit { commit() }
+                        .onAppear { focused = true }
                     Button("Save") { commit() }
                         .controlSize(.small)
                     Button("Cancel") { isEditing = false }
                         .controlSize(.small)
+                        .keyboardShortcut(.cancelAction)
                 } else if let urlString = app.effectiveWebsiteURL, let url = URL(string: urlString) {
                     Link(urlString, destination: url)
                         .font(.body)
-                    Button {
+                    EditPencilButton(help: app.userWebsiteURL == nil ? "From community data — click to override" : "Edit website") {
                         urlText = app.userWebsiteURL ?? urlString
                         isEditing = true
-                    } label: {
-                        Image(systemName: "pencil")
-                            .font(.caption)
                     }
-                    .buttonStyle(.plain)
-                    .foregroundStyle(.secondary)
-                    .help(app.userWebsiteURL == nil ? "From community data — click to override" : "Edit website")
                     CommunityPullButton(
                         state: communityStringPullState(app.communityURL, current: app.effectiveWebsiteURL),
                         action: {
@@ -497,27 +544,27 @@ struct DescriptionEditor: View {
                     .font(.body)
                     .frame(minHeight: 80)
                     .overlay(RoundedRectangle(cornerRadius: 6).stroke(.separator))
-                HStack {
-                    Button("Save") { commit() }.buttonStyle(.borderedProminent).controlSize(.small)
-                    Button("Cancel") { isEditing = false }.controlSize(.small)
-                }
+                    .onAppear { focused = true }
+                EditorSaveCancelBar(onSave: { commit() }, onCancel: { isEditing = false })
             } else {
-                if displayed.isEmpty {
-                    Text("No description. Generate one with AI or type below.")
-                        .foregroundStyle(.tertiary)
-                        .italic()
-                } else {
-                    Text(displayed)
-                        .fixedSize(horizontal: false, vertical: true)
+                HStack(alignment: .top, spacing: 8) {
+                    Group {
+                        if displayed.isEmpty {
+                            Text("No description yet. Generate one with AI, or click the pencil to add.")
+                                .foregroundStyle(.tertiary)
+                                .italic()
+                        } else {
+                            Text(displayed)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    EditPencilButton(help: displayed.isEmpty ? "Add description" : "Edit description") {
+                        text = app.userDescription ?? app.communityDescription ?? ""
+                        isEditing = true
+                        focused = true
+                    }
                 }
-                Button("Edit Description") {
-                    text = app.userDescription ?? app.communityDescription ?? ""
-                    isEditing = true
-                    focused = true
-                }
-                .buttonStyle(.plain)
-                .foregroundStyle(Color.accentColor)
-                .font(.caption)
             }
         }
     }
@@ -546,27 +593,27 @@ struct NotesEditor: View {
                     .font(.body)
                     .frame(minHeight: 60)
                     .overlay(RoundedRectangle(cornerRadius: 6).stroke(.separator))
-                HStack {
-                    Button("Save") { commit() }.buttonStyle(.borderedProminent).controlSize(.small)
-                    Button("Cancel") { isEditing = false }.controlSize(.small)
-                }
+                    .onAppear { focused = true }
+                EditorSaveCancelBar(onSave: { commit() }, onCancel: { isEditing = false })
             } else {
-                if let notes = app.userNotes, !notes.isEmpty {
-                    Text(notes)
-                        .fixedSize(horizontal: false, vertical: true)
-                } else {
-                    Text("No notes.")
-                        .foregroundStyle(.tertiary)
-                        .italic()
+                HStack(alignment: .top, spacing: 8) {
+                    Group {
+                        if let notes = app.userNotes, !notes.isEmpty {
+                            Text(notes)
+                                .fixedSize(horizontal: false, vertical: true)
+                        } else {
+                            Text("No notes.")
+                                .foregroundStyle(.tertiary)
+                                .italic()
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    EditPencilButton(help: (app.userNotes?.isEmpty ?? true) ? "Add notes" : "Edit notes") {
+                        text = app.userNotes ?? ""
+                        isEditing = true
+                        focused = true
+                    }
                 }
-                Button("Edit Notes") {
-                    text = app.userNotes ?? ""
-                    isEditing = true
-                    focused = true
-                }
-                .buttonStyle(.plain)
-                .foregroundStyle(Color.accentColor)
-                .font(.caption)
             }
         }
     }
