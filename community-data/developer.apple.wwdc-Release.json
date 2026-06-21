@@ -2,7 +2,6 @@
   "name": "Developer",
   "description": "The Developer app by Apple provides developer news, features, and videos, including WWDC sessions.",
   "categories": [
-    "Reference",
     "Developer Tools"
   ],
   "developer": "Apple",
