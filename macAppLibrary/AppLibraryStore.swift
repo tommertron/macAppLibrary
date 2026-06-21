@@ -346,7 +346,8 @@ final class AppLibraryStore {
         errorMessage = nil
         defer { isLoading = false }
 
-        let scanned = await scanner.scan()
+        let includeChromeApps = UserDefaults.standard.bool(forKey: AppScanner.includeChromeAppsKey)
+        let scanned = await scanner.scan(includeChromeApps: includeChromeApps)
         let userData = await persistence.loadUserData()
         let communityData = (try? await communityService.fetchCommunityData()) ?? [:]
 
@@ -414,6 +415,31 @@ final class AppLibraryStore {
         )
         Task { await persistence.save(data, for: app.bundleID) }
         scheduleJSONExport()
+    }
+
+    /// Re-apply user metadata to every loaded app. Mirrors the user-data merge in
+    /// refresh(); used after the metadata file is relocated/synced so the library
+    /// reflects the (possibly merged) metadata without a full rescan.
+    private func applyUserData(_ userData: [String: UserAppData]) {
+        for i in apps.indices {
+            let u = userData[apps[i].bundleID]
+            apps[i].userDescription = u?.description
+            apps[i].userDeveloper = u?.developer
+            apps[i].userCategories = u?.categories ?? []
+            apps[i].userNotes = u?.notes
+            apps[i].userWebsiteURL = u?.websiteURL
+            apps[i].isFavorite = u?.isFavorite ?? false
+        }
+        scheduleJSONExport()
+    }
+
+    /// Point the user-metadata store at `folder` (nil = local, un-synced). Migrates
+    /// existing metadata, merges with any file already in the folder (e.g. from
+    /// another Mac), and re-applies the result to the library. Only metadata syncs;
+    /// installed apps are rescanned locally.
+    func setMetadataSyncFolder(_ folder: URL?) async {
+        let merged = await persistence.setSyncFolder(folder?.path)
+        applyUserData(merged)
     }
 
     func scheduleJSONExport() {

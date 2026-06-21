@@ -8,6 +8,8 @@ struct SettingsView: View {
     @AppStorage("menubarEnabled") private var menubarEnabled = true
     @AppStorage(JSONDataExporter.enabledKey) private var jsonExportEnabled = false
     @AppStorage(JSONDataExporter.customPathKey) private var jsonExportCustomPath = ""
+    @AppStorage(PersistenceService.syncFolderKey) private var metadataSyncFolder = ""
+    @AppStorage(AppScanner.includeChromeAppsKey) private var includeChromeApps = false
     @State private var apiInfo: APIDiscoveryInfo?
     @State private var claudeInstallStatus: ClaudeInstallStatus = .idle
 
@@ -45,6 +47,16 @@ struct SettingsView: View {
                     label: "Recently Updated: within",
                     threshold: $store.recentlyUpdatedThreshold
                 )
+            }
+
+            Section("Scanning") {
+                Toggle("Include Chrome web apps", isOn: $includeChromeApps)
+                    .onChange(of: includeChromeApps) {
+                        Task { await store.refresh() }
+                    }
+                Text("Chrome installs web apps (PWAs) as standalone .app bundles. Disable this to hide them from your library.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
 
             Section("Community Data") {
@@ -95,6 +107,36 @@ struct SettingsView: View {
                 }
 
                 Text("Writes apps.json whenever your library changes. Useful for Raycast/Alfred/CLI workflows that need offline access.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Section("Library Sync") {
+                LabeledContent("Metadata file") {
+                    HStack {
+                        Text(metadataSyncFolder.isEmpty ? "Stored locally (not synced)" : metadataSyncFolder)
+                            .font(.system(.caption, design: .monospaced))
+                            .textSelection(.enabled)
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                        Spacer()
+                        Button("Choose Folder…") { chooseSyncFolder() }
+                        if !metadataSyncFolder.isEmpty {
+                            Button("Use Local") {
+                                metadataSyncFolder = ""
+                                Task { await store.setMetadataSyncFolder(nil) }
+                            }
+                        }
+                    }
+                }
+                if !metadataSyncFolder.isEmpty {
+                    Button("Reveal in Finder") {
+                        let url = URL(fileURLWithPath: (metadataSyncFolder as NSString).expandingTildeInPath)
+                            .appendingPathComponent(PersistenceService.syncFileName)
+                        NSWorkspace.shared.activateFileViewerSelecting([url])
+                    }
+                }
+                Text("Your categories, descriptions, notes, websites, and favourites live in a single JSON file. Point it at an iCloud Drive (or other synced) folder to share this metadata across your Macs. Only the metadata syncs — which apps are installed is scanned fresh on each machine.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
@@ -252,6 +294,20 @@ struct SettingsView: View {
             if jsonExportEnabled {
                 Task { await store.exportJSONNow() }
             }
+        }
+    }
+
+    private func chooseSyncFolder() {
+        let panel = NSOpenPanel()
+        panel.canChooseFiles = false
+        panel.canChooseDirectories = true
+        panel.allowsMultipleSelection = false
+        panel.canCreateDirectories = true
+        panel.prompt = "Choose"
+        panel.message = "Choose a synced folder (e.g. in iCloud Drive) to store your library metadata"
+        if panel.runModal() == .OK, let url = panel.url {
+            metadataSyncFolder = url.path
+            Task { await store.setMetadataSyncFolder(url) }
         }
     }
 

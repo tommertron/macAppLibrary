@@ -7,12 +7,17 @@ struct AppScanner {
         URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Applications"),
     ]
 
-    func scan() async -> [AppEntry] {
+    static let includeChromeAppsKey = "includeChromeApps"
+
+    func scan(includeChromeApps: Bool = false) async -> [AppEntry] {
         await Task.detached(priority: .userInitiated) {
             var seen = Set<String>()
             var entries: [AppEntry] = []
             for path in Self.searchPaths {
                 for entry in Self.scanDirectory(path) {
+                    if !includeChromeApps && Self.isChromeWebApp(entry) {
+                        continue
+                    }
                     if seen.insert(entry.bundleID).inserted {
                         entries.append(entry)
                     }
@@ -20,6 +25,12 @@ struct AppScanner {
             }
             return entries.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
         }.value
+    }
+
+    /// Chrome web apps live under "Chrome Apps.localized" and have bundle IDs
+    /// starting with "com.google.Chrome.app." — filter them out by default.
+    private static func isChromeWebApp(_ entry: AppEntry) -> Bool {
+        entry.bundleID.hasPrefix("com.google.Chrome.app.")
     }
 
     private static func scanDirectory(_ url: URL) -> [AppEntry] {
