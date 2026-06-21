@@ -9,6 +9,7 @@ struct SettingsView: View {
     @AppStorage(JSONDataExporter.enabledKey) private var jsonExportEnabled = false
     @AppStorage(JSONDataExporter.customPathKey) private var jsonExportCustomPath = ""
     @AppStorage(PersistenceService.syncFolderKey) private var metadataSyncFolder = ""
+    @AppStorage(AppScanner.includeChromeAppsKey) private var includeChromeApps = false
     @State private var apiInfo: APIDiscoveryInfo?
     @State private var claudeInstallStatus: ClaudeInstallStatus = .idle
 
@@ -46,6 +47,16 @@ struct SettingsView: View {
                     label: "Recently Updated: within",
                     threshold: $store.recentlyUpdatedThreshold
                 )
+            }
+
+            Section("Scanning") {
+                Toggle("Include Chrome web apps", isOn: $includeChromeApps)
+                    .onChange(of: includeChromeApps) {
+                        Task { await store.refresh() }
+                    }
+                Text("Chrome installs web apps (PWAs) as standalone .app bundles. Disable this to hide them from your library.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
 
             Section("Community Data") {

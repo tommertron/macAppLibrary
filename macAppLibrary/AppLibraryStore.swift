@@ -346,7 +346,8 @@ final class AppLibraryStore {
         errorMessage = nil
         defer { isLoading = false }
 
-        let scanned = await scanner.scan()
+        let includeChromeApps = UserDefaults.standard.bool(forKey: AppScanner.includeChromeAppsKey)
+        let scanned = await scanner.scan(includeChromeApps: includeChromeApps)
         let userData = await persistence.loadUserData()
         let communityData = (try? await communityService.fetchCommunityData()) ?? [:]
 
