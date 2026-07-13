@@ -891,6 +891,12 @@
     "developer": "PFU Limited",
     "url": "https://www.scansnapit.com"
   },
+  "com.getdropbox.dropbox": {
+    "name": "Dropbox",
+    "description": "Dropbox is a cloud storage and file hosting service that allows users to store, sync, and share digital files across multiple devices, including computers, smartphones, and tablets.",
+    "categories": [],
+    "developer": "Dropbox, Inc"
+  },
   "com.github.GitHubClient": {
     "name": "GitHub Desktop",
     "description": "GitHub's official desktop client for managing repositories, pull requests, and branches with a visual interface.",
