@@ -1,0 +1,9 @@
+{
+  "name": "Compressor Creator Studio",
+  "description": "Compressor is a powerful video encoding and export application for macOS. It is available as a standalone purchase or as part of the Apple Creator Studio subscription bundle, which also includes apps like Final Cut Pro, Logic Pro, and Motion.\n\nKey Features of Compressor\n✶ Format Flexibility: Export video to virtually any output format or container.\n✶ Batch Processing: Encode large numbers of media files simultaneously.\n✶ Advanced Delivery: Package movies for the iTunes Store, deliver HDR video, and manage closed captions or subtitles.\n✶ Workflow Integration: Works seamlessly alongside Final Cut Pro and Motion for rendering and output management.",
+  "categories": [
+    "Video"
+  ],
+  "developer": "Apple",
+  "url": "https://www.apple.com/au/final-cut-pro/#compressor"
+}
