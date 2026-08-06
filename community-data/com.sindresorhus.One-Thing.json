@@ -1,0 +1,9 @@
+{
+  "name": "One Thing",
+  "description": "Put a single task or goal in your menu bar\nThis can be a useful tool to help you focus on a single task.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Sindre Sorhus",
+  "url": "https://sindresorhus.com/one-thing"
+}
