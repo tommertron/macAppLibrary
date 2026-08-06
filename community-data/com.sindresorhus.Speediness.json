@@ -1,0 +1,9 @@
+{
+  "name": "Speediness",
+  "description": "Quickly check your internet connection speed.\n\nIt also includes your internet connection ping and RPM, which are two different ways of measuring latency.\n\nBy default, tests are run in parallel to better reflect real-world situations. You can change this in the settings.\n\nThe app also comes with support for Shortcuts.\n\nYou can view the history of results over time, add a note to entries, and export to CSV or JSON.\n\n\nFAQ’s\n\n• How does it compare to Speedtest by Ookla?\n\tThe Speedtest app uses a nearby server, which means the speed does not actually reflect real-world usage - it \tshows the most optimal scenario. Its requests are also often prioritized by ISPs, which skews the numbers even \tmore. Speediness also looks more like a proper macOS app and it has support for Shortcuts.\n\n• How does it compare to fast.com?\n\tThe problem with fast.com is that it's run by Netflix, and Netflix's servers are often prioritized (and sometimes \tthrottled), meaning you won't always get a realistic value. It pretty much gives you your speed for watching Netflix.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Sindre Sorhus",
+  "url": "https://sindresorhus.com/speediness"
+}
