@@ -1,0 +1,9 @@
+{
+  "name": "Universal Print",
+  "description": "Find and print to your organization's cloud printers from your Mac using Universal Print. It's as simple as selecting a printer near you and clicking \"Print\".\n\nIt's simple.\n\nUniversal Print boosts your productivity by offering streamlined location-based printer discovery when finding and installing printers. When it comes time to print something, there's zero learning curve - print the same way you already print today.\n\nKey features:\n- Quickly and easily find the printers you need with an intuitive search experience.\n- Print from anywhere when connected to the internet.\n- Print effortlessly every time.\n- Print from any app on macOS.\n- Retrieve print jobs securely after scanning the QR code with your iPhone.\n\nIt's secure.\n\nMicrosoft is committed to protecting your data and privacy. Your organizational and personal data is handled in accordance with Microsoft data management guidelines.\n\nOnce enabled to use Universal Print by your IT administrator, you'll be able to view, add, and print to any printer you've been granted access to, ensuring security while simplifying the process for you.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Microsoft Corporation",
+  "url": "https://print.microsoft.com"
+}
