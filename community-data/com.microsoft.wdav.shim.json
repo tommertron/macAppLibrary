@@ -1,0 +1,6 @@
+{
+  "name": "Microsoft Defender Shim",
+  "description": "Microsoft Defender for Endpoint on macOS helps organizations prevent, detect, investigate, and respond to advanced threats on Mac devices. Built natively on Apple's system extension architecture, it delivers enterprise-grade protection optimized for macOS workloads - from software development to content creation - with seamless integration into your existing security operations through the Microsoft Defender portal.",
+  "categories": [],
+  "developer": "Microsoft Corporation"
+}
