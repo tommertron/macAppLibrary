@@ -1,0 +1,9 @@
+{
+  "name": "Stickier",
+  "description": "Old-school sticky notes … with a few new tricks.\n\n• sync notes between all of your macOS and iOS devices\n• browse recent revisions of notes\n• italic/bold/underline/strikethrough text\n• checkboxes and links\n• customizable font and colors\n• custom background images\n• optional menu bar access\n• global shortcut key for quick notes\n• collapsible and floating (always-on-top) note windows\n• snap-to-grid option to keep windows tidy\n\nThe companion Stickier Mobile app is available in the ios App Store.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Camazotz LLC",
+  "url": "https://camazotz.com/stickier/"
+}
