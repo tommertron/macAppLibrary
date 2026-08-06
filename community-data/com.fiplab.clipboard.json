@@ -1,0 +1,10 @@
+{
+  "name": "CopyClip",
+  "description": "Clipboard History - manage your clipboard\n\nCopyClip is the simplest and most efficient clipboard manager for your Mac.\nRunning discreetly from your menu bar, this app stores all that you have copied or cut in the past, allowing you to quickly find that snippet of text you've been looking for.",
+  "categories": [
+    "Productivity",
+    "Menubar"
+  ],
+  "developer": "FIPLAB Ltd",
+  "url": "https://fiplab.com/"
+}
