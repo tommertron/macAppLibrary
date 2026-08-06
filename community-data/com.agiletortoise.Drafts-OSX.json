@@ -2,7 +2,8 @@
   "name": "Drafts",
   "description": "A quick-capture writing app where text starts here — capture ideas fast and then send them anywhere with powerful actions.",
   "categories": [
-    "Productivity"
+    "Productivity",
+    "Writing"
   ],
   "developer": "Agile Tortoise",
   "url": "https://getdrafts.com"
