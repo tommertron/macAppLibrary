@@ -1,0 +1,11 @@
+{
+  "name": "Clyde",
+  "description": "Get a call if someone attempts to steal you Mac while you’re away.\nNo more, “Hey, could you watch my stuff please?”\n\nHow Clyde works\n\t1. Toggle Clyde\n\t2. Leave the lid open\n\t3. Walk Away\n\nClyde is easy to use and provides peace of mind when you use your laptop in public places. When someone tries to close your MacBook’s lid when Clyde is turned on, you will get a call on your Apple Watch/Phone. \n\nYou can also choose to sound a loud alarm on your Mac in case that happens. To disarm the alarm, simply sign into your Mac and the alarm will turn off. With Clyde, you can rest assured that your laptop is safe and sound.\n\nGet a free version of Clyde which rings an alarm on your Mac if somebody attempts theft. You do not get notified on your phone/watch with this version.",
+  "categories": [
+    "Menubar",
+    "Security",
+    "Developer Tools"
+  ],
+  "developer": "Mansidak Singh",
+  "url": "https://theclyde.app/"
+}
