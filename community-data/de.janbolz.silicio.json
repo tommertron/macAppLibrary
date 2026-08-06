@@ -1,0 +1,9 @@
+{
+  "name": "Silicio",
+  "description": "Silico: Widgets + Mini Player\nfor Apple Music, Spotify & iTunes\n\nSilicio adds a mini player with album art for controlling music that's playing on your computer. It works with iTunes, the Apple Music app, Spotify, and more, providing customisable themes, song change notifications, and keyboard shortcuts along with desktop widgets.\n\nDESKTOP WIDGETS\nSilicio brings several music widgets showing album art and song information. (macOS Sonoma and newer)\n\nDESKTOP MINI PLAYER\nPlace a mini player with high-quality album art on your desktop.\n\nBEAUTIFUL THEMES\nCustomise the mini player with themes, each lets the album art shine.\n\nLOVE YOUR FAVOURITE SONGS\nSelect songs you like with ease (iTunes, Apple Music, and Last.fm)\n\nNOW PLAYING NOTIFICATIONS\nGet notified when a new song starts playing on your Mac.\n\nGLOBAL KEYBOARD SHORTCUTS\nInstantly control your music player from anywhere with your keyboard.\n\nLAST.FM INTEGRATION\nScrobble the songs you play to your Last.fm profile.\n\nPODCASTS\nFast-forward and rewind within the podcast. (iTunes and Spotify)\n\nKNOW MORE\nGet further information about the song and artist you're listening to on Wikipedia and other web sites.\n",
+  "categories": [
+    "Music"
+  ],
+  "developer": "Jan Bolz",
+  "url": "https://bolzoneapps.tumblr.com/silicio-widget"
+}
