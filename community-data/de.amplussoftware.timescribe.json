@@ -1,0 +1,10 @@
+{
+  "name": "TimeScribe",
+  "description": "Modern & private time tracking for macOS & Windows. No cloud, no registration, no paywall. Just download and track your work hours 100% offline.\n\nTimeScribe runs locally on your device, needs no account, and helps you keep track of your working hours, breaks, projects and overtime.\n\nTimeScribe is completely free. There are no hidden costs, no subscriptions, and no restrictions.\n\nFeatures:\n\t• Document working hours\n\tFor home office, office, and flexible work models. Keep working hours and breaks clearly and reliably \trecorded.\n\n\t• Understand overtime\n\tSee early when you are working too much or too little. That helps you spot deviations before they add up.\n\t\n\t•Bill client hours\n\tTrack projects, hourly rates, and exports for invoices. That helps you document billable time cleanly and without \tmuch rework.\n\n\t•Right from the menu bar\n\tControl your timer directly from the menu bar and switch quickly between projects. That keeps your time tracking \tonly one click away\n\n\t• App tracking\n\tTimeScribe shows you which apps you used during your workday. That gives you more overview and helps you \tunderstand your time better.\n\n\t• Absences & holidays\n\tPlan vacation and manage sick days clearly in one place. Public holidays can also be considered automatically in \tyour calendar and time tracking.\n\n\t• Keyboard shortcuts & deeplinks\n\tStart and control TimeScribe via shortcut or deeplink without clicking through the app. Ideal for fast workflows and \tyour own automations.",
+  "categories": [
+    "Developer Tools",
+    "Productivity"
+  ],
+  "developer": "TimeScribe",
+  "url": "https://timescribe.app/"
+}
