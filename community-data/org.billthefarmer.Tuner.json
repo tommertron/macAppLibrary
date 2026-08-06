@@ -1,0 +1,9 @@
+{
+  "name": "Tuner",
+  "description": "Musical instrument strobe tuner\nA musical instrument strobe tuner with cents and frequency display. With additional features useful for tuning accordions or melodeons. The strobe display may be replaced with the staff, if required. Windows and Mac versions are available. An Android version is available, also on F-Droid.",
+  "categories": [
+    "Music"
+  ],
+  "developer": "Bill Farmer",
+  "url": "https://github.com/billthefarmer/ctuner/tree/master"
+}
