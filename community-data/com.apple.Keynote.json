@@ -1,0 +1,9 @@
+{
+  "name": "Keynote Creator Studio",
+  "description": "Keynote is Apple’s native presentation software for macOS, iOS, and iPadOS. Similar to Microsoft PowerPoint, it allows users to build stunning visual slideshows using professional themes, cinematic animations, media embedding, and real-time team collaboration. It comes pre-installed or free on most Apple devices.\n\nKey Features\n✩ Cinematic Tools: Includes smooth transitions like Magic Move and high-end object animations.\n✩ Live Video Feeds: Embed a live video camera feed directly into any slide as picture-in-picture.\n✩ Collaboration: Support for multi-user, real-time editing across Mac, iPad, iPhone, and PC.\n✩ Compatibility: Fully exports files to Microsoft PowerPoint format or video files",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Apple Inc",
+  "url": "https://www.apple.com/nz/keynote/"
+}
