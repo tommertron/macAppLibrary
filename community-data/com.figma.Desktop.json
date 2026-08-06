@@ -1,0 +1,10 @@
+{
+  "name": "Figma",
+  "description": "View Designs. Comment. Mirror. \n\nFigma is a cloud-based design and prototyping platform where teams collaborate in real time to build products, websites, and user interfaces. It runs in web browsers or via desktop and mobile apps, uniting the entire product creation process from initial vector drawing to developer handoff.\n\nCore Features\n✮ Real-Time Collaboration: Multiple users can view, edit, and comment on the same file simultaneously.\n✮ Prototyping: Build interactive, clickable models of apps and web pages to test user flows.\n✮ FigJam: Integrated digital whiteboards for team brainstorming, workshops, and agile planning.\n✮ Dev Mode: A specialized workspace that helps developers inspect design specifications and pull clean code.\n✮ Figma Slides: A tool to create and collaborate on interactive presentations directly within the ecosystem.\n✮ Figma Make: An AI-powered feature that generates functional layouts and prototypes from simple text descriptions",
+  "categories": [
+    "Graphics Design",
+    "Productivity"
+  ],
+  "developer": "Figma",
+  "url": "https://www.figma.com/"
+}
