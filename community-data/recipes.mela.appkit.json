@@ -1,6 +1,6 @@
 {
   "name": "Mela",
-  "description": "A recipe manager for collecting, organizing, and cooking from recipes, with import from the web and meal planning features.",
+  "description": "A recipe manager for collecting, organizing, and cooking from recipes, with import from the web and meal planning features.\n\nIt features an in-built web browser that automatically extracts recipes from webpages, an RSS feed reader for food blogs, a distraction-free Cook Mode, and iCloud sync integration with Apple Reminders and Calendar.",
   "categories": [
     "Food & Drink"
   ],
