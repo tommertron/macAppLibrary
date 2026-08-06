@@ -1,0 +1,9 @@
+{
+  "name": "KeyboardCleanTool",
+  "description": "KeyboardCleanTool is a utility designed specifically for Mac users, enabling them to effectively clean their keyboards without accidental input. This free tool temporarily disables all keyboard and TouchBar interactions, providing a safe environment for cleaning. Users simply activate the tool, and their keyboard becomes unresponsive, ensuring that no unintended commands are executed during the cleaning process. This feature is particularly useful for maintaining hygiene and prolonging the lifespan of the keyboard.\n\nThe application is straightforward to use, requiring no complex setup or configurations. With its minimalistic design and focus on functionality, KeyboardCleanTool allows users to focus on their cleaning tasks without distractions. Its compatibility with Mac platforms makes it an essential tool for any Mac user looking to keep their keyboard in pristine condition.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "folivora",
+  "url": "https://folivora.ai/keyboardcleantool"
+}
