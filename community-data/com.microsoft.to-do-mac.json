@@ -1,0 +1,9 @@
+{
+  "name": "Microsoft To Do",
+  "description": "Microsoft To Do is a free, cloud-based task management tool that lets you plan your day, set reminders, and sync lists across Windows, Mac, iOS, Android, and the web. Built by the team behind Wunderlist, it integrates deeply with Outlook Tasks to keep your work and personal life organized.\n\nCore Features\n⭑ My Day:A smart, personalized daily planner that resets each morning so you can add fresh tasks or pick up where you left off.\n⭑ Task Breakdown: Split large jobs into smaller steps, add due dates, and set recurring reminders.\n⭑ List Sharing: Collaborate on grocery lists, projects, or travel plans by sharing lists with friends, family, or coworkers.\n⭑ File Attachments: Add files up to 25 MB to any individual task.\n⭑ Customization: Personalize individual lists with color-coding, emojis, and dark mode themes.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Microsoft Corporation",
+  "url": "https://go.microsoft.com/fwlink/p/?LinkID=2004497&clcid=0x1409&culture=en-nz&country=nz"
+}
