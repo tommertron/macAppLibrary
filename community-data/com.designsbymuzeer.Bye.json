@@ -1,0 +1,11 @@
+{
+  "name": "Bye",
+  "description": "Bye 👋 - Easily Bulk close your running apps.\nA native, open-source macOS utility to quit running applications instantly, built with SwiftUI.\n\nClose your running apps easily. One click, and they're gone. Say Bye to the mess.\n\n💡 The Problem & The Designer's Solution\nThis isn't a massive project built by a seasoned developer—it's a small, cute utility born out of a simple frustration.\n\nAs a designer (I'm designsbymuzeer), I was tired of the hassle: after closing Figma, VS Code, and a dozen utility apps, I still had to manually hunt down every single open app to quit it and reclaim my system's focus. It felt like digital clutter was winning.\n\nI realized I didn't need to be a \"super dev\" to solve this. Utilizing modern tools and a clear design vision, I built Bye—a tiny menu bar companion that is fast, intuitive, and visually native.\n\nThis project is simply my solution to a common community problem, and I'd love to share it with anyone who values a clean workspace. Enjoy!\n\n\n✨ Key Features\n\t→ Native & Lightweight: Built using modern SwiftUI for a minimal footprint and near-zero CPU usage \twhen idle.\n\t→ Instant Quitting: Quit all running user applications with a single click.\n\t→  Selective Control: Easily click to select or deselect specific apps you need to keep open.\n\t→ Adaptive Design: Features a glass-morphic interface that seamlessly adapts to Light and Dark \tMode.\n\t→ Open Source: Full source code available here for transparency and collaboration.",
+  "categories": [
+    "",
+    "Menubar",
+    "Developer Tools"
+  ],
+  "developer": "designsbymuzeer",
+  "url": "https://github.com/designsbymuzeer/Bye-Mac-App"
+}
