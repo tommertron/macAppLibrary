@@ -1,0 +1,10 @@
+{
+  "name": "Clocker - World Clock",
+  "description": "The menubar app for distributed teams.\nWorld times, upcoming meetings, and a calendar, all one glance away.\n\nClocker is a popular, free menu bar application for macOS designed to help users track multiple global time zones, schedule remote meetings, and manage time differences. It allows you to pin world clocks straight to your Mac menu bar or drop down a clean interface with a time-scrolling comparison slider.",
+  "categories": [
+    "Utilities",
+    "Menubar"
+  ],
+  "developer": "Abhishek Banthia",
+  "url": "https://adrakstudio.com/clocker"
+}
