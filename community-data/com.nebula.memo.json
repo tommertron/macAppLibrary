@@ -1,0 +1,9 @@
+{
+  "name": "Memo",
+  "description": "Powerful Sticky Notes App for iPhone, Mac and Apple Vision Pro.\n\nMemo, enables users to create, organize, and sync notes across multiple devices using iCloud. With features such as colorful notes, markdown support, and attachments, users can easily keep their notes updated and accessible on-the-go.\n\n⭑ Colorful Notes ⭑\nThe app allows users to customize their notes with various colors, fonts, and backgrounds, making it easy to organize and visually distinguish between different notes.\n\n⭑ iCloud Sync ⭑ \nThe app seamlessly syncs notes across all devices connected to the user's iCloud account, ensuring that their notes are always up-to-date and accessible.\n\n⭑ Markdown Support ⭑\nThe app supports Markdown formatting, allowing users to easily create headings, lists, links, and other formatting options to make their notes more readable and organized.\n\n⭑ Attachments ⭑\nThe app allows users to attach files, images, and other media to their notes, making it easy to keep relevant information in one place.\n\n⭑ Widgets ⭑\nThe app includes widgets that display notes on the home screen or lock screen, making it easy for users to quickly access their notes without having to open the app.\n\n⭑ Security and Privacy ⭑\nThe app ensures that users' notes are kept secure and private, with features such as encryption, passcode protection, and two-factor authentication to prevent unauthorized access.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Nebula",
+  "url": "https://memo-app.net/"
+}
