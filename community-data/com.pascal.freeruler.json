@@ -1,0 +1,9 @@
+{
+  "name": "Free Ruler",
+  "description": "Free Ruler\nA ruler application for macOS\n\nFeatures\n⇨ Horizontal and vertical rulers.\n⇨ Measure in pixels, millimeters, or inches (press U to cycle).\n⇨ Float rulers above other applications (press F to toggle).\n⇨ Move windows independently or as a group (press G to toggle).\n⇨ Show, hide, and reopen rulers from the menu or keyboard.\n⇨ Drag the end of each ruler to resize.\n⇨ Show or hide the shadow behind rulers (press S to toggle).\n⇨ Align rulers at mouse location (press O for origin).\n⇨ Reset ruler locations with Command-R.\n⇨ Available in multiple languages.\n\nDownload\nFree Ruler requires macOS Sonoma or later.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Pascal Balthrop",
+  "url": "http://pascal.com/software/freeruler"
+}
