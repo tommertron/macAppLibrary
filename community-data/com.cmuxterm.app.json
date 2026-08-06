@@ -1,0 +1,7 @@
+{
+  "name": "cmux",
+  "description": "An alternative terminal application with support for multiple tabs and workspaces, with a built-in browswer. ",
+  "categories": [
+    "Developer Tools"
+  ]
+}
