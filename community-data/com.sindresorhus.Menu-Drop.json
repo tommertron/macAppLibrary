@@ -1,0 +1,9 @@
+{
+  "name": "Menu Drop",
+  "description": "Menu Drop is a free lightweight macOS utility developed by Sindre Sorhus that brings quick, drag-and-drop AirDrop sharing directly to your Mac's menu bar.\n\nCore Features\n✱ Drag-and-Drop Sharing: Drag files, images, links, or text straight onto the app's menu bar icon to trigger the system AirDrop window immediately.\n✱ Safari Integration: You can drag a URL right out of the Safari address bar and drop it onto the icon to send it over.\n✱ Share from Clipboard: Fast-track sharing by sending whatever text or media is currently on your clipboard via customizable hotkeys.\n✱ Share from Files: Quickly launch a file picker directly from the menu bar to select specific documents.\n✱ Local Security: Built without internet permissions, meaning your data never leaves Apple's native, sandboxed AirDrop framework.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Sindre Sorhus",
+  "url": "https://sindresorhus.com/menu-drop"
+}
