@@ -1,0 +1,7 @@
+{
+  "name": "Lispr",
+  "description": "Free Mac Voice Dictation & Translation\n\nLispr turns your voice into text, anywhere on your Mac. It exists because we wanted it for ourselves — and couldn't find one this simple.\n\nHow Lispr Works:\n✓ Push-to-Talk Gesture: Press and hold the right Option key to start recording your voice, and release it to drop typed text at your current cursor position.\n\n✓ Live Translation: Tap an extra key mid-speech to translate your spoken words directly into one of 32 different target languages.\n\n✓ No Accounts Needed: The utility requires no login, subscription, or setup configuration files to begin dictating.\n\n✓ Privacy & Processing: Audio is processed via encrypted connections for transcription and is not stored or used for model training.\n\n",
+  "categories": [],
+  "developer": "Codebridge Technology",
+  "url": "https://lispr.ai/"
+}
