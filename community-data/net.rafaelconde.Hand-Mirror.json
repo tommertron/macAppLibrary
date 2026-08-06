@@ -1,0 +1,9 @@
+{
+  "name": "Hand Mirror",
+  "description": "A quick camera check, right from the menu bar. \n\nWhat is this?\nIt's a macOS app that lives in your menu bar, and when you click on it you get a view from your camera.\n\nYeah but why?\nYou know when you have to join a Zoom call but want to check your face first, or make sure nothing too embarrassing is in frame? So you open Photo Booth or something? But that's like 5 keyboard-presses at best? Maybe a quick thing might save you half a second or something?\n\nWhy not just open Photo Booth instead?\nOpening Photo Booth was exactly what I was doing, but I would use Spotlight, and sometimes it would open Photos instead, or I would open Photo Booth so much that if I just typed \"Phot\" in Spotlight it would default to Photo Booth and not Photos, and that's nice but not what I want — if I type \"Phot\" and hit return, I would expect to open \"Photos\" and not \"Photo Booth\". So that was getting annoying and I decided to build this instead.\n\nDoes this app do anything else?\nYeah, I've received a lot of improvements and feature requests in the first two years of the app being out in the world, so I've decided to bundle them all in what I'm calling Hand Mirror Plus!\n\nIt's a one-time purchase that will give you all the current and future features added to the bundle, forever. And every time a major new feature is added, the price of the bundle goes up. So the current price is the cheapest it will ever be.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Rafael Conde (Rafa Design)",
+  "url": "https://handmirror.app/"
+}
