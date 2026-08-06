@@ -1,6 +1,6 @@
 {
   "name": "Marked 2",
-  "description": "A Markdown preview app that works alongside any editor, rendering documents in real time with custom styles and export options.",
+  "description": "Marked 2 is a preview and analysis tool for Markdown documents that displays live previews, provides readability statistics, and offers various export options. It integrates with popular text editors and writing tools to help writers assess and refine their content.",
   "categories": [
     "Productivity"
   ],
