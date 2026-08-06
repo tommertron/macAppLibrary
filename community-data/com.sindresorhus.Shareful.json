@@ -1,0 +1,9 @@
+{
+  "name": "Shareful",
+  "description": "Give the macOS share menu superpowers.\n\nShareful makes the system share menu even more useful by providing some commonly needed share services like copy and save.",
+  "categories": [
+    "Productivity"
+  ],
+  "developer": "Sindre Sorhus",
+  "url": "https://sindresorhus.com/shareful"
+}
