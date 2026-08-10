@@ -1,0 +1,11 @@
+{
+  "name": "Nexus Shell",
+  "description": "A native macOS SSH workspace with tabbed terminals, dual-pane SFTP, SSH key management, server and network monitoring, Docker management, and encrypted local session logs.",
+  "categories": [
+    "Developer Tools",
+    "System Administration",
+    "Utilities"
+  ],
+  "developer": "Sameral",
+  "url": "https://nexusshell.app/"
+}
