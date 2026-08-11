@@ -51,7 +51,7 @@
     "categories": [
       "Music & Audio"
     ],
-    "developer": "Adrian Schönig",
+    "developer": "Adrian Sch\u00f6nig",
     "url": "https://longplay.rocks"
   },
   "app.macdown.macdown3000": {
@@ -167,7 +167,7 @@
   },
   "com.1password.safari": {
     "name": "1Password for Safari",
-    "description": "1Password for Safari is a browser extension that integrates 1Password's password management functionality directly into Safari, allowing users to autofill saved logins, passwords, credit cards, and other credentials on websites. (It doesn’t require the desktop app to be installed; it can sync directly to a 1Password account.)",
+    "description": "1Password for Safari is a browser extension that integrates 1Password's password management functionality directly into Safari, allowing users to autofill saved logins, passwords, credit cards, and other credentials on websites. (It doesn\u2019t require the desktop app to be installed; it can sync directly to a 1Password account.)",
     "categories": [
       "Utilities"
     ],
@@ -219,7 +219,7 @@
   },
   "com.acdsystems.acdseePhotoFlash": {
     "name": "ACDSee Photo Flash",
-    "description": "Minimalist app for brightening underexposed photos using ACDSee’s “Lighting and Contrast Enhancement (LCE)” technology to avoid excessive grain and blowout. (Discontinued; replaced with Light EQ by ACDSee.)",
+    "description": "Minimalist app for brightening underexposed photos using ACDSee\u2019s \u201cLighting and Contrast Enhancement (LCE)\u201d technology to avoid excessive grain and blowout. (Discontinued; replaced with Light EQ by ACDSee.)",
     "categories": [
       "Photography"
     ],
@@ -238,7 +238,7 @@
   },
   "com.agiletortoise.Drafts-OSX": {
     "name": "Drafts",
-    "description": "A quick-capture writing app where text starts here — capture ideas fast and then send them anywhere with powerful actions.",
+    "description": "A quick-capture writing app where text starts here \u2014 capture ideas fast and then send them anywhere with powerful actions.",
     "categories": [
       "Productivity"
     ],
@@ -342,7 +342,7 @@
   },
   "com.apimac.CleanText": {
     "name": "Clean Text",
-    "description": "Clean Text cleans and transforms text from the clipboard, removing unwanted formatting, fixing spacing and line breaks, converting text case, and more. It streamlines pasting plain, properly formatted text into other applications. It also offers tools for transforming text like regular expressions, Unicode 𝓯𝓪𝓷𝓬𝔂 𝖙𝖊𝖝𝖙, converting quote mark types (like curly quotes), or applying AI text suggestions.",
+    "description": "Clean Text cleans and transforms text from the clipboard, removing unwanted formatting, fixing spacing and line breaks, converting text case, and more. It streamlines pasting plain, properly formatted text into other applications. It also offers tools for transforming text like regular expressions, Unicode \ud835\udcef\ud835\udcea\ud835\udcf7\ud835\udcec\ud835\udd02 \ud835\udd99\ud835\udd8a\ud835\udd9d\ud835\udd99, converting quote mark types (like curly quotes), or applying AI text suggestions.",
     "categories": [
       "Productivity"
     ],
@@ -573,7 +573,7 @@
   },
   "com.bloombuilt.dayone-mac": {
     "name": "Day One",
-    "description": "Day One is a journaling app for writing, organizing, and preserving personal journal entries. It’s designed to help you get and stay in the habit of journaling, and to protect your data with encryption, sync, and backup.",
+    "description": "Day One is a journaling app for writing, organizing, and preserving personal journal entries. It\u2019s designed to help you get and stay in the habit of journaling, and to protect your data with encryption, sync, and backup.",
     "categories": [
       "Lifestyle"
     ],
@@ -799,7 +799,7 @@
   },
   "com.edovia.Default-Handler": {
     "name": "Default Handler",
-    "description": "Default Handler lets you change the default handler for URL schemes. Edovia created this to make it easy to set their Screens app as the default handler for the vnc: URL scheme, as App Store sandboxing doesn’t allow for choosing this at runtime — apps must designate a default handler in the app bundle settings, a static configuration. However, this works for other URL schemes and applications as well, not just Screens and the vnc scheme.",
+    "description": "Default Handler lets you change the default handler for URL schemes. Edovia created this to make it easy to set their Screens app as the default handler for the vnc: URL scheme, as App Store sandboxing doesn\u2019t allow for choosing this at runtime \u2014 apps must designate a default handler in the app bundle settings, a static configuration. However, this works for other URL schemes and applications as well, not just Screens and the vnc scheme.",
     "categories": [
       "Utilities"
     ],
@@ -1189,7 +1189,7 @@
   },
   "com.manytricks.Displaperture": {
     "name": "Displaperture",
-    "description": "Displaperture adds rounded corners to your display, allowing you to adjust the corner radius to match the aesthetic of modern Mac hardware or your personal preference. Originally meant to evoke classic Mac nostalgia, the app has been around so long — since 2007 — that the aesthetic now seems modern again.",
+    "description": "Displaperture adds rounded corners to your display, allowing you to adjust the corner radius to match the aesthetic of modern Mac hardware or your personal preference. Originally meant to evoke classic Mac nostalgia, the app has been around so long \u2014 since 2007 \u2014 that the aesthetic now seems modern again.",
     "categories": [
       "Utilities"
     ],
@@ -1312,7 +1312,7 @@
   },
   "com.mothersruin.Apparency": {
     "name": "Apparency",
-    "description": "Inspect macOS applications, revealing code signatures, entitlements, version information, and other metadata about applications and their contents. See identifiers and versions, what document types and URLs an application supports, and what platforms it’s compiled for.",
+    "description": "Inspect macOS applications, revealing code signatures, entitlements, version information, and other metadata about applications and their contents. See identifiers and versions, what document types and URLs an application supports, and what platforms it\u2019s compiled for.",
     "categories": [
       "Utilities",
       "Developer Tools"
@@ -1335,7 +1335,7 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "−  mowglii.com",
+    "developer": "\u2212\u2009 mowglii.com",
     "url": "https://www.mowglii.com/itsycal/"
   },
   "com.mr-brightside.ParcelOSX": {
@@ -1492,7 +1492,7 @@
   },
   "com.panic.CandyBar3": {
     "name": "CandyBar",
-    "description": "CandyBar was an icon management tool. In its heyday it was a customization tool: every system icon on your Mac could be changed. CandyBar 3 combined with the icon library tool Pixadex, providing library features, like Apple’s Photos app, for managing a library of icons. Although CandyBar was mostly discontinued in 2012, the icon library features continue to be useful, and the CandyBar Sugar Free Edition from 2022 brings it into the Apple Silicon era, albeit completely unsupported and with some bugs.",
+    "description": "CandyBar was an icon management tool. In its heyday it was a customization tool: every system icon on your Mac could be changed. CandyBar 3 combined with the icon library tool Pixadex, providing library features, like Apple\u2019s Photos app, for managing a library of icons. Although CandyBar was mostly discontinued in 2012, the icon library features continue to be useful, and the CandyBar Sugar Free Edition from 2022 brings it into the Apple Silicon era, albeit completely unsupported and with some bugs.",
     "categories": [
       "Graphics & Design"
     ],
@@ -1578,7 +1578,7 @@
   },
   "com.raycast.macos": {
     "name": "Raycast",
-    "description": "A blazing-fast launcher and productivity tool for Mac with extensions for almost everything — search, snippets, scripts, and AI.",
+    "description": "A blazing-fast launcher and productivity tool for Mac with extensions for almost everything \u2014 search, snippets, scripts, and AI.",
     "categories": [
       "Productivity"
     ],
@@ -1600,7 +1600,7 @@
     "categories": [
       "Utilities"
     ],
-    "developer": "Manuel Sainz de Baranda y Goñi.\n  Sofía Ortega Sosa",
+    "developer": "Manuel Sainz de Baranda y Go\u00f1i.\n  Sof\u00eda Ortega Sosa",
     "url": "https://zxe.io/software/Foldery"
   },
   "com.reederapp.5.macOS": {
@@ -1636,7 +1636,7 @@
   },
   "com.rogueamoeba.farrago": {
     "name": "Farrago",
-    "description": "A soundboard app for Mac that lets you organize and trigger audio clips instantly — great for podcasters, streamers, and presenters.",
+    "description": "A soundboard app for Mac that lets you organize and trigger audio clips instantly \u2014 great for podcasters, streamers, and presenters.",
     "categories": [
       "Music & Audio"
     ],
@@ -1685,7 +1685,7 @@
   },
   "com.sindresorhus.Actions": {
     "name": "Actions",
-    "description": "Actions provides a large collection of additional actions for the Shortcuts app, extending its automation capabilities with functions not available by default. They cover a wide range including text transformations, parsing CSV, JSON and Markdown, storing values in the Keychain, checking Dark mode… 180+ total.",
+    "description": "Actions provides a large collection of additional actions for the Shortcuts app, extending its automation capabilities with functions not available by default. They cover a wide range including text transformations, parsing CSV, JSON and Markdown, storing values in the Keychain, checking Dark mode\u2026 180+ total.",
     "categories": [
       "Utilities"
     ],
@@ -1703,7 +1703,7 @@
   },
   "com.sindresorhus.Supercharge": {
     "name": "Supercharge",
-    "description": "A collection of small Mac utilities and enhancements packed into one app — window management, system tweaks, and productivity boosts.",
+    "description": "A collection of small Mac utilities and enhancements packed into one app \u2014 window management, system tweaks, and productivity boosts.",
     "categories": [
       "Utilities"
     ],
@@ -1730,7 +1730,7 @@
   },
   "com.squirrels.AirParrot-3": {
     "name": "AirParrot 3",
-    "description": "AirParrot allows users to wirelessly stream or mirror their screen, audio, and media files to devices such as Apple TV, Chromecast, and AirPlay receivers. It extends macOS's native AirPlay functionality by adding support for additional streaming targets; and extra features such as streaming a single application instead of the whole screen, or transcoding video so you can stream almost anything, regardless of the receiving device’s compatibility.",
+    "description": "AirParrot allows users to wirelessly stream or mirror their screen, audio, and media files to devices such as Apple TV, Chromecast, and AirPlay receivers. It extends macOS's native AirPlay functionality by adding support for additional streaming targets; and extra features such as streaming a single application instead of the whole screen, or transcoding video so you can stream almost anything, regardless of the receiving device\u2019s compatibility.",
     "categories": [
       "Utilities",
       "Video",
@@ -1759,11 +1759,11 @@
   },
   "com.stonerl.Thaw": {
     "name": "Thaw",
-    "description": "Menu bar management tool. Its primary function is hiding and showing menu bar items; it can also customize the menu bar’s appearance. Extremely useful when running many menu bar items and facing clutter or running out of space.",
+    "description": "Menu bar management tool. Its primary function is hiding and showing menu bar items; it can also customize the menu bar\u2019s appearance. Extremely useful when running many menu bar items and facing clutter or running out of space.",
     "categories": [
       "Utilities"
     ],
-    "developer": "Toni Förster\n   Jordan Baird (Ice)",
+    "developer": "Toni F\u00f6rster\n   Jordan Baird (Ice)",
     "url": "https://github.com/stonerl/Thaw"
   },
   "com.tagtraum.beatunes": {
@@ -1870,7 +1870,7 @@
   },
   "com.valerijs.boguckis.store.TextSniper": {
     "name": "TextSniper",
-    "description": "Captures text from anywhere on your screen using OCR — grab text from images, PDFs, videos, or anything you can see.",
+    "description": "Captures text from anywhere on your screen using OCR \u2014 grab text from images, PDFs, videos, or anything you can see.",
     "categories": [
       "Productivity"
     ],
@@ -2026,7 +2026,7 @@
   },
   "h3p.Neon-Vision-Editor": {
     "name": "Neon Vision Editor",
-    "description": "A lightweight, modern code editor for macOS built for speed, readability, and automatic syntax highlighting — minimal by design, with fast file access and a focused editing experience.",
+    "description": "A lightweight, modern code editor for macOS built for speed, readability, and automatic syntax highlighting \u2014 minimal by design, with fast file access and a focused editing experience.",
     "categories": [
       "Developer Tools"
     ],
@@ -2341,7 +2341,7 @@
   },
   "org.cogx.cog": {
     "name": "Cog",
-    "description": "Cog is a free, open-source audio player that supports a wide variety of audio formats, including FLAC, MP3, Ogg Vorbis, Windows Media Audio, ATRAC3, Monkey’s Audio (APE), RealAudio, MIDI, SID, dozens of tracker formats, game formats like GBS, NSF, VGM, and many others. It provides a clean, minimal interface for music playback with support for playlists and audio format plugins. It support gapless playback and last.fm scrobbling.",
+    "description": "Cog is a free, open-source audio player that supports a wide variety of audio formats, including FLAC, MP3, Ogg Vorbis, Windows Media Audio, ATRAC3, Monkey\u2019s Audio (APE), RealAudio, MIDI, SID, dozens of tracker formats, game formats like GBS, NSF, VGM, and many others. It provides a clean, minimal interface for music playback with support for playlists and audio format plugins. It support gapless playback and last.fm scrobbling.",
     "categories": [
       "Music"
     ],
@@ -2391,7 +2391,7 @@
   },
   "org.jwz.cyberizer": {
     "name": "Cyberizer",
-    "description": "jwz’s utility for creating fun glitchy video collages",
+    "description": "jwz\u2019s utility for creating fun glitchy video collages",
     "categories": [
       "Entertainment"
     ],
@@ -2619,4 +2619,5 @@
     "developer": "macbroha",
     "url": "https://screen-break-mac.netlify.app/"
   }
+
 }
