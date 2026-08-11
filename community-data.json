@@ -2608,5 +2608,16 @@
     ],
     "developer": "zzada",
     "url": "https://github.com/zkokaja/Brewlet"
+  },
+  "com.codex.screenbreakmenu": {
+    "name": "Screen Break",
+    "description": "Screen Break is a free macOS menu bar break reminder that helps users take real breaks with guided full-screen rests, smart idle reset, busy auto-defer, multilingual UI, and friendly limits on skipping.",
+    "categories": [
+      "Productivity",
+      "Utilities"
+    ],
+    "developer": "macbroha",
+    "url": "https://screen-break-mac.netlify.app/"
   }
+
 }
