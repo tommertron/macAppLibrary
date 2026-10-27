@@ -1,0 +1,9 @@
+{
+  "name": "LayoutKeeper",
+  "description": "LayoutKeeper is a free, open-source macOS menu bar utility that remembers which monitor, Mission Control Space, and position each window belongs to, and automatically restores windows when external displays are reconnected or woken from sleep. It also supports per-port display arrangement switching on Apple Silicon and a Keep Awake toggle.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Mingke Tu",
+  "url": "https://github.com/tumingke0/LayoutKeeper"
+}
