@@ -1,0 +1,9 @@
+{
+  "name": "Kilobat",
+  "description": "A macOS menu bar app for viewing per-app network usage, checking connections and managing hotspot data. Basic features are free, with optional one-time Pro features. The desktop app is proprietary; a separate GPL-3.0-only command-line tool is also available. Requires macOS 14 or later.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Philip Seifi",
+  "url": "https://kilobat.app/"
+}
