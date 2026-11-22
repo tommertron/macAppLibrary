@@ -2015,6 +2015,14 @@
     ],
     "url": "https://its.umich.edu/computing/computers-software/mprint"
   },
+  "focusfoundry.docktor": {
+    "name": "docktor",
+    "description": "Dock enhancement",
+    "categories": [
+      "Utilities"
+    ],
+    "url": "https://docktorapp.com"
+  },
   "fr.handbrake.HandBrake": {
     "name": "HandBrake",
     "description": "HandBrake is a free, open-source video transcoder that converts video files from a wide range of formats into modern, widely supported codecs and containers. It supports batch encoding, presets, and advanced options for controlling video quality, resolution, and compression.",
