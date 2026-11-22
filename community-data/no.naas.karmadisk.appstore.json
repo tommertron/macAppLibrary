@@ -1,0 +1,9 @@
+{
+  "name": "KarmaDisk",
+  "description": "A macOS storage utility with disk maps, duplicate-file review and guided cleanup. Storage tools are free; photo processing includes a 50-photo lifetime sample, with an optional one-time purchase for unlimited photos and automatic organization. Requires macOS 15 or later.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Christopher Naas",
+  "url": "https://www.karmadisk.eu/"
+}
