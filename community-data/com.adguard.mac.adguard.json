@@ -1,0 +1,8 @@
+{
+  "name": "AdGuard",
+  "description": "Ad blocker and privacy-protection app with custom userscript injector.",
+  "categories": [
+    "Utilities"
+  ],
+  "developer": "Adguard Software Limited"
+}
