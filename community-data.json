@@ -2231,6 +2231,15 @@
     "developer": "Kovid Goyal",
     "url": "https://calibre-ebook.com"
   },
+  "net.matrixteo.app.Collections": {
+    "name": "Collections",
+    "description": "Personal database",
+    "categories": [
+      "Productivity"
+    ],
+    "developer": "risolvi.dev+collections@gmail.com",
+    "url": "https://collectionsdb.com/en/help/get-started"
+  },
   "net.pornel.ImageOptim": {
     "name": "ImageOptim",
     "description": "ImageOptim is a macOS app that compresses and optimizes images by removing unnecessary metadata and applying lossless or lossy compression, reducing file sizes without significantly affecting visual quality. It supports common formats including PNG, JPEG, and GIF.",
