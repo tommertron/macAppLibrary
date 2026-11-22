@@ -226,6 +226,14 @@
     "developer": "ACD Systems International",
     "url": "https://www.acdsee.com"
   },
+  "com.adguard.mac.adguard": {
+    "name": "AdGuard",
+    "description": "Ad blocker and privacy-protection app with custom userscript injector.",
+    "categories": [
+      "Utilities"
+    ],
+    "developer": "Adguard Software Limited"
+  },
   "com.adobe.adobedigitaleditions.app": {
     "name": "Adobe Digital Editions",
     "description": "Adobe Digital Editions is an e-book reader and library manager for DRM-protected EPUB books.",
