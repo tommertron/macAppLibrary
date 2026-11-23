@@ -1,0 +1,11 @@
+{
+  "name": "LM Studio",
+  "description": "App for downloading and running large language models locally, with a chat interface and local API endpoints.",
+  "categories": [
+    "Developer Tools",
+    "Local Models",
+    "AI"
+  ],
+  "developer": "Element Labs",
+  "url": "https://lmstudio.ai/"
+}
