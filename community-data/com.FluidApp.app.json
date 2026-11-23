@@ -1,0 +1,13 @@
+{
+  "name": "FluidVoice",
+  "description": "For you, on your own device. Free and open source. Dictation in any app you type in. Speech models that run on your device. Open source under GPLv3",
+  "categories": [
+    "Productivity",
+    "STT",
+    "Voice",
+    "AI",
+    "Local Models"
+  ],
+  "developer": "FluidVoice",
+  "url": "https://fluidvoice.com"
+}
