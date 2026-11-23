@@ -1,0 +1,11 @@
+{
+  "name": "we were online",
+  "description": "we were online is an online multiplayer world—part game, artwork, and tool—that turns the existing Internet into a living, shared world, actively shaped by its inhabitants.\n\nBuilt on playhtml, an open-source library for creating shared experiences, the game is designed to be customized and extended by its players. Individual websites can create interactions that respond to live events on other websites and change behavior depending on a user’s history and personality.\n\nIsolated browsing becomes the site of serendipitous encounters as everything becomes material for connection. Assets, buttons, and other components can be created, grown, moved, taken, and gifted. Pages show wear as people pass through and use them. Cursors become digital appendages for bumping into others.\n\nInstead of a new social platform, I'm invested in helping the existing Internet we already live in come to life with our presence — one we can shape together, piece by piece. Not as users, but as neighbors and stewards nurturing a home for generations to come.",
+  "categories": [
+    "Lifestyle",
+    "Entertainment",
+    "Browser Extension"
+  ],
+  "developer": "Spencer Chang",
+  "url": "https://wewere.online"
+}
