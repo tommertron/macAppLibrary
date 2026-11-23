@@ -1,0 +1,11 @@
+{
+  "name": "Antigravity",
+  "description": "Your command center for managing multiple local agents simultaneously. Group conversations into Projects, work across multiple workspaces, and automate routine tasks with scheduled messages.",
+  "categories": [
+    "Developer Tools",
+    "AI",
+    "Gemini"
+  ],
+  "developer": "Google LLC",
+  "url": "https://antigravity.google/"
+}
