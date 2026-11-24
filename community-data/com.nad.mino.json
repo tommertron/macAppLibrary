@@ -1,0 +1,10 @@
+{
+  "name": "Mino",
+  "description": "A fast and lightweight macOS menu bar app to track GitHub releases. Features inline actions and Homebrew integration. Built entirely with Swift and AppKit, zero dependencies.",
+  "categories": [
+    "Developer Tools",
+    "Utilities"
+  ],
+  "developer": "nad-bit",
+  "url": "https://github.com/nad-bit/Mino"
+}
